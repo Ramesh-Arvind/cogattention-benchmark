@@ -1,0 +1,38 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Credentials
+config/kaggle/kaggle.json
+config/huggingface/token.txt
+
+# Logs (not needed in repo)
+logs/
+
+# Claude internal
+.claude/
+CLAUDE.md
+AGENTS.md
+
+# Research/reference files (not needed in repo)
+attention_paradigms_research_report.md
+measuring-progress-toward-agi-a-cognitive-framework.pdf
+reference_notebooks/
+tasks/lessons.md
+tasks/attention_research_report.md
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Misc files not needed
+cogattention_*.pdf
+data/
+config/kaggle/api_key.txt
+

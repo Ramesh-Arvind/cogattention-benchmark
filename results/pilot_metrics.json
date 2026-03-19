@@ -1,0 +1,374 @@
+{
+  "difficulty_gradient": {
+    "llama8b": {
+      "anomaly": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.8,
+          "Hard": 0.0,
+          "Expert": 0.2
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.8
+      },
+      "capacity": {
+        "means_by_difficulty": {
+          "Easy": 0.0,
+          "Medium": 1.0,
+          "Hard": 1.0,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": false,
+        "gradient": -1.0
+      },
+      "interference": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.25,
+          "Hard": 0.5,
+          "Expert": 0.0
+        },
+        "monotonic_decrease": false,
+        "gradient": 1.0
+      },
+      "selective": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 0.5,
+          "Expert": 0.9334
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.0666
+      },
+      "shifting": {
+        "means_by_difficulty": {
+          "Easy": 0.9166,
+          "Medium": 0.625,
+          "Hard": 0.6,
+          "Expert": 0.6
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.3166
+      },
+      "stream_segregation": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 1.0,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.0
+      },
+      "stroop": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.875,
+          "Hard": 0.8334,
+          "Expert": 0.8125
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.1875
+      },
+      "sustained": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 0.75,
+          "Expert": 0.4583
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.5417
+      }
+    },
+    "phi3": {
+      "anomaly": {
+        "means_by_difficulty": {
+          "Easy": 0.2,
+          "Medium": 0.0,
+          "Hard": 0.2,
+          "Expert": 0.2
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.0
+      },
+      "capacity": {
+        "means_by_difficulty": {
+          "Easy": 0.0,
+          "Medium": 0.1666,
+          "Hard": 0.75,
+          "Expert": 0.6
+        },
+        "monotonic_decrease": false,
+        "gradient": -0.6
+      },
+      "interference": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.75,
+          "Hard": 0.1666,
+          "Expert": 0.5
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.5
+      },
+      "selective": {
+        "means_by_difficulty": {
+          "Easy": 0.8334,
+          "Medium": 0.3958,
+          "Hard": 0.3,
+          "Expert": 0.6667
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.1667
+      },
+      "shifting": {
+        "means_by_difficulty": {
+          "Easy": 0.9166,
+          "Medium": 0.625,
+          "Hard": 0.75,
+          "Expert": 0.45
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.4666
+      },
+      "stream_segregation": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.5,
+          "Hard": 0.5,
+          "Expert": 0.5
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.5
+      },
+      "stroop": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 0.6666,
+          "Expert": 0.875
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.125
+      },
+      "sustained": {
+        "means_by_difficulty": {
+          "Easy": 0.9,
+          "Medium": 0.6875,
+          "Hard": 0.55,
+          "Expert": 0.5834
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.3166
+      }
+    },
+    "qwen72b": {
+      "anomaly": {
+        "means_by_difficulty": {
+          "Easy": 0.5,
+          "Medium": 0.6,
+          "Hard": 0.2,
+          "Expert": 0.4
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.1
+      },
+      "capacity": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 0.5,
+          "Hard": 0.125,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.0
+      },
+      "interference": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 1.0,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.0
+      },
+      "selective": {
+        "means_by_difficulty": {
+          "Easy": 0.5,
+          "Medium": 1.0,
+          "Hard": 0.4,
+          "Expert": 0.8334
+        },
+        "monotonic_decrease": false,
+        "gradient": -0.3334
+      },
+      "shifting": {
+        "means_by_difficulty": {
+          "Easy": 0.9166,
+          "Medium": 0.875,
+          "Hard": 1.0,
+          "Expert": 0.85
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.0666
+      },
+      "stream_segregation": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 1.0,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.0
+      },
+      "stroop": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 1.0,
+          "Expert": 1.0
+        },
+        "monotonic_decrease": true,
+        "gradient": 0.0
+      },
+      "sustained": {
+        "means_by_difficulty": {
+          "Easy": 1.0,
+          "Medium": 1.0,
+          "Hard": 0.7,
+          "Expert": 0.9584
+        },
+        "monotonic_decrease": false,
+        "gradient": 0.0416
+      }
+    }
+  },
+  "cross_model_spread": {
+    "anomaly": {
+      "model_means": {
+        "llama8b": 0.5,
+        "phi3": 0.15,
+        "qwen72b": 0.425
+      },
+      "spread": 0.35,
+      "sufficient": true
+    },
+    "capacity": {
+      "model_means": {
+        "llama8b": 0.75,
+        "phi3": 0.3792,
+        "qwen72b": 0.6562
+      },
+      "spread": 0.3708,
+      "sufficient": true
+    },
+    "interference": {
+      "model_means": {
+        "llama8b": 0.4375,
+        "phi3": 0.6042,
+        "qwen72b": 1.0
+      },
+      "spread": 0.5625,
+      "sufficient": true
+    },
+    "selective": {
+      "model_means": {
+        "llama8b": 0.8583,
+        "phi3": 0.549,
+        "qwen72b": 0.6833
+      },
+      "spread": 0.3093,
+      "sufficient": true
+    },
+    "shifting": {
+      "model_means": {
+        "llama8b": 0.6854,
+        "phi3": 0.6854,
+        "qwen72b": 0.9104
+      },
+      "spread": 0.225,
+      "sufficient": true
+    },
+    "stream_segregation": {
+      "model_means": {
+        "llama8b": 1.0,
+        "phi3": 0.625,
+        "qwen72b": 1.0
+      },
+      "spread": 0.375,
+      "sufficient": true
+    },
+    "stroop": {
+      "model_means": {
+        "llama8b": 0.8802,
+        "phi3": 0.8854,
+        "qwen72b": 1.0
+      },
+      "spread": 0.1198,
+      "sufficient": true
+    },
+    "sustained": {
+      "model_means": {
+        "llama8b": 0.8021,
+        "phi3": 0.6802,
+        "qwen72b": 0.9146
+      },
+      "spread": 0.2344,
+      "sufficient": true
+    }
+  },
+  "ceiling_floor": {
+    "anomaly": {
+      "best_model_mean": 0.5,
+      "worst_model_mean": 0.15,
+      "ceiling_hit": false,
+      "floor_hit": false
+    },
+    "capacity": {
+      "best_model_mean": 0.75,
+      "worst_model_mean": 0.3792,
+      "ceiling_hit": false,
+      "floor_hit": false
+    },
+    "interference": {
+      "best_model_mean": 1.0,
+      "worst_model_mean": 0.4375,
+      "ceiling_hit": true,
+      "floor_hit": false
+    },
+    "selective": {
+      "best_model_mean": 0.8583,
+      "worst_model_mean": 0.549,
+      "ceiling_hit": false,
+      "floor_hit": false
+    },
+    "shifting": {
+      "best_model_mean": 0.9104,
+      "worst_model_mean": 0.6854,
+      "ceiling_hit": false,
+      "floor_hit": false
+    },
+    "stream_segregation": {
+      "best_model_mean": 1.0,
+      "worst_model_mean": 0.625,
+      "ceiling_hit": true,
+      "floor_hit": false
+    },
+    "stroop": {
+      "best_model_mean": 1.0,
+      "worst_model_mean": 0.8802,
+      "ceiling_hit": true,
+      "floor_hit": false
+    },
+    "sustained": {
+      "best_model_mean": 0.9146,
+      "worst_model_mean": 0.6802,
+      "ceiling_hit": false,
+      "floor_hit": false
+    }
+  }
+}

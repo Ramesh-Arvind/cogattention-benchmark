@@ -1,0 +1,2 @@
+# Keep local Kaggle API keys out of git
+kaggle.json
