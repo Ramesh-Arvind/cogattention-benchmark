@@ -65,13 +65,17 @@ Total assertion counts per notebook:
 - Shifting: 272
 - Anomaly: 64
 
+## Taxonomy Alignment
+
+Our five cognitive abilities map precisely to the hierarchy defined in the DeepMind companion paper (§7.3): Attention Capacity, Sustained Attention, Perceptual Inhibition (explicitly separated from Selective Attention as the paper requires), Attention Shifting, and Stimulus-Driven Attention. We test Perceptual Inhibition through three dedicated tasks — Distractor Filtering, Semantic Stroop, and Flanker Interference — each isolating a different inhibition mechanism. This separation demonstrates alignment with the paper's requirement to "precisely diagnose model weaknesses" by isolating each cognitive faculty.
+
 ## Procedural Generation and Contamination Resistance
 
 All instances are procedurally generated from a seed. Entity pools (50 names, 20 colors, 20 objects, 20 cities) are combined randomly. Swap sequences, update chains, target placements, and rule assignments are all computed. No instance exists in any training corpus.
 
-Each instance includes a canary string (MD5 hash) for contamination detection.
+We employ seven layers of contamination resistance: (1) procedural generation with combinatorial explosion preventing memorization, (2) canary strings (MD5 hash) embedded in every instance for detection, (3) seed-based rotation allowing instant regeneration of 600 fresh items, (4) zero lexical overlap between queries and targets in Semantic NIAH following the NoLiMa finding, (5) dynamic entity pools so the same task structure with different entities produces different items, (6) difficulty-parametric scaling so memorizing Easy items does not help at Frontier, and (7) private scoring logic not exposed in public materials.
 
-Difficulty scaling is parametric. Easy and Expert differ in concrete ways: number of tracked items, passage length, distractor density, cue clarity, number of rule-switch items. This is not vague "harder" prompting. It is quantified.
+Difficulty scaling is parametric across five tiers. Each tier changes concrete parameters: number of tracked items, passage length, distractor density, cue clarity, number of rule-switch items. This is not vague "harder" prompting. It is quantified.
 
 ## Local Validation Results
 
