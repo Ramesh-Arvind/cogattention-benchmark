@@ -77,20 +77,111 @@ tasks/               # Planning docs and progress tracker
 8. Position bias U-curve (Lost in the Middle)
 9. Selectivity frontier (recall vs intrusion scatter)
 
+## Installation
+
+```bash
+# Clone and install (editable mode)
+git clone https://github.com/Ramesh-Arvind/cogattention-benchmark.git
+cd cogattention-benchmark
+pip install -e .
+
+# With visualization support
+pip install -e ".[viz]"
+
+# With GPU evaluation support
+pip install -e ".[eval]"
+
+# With multimodal Visual Stroop support
+pip install -e ".[vision]"
+
+# Everything
+pip install -e ".[all]"
+
+# Development (includes pytest)
+pip install -e ".[dev]"
+```
+
 ## Quick Start
 
 ```bash
-# Run tests
+# Run all 124 tests
 python3 -m pytest tests/ -v
 
-# Generate all 560 benchmark instances
-python3 -c "from src.run_local_eval import generate_all_instances; print(len(generate_all_instances(2026)))"
+# Generate all 600 benchmark instances (560 text + 40 visual)
+python3 -c "
+from src.generators.capacity import generate_capacity_dataset
+from src.generators.sustained import generate_sustained_dataset
+from src.generators.selective import generate_selective_dataset
+from src.generators.shifting import generate_shifting_dataset
+from src.generators.anomaly import generate_anomaly_dataset
+from src.generators.visual_selective import generate_visual_stroop_dataset
 
-# Generate figures (from pilot data)
+total = sum(len(g(seed=2026)) for g in [
+    generate_capacity_dataset, generate_sustained_dataset,
+    generate_selective_dataset, generate_shifting_dataset,
+    generate_anomaly_dataset, generate_visual_stroop_dataset,
+])
+print(f'Total instances: {total}')
+"
+
+# Generate all 9 figures (from pilot data)
 python3 src/visualize.py
 
 # Run local evaluation (requires GPU + vLLM)
 python3 -m src.run_local_eval --model phi3 --pilot-n 2
+
+# Run full evaluation on all models
+python3 -m src.run_local_eval --model all --full
+```
+
+## Usage as a Library
+
+```python
+# Generate benchmark instances
+from src.generators.capacity import generate_capacity_dataset
+from src.generators.visual_selective import generate_visual_stroop_dataset
+
+capacity_items = generate_capacity_dataset(seed=42)
+visual_items = generate_visual_stroop_dataset(seed=42)
+
+# Score responses
+from src.scorers.capacity import score_capacity
+from src.scorers.composite import compute_cas
+
+result = score_capacity(capacity_items[0], "ANSWER:\n- Alice: red key\n- Bob: blue book")
+print(f"Accuracy: {result.metrics['accuracy']}")
+
+# Statistical analysis
+from src.analysis.bootstrap import bootstrap_ci
+from src.analysis.effect_size import cohens_d
+from src.analysis.irt import fit_irt_model
+
+ci = bootstrap_ci([0.8, 0.7, 0.9, 0.85], n_bootstrap=10000)
+print(f"Mean: {ci['point_estimate']:.3f} [{ci['ci_lower']:.3f}, {ci['ci_upper']:.3f}]")
+
+d = cohens_d([0.9, 0.85, 0.88], [0.6, 0.55, 0.58])
+print(f"Cohen's d: {d:.2f}")
+```
+
+## Integration with lm-evaluation-harness
+
+The package structure supports integration with EleutherAI's lm-evaluation-harness:
+
+```python
+# Each generator returns TaskInstance objects with .prompt and .gold_answer
+# Each scorer takes (TaskInstance, response_str) and returns ScoreResult
+# ScoreResult.metrics is a dict of float scores
+
+from src.generators.base import TaskInstance
+from src.scorers.base import ScoreResult
+from src.eval_config import get_task_registry
+
+# Get all task types with their generators and scorers
+registry = get_task_registry()
+for task_type, (gen_fn, score_fn) in registry.items():
+    instances = gen_fn(seed=2026)
+    # Feed instance.prompt to your model, get response
+    # result = score_fn(instance, model_response)
 ```
 
 ## References

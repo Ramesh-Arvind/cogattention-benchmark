@@ -626,3 +626,14 @@
 - `[Figures]` `figures/visual_stroop_sample_*.png` — Sample generated Stroop images
 - `[Docs]` `docs/metrics.md` — Updated with all new metrics and statistical methods
 - `[Docs]` `docs/task_specs.md` — Updated to reflect 15 tasks × 40 items = 600
+
+---
+
+## Phase 10: Pip-Installable Library + GitHub Repo ✅ COMPLETE
+> Package the benchmark as a proper Python library for integration with lm-evaluation-harness.
+
+- [x] **10.1** `pyproject.toml` — pip-installable with optional deps (viz, eval, vision, dev)
+- [x] **10.2** `pip install -e .` verified working, all imports clean
+- [x] **10.3** README.md — Installation, Quick Start, Library Usage, harness integration guide
+- [x] **10.4** Private GitHub repo: `Ramesh-Arvind/cogattention-benchmark`
+- [x] **10.5** .gitignore excludes credentials, logs, CLAUDE.md, research PDFs
