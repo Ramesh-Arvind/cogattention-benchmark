@@ -50,16 +50,84 @@ NOTEBOOK_SPECS = [
         ),
     },
     {
-        "filename": "task_b_sustained.ipynb",
-        "title": "CogAttention — Sustained & Stream Segregation",
+        "filename": "task_b1_sustained.ipynb",
+        "title": "CogAttention — Vigilance & Stream Segregation",
         "cognitive_ability": "Sustained Attention",
-        "task_types": ["sustained", "stream_segregation", "context_dilution", "semantic_niah", "multihop"],
+        "task_types": ["sustained", "stream_segregation"],
         "description": (
-            "Tests sustained attention through vigilance probes, stream segregation, "
-            "context dilution (performance vs. length at constant difficulty), "
-            "semantic needle-in-a-haystack (zero lexical overlap), and multi-hop "
-            "scattered reasoning (chaining distant facts). "
-            "Based on CPT/NoLiMa (ICML 2025), Context Rot (Chroma 2025), and BABILong (NeurIPS 2024)."
+            "Tests sustained attention through vigilance probes (detecting targets scattered "
+            "across long documents) and stream segregation (tracking one conversation while "
+            "ignoring an interleaved distractor stream). "
+            "Based on CPT (Mackworth, 1948) and Dichotic Listening (Cherry, 1953)."
+        ),
+    },
+    {
+        "filename": "task_b2_dilution_emh.ipynb",
+        "title": "CogAttention — Context Dilution (Easy-Medium-Hard)",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["context_dilution"],
+        "difficulty_filter": ["Easy", "Medium", "Hard"],
+        "description": (
+            "Tests sustained attention under context scaling (short-to-medium contexts). "
+            "Based on Context Rot (Chroma 2025)."
+        ),
+    },
+    {
+        "filename": "task_b2_dilution_expert.ipynb",
+        "title": "CogAttention — Context Dilution (Expert)",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["context_dilution"],
+        "difficulty_filter": ["Expert"],
+        "description": (
+            "Tests sustained attention under long context scaling (Expert difficulty). "
+            "Based on Context Rot (Chroma 2025)."
+        ),
+    },
+    {
+        "filename": "task_b2_dilution_frontier_a.ipynb",
+        "title": "CogAttention — Context Dilution (Frontier Part A)",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["context_dilution"],
+        "difficulty_filter": ["Frontier"],
+        "max_items": 4,
+        "description": (
+            "Tests sustained attention under extreme context scaling (Frontier, Part A). "
+            "Based on Context Rot (Chroma 2025)."
+        ),
+    },
+    {
+        "filename": "task_b2_dilution_frontier_b.ipynb",
+        "title": "CogAttention — Context Dilution (Frontier Part B)",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["context_dilution"],
+        "difficulty_filter": ["Frontier"],
+        "item_offset": 4,
+        "max_items": 4,
+        "description": (
+            "Tests sustained attention under extreme context scaling (Frontier, Part B). "
+            "Based on Context Rot (Chroma 2025)."
+        ),
+    },
+    {
+        "filename": "task_b3_niah.ipynb",
+        "title": "CogAttention — Semantic Needle-in-a-Haystack",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["semantic_niah"],
+        "description": (
+            "Tests sustained attention through semantic NIAH — the needle has zero lexical "
+            "overlap with the question, forcing semantic inference rather than keyword matching. "
+            "Based on NoLiMa (ICML 2025)."
+        ),
+    },
+    {
+        "filename": "task_b4_multihop.ipynb",
+        "title": "CogAttention — Multi-hop Attention",
+        "cognitive_ability": "Sustained Attention",
+        "task_types": ["multihop"],
+        "description": (
+            "Tests sustained attention through multi-hop scattered reasoning — the model "
+            "must chain facts distributed across a long document to reach the final answer. "
+            "Based on BABILong (NeurIPS 2024)."
         ),
     },
     {
@@ -300,9 +368,18 @@ def build_notebook(spec: dict, datasets: dict, seed: int) -> dict:
     canary = make_canary(seed, spec["filename"])
 
     # Gather all items for this notebook
+    difficulty_filter = spec.get("difficulty_filter", None)
+    max_items = spec.get("max_items", None)
+    item_offset = spec.get("item_offset", 0)
     all_items = []
     for tt in spec["task_types"]:
         instances = datasets[tt]
+        if difficulty_filter:
+            instances = [inst for inst in instances if inst.difficulty in difficulty_filter]
+        if item_offset:
+            instances = instances[item_offset:]
+        if max_items:
+            instances = instances[:max_items]
         items = serialize_dataset_for_notebook(instances)
         all_items.extend(items)
 
