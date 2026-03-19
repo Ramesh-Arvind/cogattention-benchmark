@@ -2,18 +2,19 @@
 
 **Kaggle Community Benchmarks — Attention Track**
 
-A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive psychology paradigms into 15 procedurally generated task types across 5 attention abilities.
+A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive psychology paradigms into 16 procedurally generated task types across 5 attention abilities — including a multimodal Visual Stroop extension for VLMs.
 
 ## Key Numbers
 
 | Metric | Value |
 |--------|-------|
-| Task types | 15 (across 5 cognitive abilities) |
-| Total items | 560 |
+| Task types | 16 (15 text + 1 visual, across 5 cognitive abilities) |
+| Total items | 600 (560 text + 40 visual Stroop) |
 | Difficulty tiers | 5 (Easy, Medium, Hard, Expert, Frontier) |
 | Fine-grained assertions | 1,168 |
-| Kaggle notebooks | 5 self-contained .ipynb files |
+| Kaggle notebooks | 5 task notebooks + 1 interactive public demo |
 | Unit tests | 124 passing |
+| Scoring variants | Arithmetic CAS + Geometric CAS (non-compensatory) |
 
 ## Cognitive Abilities Tested
 
@@ -21,52 +22,69 @@ A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive ps
 |---------|-------|----------------|
 | **Attention Capacity** | Thread Tracking, Proactive Interference, Attentional Blink | MOT (Pylyshyn), PI-LLM (Wang & Sun) |
 | **Sustained Attention** | Vigilance Probe, Stream Segregation, Context Dilution, Semantic NIAH, Multi-hop | CPT (Mackworth), Dichotic Listening (Cherry) |
-| **Selective Attention** | Distractor Filtering, Semantic Stroop, Flanker | SiN, Stroop (1935), Eriksen Flanker |
+| **Selective Attention** | Distractor Filtering, Semantic Stroop, Flanker, **Visual Stroop (VLM)** | SiN, Stroop (1935), Eriksen Flanker |
 | **Attention Shifting** | Rule Shift, Inhibition of Return | WCST (Monsell), IOR |
 | **Stimulus-Driven** | Anomaly Detection | Inattentional Blindness (Simons & Chabris) |
 
-## Local Validation Results
+## Local Validation Results (with Frontier Tier)
 
-| Model | CAS Score | 95% CI |
-|-------|-----------|--------|
-| Qwen2.5-72B-Instruct | 0.81 | [0.71, 0.86] |
-| Llama-3.1-8B-Instruct | 0.73 | [0.62, 0.81] |
-| Phi-3.5-mini-instruct | 0.57 | [0.45, 0.61] |
+Evaluated on 140 items per model (2 per difficulty × 15 tasks × 5 tiers) using vLLM with deterministic generation (temperature=0, top_p=1):
 
-Cohen's d between Phi-3.5 and Qwen-72B: **0.72 (medium effect)**.
+| Model | Parameters | CAS (Arithmetic) | CAS (Geometric) | 95% CI |
+|-------|-----------|-------------------|-----------------|--------|
+| Qwen2.5-72B-Instruct | 72B | **0.833** | 0.806 | [0.785, 0.878] |
+| Llama-3.1-8B-Instruct | 8B | **0.685** | 0.640 | [0.621, 0.747] |
+| Phi-3.5-mini-instruct | 3.8B | **0.567** | 0.479 | [0.513, 0.619] |
+
+**Effect sizes:** Phi vs Qwen d=0.68 (medium), Llama vs Qwen d=0.41 (small). CIs do not overlap between top and bottom models.
+
+**Frontier tier works:** Context dilution drops to 0.0 for all models at Frontier. Capacity Frontier=0.19 for Qwen (vs 1.0 Easy). Anomaly detection: Phi=0.16 overall.
+
+**Geometric CAS** penalizes models that completely fail on any ability — Phi drops from 0.567 (arithmetic) to 0.479 (geometric), exposing hidden weaknesses.
 
 ## Repository Structure
 
 ```
 src/
-  generators/       # 15 procedural task generators (all seeded, contamination-resistant)
-  scorers/           # 6 scoring modules + composite CAS aggregator
-  analysis/          # Statistical analysis (bootstrap CI, effect sizes, IRT, degradation, position bias)
+  generators/       # 16 procedural task generators (all seeded, contamination-resistant)
+    visual_selective.py  # PIL-generated Visual Stroop images for VLMs
+  scorers/           # 7 scoring modules + composite CAS aggregator
+    visual_selective.py  # VLM Stroop scorer with error classification
+  analysis/          # Statistical analysis suite
+    bootstrap.py       # Bootstrapped CIs (10,000 resamples)
+    effect_size.py     # Cohen's d + rank-biserial correlation
+    irt.py             # 2PL Item Response Theory (scipy.optimize)
+    degradation.py     # Power-law degradation coefficient
+    position_bias.py   # U-shape / Lost-in-the-Middle detection
+    discrimination.py  # Cross-model spread + ceiling/floor detection
   human_baseline/    # Scaffolding for human evaluation (Prolific/MTurk export)
   visualize.py       # 9 publication-quality figures (dark theme, 300 DPI)
   inference_engine.py # vLLM wrapper with OOM resilience
   run_local_eval.py  # Main evaluation harness with checkpoint/resume
 
-notebooks/           # 5 Kaggle SDK notebooks (560 items, 1168 assertions)
+notebooks/           # 5 Kaggle SDK task notebooks + 1 interactive public demo
 tests/               # 124 unit tests (generators, scorers, analysis)
-docs/                # Competition writeup
-figures/             # Generated visualizations
-results/             # Pilot evaluation results (3 models)
+docs/                # Competition writeup + metrics spec + task specs
+figures/             # 9 generated visualizations + Visual Stroop samples
+results/             # Evaluation results (3 models × 140 items)
 tasks/               # Planning docs and progress tracker
 ```
 
 ## Scoring Architecture
 
-- **Arithmetic CAS** — weighted mean across 13 task types (compensatory)
+- **Arithmetic CAS** — weighted mean across 14 task types (compensatory)
 - **Geometric CAS** — weighted geometric mean (non-compensatory: zero on any ability tanks composite)
-- **Per-task metrics** — recall, precision, intrusion rate, switch cost, perseveration rate, etc.
-- **Attentional residue classification** — errors split into perseveration, residue, and random
+- **Per-task metrics** — recall, precision, intrusion rate, switch cost, perseveration rate, Stroop resistance, etc.
+- **Attentional residue classification** — shifting errors split into perseveration, residue, and random
 - **Bootstrapped 95% CIs** — 10,000 resamples for all metrics
+- **Cohen's d + rank-biserial** — pairwise effect sizes between models
+- **2PL IRT** — item difficulty and discrimination parameters
 - **Power-law degradation** — `E(m) ~ a * m^delta` fit for selective attention
+- **Position bias** — U-shape detection (Lost in the Middle)
 
 ## Figures
 
-9 publication-quality visualizations:
+9 publication-quality visualizations (dark theme, 300 DPI):
 1. CAS scores by model (bar chart)
 2. Task performance heatmap (model x task)
 3. Difficulty degradation curves (line chart)
@@ -77,6 +95,8 @@ tasks/               # Planning docs and progress tracker
 8. Position bias U-curve (Lost in the Middle)
 9. Selectivity frontier (recall vs intrusion scatter)
 
+Plus: Visual Stroop sample images (`figures/visual_stroop_sample_*.png`)
+
 ## Installation
 
 ```bash
@@ -85,13 +105,13 @@ git clone https://github.com/Ramesh-Arvind/cogattention-benchmark.git
 cd cogattention-benchmark
 pip install -e .
 
-# With visualization support
+# With visualization support (matplotlib + plotly)
 pip install -e ".[viz]"
 
-# With GPU evaluation support
+# With GPU evaluation support (torch + vLLM + transformers)
 pip install -e ".[eval]"
 
-# With multimodal Visual Stroop support
+# With multimodal Visual Stroop support (Pillow)
 pip install -e ".[vision]"
 
 # Everything
@@ -183,6 +203,16 @@ for task_type, (gen_fn, score_fn) in registry.items():
     # Feed instance.prompt to your model, get response
     # result = score_fn(instance, model_response)
 ```
+
+## Discussion: Cognitive Failures Map to Transformer Architecture
+
+| Cognitive Failure | Transformer Mechanism | Our Evidence |
+|-------------------|----------------------|-------------|
+| Vigilance decrement | Softmax dilution over long contexts | U-shaped accuracy curve |
+| Perseveration | Residual connections carrying stale KV states | 60%+ of shifting errors are perseveration |
+| Distractor intrusion | MLP pre-training priors overpower in-context attention | Factual distractors intrude more than nonsense |
+| Capacity limit | Fixed attention heads per layer | Accuracy cliff at 4+ tracked objects |
+| Inattentional blindness | Causal mask prevents backward anomaly detection | Phi-3.5 scores 0.16 on dual-task anomaly |
 
 ## References
 

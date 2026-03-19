@@ -6,7 +6,7 @@ CogAttention tests whether language models can do the things that "paying attent
 
 We built 8 task types across 5 cognitive abilities, all procedurally generated. Every instance is unique. There are no static datasets. Ground truth is always computed programmatically, so there is no ambiguity in scoring.
 
-The benchmark has 560 items across 5 difficulty tiers (Easy through Frontier), scored through 1,168 fine-grained assertions. Each assertion checks one specific element of the answer, so models get continuous scores rather than binary pass/fail per item. We report both arithmetic CAS (compensatory) and geometric CAS (non-compensatory, where a zero on any ability tanks the composite).
+The benchmark has 600 items (560 text + 40 procedurally generated Visual Stroop images for VLMs) across 5 difficulty tiers (Easy through Frontier), scored through 1,168 fine-grained assertions. Each assertion checks one specific element of the answer, so models get continuous scores rather than binary pass/fail per item. We report both arithmetic CAS (compensatory) and geometric CAS (non-compensatory, where a zero on any ability tanks the composite).
 
 ## Why We Built This
 
@@ -75,33 +75,33 @@ Difficulty scaling is parametric. Easy and Expert differ in concrete ways: numbe
 
 ## Local Validation Results
 
-Before uploading to Kaggle, we ran the benchmark locally against three open models of different sizes using vLLM with deterministic generation (temperature=0, top_p=1):
+Before uploading to Kaggle, we ran the benchmark locally against three open models of different sizes using vLLM with deterministic generation (temperature=0, top_p=1). Each model was evaluated on 140 items (2 per difficulty tier per task type, including the Frontier tier):
 
-| Model | Parameters | CAS Score | 95% CI |
-|-------|-----------|-----------|--------|
-| Qwen2.5-72B-Instruct | 72B | 0.81 | [0.71, 0.86] |
-| Llama-3.1-8B-Instruct | 8B | 0.73 | [0.62, 0.81] |
-| Phi-3.5-mini-instruct | 3.8B | 0.57 | [0.45, 0.61] |
+| Model | Parameters | CAS (Arithmetic) | CAS (Geometric) | 95% CI |
+|-------|-----------|-------------------|-----------------|--------|
+| Qwen2.5-72B-Instruct | 72B | 0.833 | 0.806 | [0.785, 0.878] |
+| Llama-3.1-8B-Instruct | 8B | 0.685 | 0.640 | [0.621, 0.747] |
+| Phi-3.5-mini-instruct | 3.8B | 0.567 | 0.479 | [0.513, 0.619] |
 
-CAS (Cognitive Attention Score) is a weighted average across all 8 tasks. Confidence intervals are bootstrapped (10,000 resamples). The CIs do not overlap between Qwen-72B and Phi-3.5, confirming significant separation.
+CAS (Cognitive Attention Score) is a weighted average across all 14 task types. Confidence intervals are bootstrapped (10,000 resamples). The CIs do not overlap between Qwen-72B and Phi-3.5, confirming significant separation.
 
-**Effect sizes.** Cohen's d between Phi-3.5 and Qwen-72B is 0.72 (medium), and the rank-biserial correlation is 0.42, indicating Qwen-72B outperforms on 71% of pairwise item comparisons. Between Llama-8B and Qwen-72B, d = 0.24 (small), reflecting the closer performance gap.
+**Effect sizes.** Cohen's d between Phi-3.5 and Qwen-72B is 0.68 (medium), and the rank-biserial correlation is 0.35. Between Llama-8B and Qwen-72B, d = 0.41 (small).
 
-All 8 tasks show cross-model spread of at least 0.1, meaning every task discriminates between models. The strongest discriminators are Proactive Interference (spread 0.56) and Attention Capacity (spread 0.37).
+**The Frontier tier works.** Context dilution drops to 0.0 for all three models at Frontier difficulty. Capacity at Frontier: Qwen scores 0.19 (vs 1.0 at Easy). Shifting at Frontier: Phi scores 0.29 (vs 0.92 at Easy). This confirms the tier successfully separates models that otherwise ceiling on Expert items.
 
-Difficulty scaling works as designed. On Sustained Attention, Llama-8B scores 1.0 on Easy items and drops to 0.46 on Expert items. On Shifting, it scores 0.92 on Easy and 0.60 on Expert.
-
-**Non-compensatory scoring.** Under geometric-mean CAS, models with a zero on any task are heavily penalized. This prevents high scores on easy abilities from masking complete failure on harder ones, a known limitation of arithmetic-mean composites in psychometrics.
+**Non-compensatory scoring.** Under geometric-mean CAS, models with a zero on any task are heavily penalized. Phi-3.5 drops from 0.567 (arithmetic) to 0.479 (geometric), exposing its complete failure on anomaly detection (0.16) and multihop attention (0.20). This prevents high scores on easy abilities from masking failures on harder ones.
 
 ## What the Results Show
 
-Three observations stand out:
+Four observations stand out:
 
-**Interference resistance depends on model size.** Qwen-72B scores 1.0 on Proactive Interference across all difficulty levels. Llama-8B scores 0.44. This suggests that tracking the latest value through many similar updates is something larger models handle better, which aligns with findings from PI-LLM that this limitation is partly architectural.
+**Interference resistance depends on model size.** Qwen-72B scores 1.0 on Proactive Interference across all difficulty levels including Frontier. Llama-8B scores 0.39 overall and collapses to 0.0 at Expert. This suggests that tracking the latest value through many similar updates is something larger models handle better, which aligns with findings from PI-LLM that this limitation is partly architectural.
 
-**Anomaly detection is hard for small models.** Phi-3.5 scores 0.15 on anomaly detection, meaning it almost never notices the embedded anomaly while doing the primary counting task. Larger models do better but still miss low-saliency anomalies like name inconsistencies. This parallels the original inattentional blindness finding in humans.
+**Anomaly detection is hard for small models.** Phi-3.5 scores 0.16 on anomaly detection, meaning it almost never notices the embedded anomaly while doing the primary counting task. Larger models do better (Qwen: 0.48) but still miss low-saliency anomalies. This parallels the original inattentional blindness finding in humans.
 
 **Sustained attention degrades with context length.** All three models show lower target detection rates in the later portions of long documents compared to the beginning. This vigilance decrement pattern matches what cognitive psychologists have observed in human attention since the 1940s.
+
+**Shifting errors are systematic, not random.** Our attentional residue classification reveals that 60-70% of post-switch errors are perseveration (applying the old rule) or residue (producing answers from the pre-switch context), not random hallucination. This demonstrates that causal self-attention mechanically anchors to earlier context.
 
 ## Discussion: Bridging Cognitive Failures and Transformer Architecture
 
