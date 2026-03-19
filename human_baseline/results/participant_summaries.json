@@ -1,0 +1,382 @@
+[
+  {
+    "participant_id": "P001",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 1.0,
+    "per_task_accuracy": {
+      "stroop": 1.0,
+      "selective": 1.0,
+      "anomaly": 1.0,
+      "capacity": 1.0,
+      "inhibition_return": 1.0
+    },
+    "completion_time_min": 38.9
+  },
+  {
+    "participant_id": "P002",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "stream_segregation": 1.0,
+      "interference": 1.0,
+      "inhibition_return": 1.0,
+      "anomaly": 0.5,
+      "sustained": 0.0,
+      "stroop": 1.0
+    },
+    "completion_time_min": 29.8
+  },
+  {
+    "participant_id": "P003",
+    "domain": "psychology",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.8889,
+    "per_task_accuracy": {
+      "shifting": 1.0,
+      "anomaly": 1.0,
+      "interference": 1.0,
+      "stream_segregation": 1.0,
+      "inhibition_return": 1.0,
+      "sustained": 1.0,
+      "stroop": 0.0
+    },
+    "completion_time_min": 24.3
+  },
+  {
+    "participant_id": "P004",
+    "domain": "psychology",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.6667,
+    "per_task_accuracy": {
+      "stream_segregation": 1.0,
+      "inhibition_return": 0.5,
+      "anomaly": 0.5,
+      "stroop": 1.0,
+      "interference": 0.0,
+      "capacity": 1.0
+    },
+    "completion_time_min": 29.6
+  },
+  {
+    "participant_id": "P005",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "stroop": 1.0,
+      "anomaly": 0.5,
+      "inhibition_return": 1.0,
+      "interference": 1.0,
+      "selective": 0.0,
+      "capacity": 1.0
+    },
+    "completion_time_min": 31.5
+  },
+  {
+    "participant_id": "P006",
+    "domain": "psychology",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.7778,
+    "per_task_accuracy": {
+      "anomaly": 0.0,
+      "stream_segregation": 1.0,
+      "sustained": 1.0,
+      "shifting": 0.0,
+      "stroop": 1.0,
+      "interference": 1.0,
+      "capacity": 1.0
+    },
+    "completion_time_min": 34.2
+  },
+  {
+    "participant_id": "P007",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.875,
+    "per_task_accuracy": {
+      "interference": 1.0,
+      "inhibition_return": 0.0,
+      "sustained": 1.0,
+      "anomaly": 1.0,
+      "stroop": 1.0
+    },
+    "completion_time_min": 21.4
+  },
+  {
+    "participant_id": "P008",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.875,
+    "per_task_accuracy": {
+      "inhibition_return": 1.0,
+      "anomaly": 1.0,
+      "shifting": 1.0,
+      "stream_segregation": 1.0,
+      "interference": 0.0,
+      "stroop": 1.0,
+      "capacity": 1.0
+    },
+    "completion_time_min": 47.1
+  },
+  {
+    "participant_id": "P009",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.5,
+    "per_task_accuracy": {
+      "selective": 0.5,
+      "anomaly": 0.0,
+      "stroop": 1.0,
+      "inhibition_return": 1.0,
+      "sustained": 0.0,
+      "stream_segregation": 0.0,
+      "shifting": 1.0
+    },
+    "completion_time_min": 37.3
+  },
+  {
+    "participant_id": "P010",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "stroop": 1.0,
+      "interference": 0.5,
+      "anomaly": 0.5,
+      "inhibition_return": 1.0,
+      "capacity": 1.0
+    },
+    "completion_time_min": 35.3
+  },
+  {
+    "participant_id": "P011",
+    "domain": "psychology",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.6667,
+    "per_task_accuracy": {
+      "capacity": 0.5,
+      "anomaly": 1.0,
+      "stroop": 1.0,
+      "stream_segregation": 0.0,
+      "selective": 0.0,
+      "interference": 1.0,
+      "inhibition_return": 1.0
+    },
+    "completion_time_min": 34.8
+  },
+  {
+    "participant_id": "P012",
+    "domain": "psychology",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.8889,
+    "per_task_accuracy": {
+      "sustained": 1.0,
+      "anomaly": 1.0,
+      "capacity": 1.0,
+      "shifting": 1.0,
+      "stream_segregation": 1.0,
+      "interference": 0.0
+    },
+    "completion_time_min": 28.1
+  },
+  {
+    "participant_id": "P013",
+    "domain": "psychology",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.875,
+    "per_task_accuracy": {
+      "anomaly": 0.0,
+      "shifting": 1.0,
+      "inhibition_return": 1.0,
+      "selective": 1.0,
+      "interference": 1.0,
+      "sustained": 1.0
+    },
+    "completion_time_min": 24.0
+  },
+  {
+    "participant_id": "P014",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "sustained": 1.0,
+      "interference": 0.5,
+      "shifting": 0.0,
+      "stroop": 1.0,
+      "capacity": 1.0,
+      "selective": 1.0
+    },
+    "completion_time_min": 39.9
+  },
+  {
+    "participant_id": "P015",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "anomaly": 1.0,
+      "inhibition_return": 0.6667,
+      "stroop": 0.0,
+      "selective": 1.0,
+      "interference": 1.0,
+      "shifting": 1.0
+    },
+    "completion_time_min": 19.3
+  },
+  {
+    "participant_id": "P016",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.625,
+    "per_task_accuracy": {
+      "shifting": 0.5,
+      "anomaly": 0.5,
+      "selective": 1.0,
+      "sustained": 1.0,
+      "stream_segregation": 1.0,
+      "interference": 0.0
+    },
+    "completion_time_min": 28.3
+  },
+  {
+    "participant_id": "P017",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "anomaly": 1.0,
+      "selective": 1.0,
+      "stroop": 1.0,
+      "shifting": 0.0,
+      "inhibition_return": 1.0,
+      "capacity": 1.0,
+      "sustained": 1.0,
+      "interference": 0.0
+    },
+    "completion_time_min": 41.4
+  },
+  {
+    "participant_id": "P018",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "anomaly": 1.0,
+      "sustained": 1.0,
+      "shifting": 1.0,
+      "selective": 0.0,
+      "stream_segregation": 1.0,
+      "inhibition_return": 1.0,
+      "interference": 0.0
+    },
+    "completion_time_min": 21.0
+  },
+  {
+    "participant_id": "P019",
+    "domain": "general",
+    "n_items_completed": 9,
+    "overall_accuracy": 1.0,
+    "per_task_accuracy": {
+      "selective": 1.0,
+      "stream_segregation": 1.0,
+      "inhibition_return": 1.0,
+      "stroop": 1.0,
+      "sustained": 1.0
+    },
+    "completion_time_min": 28.2
+  },
+  {
+    "participant_id": "P020",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.375,
+    "per_task_accuracy": {
+      "anomaly": 0.5,
+      "interference": 0.0,
+      "stroop": 0.0,
+      "stream_segregation": 1.0,
+      "sustained": 0.0,
+      "inhibition_return": 0.0,
+      "selective": 1.0
+    },
+    "completion_time_min": 36.3
+  },
+  {
+    "participant_id": "P021",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "anomaly": 0.5,
+      "inhibition_return": 1.0,
+      "capacity": 0.5,
+      "selective": 1.0,
+      "shifting": 1.0
+    },
+    "completion_time_min": 26.7
+  },
+  {
+    "participant_id": "P022",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.625,
+    "per_task_accuracy": {
+      "shifting": 0.5,
+      "inhibition_return": 1.0,
+      "stroop": 1.0,
+      "selective": 1.0,
+      "sustained": 0.0,
+      "anomaly": 0.0,
+      "stream_segregation": 1.0
+    },
+    "completion_time_min": 31.7
+  },
+  {
+    "participant_id": "P023",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.625,
+    "per_task_accuracy": {
+      "stream_segregation": 0.3333,
+      "inhibition_return": 1.0,
+      "anomaly": 1.0,
+      "stroop": 1.0,
+      "shifting": 0.0
+    },
+    "completion_time_min": 33.7
+  },
+  {
+    "participant_id": "P024",
+    "domain": "general",
+    "n_items_completed": 8,
+    "overall_accuracy": 0.75,
+    "per_task_accuracy": {
+      "shifting": 0.0,
+      "anomaly": 1.0,
+      "sustained": 1.0,
+      "inhibition_return": 1.0,
+      "capacity": 0.0,
+      "interference": 1.0
+    },
+    "completion_time_min": 39.6
+  },
+  {
+    "participant_id": "P025",
+    "domain": "general",
+    "n_items_completed": 9,
+    "overall_accuracy": 0.8889,
+    "per_task_accuracy": {
+      "interference": 1.0,
+      "inhibition_return": 1.0,
+      "anomaly": 1.0,
+      "capacity": 1.0,
+      "shifting": 1.0,
+      "stroop": 0.5,
+      "stream_segregation": 1.0
+    },
+    "completion_time_min": 39.1
+  }
+]

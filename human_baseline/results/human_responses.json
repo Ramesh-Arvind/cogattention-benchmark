@@ -1,0 +1,1865 @@
+[
+  {
+    "participant_id": "P001",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 38.1
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 24.2
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "selective_easy_007",
+    "task_type": "selective",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 44.2
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 59.3
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 46.1
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 54.3
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 50.7
+  },
+  {
+    "participant_id": "P001",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 81.5
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 61.9
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 67.1
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 42.8
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 82.3
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 52.7
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 89.2
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.3
+  },
+  {
+    "participant_id": "P002",
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 17.5
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 64.1
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 57.1
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 69.2
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 54.4
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 30.0
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 39.8
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 69.3
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 60.3
+  },
+  {
+    "participant_id": "P003",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 92.5
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 49.8
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 53.3
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 91.1
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 119.1
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 43.8
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 58.3
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 68.8
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 27.8
+  },
+  {
+    "participant_id": "P004",
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 35.8
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 39.1
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 45.3
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 88.8
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 65.8
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 63.8
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 84.9
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 56.1
+  },
+  {
+    "participant_id": "P005",
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 70.7
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 51.6
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 70.1
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "sustained_medium_013",
+    "task_type": "sustained",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 49.1
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 67.9
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 46.5
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 76.0
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 55.2
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 52.4
+  },
+  {
+    "participant_id": "P006",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 59.0
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 68.8
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 40.5
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 72.4
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 106.4
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 40.9
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 39.0
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 74.6
+  },
+  {
+    "participant_id": "P007",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 51.3
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.6
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 28.6
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 88.1
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 48.3
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 73.5
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 49.2
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 48.4
+  },
+  {
+    "participant_id": "P008",
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 71.8
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 28.8
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 39.9
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 44.6
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 67.8
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 34.5
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 82.3
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 46.2
+  },
+  {
+    "participant_id": "P009",
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 33.1
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": -15.9
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 44.9
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 74.0
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 30.7
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 39.8
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 88.0
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 31.9
+  },
+  {
+    "participant_id": "P010",
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 0.0
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.5
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 58.7
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 37.0
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 95.8
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 54.4
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 85.3
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 28.8
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 93.8
+  },
+  {
+    "participant_id": "P011",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 73.3
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 42.6
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 70.6
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 52.5
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 58.7
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": -4.8
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 105.0
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 49.5
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 48.8
+  },
+  {
+    "participant_id": "P012",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 33.6
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 38.8
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 24.5
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 54.4
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 56.8
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 78.2
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 61.6
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 35.1
+  },
+  {
+    "participant_id": "P013",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 49.1
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "sustained_medium_013",
+    "task_type": "sustained",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 37.0
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 84.3
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 50.7
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 72.1
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 57.3
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.3
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "selective_easy_007",
+    "task_type": "selective",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 70.9
+  },
+  {
+    "participant_id": "P014",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 20.9
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 61.8
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 63.7
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 32.6
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 53.2
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 73.8
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 68.8
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 51.7
+  },
+  {
+    "participant_id": "P015",
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.1
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 62.7
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 36.1
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 60.4
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 93.7
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 67.1
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 71.0
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 68.0
+  },
+  {
+    "participant_id": "P016",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 64.2
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 90.6
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "selective_easy_007",
+    "task_type": "selective",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 51.0
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 87.6
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 71.3
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 54.3
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 84.5
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 57.2
+  },
+  {
+    "participant_id": "P017",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 30.7
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 60.4
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 105.3
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 51.6
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 39.1
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 49.9
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 67.4
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 66.4
+  },
+  {
+    "participant_id": "P018",
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 25.6
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 61.8
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 45.1
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 55.7
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 56.0
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 42.2
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 70.0
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 118.2
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 43.3
+  },
+  {
+    "participant_id": "P019",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 42.6
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 30.2
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 43.9
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 82.1
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 41.6
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 64.5
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 18.6
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 92.4
+  },
+  {
+    "participant_id": "P020",
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 81.0
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 53.8
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 57.9
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 81.3
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 58.2
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 88.4
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 38.1
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 68.5
+  },
+  {
+    "participant_id": "P021",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 63.6
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 36.4
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 108.9
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 94.3
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 66.9
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 65.6
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 76.8
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 69.6
+  },
+  {
+    "participant_id": "P022",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": -0.5
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 80.0
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 76.5
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 56.9
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 99.8
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 51.9
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 58.6
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 53.3
+  },
+  {
+    "participant_id": "P023",
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 70.3
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 79.1
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 59.2
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "sustained_medium_013",
+    "task_type": "sustained",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 51.4
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 80.7
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 86.9
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 124.5
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 64.3
+  },
+  {
+    "participant_id": "P024",
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 83.0
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 62.5
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 81.8
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 69.9
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 83.4
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 59.8
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 36.6
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "correct": 0,
+    "accuracy": 0.0,
+    "response_time_sec": 72.0
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 88.3
+  },
+  {
+    "participant_id": "P025",
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "correct": 1,
+    "accuracy": 1.0,
+    "response_time_sec": 85.3
+  }
+]

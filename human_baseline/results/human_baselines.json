@@ -1,0 +1,72 @@
+{
+  "overall_accuracy": 0.7585,
+  "human_cas_estimate": 0.7674,
+  "n_participants": 25,
+  "n_responses": 207,
+  "per_task": {
+    "stroop": {
+      "mean": 0.8519,
+      "std": 0.3552,
+      "n": 27
+    },
+    "selective": {
+      "mean": 0.7647,
+      "std": 0.4242,
+      "n": 17
+    },
+    "anomaly": {
+      "mean": 0.6765,
+      "std": 0.4678,
+      "n": 34
+    },
+    "capacity": {
+      "mean": 0.8125,
+      "std": 0.3903,
+      "n": 16
+    },
+    "inhibition_return": {
+      "mean": 0.8621,
+      "std": 0.3448,
+      "n": 29
+    },
+    "stream_segregation": {
+      "mean": 0.8095,
+      "std": 0.3927,
+      "n": 21
+    },
+    "interference": {
+      "mean": 0.64,
+      "std": 0.48,
+      "n": 25
+    },
+    "sustained": {
+      "mean": 0.7895,
+      "std": 0.4077,
+      "n": 19
+    },
+    "shifting": {
+      "mean": 0.6316,
+      "std": 0.4824,
+      "n": 19
+    }
+  },
+  "per_difficulty": {
+    "Medium": 0.7222,
+    "Hard": 0.6,
+    "Easy": 0.9429
+  },
+  "per_domain": {
+    "psychology": {
+      "mean": 0.7895,
+      "std": 0.1255,
+      "n": 13
+    },
+    "general": {
+      "mean": 0.7199,
+      "std": 0.1468,
+      "n": 12
+    }
+  },
+  "collection_date": "2026-03-15",
+  "study_description": "25 participants (13 psychology students, 12 general university students) completed 8-9 attention tasks each via an online survey. Tasks sampled from CogAttention benchmark (Easy/Medium/Hard tiers)."
+}

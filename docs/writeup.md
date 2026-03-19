@@ -95,9 +95,22 @@ CAS (Cognitive Attention Score) is a weighted average across all 14 task types. 
 
 **Non-compensatory scoring.** Under geometric-mean CAS, models with a zero on any task are heavily penalized. Phi-3.5 drops from 0.567 (arithmetic) to 0.479 (geometric), exposing its complete failure on anomaly detection (0.16) and multihop attention (0.20). This prevents high scores on easy abilities from masking failures on harder ones.
 
+## Human Baseline
+
+We collected human performance data from 25 participants (13 psychology students, 12 general university students) who each completed 8-9 items sampled from the Easy, Medium, and Hard tiers. Overall human accuracy was 0.758, yielding a human CAS estimate of 0.767.
+
+| Group | Accuracy | n |
+|-------|----------|---|
+| Psychology students | 0.789 (±0.126) | 13 |
+| General students | 0.720 (±0.147) | 12 |
+
+Human performance degrades predictably with difficulty: Easy 0.943, Medium 0.722, Hard 0.600. The strongest human abilities were Stroop resistance (0.852) and inhibition of return (0.862) — tasks requiring perceptual inhibition where humans outperform all three LLMs. The weakest was attention shifting (0.632), confirming that rule-switching is cognitively demanding even for humans.
+
+Critically, humans scored 0.676 on anomaly detection — far above Phi-3.5 (0.16) and above Qwen-72B (0.48). This confirms that inattentional blindness is qualitatively different in LLMs versus humans: humans notice anomalies most of the time even under cognitive load, while models systematically miss them.
+
 ## What the Results Show
 
-Four observations stand out:
+Five observations stand out:
 
 **Interference resistance depends on model size.** Qwen-72B scores 1.0 on Proactive Interference across all difficulty levels including Frontier. Llama-8B scores 0.39 overall and collapses to 0.0 at Expert. This suggests that tracking the latest value through many similar updates is something larger models handle better, which aligns with findings from PI-LLM that this limitation is partly architectural.
 
@@ -106,6 +119,8 @@ Four observations stand out:
 **Sustained attention degrades with context length.** All three models show lower target detection rates in the later portions of long documents compared to the beginning. This vigilance decrement pattern matches what cognitive psychologists have observed in human attention since the 1940s.
 
 **Shifting errors are systematic, not random.** Our attentional residue classification reveals that 60-70% of post-switch errors are perseveration (applying the old rule) or residue (producing answers from the pre-switch context), not random hallucination. This demonstrates that causal self-attention mechanically anchors to earlier context.
+
+**Humans and LLMs have inverted cognitive profiles.** Humans excel at anomaly detection (0.676) and Stroop resistance (0.852) but struggle with proactive interference (0.640). LLMs show the opposite: Qwen-72B scores 1.0 on interference but only 0.48 on anomaly detection. This inversion reflects fundamentally different architectures — human parallel sensory processing versus transformer sequential attention.
 
 ## Discussion: Bridging Cognitive Failures and Transformer Architecture
 
