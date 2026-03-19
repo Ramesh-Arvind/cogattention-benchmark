@@ -591,3 +591,38 @@
 - `[Tests]` `tests/test_scorers.py` — 9 new tests (Steps 2-3)
 - `[Tests]` `tests/test_analysis.py` — 16 new tests (Steps 4-6)
 - `[Strategy]` `tasks/path_to_victory.md` — 1st Place Master Plan
+
+---
+
+## Phase 9: Showstopper Notebook + Multimodal VLM Extension ✅ COMPLETE
+> Interactive public notebook for judges + procedurally generated Visual Stroop for VLMs.
+
+- [x] **9.1** Showstopper Public Notebook (`notebooks/public_demo.ipynb`):
+  - [x] "Try It Yourself" interactive cell — human inattentional blindness demo (ipywidgets)
+  - [x] Interactive Plotly radar chart — AI vs Human cognitive profile (hover + toggle)
+  - [x] Interactive Plotly difficulty curves — 4 tasks × 3 models
+  - [x] Interactive Plotly stacked bar — shifting error breakdown
+  - [x] Statistical rigor table (arithmetic/geometric CAS, CIs, effect sizes)
+  - [x] Architecture → Cognition mapping table
+  - [x] Multimodal extension section
+- [x] **9.2** Visual Stroop Generator (`src/generators/visual_selective.py`):
+  - [x] Procedural PIL image generation — color word in conflicting ink color
+  - [x] 5 difficulty tiers: font size, background noise, distractor shapes
+  - [x] 40 instances (8 per difficulty), base64-encoded PNG images
+  - [x] Zero data leakage — all images generated at runtime
+- [x] **9.3** Visual Stroop Scorer (`src/scorers/visual_selective.py`):
+  - [x] Color alias matching (red/crimson/scarlet etc.)
+  - [x] Error classification: stroop_error (OCR pathway failure) vs random_error
+  - [x] Stroop resistance metric
+- [x] **9.4** Documentation Updates:
+  - [x] `docs/metrics.md` — Added geometric CAS, residue metrics, degradation, visual Stroop, statistical methods table
+  - [x] `docs/task_specs.md` — Updated to 15 task types, 600 items, 5 difficulty tiers
+  - [x] `docs/writeup.md` — Already had CIs, effect sizes, discussion section
+
+### Phase 9 Deliverables:
+- `[Notebook]` `notebooks/public_demo.ipynb` — Interactive showstopper for judges
+- `[Generator]` `src/generators/visual_selective.py` — Procedural Visual Stroop (PIL)
+- `[Scorer]` `src/scorers/visual_selective.py` — VLM Stroop scorer with error classification
+- `[Figures]` `figures/visual_stroop_sample_*.png` — Sample generated Stroop images
+- `[Docs]` `docs/metrics.md` — Updated with all new metrics and statistical methods
+- `[Docs]` `docs/task_specs.md` — Updated to reflect 15 tasks × 40 items = 600

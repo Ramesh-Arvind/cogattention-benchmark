@@ -8,19 +8,31 @@
 
 ## Overview
 
-CogAttention tests 5 attention sub-abilities with 6 task types across 4 difficulty levels.
+CogAttention tests 5 attention sub-abilities with 15 task types across 5 difficulty levels.
 All tasks are procedurally generated, contamination-resistant, and produce unambiguous ground truth.
 
 | Task | Sub-ability | Paper Section | Paradigm Source | Items |
 |------|------------|---------------|-----------------|-------|
-| A: Thread Tracking | Capacity (7.3.1) | Attention Capacity | MOT + PI-LLM | 32 |
-| B: Vigilance Probe | Sustained (7.3.2) | Sustained Attention | CPT + NoLiMa | 32 |
-| C: Distractor Filtering | Selective (7.3.2) | Perceptual Inhibition | GSM-DC + Flanker | 32 |
-| D: Rule Shift | Shifting (7.3.2) | Attention Shifting | WCST + Task Interference | 32 |
-| E: Anomaly Detection | Stimulus-Driven (7.3.3) | Stimulus-Driven | Inattentional Blindness | 32 |
-| **Total** | | | | **160** |
+| A: Thread Tracking | Capacity (7.3.1) | Attention Capacity | MOT (Pylyshyn) | 40 |
+| A: Proactive Interference | Capacity (7.3.1) | Attention Capacity | PI-LLM (Wang & Sun) | 40 |
+| A: Attentional Blink | Capacity (7.3.1) | Temporal Capacity | RSVP | 40 |
+| B: Vigilance Probe | Sustained (7.3.2) | Sustained Attention | CPT (Mackworth) | 40 |
+| B: Stream Segregation | Sustained (7.3.2) | Sustained Attention | Dichotic Listening (Cherry) | 40 |
+| B: Context Dilution | Sustained (7.3.2) | Sustained Attention | Length scaling | 40 |
+| B: Semantic NIAH | Sustained (7.3.2) | Sustained Attention | NoLiMa | 40 |
+| B: Multi-hop Attention | Sustained (7.3.2) | Sustained Attention | BABILong | 40 |
+| C: Distractor Filtering | Selective (7.3.2) | Perceptual Inhibition | SiN enhanced | 40 |
+| C: Semantic Stroop | Selective (7.3.2) | Perceptual Inhibition | Stroop (1935) | 40 |
+| C: Flanker Interference | Selective (7.3.2) | Perceptual Inhibition | Eriksen Flanker | 40 |
+| D: Rule Shift | Shifting (7.3.2) | Attention Shifting | WCST (Monsell) | 40 |
+| D: Inhibition of Return | Shifting (7.3.2) | Attention Shifting | IOR | 40 |
+| E: Anomaly Detection | Stimulus-Driven (7.3.3) | Stimulus-Driven | Inattentional Blindness (Simons) | 40 |
+| F: Visual Stroop | Selective (VLM) | Multi-sensory | Visual Stroop (Pillow-generated) | 40 |
+| **Total** | | | | **600** |
 
-Each task: 8 Easy + 8 Medium + 8 Hard + 8 Expert = 32 items.
+Each task: 8 Easy + 8 Medium + 8 Hard + 8 Expert + 8 Frontier = 40 items.
+
+**Scoring upgrades**: Geometric CAS, attentional residue classification, bootstrapped CIs, power-law degradation, IRT analysis, position bias detection. See `docs/metrics.md`.
 
 ---
 
