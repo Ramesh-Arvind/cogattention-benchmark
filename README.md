@@ -216,12 +216,13 @@ for task_type, (gen_fn, score_fn) in registry.items():
 
 ## References
 
-- Cherry, E.C. (1953). Some experiments on the recognition of speech. *JASA*.
-- Liu, N.F. et al. (2024). Lost in the middle. *TACL*.
-- Mackworth, N.H. (1948). Breakdown of vigilance. *QJEP*.
-- Monsell, S. (2003). Task switching. *Trends in Cognitive Sciences*.
-- Pylyshyn, Z.W. & Storm, R.W. (2001). Tracking multiple independent targets. *Spatial Vision*.
-- Simons, D.J. & Chabris, C.F. (1999). Gorillas in our midst. *Perception*.
-- Stroop, J.R. (1935). Interference in serial verbal reactions. *JEP*.
-- Wang, Y. & Sun, Y. (2025). PI-LLM. *ICML Workshop*.
-- Yang, Z. et al. (2025). Distractor-induced degradation. *EMNLP*.
+- Cherry, E. C. (1953). Some experiments on the recognition of speech, with one and with two ears. *Journal of the Acoustical Society of America*, 25(5), 975--979.
+- Liu, N. F. et al. (2024). Lost in the middle: How language models use long contexts. *TACL*.
+- Mackworth, N. H. (1948). The breakdown of vigilance during prolonged visual search. *Quarterly Journal of Experimental Psychology*, 1(1), 6--21.
+- Monsell, S. (2003). Task switching. *Trends in Cognitive Sciences*, 7(3), 134--140.
+- Posner, M. I., & Petersen, S. E. (1990). The attention system of the human brain. *Annual Review of Neuroscience*, 13, 25--42.
+- Pylyshyn, Z. W., & Storm, R. W. (1988). Tracking multiple independent targets: Evidence for a parallel tracking mechanism. *Spatial Vision*, 3(3), 179--197.
+- Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained inattentional blindness for dynamic events. *Perception*, 28(9), 1059--1074.
+- Sohlberg, M. M., & Mateer, C. A. (1987). Effectiveness of an attention-training program. *Journal of Clinical and Experimental Neuropsychology*, 9(2), 117--130.
+- Stroop, J. R. (1935). Studies of interference in serial verbal reactions. *Journal of Experimental Psychology*, 18(6), 643--662.
+- Wang, C., & Sun, J. V. (2025). Unable to forget: Proactive interference reveals working memory limits in LLMs beyond context length (PI-LLM). In *Proceedings of the ICML 2025 Workshop on Long Context Foundation Models (ICFM)*. arXiv:2506.08184.
