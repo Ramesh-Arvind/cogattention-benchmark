@@ -1,0 +1,1463 @@
+[
+  {
+    "task_id": "capacity_easy_007",
+    "task_type": "capacity",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "Celine": "ivory key",
+      "Maren": "slate compass"
+    },
+    "metadata": {
+      "n_people": 2,
+      "n_swaps": 2,
+      "people": [
+        "Celine",
+        "Maren"
+      ],
+      "initial_items": {
+        "Celine": "ivory key",
+        "Maren": "slate compass"
+      },
+      "swaps": [
+        [
+          "Celine",
+          "Maren"
+        ],
+        [
+          "Celine",
+          "Maren"
+        ]
+      ],
+      "gold_formatted": "- Celine: ivory key\n- Maren: slate compass"
+    }
+  },
+  {
+    "task_id": "interference_easy_001",
+    "task_type": "interference",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "registry": "850"
+    },
+    "metadata": {
+      "n_keys": 1,
+      "n_updates_per_key": 3,
+      "total_updates": 3,
+      "domain": "number",
+      "key_names": [
+        "registry"
+      ],
+      "final_values": {
+        "registry": "850"
+      },
+      "all_prior_values": {
+        "registry": [
+          "574",
+          "943"
+        ]
+      },
+      "decoy_questions": []
+    }
+  },
+  {
+    "task_id": "capacity_medium_013",
+    "task_type": "capacity",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "Bram": "indigo dagger",
+      "Nico": "russet shell",
+      "Soren": "teal feather"
+    },
+    "metadata": {
+      "n_people": 3,
+      "n_swaps": 4,
+      "people": [
+        "Bram",
+        "Nico",
+        "Soren"
+      ],
+      "initial_items": {
+        "Bram": "russet shell",
+        "Nico": "teal feather",
+        "Soren": "indigo dagger"
+      },
+      "swaps": [
+        [
+          "Bram",
+          "Nico"
+        ],
+        [
+          "Nico",
+          "Soren"
+        ],
+        [
+          "Bram",
+          "Nico"
+        ],
+        [
+          "Nico",
+          "Soren"
+        ]
+      ],
+      "gold_formatted": "- Bram: indigo dagger\n- Nico: russet shell\n- Soren: teal feather"
+    }
+  },
+  {
+    "task_id": "interference_medium_013",
+    "task_type": "interference",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "destination": "Gael",
+      "reference": "Idris"
+    },
+    "metadata": {
+      "n_keys": 2,
+      "n_updates_per_key": 6,
+      "total_updates": 12,
+      "domain": "person",
+      "key_names": [
+        "destination",
+        "reference"
+      ],
+      "final_values": {
+        "destination": "Gael",
+        "reference": "Idris"
+      },
+      "all_prior_values": {
+        "destination": [
+          "Colette",
+          "Freya",
+          "Maren",
+          "Magnus",
+          "Adaeze"
+        ],
+        "reference": [
+          "Freya",
+          "Bashir",
+          "Soren",
+          "Ravi",
+          "Vesna"
+        ]
+      },
+      "decoy_questions": []
+    }
+  },
+  {
+    "task_id": "capacity_hard_023",
+    "task_type": "capacity",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "Willa": "green mirror",
+      "Idris": "ivory dagger",
+      "Hana": "ochre scroll",
+      "Orla": "indigo compass"
+    },
+    "metadata": {
+      "n_people": 4,
+      "n_swaps": 7,
+      "people": [
+        "Willa",
+        "Idris",
+        "Hana",
+        "Orla"
+      ],
+      "initial_items": {
+        "Willa": "ochre scroll",
+        "Idris": "indigo compass",
+        "Hana": "ivory dagger",
+        "Orla": "green mirror"
+      },
+      "swaps": [
+        [
+          "Willa",
+          "Hana"
+        ],
+        [
+          "Idris",
+          "Hana"
+        ],
+        [
+          "Willa",
+          "Orla"
+        ],
+        [
+          "Willa",
+          "Idris"
+        ],
+        [
+          "Willa",
+          "Orla"
+        ],
+        [
+          "Willa",
+          "Idris"
+        ],
+        [
+          "Hana",
+          "Orla"
+        ]
+      ],
+      "gold_formatted": "- Willa: green mirror\n- Idris: ivory dagger\n- Hana: ochre scroll\n- Orla: indigo compass"
+    }
+  },
+  {
+    "task_id": "interference_hard_020",
+    "task_type": "interference",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "contact": "Zain",
+      "location": "Freya",
+      "coordinator": "Nico"
+    },
+    "metadata": {
+      "n_keys": 3,
+      "n_updates_per_key": 12,
+      "total_updates": 36,
+      "domain": "person",
+      "key_names": [
+        "contact",
+        "location",
+        "coordinator"
+      ],
+      "final_values": {
+        "contact": "Zain",
+        "location": "Freya",
+        "coordinator": "Nico"
+      },
+      "all_prior_values": {
+        "contact": [
+          "Ines",
+          "Dmitri",
+          "Zora",
+          "Soren",
+          "Bram",
+          "Freya",
+          "Dariush",
+          "Bram",
+          "Zain",
+          "Xander",
+          "Viktor"
+        ],
+        "location": [
+          "Vesna",
+          "Kaia",
+          "Tariq",
+          "Lumi",
+          "Idris",
+          "Ines",
+          "Elara",
+          "Bashir",
+          "Dmitri",
+          "Adaeze",
+          "Orla"
+        ],
+        "coordinator": [
+          "Orla",
+          "Uma",
+          "Dmitri",
+          "Dariush",
+          "Greta",
+          "Dmitri",
+          "Kenji",
+          "Xander",
+          "Idris",
+          "Bashir",
+          "Celine"
+        ]
+      },
+      "decoy_questions": [
+        {
+          "key": "contact",
+          "value": "Dmitri",
+          "answer": "Yes"
+        }
+      ]
+    }
+  },
+  {
+    "task_id": "sustained_easy_007",
+    "task_type": "sustained",
+    "difficulty": "Easy",
+    "gold_answer": [
+      "theremin",
+      "flute",
+      "dulcimer",
+      "harp",
+      "violin"
+    ],
+    "metadata": {
+      "category": "instruments",
+      "category_description": "a musical instrument",
+      "targets": [
+        "theremin",
+        "flute",
+        "dulcimer",
+        "harp",
+        "violin"
+      ],
+      "nearmisses": [
+        "music stand",
+        "pitch pipe"
+      ],
+      "target_positions": [
+        [
+          0,
+          "theremin"
+        ],
+        [
+          6,
+          "flute"
+        ],
+        [
+          7,
+          "dulcimer"
+        ],
+        [
+          10,
+          "harp"
+        ],
+        [
+          11,
+          "violin"
+        ]
+      ],
+      "quintile_targets": {
+        "0": [
+          "theremin"
+        ],
+        "1": [],
+        "2": [
+          "flute"
+        ],
+        "3": [
+          "dulcimer"
+        ],
+        "4": [
+          "harp",
+          "violin"
+        ]
+      },
+      "n_paragraphs": 12,
+      "doc_word_count": 407
+    }
+  },
+  {
+    "task_id": "stream_easy_001",
+    "task_type": "stream_segregation",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "1": "8"
+    },
+    "metadata": {
+      "topic_a": "gardening_guide",
+      "topic_b": "financial_discussion",
+      "n_streams": 2,
+      "n_sentences_per_stream": 4,
+      "has_breakthrough": false,
+      "breakthrough_keyword": null,
+      "first_number_in_a": "8",
+      "stream_a_sentences": [
+        "Mulch with wood chips to retain moisture.",
+        "Mulch with wood chips to retain moisture.",
+        "Space each plant at least 8 inches apart.",
+        "Water thoroughly every 13 days during spring."
+      ]
+    }
+  },
+  {
+    "task_id": "sustained_medium_013",
+    "task_type": "sustained",
+    "difficulty": "Medium",
+    "gold_answer": [
+      "dulcimer",
+      "bassoon",
+      "harp",
+      "mbira",
+      "hurdy-gurdy",
+      "erhu",
+      "cello",
+      "balalaika"
+    ],
+    "metadata": {
+      "category": "instruments",
+      "category_description": "a musical instrument",
+      "targets": [
+        "dulcimer",
+        "bassoon",
+        "harp",
+        "mbira",
+        "hurdy-gurdy",
+        "erhu",
+        "cello",
+        "balalaika"
+      ],
+      "nearmisses": [
+        "metronome",
+        "tuning fork",
+        "amplifier",
+        "microphone",
+        "mixer"
+      ],
+      "target_positions": [
+        [
+          0,
+          "dulcimer"
+        ],
+        [
+          14,
+          "bassoon"
+        ],
+        [
+          16,
+          "harp"
+        ],
+        [
+          17,
+          "mbira"
+        ],
+        [
+          18,
+          "hurdy-gurdy"
+        ],
+        [
+          22,
+          "erhu"
+        ],
+        [
+          23,
+          "cello"
+        ],
+        [
+          28,
+          "balalaika"
+        ]
+      ],
+      "quintile_targets": {
+        "0": [
+          "dulcimer"
+        ],
+        "1": [],
+        "2": [
+          "bassoon",
+          "harp",
+          "mbira"
+        ],
+        "3": [
+          "hurdy-gurdy",
+          "erhu",
+          "cello"
+        ],
+        "4": [
+          "balalaika"
+        ]
+      },
+      "n_paragraphs": 30,
+      "doc_word_count": 992
+    }
+  },
+  {
+    "task_id": "stream_medium_013",
+    "task_type": "stream_segregation",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "1": "21"
+    },
+    "metadata": {
+      "topic_a": "sports_commentary",
+      "topic_b": "medical_advice",
+      "n_streams": 2,
+      "n_sentences_per_stream": 6,
+      "has_breakthrough": false,
+      "breakthrough_keyword": null,
+      "first_number_in_a": "21",
+      "stream_a_sentences": [
+        "Hana scored from 21 yards out.",
+        "The score is 4-0 at the end of the first half.",
+        "The corner kick is taken by Ravi.",
+        "The referee issued a red card for the foul.",
+        "The match has been played in sunshine conditions.",
+        "Substitution: Zain replaces Sigrid."
+      ]
+    }
+  },
+  {
+    "task_id": "sustained_hard_023",
+    "task_type": "sustained",
+    "difficulty": "Hard",
+    "gold_answer": [
+      "eagle",
+      "raven",
+      "magpie",
+      "swift",
+      "finch",
+      "ibis",
+      "woodpecker",
+      "crane",
+      "dove",
+      "wren"
+    ],
+    "metadata": {
+      "category": "birds",
+      "category_description": "a type of bird",
+      "targets": [
+        "eagle",
+        "raven",
+        "magpie",
+        "swift",
+        "finch",
+        "ibis",
+        "woodpecker",
+        "crane",
+        "dove",
+        "wren"
+      ],
+      "nearmisses": [
+        "sugar glider",
+        "bat",
+        "flying fish",
+        "moth",
+        "wasp",
+        "dragonfly",
+        "butterfly",
+        "pterodactyl"
+      ],
+      "target_positions": [
+        [
+          2,
+          "eagle"
+        ],
+        [
+          3,
+          "raven"
+        ],
+        [
+          4,
+          "magpie"
+        ],
+        [
+          9,
+          "swift"
+        ],
+        [
+          16,
+          "finch"
+        ],
+        [
+          24,
+          "ibis"
+        ],
+        [
+          30,
+          "woodpecker"
+        ],
+        [
+          42,
+          "crane"
+        ],
+        [
+          45,
+          "dove"
+        ],
+        [
+          50,
+          "wren"
+        ]
+      ],
+      "quintile_targets": {
+        "0": [
+          "eagle",
+          "raven",
+          "magpie",
+          "swift"
+        ],
+        "1": [
+          "finch"
+        ],
+        "2": [
+          "ibis",
+          "woodpecker"
+        ],
+        "3": [
+          "crane"
+        ],
+        "4": [
+          "dove",
+          "wren"
+        ]
+      },
+      "n_paragraphs": 55,
+      "doc_word_count": 1724
+    }
+  },
+  {
+    "task_id": "stream_hard_020",
+    "task_type": "stream_segregation",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "1": "11",
+      "2": "yes"
+    },
+    "metadata": {
+      "topic_a": "gardening_guide",
+      "topic_b": "financial_discussion",
+      "n_streams": 2,
+      "n_sentences_per_stream": 8,
+      "has_breakthrough": true,
+      "breakthrough_keyword": "ALERT",
+      "first_number_in_a": "11",
+      "stream_a_sentences": [
+        "Harvest when the sunflower reaches 11 inches tall.",
+        "Add potassium fertilizer once every 2 weeks.",
+        "Mulch with wood chips to retain moisture.",
+        "Prune the sunflower back to 8 inches in October.",
+        "Plant the basil seeds 2 inches deep.",
+        "Harvest when the sunflower reaches 14 inches tall.",
+        "Expect germination in 10 to 17 days.",
+        "Water thoroughly every 12 days during autumn."
+      ]
+    }
+  },
+  {
+    "task_id": "selective_easy_007",
+    "task_type": "selective",
+    "difficulty": "Easy",
+    "gold_answer": [
+      "11.3",
+      "1.8",
+      "31.8"
+    ],
+    "metadata": {
+      "domain": "weather",
+      "labeling": "explicit",
+      "signal_values": [
+        "11.3",
+        "1.8",
+        "31.8"
+      ],
+      "distractor_values": [
+        "-10.3",
+        "33.2",
+        "9.6"
+      ],
+      "n_signal": 3,
+      "n_distractor": 3,
+      "noise_ratio": 0.5
+    }
+  },
+  {
+    "task_id": "stroop_easy_001",
+    "task_type": "stroop",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "1": "1955",
+      "2": "Volga",
+      "3": "1801"
+    },
+    "metadata": {
+      "n_items": 3,
+      "instruction_clarity": "explicit",
+      "items": [
+        {
+          "sentence": "The French Revolution occurred in 1955",
+          "question": "What year is mentioned in the sentence?",
+          "correct": "1955",
+          "trap": "the actual year",
+          "category": "history"
+        },
+        {
+          "sentence": "The Volga is the longest river in Europe",
+          "question": "What river is mentioned?",
+          "correct": "Volga",
+          "trap": "the actual longest river",
+          "category": "geography"
+        },
+        {
+          "sentence": "The signing of the Magna Carta occurred in 1801",
+          "question": "What year is mentioned in the sentence?",
+          "correct": "1801",
+          "trap": "the actual year",
+          "category": "history"
+        }
+      ],
+      "trap_answers": {
+        "1": "the actual year",
+        "2": "the actual longest river",
+        "3": "the actual year"
+      },
+      "categories": [
+        "history",
+        "geography",
+        "history"
+      ]
+    }
+  },
+  {
+    "task_id": "selective_medium_013",
+    "task_type": "selective",
+    "difficulty": "Medium",
+    "gold_answer": [
+      "30.3",
+      "23.2",
+      "12.0",
+      "-3.7"
+    ],
+    "metadata": {
+      "domain": "weather",
+      "labeling": "inline",
+      "signal_values": [
+        "30.3",
+        "23.2",
+        "12.0",
+        "-3.7"
+      ],
+      "distractor_values": [
+        "21.8",
+        "11.5",
+        "34.0",
+        "4.8",
+        "11.7",
+        "38.4"
+      ],
+      "n_signal": 4,
+      "n_distractor": 6,
+      "noise_ratio": 0.6
+    }
+  },
+  {
+    "task_id": "stroop_medium_013",
+    "task_type": "stroop",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "1": "Danube",
+      "2": "85",
+      "3": "110",
+      "4": "166"
+    },
+    "metadata": {
+      "n_items": 4,
+      "instruction_clarity": "clear",
+      "items": [
+        {
+          "sentence": "The Danube is the longest river in South America",
+          "question": "What river is mentioned?",
+          "correct": "Danube",
+          "trap": "the actual longest river",
+          "category": "geography"
+        },
+        {
+          "sentence": "Water boils at 85 degrees Celsius at sea level",
+          "question": "What temperature is mentioned in the sentence?",
+          "correct": "85",
+          "trap": "100",
+          "category": "science"
+        },
+        {
+          "sentence": "Water boils at 110 degrees Celsius at sea level",
+          "question": "What temperature is mentioned in the sentence?",
+          "correct": "110",
+          "trap": "100",
+          "category": "science"
+        },
+        {
+          "sentence": "According to the report, 70 + 81 = 166",
+          "question": "What number does the report state as the sum?",
+          "correct": "166",
+          "trap": "151",
+          "category": "math"
+        }
+      ],
+      "trap_answers": {
+        "1": "the actual longest river",
+        "2": "100",
+        "3": "100",
+        "4": "151"
+      },
+      "categories": [
+        "geography",
+        "science",
+        "science",
+        "math"
+      ]
+    }
+  },
+  {
+    "task_id": "selective_hard_023",
+    "task_type": "selective",
+    "difficulty": "Hard",
+    "gold_answer": [
+      "429.8",
+      "106.6",
+      "387.6",
+      "350.2",
+      "75.0"
+    ],
+    "metadata": {
+      "domain": "lab_results",
+      "labeling": "subtle",
+      "signal_values": [
+        "429.8",
+        "106.6",
+        "387.6",
+        "350.2",
+        "75.0"
+      ],
+      "distractor_values": [
+        "446.1",
+        "221.7",
+        "451.8",
+        "195.0",
+        "449.0",
+        "93.6",
+        "110.5",
+        "198.2",
+        "81.5",
+        "94.0"
+      ],
+      "n_signal": 5,
+      "n_distractor": 10,
+      "noise_ratio": 0.667
+    }
+  },
+  {
+    "task_id": "stroop_hard_020",
+    "task_type": "stroop",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "1": "Australia",
+      "2": "Seine",
+      "3": "Germany",
+      "4": "75",
+      "5": "92",
+      "6": "Seine"
+    },
+    "metadata": {
+      "n_items": 6,
+      "instruction_clarity": "subtle",
+      "items": [
+        {
+          "sentence": "Paris is the capital of Australia",
+          "question": "What country is mentioned in the sentence?",
+          "correct": "Australia",
+          "trap": "France",
+          "category": "geography"
+        },
+        {
+          "sentence": "The Seine is the longest river in Africa",
+          "question": "What river is mentioned?",
+          "correct": "Seine",
+          "trap": "the actual longest river",
+          "category": "geography"
+        },
+        {
+          "sentence": "Paris is the capital of Germany",
+          "question": "What country is mentioned in the sentence?",
+          "correct": "Germany",
+          "trap": "France",
+          "category": "geography"
+        },
+        {
+          "sentence": "Water boils at 75 degrees Celsius at sea level",
+          "question": "What temperature is mentioned in the sentence?",
+          "correct": "75",
+          "trap": "100",
+          "category": "science"
+        },
+        {
+          "sentence": "Water boils at 92 degrees Celsius at sea level",
+          "question": "What temperature is mentioned in the sentence?",
+          "correct": "92",
+          "trap": "100",
+          "category": "science"
+        },
+        {
+          "sentence": "The Seine is the longest river in South America",
+          "question": "What river is mentioned?",
+          "correct": "Seine",
+          "trap": "the actual longest river",
+          "category": "geography"
+        }
+      ],
+      "trap_answers": {
+        "1": "France",
+        "2": "the actual longest river",
+        "3": "France",
+        "4": "100",
+        "5": "100",
+        "6": "the actual longest river"
+      },
+      "categories": [
+        "geography",
+        "geography",
+        "geography",
+        "science",
+        "science",
+        "geography"
+      ]
+    }
+  },
+  {
+    "task_id": "shifting_easy_007",
+    "task_type": "shifting",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "1": "early",
+      "2": "early",
+      "3": "early",
+      "4": "object",
+      "5": "animal",
+      "6": "food"
+    },
+    "metadata": {
+      "rule1": "first_letter",
+      "rule2": "category",
+      "rule_similarity": "low",
+      "warning_type": "header",
+      "pre_items": 3,
+      "post_items": 3,
+      "switch_point": 3,
+      "pre_answers": [
+        [
+          "hammer",
+          "early"
+        ],
+        [
+          "eagle",
+          "early"
+        ],
+        [
+          "mirror",
+          "early"
+        ]
+      ],
+      "post_answers": [
+        [
+          "shovel",
+          "object"
+        ],
+        [
+          "falcon",
+          "animal"
+        ],
+        [
+          "walnut",
+          "food"
+        ]
+      ],
+      "perseveration_answers": [
+        [
+          "shovel",
+          "late"
+        ],
+        [
+          "falcon",
+          "early"
+        ],
+        [
+          "walnut",
+          "late"
+        ]
+      ]
+    }
+  },
+  {
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "1": "Amara",
+      "2": "45.1",
+      "3": "15"
+    },
+    "metadata": {
+      "n_passages": 3,
+      "n_filler_between": 0,
+      "return_passage": "B",
+      "questions": [
+        {
+          "question_num": 1,
+          "passage": "B",
+          "passage_idx": 1,
+          "question": "Who logged the shipment?",
+          "answer_key": "person",
+          "gold": "Amara",
+          "phase": "initial"
+        },
+        {
+          "question_num": 2,
+          "passage": "A",
+          "passage_idx": 0,
+          "question": "What was the resulting concentration?",
+          "answer_key": "concentration",
+          "gold": "45.1",
+          "phase": "shift"
+        },
+        {
+          "question_num": 3,
+          "passage": "B",
+          "passage_idx": 1,
+          "question": "How many crates were in the shipment?",
+          "answer_key": "quantity",
+          "gold": "15",
+          "phase": "return"
+        }
+      ],
+      "n_questions": 3,
+      "return_delay": 1
+    }
+  },
+  {
+    "task_id": "shifting_medium_013",
+    "task_type": "shifting",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "1": "object",
+      "2": "animal",
+      "3": "animal",
+      "4": "food",
+      "5": "late",
+      "6": "late",
+      "7": "early",
+      "8": "late"
+    },
+    "metadata": {
+      "rule1": "category",
+      "rule2": "first_letter",
+      "rule_similarity": "low",
+      "warning_type": "inline",
+      "pre_items": 4,
+      "post_items": 4,
+      "switch_point": 4,
+      "pre_answers": [
+        [
+          "candle",
+          "object"
+        ],
+        [
+          "parrot",
+          "animal"
+        ],
+        [
+          "falcon",
+          "animal"
+        ],
+        [
+          "mango",
+          "food"
+        ]
+      ],
+      "post_answers": [
+        [
+          "shovel",
+          "late"
+        ],
+        [
+          "walnut",
+          "late"
+        ],
+        [
+          "donkey",
+          "early"
+        ],
+        [
+          "wrench",
+          "late"
+        ]
+      ],
+      "perseveration_answers": [
+        [
+          "shovel",
+          "object"
+        ],
+        [
+          "walnut",
+          "food"
+        ],
+        [
+          "donkey",
+          "animal"
+        ],
+        [
+          "wrench",
+          "object"
+        ]
+      ]
+    }
+  },
+  {
+    "task_id": "ior_medium_013",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "1": "8.9",
+      "2": "WH-2293",
+      "3": "Nalini"
+    },
+    "metadata": {
+      "n_passages": 3,
+      "n_filler_between": 1,
+      "return_passage": "C",
+      "questions": [
+        {
+          "question_num": 1,
+          "passage": "C",
+          "passage_idx": 2,
+          "question": "What was the resulting concentration?",
+          "answer_key": "concentration",
+          "gold": "8.9",
+          "phase": "initial"
+        },
+        {
+          "question_num": 2,
+          "passage": "B",
+          "passage_idx": 1,
+          "question": "What was the reference number?",
+          "answer_key": "ref",
+          "gold": "WH-2293",
+          "phase": "shift"
+        },
+        {
+          "question_num": 3,
+          "passage": "C",
+          "passage_idx": 2,
+          "question": "Who conducted the experiment?",
+          "answer_key": "person",
+          "gold": "Nalini",
+          "phase": "return"
+        }
+      ],
+      "n_questions": 3,
+      "return_delay": 1
+    }
+  },
+  {
+    "task_id": "shifting_hard_023",
+    "task_type": "shifting",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "1": "2",
+      "2": "2",
+      "3": "2",
+      "4": "2",
+      "5": "2",
+      "6": "food",
+      "7": "animal",
+      "8": "animal",
+      "9": "food",
+      "10": "object"
+    },
+    "metadata": {
+      "rule1": "syllables",
+      "rule2": "category",
+      "rule_similarity": "medium",
+      "warning_type": "subtle",
+      "pre_items": 5,
+      "post_items": 5,
+      "switch_point": 5,
+      "pre_answers": [
+        [
+          "eagle",
+          "2"
+        ],
+        [
+          "lobster",
+          "2"
+        ],
+        [
+          "walnut",
+          "2"
+        ],
+        [
+          "pigeon",
+          "2"
+        ],
+        [
+          "donkey",
+          "2"
+        ]
+      ],
+      "post_answers": [
+        [
+          "orange",
+          "food"
+        ],
+        [
+          "parrot",
+          "animal"
+        ],
+        [
+          "tiger",
+          "animal"
+        ],
+        [
+          "banana",
+          "food"
+        ],
+        [
+          "pencil",
+          "object"
+        ]
+      ],
+      "perseveration_answers": [
+        [
+          "orange",
+          "2"
+        ],
+        [
+          "parrot",
+          "2"
+        ],
+        [
+          "tiger",
+          "2"
+        ],
+        [
+          "banana",
+          "3+"
+        ],
+        [
+          "pencil",
+          "2"
+        ]
+      ]
+    }
+  },
+  {
+    "task_id": "ior_hard_020",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "1": "45",
+      "2": "72",
+      "3": "52",
+      "4": "33.6"
+    },
+    "metadata": {
+      "n_passages": 4,
+      "n_filler_between": 2,
+      "return_passage": "B",
+      "questions": [
+        {
+          "question_num": 1,
+          "passage": "B",
+          "passage_idx": 1,
+          "question": "How many minutes was the heating duration?",
+          "answer_key": "duration",
+          "gold": "45",
+          "phase": "initial"
+        },
+        {
+          "question_num": 2,
+          "passage": "A",
+          "passage_idx": 0,
+          "question": "How many crates were in the shipment?",
+          "answer_key": "quantity",
+          "gold": "72",
+          "phase": "shift"
+        },
+        {
+          "question_num": 3,
+          "passage": "D",
+          "passage_idx": 3,
+          "question": "What was the wind speed?",
+          "answer_key": "wind",
+          "gold": "52",
+          "phase": "shift"
+        },
+        {
+          "question_num": 4,
+          "passage": "B",
+          "passage_idx": 1,
+          "question": "What was the resulting concentration?",
+          "answer_key": "concentration",
+          "gold": "33.6",
+          "phase": "return"
+        }
+      ],
+      "n_questions": 4,
+      "return_delay": 2
+    }
+  },
+  {
+    "task_id": "anomaly_easy_003",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "primary": 28,
+      "anomaly_type": "language_switch",
+      "anomaly_sentence": "Le soleil se couchait derri\u00e8re les montagnes, peignant le ciel en nuances d'or et de pourpre."
+    },
+    "metadata": {
+      "primary_task": "count_word",
+      "target_word": "the",
+      "primary_answer": 28,
+      "anomaly_type": "language_switch",
+      "anomaly_saliency": "high",
+      "anomaly_position": 2,
+      "anomaly_sentence": "Le soleil se couchait derri\u00e8re les montagnes, peignant le ciel en nuances d'or et de pourpre.",
+      "detection_keywords": [
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "foreign",
+        "different language",
+        "non-english",
+        "another language"
+      ],
+      "passage_paragraphs": 9
+    }
+  },
+  {
+    "task_id": "anomaly_easy_004",
+    "task_type": "anomaly",
+    "difficulty": "Easy",
+    "gold_answer": {
+      "primary": 5,
+      "anomaly_type": "code_block",
+      "anomaly_sentence": "def calculate_total(items): return sum(item.price for item in items if item.is_valid)"
+    },
+    "metadata": {
+      "primary_task": "count_word",
+      "target_word": "and",
+      "primary_answer": 5,
+      "anomaly_type": "code_block",
+      "anomaly_saliency": "high",
+      "anomaly_position": 2,
+      "anomaly_sentence": "def calculate_total(items): return sum(item.price for item in items if item.is_valid)",
+      "detection_keywords": [
+        "code",
+        "programming",
+        "script",
+        "function",
+        "SQL",
+        "software",
+        "computer code",
+        "snippet"
+      ],
+      "passage_paragraphs": 9
+    }
+  },
+  {
+    "task_id": "anomaly_medium_011",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "primary": 2,
+      "anomaly_type": "language_switch",
+      "anomaly_sentence": "Le soleil se couchait derri\u00e8re les montagnes, peignant le ciel en nuances d'or et de pourpre."
+    },
+    "metadata": {
+      "primary_task": "count_word",
+      "target_word": "that",
+      "primary_answer": 2,
+      "anomaly_type": "language_switch",
+      "anomaly_saliency": "high",
+      "anomaly_position": 7,
+      "anomaly_sentence": "Le soleil se couchait derri\u00e8re les montagnes, peignant le ciel en nuances d'or et de pourpre.",
+      "detection_keywords": [
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "foreign",
+        "different language",
+        "non-english",
+        "another language"
+      ],
+      "passage_paragraphs": 16
+    }
+  },
+  {
+    "task_id": "anomaly_medium_015",
+    "task_type": "anomaly",
+    "difficulty": "Medium",
+    "gold_answer": {
+      "primary": 1,
+      "anomaly_type": "language_switch",
+      "anomaly_sentence": "Die alte Br\u00fccke \u00fcberquerte den Fluss seit mehr als dreihundert Jahren."
+    },
+    "metadata": {
+      "primary_task": "count_word",
+      "target_word": "was",
+      "primary_answer": 1,
+      "anomaly_type": "language_switch",
+      "anomaly_saliency": "high",
+      "anomaly_position": 4,
+      "anomaly_sentence": "Die alte Br\u00fccke \u00fcberquerte den Fluss seit mehr als dreihundert Jahren.",
+      "detection_keywords": [
+        "french",
+        "spanish",
+        "german",
+        "italian",
+        "foreign",
+        "different language",
+        "non-english",
+        "another language"
+      ],
+      "passage_paragraphs": 16
+    }
+  },
+  {
+    "task_id": "anomaly_hard_019",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "primary": 5,
+      "anomaly_type": "numerical_anomaly",
+      "anomaly_sentence": "The final invoice came to $12,000,000.00, which Soren paid without hesitation."
+    },
+    "metadata": {
+      "primary_task": "count_names",
+      "target_word": null,
+      "primary_answer": 5,
+      "anomaly_type": "numerical_anomaly",
+      "anomaly_saliency": "medium",
+      "anomaly_position": 13,
+      "anomaly_sentence": "The final invoice came to $12,000,000.00, which Soren paid without hesitation.",
+      "detection_keywords": [
+        "large",
+        "unusual",
+        "amount",
+        "million",
+        "expensive",
+        "anomalous",
+        "extraordinary",
+        "999",
+        "8,500",
+        "12,000"
+      ],
+      "passage_paragraphs": 21
+    }
+  },
+  {
+    "task_id": "anomaly_hard_021",
+    "task_type": "anomaly",
+    "difficulty": "Hard",
+    "gold_answer": {
+      "primary": 4,
+      "anomaly_type": "numerical_anomaly",
+      "anomaly_sentence": "The final invoice came to $999,999.00, which Colette paid without hesitation."
+    },
+    "metadata": {
+      "primary_task": "count_names",
+      "target_word": null,
+      "primary_answer": 4,
+      "anomaly_type": "numerical_anomaly",
+      "anomaly_saliency": "medium",
+      "anomaly_position": 11,
+      "anomaly_sentence": "The final invoice came to $999,999.00, which Colette paid without hesitation.",
+      "detection_keywords": [
+        "large",
+        "unusual",
+        "amount",
+        "million",
+        "expensive",
+        "anomalous",
+        "extraordinary",
+        "999",
+        "8,500",
+        "12,000"
+      ],
+      "passage_paragraphs": 21
+    }
+  }
+]
