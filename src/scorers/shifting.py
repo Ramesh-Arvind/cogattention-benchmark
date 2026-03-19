@@ -13,7 +13,11 @@ def score_shifting(instance: TaskInstance, response: str) -> ScoreResult:
     result.raw_response = response
 
     gold = instance.gold_answer  # Dict[str, str]: {"1": answer, "2": answer, ...}
-    switch_point = instance.metadata["switch_point"]
+    # Frontier uses switch_points (list) for triple-rule; others use switch_point (int)
+    if "switch_points" in instance.metadata:
+        switch_point = instance.metadata["switch_points"][0]  # first switch
+    else:
+        switch_point = instance.metadata["switch_point"]
     pre_answers = instance.metadata["pre_answers"]
     post_answers = instance.metadata["post_answers"]
     perseveration_answers = instance.metadata["perseveration_answers"]

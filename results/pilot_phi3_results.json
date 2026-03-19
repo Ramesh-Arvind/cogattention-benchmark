@@ -76,7 +76,7 @@
       "prompt_tokens": 734,
       "prompt_tokens_after_trunc": 734,
       "generation_tokens": 245,
-      "latency_s": 0.91
+      "latency_s": 0.92
     },
     "raw_response": " ANSWER:\n1. The word \"and\" appears 5 times in the passage.\n2. Nothing unusual; the passage is coherent and there are no glaring inconsistencies or errors.\n\n---\n\nGiven the additional task to count the word \"and\" in the extended passage provided, the updated answer would be:\n\nANSWER:\n1. The word \"and\" appears 7 times in the extended passage.\n2. Nothing unusual; the passage is coherent and there are no glaring inconsistencies or errors.\n\n---\n\nFor the final comprehensive answer including the entire passage:\n\nANSWER:\n1. The word \"and\" appears 7 times in the entire passage.\n2. Nothing unusual; the passage is coherent and there are no glaring inconsistencies or errors.\n\n---\n\nPlease note that the count of \"and\" includes all instances within the provided text, regardless of the passage's context or content. The passage does not contain any unusual or out of place elements, as it is a well-structured collection of sentences and descriptions."
   },
@@ -211,9 +211,343 @@
       "prompt_tokens": 1222,
       "prompt_tokens_after_trunc": 1222,
       "generation_tokens": 66,
-      "latency_s": 0.26
+      "latency_s": 0.25
     },
     "raw_response": " 1. $42.07 + $109.21 + $23.83 + $83.26 = $258.37\n2. Nothing unusual\n\nANSWER:\n1. $258.37\n2. nothing unusual"
+  },
+  {
+    "task_id": "anomaly_frontier_032",
+    "task_type": "anomaly",
+    "difficulty": "Frontier",
+    "primary_accuracy": 0.0,
+    "anomaly_detection": 0.0,
+    "dual_task_score": 0.0,
+    "details": {
+      "pred_primary": "$339.26",
+      "gold_primary": 339.23,
+      "primary_correct": false,
+      "pred_anomaly": "Nothing unusual",
+      "anomaly_detected": false,
+      "anomaly_type": "off_by_one",
+      "anomaly_saliency": "ultra_low"
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "anomaly_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 1638,
+      "prompt_tokens_after_trunc": 1638,
+      "generation_tokens": 17,
+      "latency_s": 0.09
+    },
+    "raw_response": " 1. $339.26\n2. Nothing unusual\n"
+  },
+  {
+    "task_id": "anomaly_frontier_033",
+    "task_type": "anomaly",
+    "difficulty": "Frontier",
+    "primary_accuracy": 1.0,
+    "anomaly_detection": 0.0,
+    "dual_task_score": 0.4,
+    "details": {
+      "pred_primary": "$394.16",
+      "gold_primary": 394.16,
+      "primary_correct": true,
+      "pred_anomaly": "nothing unusual",
+      "anomaly_detected": false,
+      "anomaly_type": "single_char_swap",
+      "anomaly_saliency": "ultra_low"
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "anomaly_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 1604,
+      "prompt_tokens_after_trunc": 1604,
+      "generation_tokens": 67,
+      "latency_s": 0.27
+    },
+    "raw_response": " 1. $192.72 + $63.45 + $34.12 + $103.87 = $394.16\n2. Nothing unusual\n\nANSWER:\n1. $394.16\n2. nothing unusual"
+  },
+  {
+    "task_id": "blink_easy_000",
+    "task_type": "blink",
+    "difficulty": "Easy",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "pavilion",
+      "gold_t1": "EMERALD",
+      "gold_t2": "forty-five",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 8
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 218,
+      "prompt_tokens_after_trunc": 218,
+      "generation_tokens": 15,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: EMERALD\nT2: pavilion"
+  },
+  {
+    "task_id": "blink_easy_001",
+    "task_type": "blink",
+    "difficulty": "Easy",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "column",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "nine-million",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 8
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 212,
+      "prompt_tokens_after_trunc": 212,
+      "generation_tokens": 13,
+      "latency_s": 0.05
+    },
+    "raw_response": " T1: DIAMOND\nT2: column"
+  },
+  {
+    "task_id": "blink_medium_008",
+    "task_type": "blink",
+    "difficulty": "Medium",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "pavilion",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "seven-hundred",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 269,
+      "prompt_tokens_after_trunc": 269,
+      "generation_tokens": 15,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: DIAMOND\nT2: pavilion"
+  },
+  {
+    "task_id": "blink_medium_009",
+    "task_type": "blink",
+    "difficulty": "Medium",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "pavilion",
+      "gold_t1": "EMERALD",
+      "gold_t2": "sixty-three",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 268,
+      "prompt_tokens_after_trunc": 268,
+      "generation_tokens": 15,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: EMERALD\nT2: pavilion"
+  },
+  {
+    "task_id": "blink_hard_016",
+    "task_type": "blink",
+    "difficulty": "Hard",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 1.0,
+    "t2_given_t1": 1.0,
+    "accuracy": 1.0,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "PENGUIN",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "PENGUIN",
+      "t1_correct": true,
+      "t2_correct": true,
+      "lag": 3
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 319,
+      "prompt_tokens_after_trunc": 319,
+      "generation_tokens": 17,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: DIAMOND\nT2: PENGUIN"
+  },
+  {
+    "task_id": "blink_hard_017",
+    "task_type": "blink",
+    "difficulty": "Hard",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 1.0,
+    "t2_given_t1": 1.0,
+    "accuracy": 1.0,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "PENGUIN",
+      "gold_t1": "EMERALD",
+      "gold_t2": "PENGUIN",
+      "t1_correct": true,
+      "t2_correct": true,
+      "lag": 3
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 324,
+      "prompt_tokens_after_trunc": 324,
+      "generation_tokens": 17,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: EMERALD\nT2: PENGUIN"
+  },
+  {
+    "task_id": "blink_expert_024",
+    "task_type": "blink",
+    "difficulty": "Expert",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "GARNET",
+      "pred_t2": "COLUMN",
+      "gold_t1": "GARNET",
+      "gold_t2": "twenty-eight",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 2
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 374,
+      "prompt_tokens_after_trunc": 374,
+      "generation_tokens": 13,
+      "latency_s": 0.05
+    },
+    "raw_response": " T1: GARNET\nT2: COLUMN"
+  },
+  {
+    "task_id": "blink_expert_025",
+    "task_type": "blink",
+    "difficulty": "Expert",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "OPAL",
+      "pred_t2": "chimney",
+      "gold_t1": "OPAL",
+      "gold_t2": "nine-million",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 2
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 374,
+      "prompt_tokens_after_trunc": 374,
+      "generation_tokens": 12,
+      "latency_s": 0.05
+    },
+    "raw_response": " T1: OPAL\nT2: chimney"
+  },
+  {
+    "task_id": "blink_frontier_032",
+    "task_type": "blink",
+    "difficulty": "Frontier",
+    "t1_accuracy": 0.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.0,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "passage",
+      "gold_t1": "sixty-three",
+      "gold_t2": "DIAMOND",
+      "t1_correct": false,
+      "t2_correct": false,
+      "lag": 1
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 538,
+      "prompt_tokens_after_trunc": 538,
+      "generation_tokens": 13,
+      "latency_s": 0.06
+    },
+    "raw_response": " T1: DIAMOND\nT2: passage"
+  },
+  {
+    "task_id": "blink_frontier_033",
+    "task_type": "blink",
+    "difficulty": "Frontier",
+    "t1_accuracy": 0.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.0,
+    "details": {
+      "pred_t1": "OPAL",
+      "pred_t2": "bridge",
+      "gold_t1": "sixty-three",
+      "gold_t2": "OPAL",
+      "t1_correct": false,
+      "t2_correct": false,
+      "lag": 1
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "blink_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 534,
+      "prompt_tokens_after_trunc": 534,
+      "generation_tokens": 11,
+      "latency_s": 0.05
+    },
+    "raw_response": " T1: OPAL\nT2: bridge"
   },
   {
     "task_id": "capacity_easy_000",
@@ -223,27 +557,27 @@
     "correct_count": 0,
     "total_people": 2,
     "details": {
-      "Haruto": {
+      "Yuki": {
         "status": "incorrect",
-        "predicted": "jade dice",
-        "gold": "amber coin"
+        "predicted": "Jade book",
+        "gold": "blue mirror"
       },
-      "Femi": {
+      "Kenji": {
         "status": "incorrect",
-        "predicted": "amber coin",
-        "gold": "jade dice"
+        "predicted": "Blue mirror",
+        "gold": "jade book"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_easy_000",
       "model": "phi3",
-      "prompt_tokens": 125,
-      "prompt_tokens_after_trunc": 125,
-      "generation_tokens": 22,
-      "latency_s": 0.08
+      "prompt_tokens": 124,
+      "prompt_tokens_after_trunc": 124,
+      "generation_tokens": 79,
+      "latency_s": 0.27
     },
-    "raw_response": " ANSWER:\n- Haruto: jade dice\n- Femi: amber coin"
+    "raw_response": " ANSWER:\n- Yuki: Jade book\n- Kenji: Blue mirror\n\nExplanation: After the first swap, Yuki has the jade book and Kenji has the blue mirror. After the second swap, they switch back to their original items. Therefore, Yuki ends up with the jade book and Kenji with the blue mirror."
   },
   {
     "task_id": "capacity_easy_001",
@@ -253,62 +587,62 @@
     "correct_count": 0,
     "total_people": 2,
     "details": {
-      "Priya": {
+      "Joaquin": {
         "status": "incorrect",
-        "predicted": "Copper shell",
-        "gold": "onyx book"
+        "predicted": "Jade dagger",
+        "gold": "bronze mirror"
       },
-      "Leif": {
+      "Adaeze": {
         "status": "incorrect",
-        "predicted": "Onyx book",
-        "gold": "copper shell"
+        "predicted": "Bronze mirror",
+        "gold": "jade dagger"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_easy_001",
       "model": "phi3",
-      "prompt_tokens": 126,
-      "prompt_tokens_after_trunc": 126,
-      "generation_tokens": 24,
+      "prompt_tokens": 131,
+      "prompt_tokens_after_trunc": 131,
+      "generation_tokens": 26,
       "latency_s": 0.09
     },
-    "raw_response": " ANSWER:\n- Priya: Copper shell\n- Leif: Onyx book\n"
+    "raw_response": " ANSWER:\n- Joaquin: Jade dagger\n- Adaeze: Bronze mirror\n"
   },
   {
     "task_id": "capacity_medium_008",
     "task_type": "capacity",
     "difficulty": "Medium",
-    "accuracy": 0.0,
-    "correct_count": 0,
+    "accuracy": 0.3333,
+    "correct_count": 1,
     "total_people": 3,
     "details": {
-      "Qadir": {
-        "status": "incorrect",
-        "predicted": "onyx flask",
-        "gold": "coral book"
+      "Haruto": {
+        "status": "correct",
+        "predicted": "ivory locket",
+        "gold": "ivory locket"
       },
-      "Leif": {
+      "Adaeze": {
         "status": "incorrect",
-        "predicted": "silver ring",
-        "gold": "onyx flask"
+        "predicted": "russet pendant",
+        "gold": "onyx chalice"
       },
-      "Wren": {
+      "Elara": {
         "status": "incorrect",
-        "predicted": "coral book",
-        "gold": "silver ring"
+        "predicted": "onyx chalice",
+        "gold": "russet pendant"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_medium_008",
       "model": "phi3",
-      "prompt_tokens": 167,
-      "prompt_tokens_after_trunc": 167,
-      "generation_tokens": 31,
-      "latency_s": 0.11
+      "prompt_tokens": 171,
+      "prompt_tokens_after_trunc": 171,
+      "generation_tokens": 36,
+      "latency_s": 0.13
     },
-    "raw_response": " ANSWER:\n- Qadir: onyx flask\n- Leif: silver ring\n- Wren: coral book"
+    "raw_response": " ANSWER:\n- Haruto: ivory locket\n- Adaeze: russet pendant\n- Elara: onyx chalice\n"
   },
   {
     "task_id": "capacity_medium_009",
@@ -318,202 +652,1268 @@
     "correct_count": 1,
     "total_people": 3,
     "details": {
-      "Orla": {
+      "Zain": {
         "status": "incorrect",
-        "predicted": "ivory book",
-        "gold": "ochre locket"
+        "predicted": "Teal scroll",
+        "gold": "bronze book"
       },
-      "Ugo": {
-        "status": "incorrect",
-        "predicted": "ochre locket",
-        "gold": "ivory book"
-      },
-      "Sigrid": {
+      "Wren": {
         "status": "correct",
-        "predicted": "silver lantern",
-        "gold": "silver lantern"
+        "predicted": "Jade pendant",
+        "gold": "jade pendant"
+      },
+      "Hana": {
+        "status": "incorrect",
+        "predicted": "Bronze book",
+        "gold": "teal scroll"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_medium_009",
       "model": "phi3",
-      "prompt_tokens": 165,
-      "prompt_tokens_after_trunc": 165,
-      "generation_tokens": 32,
-      "latency_s": 0.12
+      "prompt_tokens": 163,
+      "prompt_tokens_after_trunc": 163,
+      "generation_tokens": 30,
+      "latency_s": 0.11
     },
-    "raw_response": " ANSWER:\n- Orla: ivory book\n- Ugo: ochre locket\n- Sigrid: silver lantern\n"
+    "raw_response": " ANSWER:\n- Zain: Teal scroll\n- Wren: Jade pendant\n- Hana: Bronze book"
   },
   {
     "task_id": "capacity_hard_016",
     "task_type": "capacity",
     "difficulty": "Hard",
-    "accuracy": 0.5,
-    "correct_count": 2,
+    "accuracy": 0.25,
+    "correct_count": 1,
     "total_people": 4,
     "details": {
-      "Tala": {
-        "status": "correct",
-        "predicted": "onyx lantern",
-        "gold": "onyx lantern"
-      },
-      "Nico": {
-        "status": "correct",
-        "predicted": "coral dice",
-        "gold": "coral dice"
-      },
-      "Vesna": {
+      "Yara": {
         "status": "incorrect",
-        "predicted": "pearl book",
-        "gold": "blue dagger"
+        "predicted": "Silver locket",
+        "gold": "pearl candle"
       },
-      "Elio": {
+      "Soren": {
+        "status": "correct",
+        "predicted": "Teal ring",
+        "gold": "teal ring"
+      },
+      "Zain": {
         "status": "incorrect",
-        "predicted": "blue dagger",
-        "gold": "pearl book"
+        "predicted": "Cobalt mirror",
+        "gold": "silver locket"
+      },
+      "Uma": {
+        "status": "incorrect",
+        "predicted": "Pearl candle",
+        "gold": "cobalt mirror"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_hard_016",
       "model": "phi3",
-      "prompt_tokens": 223,
-      "prompt_tokens_after_trunc": 223,
-      "generation_tokens": 43,
-      "latency_s": 0.16
+      "prompt_tokens": 217,
+      "prompt_tokens_after_trunc": 217,
+      "generation_tokens": 40,
+      "latency_s": 0.14
     },
-    "raw_response": " ANSWER:\n- Tala: onyx lantern\n- Nico: coral dice\n- Vesna: pearl book\n- Elio: blue dagger\n"
+    "raw_response": " ANSWER:\n- Yara: Silver locket\n- Soren: Teal ring\n- Zain: Cobalt mirror\n- Uma: Pearl candle\n"
   },
   {
     "task_id": "capacity_hard_017",
     "task_type": "capacity",
     "difficulty": "Hard",
-    "accuracy": 1.0,
-    "correct_count": 4,
+    "accuracy": 0.5,
+    "correct_count": 2,
     "total_people": 4,
     "details": {
-      "Tariq": {
+      "Maren": {
         "status": "correct",
-        "predicted": "ochre feather",
-        "gold": "ochre feather"
+        "predicted": "slate mask",
+        "gold": "slate mask"
       },
-      "Runa": {
-        "status": "correct",
-        "predicted": "crimson flask",
-        "gold": "crimson flask"
+      "Gael": {
+        "status": "incorrect",
+        "predicted": "crimson lantern",
+        "gold": "green flask"
       },
-      "Paloma": {
-        "status": "correct",
-        "predicted": "silver stone",
-        "gold": "silver stone"
+      "Nalini": {
+        "status": "incorrect",
+        "predicted": "green flask",
+        "gold": "amber candle"
       },
-      "Kaia": {
+      "Ines": {
         "status": "correct",
-        "predicted": "onyx key",
-        "gold": "onyx key"
+        "predicted": "crimson lantern",
+        "gold": "crimson lantern"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_hard_017",
       "model": "phi3",
-      "prompt_tokens": 220,
-      "prompt_tokens_after_trunc": 220,
-      "generation_tokens": 41,
-      "latency_s": 0.15
+      "prompt_tokens": 221,
+      "prompt_tokens_after_trunc": 221,
+      "generation_tokens": 370,
+      "latency_s": 1.29
     },
-    "raw_response": " ANSWER:\n- Tariq: ochre feather\n- Runa: crimson flask\n- Paloma: silver stone\n- Kaia: onyx key\n"
+    "raw_response": " ANSWER:\n- Maren: slate mask\n- Gael: green flask\n- Nalini: amber candle\n- Ines: crimson lantern\n\nHere's the breakdown of the swaps:\n1. Gael and Nalini swap: Gael now has the crimson lantern, Nalini has the green flask.\n2. Nalini and Ines swap: Nalini now has the amber candle, Ines has the slate mask.\n3. Gael and Ines swap: Gael now has the slate mask, Ines has the crimson lantern.\n4. Nalini and Ines swap: Nalini now has the crimson lantern, Ines has the green flask.\n5. Gael and Nalini swap: Gael now has the green flask, Nalini has the slate mask.\n6. Nalini and Ines swap: Nalini now has the green flask, Ines has the crimson lantern.\n7. Gael and Ines swap: Gael now has the crimson lantern, Ines has the green flask.\n\nAfter the final swap, Gael has the crimson lantern, Nalini has the green flask, Maren still has the slate mask, and Ines has the green flask. However, there seems to be a mistake in the final answer provided. Ines should have the crimson lantern, not the green flask. Here is the corrected final answer:\n\nANSWER:\n- Maren: slate mask\n- Gael: crimson lantern\n- Nalini: green flask\n- Ines: crimson lantern"
   },
   {
     "task_id": "capacity_expert_024",
     "task_type": "capacity",
     "difficulty": "Expert",
-    "accuracy": 0.8,
-    "correct_count": 4,
+    "accuracy": 0.2,
+    "correct_count": 1,
     "total_people": 5,
     "details": {
-      "Lumi": {
+      "Soren": {
+        "status": "incorrect",
+        "predicted": "ivory coin",
+        "gold": "bronze mask"
+      },
+      "Joaquin": {
         "status": "correct",
-        "predicted": "Green bell",
-        "gold": "green bell"
+        "predicted": "ochre book",
+        "gold": "ochre book"
+      },
+      "Yara": {
+        "status": "incorrect",
+        "predicted": "slate bell",
+        "gold": "russet scroll"
+      },
+      "Qadir": {
+        "status": "incorrect",
+        "predicted": "russet scroll",
+        "gold": "ivory coin"
       },
       "Yuki": {
-        "status": "correct",
-        "predicted": "Indigo dagger",
-        "gold": "indigo dagger"
-      },
-      "Bashir": {
-        "status": "correct",
-        "predicted": "Copper mask",
-        "gold": "copper mask"
-      },
-      "Gael": {
         "status": "incorrect",
-        "predicted": "Copper mask",
-        "gold": "blue pendant"
-      },
-      "Leif": {
-        "status": "correct",
-        "predicted": "Slate locket",
-        "gold": "slate locket"
+        "predicted": "bronze mask",
+        "gold": "slate bell"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_expert_024",
       "model": "phi3",
-      "prompt_tokens": 289,
-      "prompt_tokens_after_trunc": 289,
-      "generation_tokens": 431,
-      "latency_s": 1.57
+      "prompt_tokens": 300,
+      "prompt_tokens_after_trunc": 300,
+      "generation_tokens": 48,
+      "latency_s": 0.17
     },
-    "raw_response": " ANSWER:\n- Lumi: Green bell\n- Yuki: Indigo dagger\n- Bashir: Copper mask\n- Gael: Leaf\n- Leif: Slate locket\n\nHere's the breakdown of the swaps:\n1. Lumi and Gael swap: Lumi has the copper mask, Gael has the slate locket.\n2. Lumi and Leif swap: Lumi has the green bell, Leif has the copper mask.\n3. Bashir and Gael swap: Bashir has the slate locket, Gael has the copper mask.\n4. Gael and Leif swap: Gael has the copper mask, Leif has the slate locket.\n5. Lumi and Bashir swap: Lumi has the slate locket, Bashir has the copper mask.\n6. Gael and Leif swap: Gael has the slate locket, Leif has the copper mask.\n7. Lumi and Leif swap: Lumi has the green bell, Leif has the slate locket.\n8. Lumi and Yuki swap: Lumi has the indigo dagger, Yuki has the green bell.\n9. Gael and Leif swap: Gael has the slate locket, Leif has the copper mask.\n10. Lumi and Yuki swap: Lumi has the green bell, Yuki has the indigo dagger.\n11. Gael and Leif swap: Gael has the copper mask, Leif has the slate locket.\n12. Lumi and Bashir swap: Lumi has the copper mask, Bashir has the slate locket.\n\nFinal positions after all swaps:\n- Lumi: Green bell\n- Yuki: Indigo dagger\n- Bashir: Copper mask\n- Gael: Copper mask\n- Leif: Slate locket"
+    "raw_response": " ANSWER:\n- Soren: ivory coin\n- Joaquin: ochre book\n- Yara: slate bell\n- Qadir: russet scroll\n- Yuki: bronze mask\n"
   },
   {
     "task_id": "capacity_expert_025",
     "task_type": "capacity",
     "difficulty": "Expert",
-    "accuracy": 0.4,
-    "correct_count": 2,
+    "accuracy": 0.2,
+    "correct_count": 1,
     "total_people": 5,
     "details": {
-      "Idris": {
-        "status": "incorrect",
-        "predicted": "Pearl chalice",
-        "gold": "golden dice"
-      },
-      "Zora": {
+      "Paloma": {
         "status": "correct",
-        "predicted": "Indigo book",
-        "gold": "indigo book"
+        "predicted": "Silver lantern",
+        "gold": "silver lantern"
       },
-      "Qadir": {
+      "Joaquin": {
         "status": "incorrect",
-        "predicted": "Amber shell",
-        "gold": "bronze compass"
+        "predicted": "Cobalt candle",
+        "gold": "copper flask"
       },
-      "Yuki": {
+      "Kenji": {
         "status": "incorrect",
-        "predicted": "Bronze compass",
-        "gold": "amber shell"
+        "predicted": "Pearl ring",
+        "gold": "bronze bell"
       },
-      "Greta": {
-        "status": "correct",
-        "predicted": "Pearl chalice",
-        "gold": "pearl chalice"
+      "Runa": {
+        "status": "incorrect",
+        "predicted": "Copper flask",
+        "gold": "cobalt candle"
+      },
+      "Lumi": {
+        "status": "incorrect",
+        "predicted": "Bronze bell",
+        "gold": "pearl ring"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "capacity_expert_025",
       "model": "phi3",
-      "prompt_tokens": 300,
-      "prompt_tokens_after_trunc": 300,
-      "generation_tokens": 561,
-      "latency_s": 2.0
+      "prompt_tokens": 297,
+      "prompt_tokens_after_trunc": 297,
+      "generation_tokens": 49,
+      "latency_s": 0.17
     },
-    "raw_response": " ANSWER:\n- Idris: Pearl chalice\n- Zora: Indigo book\n- Qadir: Bronze compass\n- Yuki: Amber shell\n- Greta: Golden dice\n\nHere's the breakdown of the swaps:\n1. Zora (golden dice) and Qadir (pearl chalice) swap: Zora has pearl chalice, Qadir has golden dice.\n2. Zora (pearl chalice) and Greta (indigo book) swap: Zora has indigo book, Greta has pearl chalice.\n3. Idris (amber shell) and Zora (indigo book) swap: Idris has indigo book, Zora has amber shell.\n4. Idris (indigo book) and Qadir (golden dice) swap: Idris has golden dice, Qadir has indigo book.\n5. Zora (amber shell) and Yuki (bronze compass) swap: Zora has bronze compass, Yuki has amber shell.\n6. Idris (golden dice) and Qadir (indigo book) swap: Idris has indigo book, Qadir has golden dice.\n7. Zora (bronze compass) and Qadir (golden dice) swap: Zora has golden dice, Qadir has bronze compass.\n8. Zora (golden dice) and Yuki (amber shell) swap: Zora has amber shell, Yuki has golden dice.\n9. Qadir (bronze compass) and Yuki (golden dice) swap: Qadir has golden dice, Yuki has bronze compass.\n10. Idris (indigo book) and Qadir (golden dice) swap: Idris has golden dice, Qadir has indigo book.\n11. Zora (amber shell) and Qadir (indigo book) swap: Zora has indigo book, Qadir has amber shell.\n12. Qadir (amber shell) and Yuki (bronze compass) swap: Qadir has bronze compass, Yuki has indigo book.\n\nFinal positions after all swaps:\n- Idris: Golden dice\n- Zora: Indigo book\n- Qadir: Amber shell\n- Yuki: Bronze compass\n- Greta: Pearl chalice"
+    "raw_response": " ANSWER:\n- Paloma: Silver lantern\n- Joaquin: Cobalt candle\n- Kenji: Pearl ring\n- Runa: Copper flask\n- Lumi: Bronze bell\n"
+  },
+  {
+    "task_id": "capacity_frontier_032",
+    "task_type": "capacity",
+    "difficulty": "Frontier",
+    "accuracy": 0.125,
+    "correct_count": 1,
+    "total_people": 8,
+    "details": {
+      "Lumi": {
+        "status": "incorrect",
+        "predicted": "Jade bell",
+        "gold": "russet mask"
+      },
+      "Joaquin": {
+        "status": "incorrect",
+        "predicted": "Blue pendant",
+        "gold": "coral candle"
+      },
+      "Yuki": {
+        "status": "incorrect",
+        "predicted": "Bronze flask",
+        "gold": "teal stone"
+      },
+      "Tala": {
+        "status": "incorrect",
+        "predicted": "Coral candle",
+        "gold": "pearl mirror"
+      },
+      "Greta": {
+        "status": "incorrect",
+        "predicted": "Teal stone",
+        "gold": "bronze flask"
+      },
+      "Tariq": {
+        "status": "correct",
+        "predicted": "Silver lantern",
+        "gold": "silver lantern"
+      },
+      "Bram": {
+        "status": "incorrect",
+        "predicted": "Pearl mirror",
+        "gold": "blue pendant"
+      },
+      "Wren": {
+        "status": "incorrect",
+        "predicted": "Russet mask",
+        "gold": "jade bell"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "capacity_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 513,
+      "prompt_tokens_after_trunc": 513,
+      "generation_tokens": 145,
+      "latency_s": 0.52
+    },
+    "raw_response": " ANSWER:\n- Lumi: Jade bell\n- Joaquin: Blue pendant\n- Yuki: Bronze flask\n- Tala: Coral candle\n- Greta: Teal stone\n- Bram: Pearl mirror\n- Wren: Russet mask\n- Tariq: Silver lantern\n- ANSWER:\n- Lumi: Jade bell\n- Joaquin: Blue pendant\n- Yuki: Bronze flask\n- Tala: Coral candle\n- Greta: Teal stone\n- Bram: Pearl mirror\n- Wren: Russet mask\n- Tariq: Silver lantern"
+  },
+  {
+    "task_id": "capacity_frontier_033",
+    "task_type": "capacity",
+    "difficulty": "Frontier",
+    "accuracy": 0.25,
+    "correct_count": 2,
+    "total_people": 8,
+    "details": {
+      "Bashir": {
+        "status": "incorrect",
+        "predicted": "Jade dagger",
+        "gold": "coral ring"
+      },
+      "Freya": {
+        "status": "correct",
+        "predicted": "Teal coin",
+        "gold": "teal coin"
+      },
+      "Willa": {
+        "status": "correct",
+        "predicted": "Cobalt bell",
+        "gold": "cobalt bell"
+      },
+      "Colette": {
+        "status": "incorrect",
+        "predicted": "Cobalt bell",
+        "gold": "jade dagger"
+      },
+      "Greta": {
+        "status": "incorrect",
+        "predicted": "Silver pendant",
+        "gold": "blue key"
+      },
+      "Nalini": {
+        "status": "incorrect",
+        "predicted": "Bronze feather",
+        "gold": "silver pendant"
+      },
+      "Tala": {
+        "status": "incorrect",
+        "predicted": "Silver pendant",
+        "gold": "indigo flask"
+      },
+      "Sigrid": {
+        "status": "incorrect",
+        "predicted": "Indigo flask",
+        "gold": "bronze feather"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "capacity_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 503,
+      "prompt_tokens_after_trunc": 503,
+      "generation_tokens": 530,
+      "latency_s": 1.88
+    },
+    "raw_response": " ANSWER:\n- Bashir: Teal coin\n- Freya: Coral ring\n- Willa: Silver pendant\n- Colette: Jade dagger\n- Greta: Bronze feather\n- Nalini: Blue key\n- Tala: Indigo flask\n- Sigrid: Cobalt bell\n- Colette: Bronze feather\n- Greta: Indigo flask\n- Willa: Blue key\n- Bashir: Cobalt bell\n- Freya: Jade dagger\n- Colette: Teal coin\n- Nalini: Silver pendant\n- Tala: Coral ring\n- Sigrid: Blue key\n- Willa: Cobalt bell\n- Bashir: Jade dagger\n- Freya: Teal coin\n- Colette: Indigo flask\n- Nalini: Cobalt bell\n- Tala: Silver pendant\n- Sigrid: Blue key\n- Willa: Bronze feather\n- Bashir: Cobalt bell\n- Freya: Cobalt bell\n- Colette: Teal coin\n- Nalini: Jade dagger\n- Greta: Silver pendant\n- Willa: Indigo flask\n- Bashir: Bronze feather\n- Freya: Cobalt bell\n- Colette: Bronze feather\n- Nalini: Teal coin\n- Tala: Coral ring\n- Sigrid: Indigo flask\n- Willa: Cobalt bell\n- Bashir: Jade dagger\n- Freya: Teal coin\n- Colette: Cobalt bell\n- Nalini: Bronze feather\n- Tala: Silver pendant\n- Sigrid: Blue key\n- Willa: Cobalt bell\n- Bashir: Jade dagger\n- Freya: Teal coin\n- Colette: Indigo flask\n- Nalini: Cobalt bell\n- Greta: Silver pendant\n- Willa: Bronze feather\n- Bashir: Cobalt bell\n- Freya: Cobalt bell\n- Colette: Teal coin\n- Nalini: Jade dagger\n- Tala: Coral ring\n- Sigrid: Blue key\n- Willa: Cobalt bell\n- Bashir: Jade dagger\n- Freya: Teal coin\n- Colette: Cobalt bell\n- Nalini: Bronze feather\n- Tala: Silver pendant\n- Sigrid: Indigo flask"
+  },
+  {
+    "task_id": "dilution_easy_000",
+    "task_type": "context_dilution",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Olive",
+      "gold": "olive",
+      "correct": true,
+      "word_count": 1017,
+      "is_shuffled": false,
+      "needle_depth": 0.5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 1577,
+      "prompt_tokens_after_trunc": 1577,
+      "generation_tokens": 3,
+      "latency_s": 0.03
+    },
+    "raw_response": " Olive"
+  },
+  {
+    "task_id": "dilution_easy_001",
+    "task_type": "context_dilution",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Olive",
+      "gold": "olive",
+      "correct": true,
+      "word_count": 1032,
+      "is_shuffled": true,
+      "needle_depth": 0.25
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 1561,
+      "prompt_tokens_after_trunc": 1561,
+      "generation_tokens": 3,
+      "latency_s": 0.03
+    },
+    "raw_response": " Olive"
+  },
+  {
+    "task_id": "dilution_medium_008",
+    "task_type": "context_dilution",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Charcoal",
+      "gold": "charcoal",
+      "correct": true,
+      "word_count": 4043,
+      "is_shuffled": false,
+      "needle_depth": 0.25
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 6075,
+      "prompt_tokens_after_trunc": 6075,
+      "generation_tokens": 4,
+      "latency_s": 0.11
+    },
+    "raw_response": " Charcoal"
+  },
+  {
+    "task_id": "dilution_medium_009",
+    "task_type": "context_dilution",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Sapphire",
+      "gold": "sapphire",
+      "correct": true,
+      "word_count": 4025,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 5870,
+      "prompt_tokens_after_trunc": 5870,
+      "generation_tokens": 4,
+      "latency_s": 0.1
+    },
+    "raw_response": " Sapphire"
+  },
+  {
+    "task_id": "dilution_hard_016",
+    "task_type": "context_dilution",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Vermillion",
+      "gold": "vermillion",
+      "correct": true,
+      "word_count": 8045,
+      "is_shuffled": false,
+      "needle_depth": 0.75
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 11918,
+      "prompt_tokens_after_trunc": 11918,
+      "generation_tokens": 4,
+      "latency_s": 0.22
+    },
+    "raw_response": " Vermillion"
+  },
+  {
+    "task_id": "dilution_hard_017",
+    "task_type": "context_dilution",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Tangerine",
+      "gold": "tangerine",
+      "correct": true,
+      "word_count": 8023,
+      "is_shuffled": true,
+      "needle_depth": 0.25
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 11527,
+      "prompt_tokens_after_trunc": 11527,
+      "generation_tokens": 4,
+      "latency_s": 0.22
+    },
+    "raw_response": " Tangerine"
+  },
+  {
+    "task_id": "dilution_expert_024",
+    "task_type": "context_dilution",
+    "difficulty": "Expert",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The document does not provide information about the color of Joaquin's automobile.",
+      "gold": "sapphire",
+      "correct": false,
+      "word_count": 16036,
+      "is_shuffled": false,
+      "needle_depth": 0.25
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 23583,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 19,
+      "latency_s": 0.08
+    },
+    "raw_response": " The document does not provide information about the color of Joaquin's automobile."
+  },
+  {
+    "task_id": "dilution_expert_025",
+    "task_type": "context_dilution",
+    "difficulty": "Expert",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "Car",
+      "gold": "platinum",
+      "correct": false,
+      "word_count": 16019,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 23041,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 2,
+      "latency_s": 0.02
+    },
+    "raw_response": " Car"
+  },
+  {
+    "task_id": "dilution_frontier_032",
+    "task_type": "context_dilution",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "White",
+      "gold": "cerulean",
+      "correct": false,
+      "word_count": 32030,
+      "is_shuffled": false,
+      "needle_depth": 0.75
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 47553,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 2,
+      "latency_s": 0.02
+    },
+    "raw_response": " White"
+  },
+  {
+    "task_id": "dilution_frontier_033",
+    "task_type": "context_dilution",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "Red",
+      "gold": "vermillion",
+      "correct": false,
+      "word_count": 32022,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "dilution_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 46113,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 2,
+      "latency_s": 0.02
+    },
+    "raw_response": " Red"
+  },
+  {
+    "task_id": "flanker_easy_000",
+    "task_type": "flanker",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The event is scheduled for Friday, as indicated in sentence 2 where Olena confirmed the appointment for that day.",
+      "gold": "Friday",
+      "correct": true,
+      "n_flankers": 2,
+      "target_position": 2
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 152,
+      "prompt_tokens_after_trunc": 152,
+      "generation_tokens": 31,
+      "latency_s": 0.11
+    },
+    "raw_response": " Friday\n\nANSWER: The event is scheduled for Friday, as indicated in sentence 2 where Olena confirmed the appointment for that day."
+  },
+  {
+    "task_id": "flanker_easy_001",
+    "task_type": "flanker",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Wednesday",
+      "gold": "Wednesday",
+      "correct": true,
+      "n_flankers": 2,
+      "target_position": 1
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 154,
+      "prompt_tokens_after_trunc": 154,
+      "generation_tokens": 4,
+      "latency_s": 0.02
+    },
+    "raw_response": " Wednesday"
+  },
+  {
+    "task_id": "flanker_medium_008",
+    "task_type": "flanker",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Friday",
+      "gold": "Friday",
+      "correct": true,
+      "n_flankers": 4,
+      "target_position": 2
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 205,
+      "prompt_tokens_after_trunc": 205,
+      "generation_tokens": 2,
+      "latency_s": 0.01
+    },
+    "raw_response": " Friday"
+  },
+  {
+    "task_id": "flanker_medium_009",
+    "task_type": "flanker",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "67.4 ppm",
+      "gold": "67.4 ppm",
+      "correct": true,
+      "n_flankers": 4,
+      "target_position": 3
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 181,
+      "prompt_tokens_after_trunc": 181,
+      "generation_tokens": 8,
+      "latency_s": 0.03
+    },
+    "raw_response": " 67.4 ppm"
+  },
+  {
+    "task_id": "flanker_hard_016",
+    "task_type": "flanker",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Wednesday",
+      "gold": "Wednesday",
+      "correct": true,
+      "n_flankers": 6,
+      "target_position": 3
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 278,
+      "prompt_tokens_after_trunc": 278,
+      "generation_tokens": 4,
+      "latency_s": 0.02
+    },
+    "raw_response": " Wednesday"
+  },
+  {
+    "task_id": "flanker_hard_017",
+    "task_type": "flanker",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Saturday",
+      "gold": "Saturday",
+      "correct": true,
+      "n_flankers": 6,
+      "target_position": 5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 278,
+      "prompt_tokens_after_trunc": 278,
+      "generation_tokens": 2,
+      "latency_s": 0.01
+    },
+    "raw_response": " Saturday"
+  },
+  {
+    "task_id": "flanker_expert_024",
+    "task_type": "flanker",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The exact measurement reading according to sentence 4 was 67.4 kPa.",
+      "gold": "67.4 kPa",
+      "correct": true,
+      "n_flankers": 8,
+      "target_position": 4
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 287,
+      "prompt_tokens_after_trunc": 287,
+      "generation_tokens": 19,
+      "latency_s": 0.07
+    },
+    "raw_response": " The exact measurement reading according to sentence 4 was 67.4 kPa."
+  },
+  {
+    "task_id": "flanker_expert_025",
+    "task_type": "flanker",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "120 units of components were included according to sentence 3.",
+      "gold": "120",
+      "correct": true,
+      "n_flankers": 8,
+      "target_position": 3
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 357,
+      "prompt_tokens_after_trunc": 357,
+      "generation_tokens": 16,
+      "latency_s": 0.06
+    },
+    "raw_response": " 120 units of components were included according to sentence 3."
+  },
+  {
+    "task_id": "flanker_frontier_032",
+    "task_type": "flanker",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "510 units of modules",
+      "gold": "510",
+      "correct": true,
+      "n_flankers": 12,
+      "target_position": 8
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 444,
+      "prompt_tokens_after_trunc": 444,
+      "generation_tokens": 8,
+      "latency_s": 0.04
+    },
+    "raw_response": " 510 units of modules"
+  },
+  {
+    "task_id": "flanker_frontier_033",
+    "task_type": "flanker",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "14.6 mV",
+      "gold": "14.6 mV",
+      "correct": true,
+      "n_flankers": 12,
+      "target_position": 5
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "flanker_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 322,
+      "prompt_tokens_after_trunc": 322,
+      "generation_tokens": 8,
+      "latency_s": 0.03
+    },
+    "raw_response": " 14.6 mV"
+  },
+  {
+    "task_id": "ior_easy_000",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "45.1 mg/L",
+        "gold": "45.1",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "WH-7120",
+        "gold": "WH-7120",
+        "correct": true
+      },
+      "3": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "45 minutes",
+        "gold": "45",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 447,
+      "prompt_tokens_after_trunc": 447,
+      "generation_tokens": 79,
+      "latency_s": 0.28
+    },
+    "raw_response": " 1. The resulting concentration was 45.1 mg/L.\n2. The reference number was WH-7120.\n3. The heating duration was 45 minutes.\n\nANSWER:\n1. 45.1 mg/L\n2. WH-7120\n3. 45 minutes"
+  },
+  {
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "Amara",
+        "gold": "Amara",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "45.1 mg/L",
+        "gold": "45.1",
+        "correct": true
+      },
+      "3": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "15 crates",
+        "gold": "15",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 458,
+      "prompt_tokens_after_trunc": 458,
+      "generation_tokens": 76,
+      "latency_s": 0.27
+    },
+    "raw_response": " 1. The shipment was logged by Amara.\n2. The resulting concentration was 45.1 mg/L.\n3. There were 15 crates in the shipment.\n\nANSWER:\n1. Amara\n2. 45.1 mg/L\n3. 15 crates"
+  },
+  {
+    "task_id": "ior_medium_008",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "The total value of the shipment was $4,200",
+        "gold": "4,200",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "The temperature recorded on Monday at the valley floor was 31.7\u00b0C",
+        "gold": "31.7",
+        "correct": true
+      },
+      "3": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "There were 24 crates in the shipment",
+        "gold": "24",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 546,
+      "prompt_tokens_after_trunc": 546,
+      "generation_tokens": 55,
+      "latency_s": 0.2
+    },
+    "raw_response": " 1. The total value of the shipment was $4,200.\n2. The temperature recorded on Monday at the valley floor was 31.7\u00b0C.\n3. There were 24 crates in the shipment."
+  },
+  {
+    "task_id": "ior_medium_009",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "45\u00b0C",
+        "gold": "45",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "Monday",
+        "gold": "Monday",
+        "correct": true
+      },
+      "3": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "Qadir",
+        "gold": "Qadir",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 558,
+      "prompt_tokens_after_trunc": 558,
+      "generation_tokens": 63,
+      "latency_s": 0.23
+    },
+    "raw_response": " 1. The sample was heated to 45\u00b0C.\n2. The shipment arrived on Monday.\n3. The experiment was conducted by Qadir.\n\nANSWER:\n1. 45\u00b0C\n2. Monday\n3. Qadir\n"
+  },
+  {
+    "task_id": "ior_hard_016",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "Conditions were recorded on Wednesday",
+        "gold": "Wednesday",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "The reference number was WH-3506",
+        "gold": "WH-3506",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "The total value of the shipment in Passage D was $9,100",
+        "gold": "9,100",
+        "correct": true
+      },
+      "4": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "The temperature was 27.8\u00b0C",
+        "gold": "27.8",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 849,
+      "prompt_tokens_after_trunc": 849,
+      "generation_tokens": 63,
+      "latency_s": 0.24
+    },
+    "raw_response": " 1. Conditions were recorded on Wednesday.\n2. The reference number was WH-3506.\n3. The total value of the shipment in Passage D was $9,100.\n4. The temperature was 27.8\u00b0C."
+  },
+  {
+    "task_id": "ior_hard_017",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "The total value of the shipment received at the warehouse in building 7 was $3,600",
+        "gold": "3,600",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "The final pH of the solution in Experiment EX-884 was 4.5",
+        "gold": "4.5",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "The resulting concentration in Experiment EX-712 was 12.4 mg/L",
+        "gold": "12.4",
+        "correct": true
+      },
+      "4": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "The reference number for the shipment received at the warehouse in building 7 was WH-2293",
+        "gold": "WH-2293",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 824,
+      "prompt_tokens_after_trunc": 824,
+      "generation_tokens": 106,
+      "latency_s": 0.39
+    },
+    "raw_response": " 1. The total value of the shipment received at the warehouse in building 7 was $3,600.\n2. The final pH of the solution in Experiment EX-884 was 4.5.\n3. The resulting concentration in Experiment EX-712 was 12.4 mg/L.\n4. The reference number for the shipment received at the warehouse in building 7 was WH-2293."
+  },
+  {
+    "task_id": "ior_expert_024",
+    "task_type": "inhibition_return",
+    "difficulty": "Expert",
+    "overall_accuracy": 0.75,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "A",
+        "predicted": "The humidity percentage in Passage A was 62%",
+        "gold": "62",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "There were 60 crates in the shipment mentioned in Passage C",
+        "gold": "60",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "The heating duration in Passage B was 30 minutes",
+        "gold": "30",
+        "correct": true
+      },
+      "4": {
+        "phase": "return",
+        "passage": "A",
+        "predicted": "Conditions were recorded on Friday in Passage A",
+        "gold": "Tuesday",
+        "correct": false
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 956,
+      "prompt_tokens_after_trunc": 956,
+      "generation_tokens": 69,
+      "latency_s": 0.26
+    },
+    "raw_response": " 1. The humidity percentage in Passage A was 62%.\n2. There were 60 crates in the shipment mentioned in Passage C.\n3. The heating duration in Passage B was 30 minutes.\n4. Conditions were recorded on Friday in Passage A."
+  },
+  {
+    "task_id": "ior_expert_025",
+    "task_type": "inhibition_return",
+    "difficulty": "Expert",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "A",
+        "predicted": "The barometric pressure was 1021 hPa",
+        "gold": "1021",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "There were 48 crates in the shipment",
+        "gold": "48",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "The heating duration was 15 minutes",
+        "gold": "15",
+        "correct": true
+      },
+      "4": {
+        "phase": "return",
+        "passage": "A",
+        "predicted": "The temperature was 27.8\u00b0C",
+        "gold": "27.8",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 993,
+      "prompt_tokens_after_trunc": 993,
+      "generation_tokens": 59,
+      "latency_s": 0.23
+    },
+    "raw_response": " 1. The barometric pressure was 1021 hPa.\n2. There were 48 crates in the shipment.\n3. The heating duration was 15 minutes.\n4. The temperature was 27.8\u00b0C."
+  },
+  {
+    "task_id": "ior_frontier_032",
+    "task_type": "inhibition_return",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.8,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "The heating duration in Passage B was 45 minutes",
+        "gold": "45",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "The barometric pressure in Passage C was 1015 hPa",
+        "gold": "1015",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "The wind speed in Passage C was 28 km/h from the east",
+        "gold": "28",
+        "correct": true
+      },
+      "4": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "The temperature the sample was heated to in Passage D was 150\u00b0C",
+        "gold": "150",
+        "correct": true
+      },
+      "5": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "The experiment ID in Passage B was EX-884",
+        "gold": "EX-712",
+        "correct": false
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 1558,
+      "prompt_tokens_after_trunc": 1558,
+      "generation_tokens": 99,
+      "latency_s": 0.38
+    },
+    "raw_response": " 1. The heating duration in Passage B was 45 minutes.\n2. The barometric pressure in Passage C was 1015 hPa.\n3. The wind speed in Passage C was 28 km/h from the east.\n4. The temperature the sample was heated to in Passage D was 150\u00b0C.\n5. The experiment ID in Passage B was EX-884."
+  },
+  {
+    "task_id": "ior_frontier_033",
+    "task_type": "inhibition_return",
+    "difficulty": "Frontier",
+    "overall_accuracy": 1.0,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 1.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "E",
+        "predicted": "The humidity percentage in Passage E was 62%",
+        "gold": "62",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "The wind speed in Passage D was 35 km/h",
+        "gold": "35",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "There were 24 crates in the shipment mentioned in Passage B",
+        "gold": "24",
+        "correct": true
+      },
+      "4": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "The total value of the shipment in Passage B was $4,200",
+        "gold": "4,200",
+        "correct": true
+      },
+      "5": {
+        "phase": "return",
+        "passage": "E",
+        "predicted": "The barometric pressure in Passage E was 1015 hPa",
+        "gold": "1015",
+        "correct": true
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "ior_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 1511,
+      "prompt_tokens_after_trunc": 1511,
+      "generation_tokens": 98,
+      "latency_s": 0.38
+    },
+    "raw_response": " 1. The humidity percentage in Passage E was 62%.\n2. The wind speed in Passage D was 35 km/h.\n3. There were 24 crates in the shipment mentioned in Passage B.\n4. The total value of the shipment in Passage B was $4,200.\n5. The barometric pressure in Passage E was 1015 hPa."
   },
   {
     "task_id": "interference_easy_000",
@@ -524,7 +1924,7 @@
     "correct_count": 1,
     "total_keys": 1,
     "details": {
-      "reference": {
+      "delegate": {
         "status": "correct",
         "predicted": "Plovdiv",
         "gold": "Plovdiv"
@@ -539,7 +1939,7 @@
       "generation_tokens": 7,
       "latency_s": 0.03
     },
-    "raw_response": " - reference: Plovdiv"
+    "raw_response": " - delegate: Plovdiv"
   },
   {
     "task_id": "interference_easy_001",
@@ -550,7 +1950,7 @@
     "correct_count": 1,
     "total_keys": 1,
     "details": {
-      "destination": {
+      "registry": {
         "status": "correct",
         "predicted": "850",
         "gold": "850"
@@ -562,10 +1962,10 @@
       "model": "phi3",
       "prompt_tokens": 119,
       "prompt_tokens_after_trunc": 119,
-      "generation_tokens": 20,
-      "latency_s": 0.07
+      "generation_tokens": 7,
+      "latency_s": 0.03
     },
-    "raw_response": " destination: 850\nANSWER:\n- destination: 850"
+    "raw_response": " registry: 850"
   },
   {
     "task_id": "interference_medium_008",
@@ -578,25 +1978,25 @@
     "details": {
       "coordinator": {
         "status": "perseveration",
-        "predicted": "Fez",
-        "gold": "Tallinn"
+        "predicted": "Tallinn",
+        "gold": "Cartagena"
       },
       "delegate": {
         "status": "correct",
-        "predicted": "Cusco",
-        "gold": "Cusco"
+        "predicted": "Tallinn",
+        "gold": "Tallinn"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "interference_medium_008",
       "model": "phi3",
-      "prompt_tokens": 265,
-      "prompt_tokens_after_trunc": 265,
-      "generation_tokens": 57,
-      "latency_s": 0.2
+      "prompt_tokens": 266,
+      "prompt_tokens_after_trunc": 266,
+      "generation_tokens": 32,
+      "latency_s": 0.11
     },
-    "raw_response": " - coordinator: Fez\n- delegate: Cusco\n\nThe final values are determined by the last update for each record:\n  - The coordinator was last set to 'Fez'.\n  - The delegate was last set to 'Cusco'."
+    "raw_response": " - coordinator: Tallinn\n- delegate: Tallinn\n\nThe final values for both records are Tallinn after the last update."
   },
   {
     "task_id": "interference_medium_009",
@@ -607,12 +2007,12 @@
     "correct_count": 2,
     "total_keys": 2,
     "details": {
-      "contact": {
+      "reference": {
         "status": "correct",
         "predicted": "Mandalay",
         "gold": "Mandalay"
       },
-      "coordinator": {
+      "assignment": {
         "status": "correct",
         "predicted": "Gdansk",
         "gold": "Gdansk"
@@ -622,35 +2022,35 @@
     "generation_meta": {
       "task_id": "interference_medium_009",
       "model": "phi3",
-      "prompt_tokens": 259,
-      "prompt_tokens_after_trunc": 259,
-      "generation_tokens": 39,
-      "latency_s": 0.14
+      "prompt_tokens": 252,
+      "prompt_tokens_after_trunc": 252,
+      "generation_tokens": 37,
+      "latency_s": 0.13
     },
-    "raw_response": " - contact: Mandalay\n- coordinator: Gdansk\n\nFinal values after reading all updates:\n- contact: Mandalay\n- coordinator: Gdansk"
+    "raw_response": " - reference: Mandalay\n- assignment: Gdansk\n\nFinal values after reading all updates:\n- reference: Mandalay\n- assignment: Gdansk"
   },
   {
     "task_id": "interference_hard_016",
     "task_type": "interference",
     "difficulty": "Hard",
-    "accuracy": 0.3333,
-    "perseveration_rate": 0.6667,
-    "correct_count": 1,
+    "accuracy": 0.0,
+    "perseveration_rate": 0.0,
+    "correct_count": 0,
     "total_keys": 3,
     "details": {
-      "destination": {
-        "status": "perseveration",
-        "predicted": "Femi",
+      "dispatch": {
+        "status": "incorrect",
+        "predicted": "No",
         "gold": "Joelle"
       },
-      "reference": {
-        "status": "perseveration",
-        "predicted": "Dmitri",
+      "delegate": {
+        "status": "incorrect",
+        "predicted": "No",
         "gold": "Freya"
       },
-      "contact": {
-        "status": "correct",
-        "predicted": "Nico",
+      "assignment": {
+        "status": "incorrect",
+        "predicted": "Yes",
         "gold": "Nico"
       }
     },
@@ -660,128 +2060,490 @@
       "model": "phi3",
       "prompt_tokens": 609,
       "prompt_tokens_after_trunc": 609,
-      "generation_tokens": 38,
-      "latency_s": 0.15
+      "generation_tokens": 34,
+      "latency_s": 0.13
     },
-    "raw_response": " - destination: Femi\n- reference: Dmitri\n- contact: Nico\n\nV1. Was 'Bashir' ever assigned to destination? [No]"
+    "raw_response": " - dispatch: No\n- delegate: No\n- assignment: Yes\n\nV1. Was 'Bashir' ever assigned to dispatch? [No]"
   },
   {
     "task_id": "interference_hard_017",
     "task_type": "interference",
     "difficulty": "Hard",
-    "accuracy": 0.0,
-    "perseveration_rate": 1.0,
-    "correct_count": 0,
+    "accuracy": 1.0,
+    "perseveration_rate": 0.0,
+    "correct_count": 3,
     "total_keys": 3,
     "details": {
-      "delegate": {
-        "status": "perseveration",
-        "predicted": "Joelle",
-        "gold": "Dmitri"
+      "assignment": {
+        "status": "correct",
+        "predicted": "Lumi",
+        "gold": "Lumi"
+      },
+      "dispatch": {
+        "status": "correct",
+        "predicted": "Viktor",
+        "gold": "Viktor"
       },
       "contact": {
-        "status": "perseveration",
-        "predicted": "Elara",
-        "gold": "Leif"
-      },
-      "coordinator": {
-        "status": "perseveration",
-        "predicted": "Vesna",
-        "gold": "Dariush"
+        "status": "correct",
+        "predicted": "Uma",
+        "gold": "Uma"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "interference_hard_017",
       "model": "phi3",
-      "prompt_tokens": 621,
-      "prompt_tokens_after_trunc": 621,
-      "generation_tokens": 38,
+      "prompt_tokens": 608,
+      "prompt_tokens_after_trunc": 608,
+      "generation_tokens": 36,
       "latency_s": 0.14
     },
-    "raw_response": " - delegate: Joelle\n- contact: Elara\n- coordinator: Vesna\n\nV1. Was 'Orla' ever assigned to delegate? [Yes]"
+    "raw_response": " - assignment: Lumi\n- dispatch: Viktor\n- contact: Uma\n\nV1. Was 'Wren' ever assigned to assignment? [Yes]"
   },
   {
     "task_id": "interference_expert_024",
     "task_type": "interference",
     "difficulty": "Expert",
-    "accuracy": 1.0,
-    "perseveration_rate": 0.0,
-    "correct_count": 4,
+    "accuracy": 0.5,
+    "perseveration_rate": 0.5,
+    "correct_count": 2,
     "total_keys": 4,
     "details": {
-      "contact": {
-        "status": "correct",
-        "predicted": "894",
-        "gold": "894"
-      },
-      "delegate": {
-        "status": "correct",
-        "predicted": "132",
-        "gold": "132"
-      },
       "assignment": {
-        "status": "correct",
-        "predicted": "491",
-        "gold": "491"
+        "status": "perseveration",
+        "predicted": "559",
+        "gold": "209"
+      },
+      "liaison": {
+        "status": "perseveration",
+        "predicted": "132",
+        "gold": "765"
       },
       "location": {
         "status": "correct",
-        "predicted": "188",
-        "gold": "188"
+        "predicted": "267",
+        "gold": "267"
+      },
+      "registry": {
+        "status": "correct",
+        "predicted": "951",
+        "gold": "951"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "interference_expert_024",
       "model": "phi3",
-      "prompt_tokens": 1554,
-      "prompt_tokens_after_trunc": 1554,
-      "generation_tokens": 69,
-      "latency_s": 0.27
+      "prompt_tokens": 1608,
+      "prompt_tokens_after_trunc": 1608,
+      "generation_tokens": 73,
+      "latency_s": 0.29
     },
-    "raw_response": " - contact: 894\n- delegate: 132\n- assignment: 491\n- location: 188\n\nV1. Was '631' ever assigned to contact? [No]\nV2. Was '178' ever assigned to delegate? [Yes]"
+    "raw_response": " - assignment: 559\n- liaison: 132\n- location: 267\n- registry: 951\n\nV1. Was '518' ever assigned to assignment? [Yes]\nV2. Was '872' ever assigned to liaison? [No]"
   },
   {
     "task_id": "interference_expert_025",
     "task_type": "interference",
     "difficulty": "Expert",
-    "accuracy": 0.0,
-    "perseveration_rate": 1.0,
-    "correct_count": 0,
+    "accuracy": 0.5,
+    "perseveration_rate": 0.5,
+    "correct_count": 2,
     "total_keys": 4,
     "details": {
-      "coordinator": {
+      "registry": {
         "status": "perseveration",
         "predicted": "Freya",
-        "gold": "Haruto"
+        "gold": "Ines"
       },
-      "destination": {
+      "liaison": {
         "status": "perseveration",
         "predicted": "Tala",
-        "gold": "Freya"
+        "gold": "Viktor"
+      },
+      "dispatch": {
+        "status": "correct",
+        "predicted": "Dmitri",
+        "gold": "Dmitri"
       },
       "assignment": {
-        "status": "perseveration",
-        "predicted": "Nalini",
-        "gold": "Dariush"
-      },
-      "delegate": {
-        "status": "perseveration",
-        "predicted": "Uma",
-        "gold": "Celine"
+        "status": "correct",
+        "predicted": "Dmitri",
+        "gold": "Dmitri"
       }
     },
     "model": "phi3",
     "generation_meta": {
       "task_id": "interference_expert_025",
       "model": "phi3",
-      "prompt_tokens": 1513,
-      "prompt_tokens_after_trunc": 1513,
-      "generation_tokens": 63,
-      "latency_s": 0.25
+      "prompt_tokens": 1540,
+      "prompt_tokens_after_trunc": 1540,
+      "generation_tokens": 69,
+      "latency_s": 0.27
     },
-    "raw_response": " - coordinator: Freya\n- destination: Tala\n- assignment: Nalini\n- delegate: Uma\n\nV1. Was 'Olena' ever assigned to coordinator? [Yes]\nV2. Was 'Tala' ever assigned to destination? [Yes]"
+    "raw_response": " - registry: Freya\n- liaison: Tala\n- dispatch: Dmitri\n- assignment: Dmitri\n\nV1. Yes, 'Freya' was assigned to the registry at one point.\nV2. Yes, 'Leif' was assigned to the liaison at one point."
+  },
+  {
+    "task_id": "interference_frontier_032",
+    "task_type": "interference",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "perseveration_rate": 0.875,
+    "correct_count": 0,
+    "total_keys": 8,
+    "details": {
+      "registry": {
+        "status": "perseveration",
+        "predicted": "Valetta",
+        "gold": "Trieste"
+      },
+      "coordinator": {
+        "status": "perseveration",
+        "predicted": "Trieste",
+        "gold": "Gdansk"
+      },
+      "location": {
+        "status": "perseveration",
+        "predicted": "Luang Prabang",
+        "gold": "Tallinn"
+      },
+      "reference": {
+        "status": "perseveration",
+        "predicted": "Tallinn",
+        "gold": "Valetta"
+      },
+      "delegate": {
+        "status": "perseveration",
+        "predicted": "Jaipur",
+        "gold": "Oulu"
+      },
+      "dispatch": {
+        "status": "perseveration",
+        "predicted": "Bruges",
+        "gold": "Cusco"
+      },
+      "contact": {
+        "status": "perseveration",
+        "predicted": "Reykjavik",
+        "gold": "Luang Prabang"
+      },
+      "destination": {
+        "status": "incorrect",
+        "predicted": "[not found]",
+        "gold": "Reykjavik"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "interference_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 5941,
+      "prompt_tokens_after_trunc": 5941,
+      "generation_tokens": 72,
+      "latency_s": 0.39
+    },
+    "raw_response": " - registry: Valetta\n- coordinator: Trieste\n- location: Luang Prabang\n- reference: Tallinn\n- delegate: Jaipur\n- dispatch: Bruges\n- contact: Reykjavik\n\nV1. Yes\nV2. No\nV3. Yes\nV4. No"
+  },
+  {
+    "task_id": "interference_frontier_033",
+    "task_type": "interference",
+    "difficulty": "Frontier",
+    "accuracy": 0.125,
+    "perseveration_rate": 0.875,
+    "correct_count": 1,
+    "total_keys": 8,
+    "details": {
+      "registry": {
+        "status": "perseveration",
+        "predicted": "Cusco",
+        "gold": "Kumasi"
+      },
+      "dispatch": {
+        "status": "correct",
+        "predicted": "Gdansk",
+        "gold": "Gdansk"
+      },
+      "reference": {
+        "status": "perseveration",
+        "predicted": "Tbilisi",
+        "gold": "Jaipur"
+      },
+      "coordinator": {
+        "status": "perseveration",
+        "predicted": "Luang Prabang",
+        "gold": "Cusco"
+      },
+      "destination": {
+        "status": "perseveration",
+        "predicted": "Ulaanbaatar",
+        "gold": "Mandalay"
+      },
+      "location": {
+        "status": "perseveration",
+        "predicted": "Kotor",
+        "gold": "Tbilisi"
+      },
+      "delegate": {
+        "status": "perseveration",
+        "predicted": "Mandalay",
+        "gold": "Fez"
+      },
+      "contact": {
+        "status": "perseveration",
+        "predicted": "Fez",
+        "gold": "Kotor"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "interference_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 5959,
+      "prompt_tokens_after_trunc": 5959,
+      "generation_tokens": 147,
+      "latency_s": 0.71
+    },
+    "raw_response": " ANSWER:\n- registry: Cusco\n- dispatch: Gdansk\n- reference: Tbilisi\n- coordinator: Luang Prabang\n- destination: Ulaanbaatar\n- location: Kotor\n- delegate: Mandalay\n- contact: Fez\n\nVERIFICATION QUESTIONS:\nV1. Was 'Cusco' ever assigned to registry? [Yes]\nV2. Was 'Tbilisi' ever assigned to dispatch? [Yes]\nV3. Was 'Oulu' ever assigned to reference? [Yes]\nV4. Was 'Valetta' ever assigned to coordinator? [Yes]"
+  },
+  {
+    "task_id": "multihop_easy_000",
+    "task_type": "multihop",
+    "difficulty": "Easy",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "Gael now has the silver scroll.",
+      "gold": "the guard station",
+      "correct": false,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 410
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 677,
+      "prompt_tokens_after_trunc": 677,
+      "generation_tokens": 74,
+      "latency_s": 0.27
+    },
+    "raw_response": " The silver scroll is now with Gael. This information is derived from the sentence \"Evening fell quickly in the valley. The mountains blocked the last hour of sunlight, and by five o'clock the streetlights were already on. Ugo handed the silver scroll to Gael.\"\n\nFinal Answer: Gael now has the silver scroll."
+  },
+  {
+    "task_id": "multihop_easy_001",
+    "task_type": "multihop",
+    "difficulty": "Easy",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The crimson key gave access to the side passage. The text specifically mentions \"Bram used the crimson key to unlock the side passage.\" Therefore, the room the crimson key gave access to is not explic",
+      "gold": "room 27",
+      "correct": false,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 409
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 702,
+      "prompt_tokens_after_trunc": 702,
+      "generation_tokens": 71,
+      "latency_s": 0.26
+    },
+    "raw_response": " The crimson key gave access to the side passage. The text specifically mentions \"Bram used the crimson key to unlock the side passage.\" Therefore, the room the crimson key gave access to is not explicitly named, but it is the side passage itself. The final answer is: The crimson key gave access to the side passage."
+  },
+  {
+    "task_id": "multihop_medium_008",
+    "task_type": "multihop",
+    "difficulty": "Medium",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The jade locket was given to Nico, as mentioned in the text \"Construction on the new civic building proceeded on schedule despite the weather. The foreman reviewed the blueprints each morning, marking",
+      "gold": "the observatory loft",
+      "correct": false,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 994
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 1544,
+      "prompt_tokens_after_trunc": 1544,
+      "generation_tokens": 95,
+      "latency_s": 0.37
+    },
+    "raw_response": " The jade locket was given to Nico, as mentioned in the text \"Construction on the new civic building proceeded on schedule despite the weather. The foreman reviewed the blueprints each morning, marking progress with a red pencil. Nalini handed the jade locket to Nico.\"\n\nBased on this information, the final answer is: The jade locket is now in the possession of Nico."
+  },
+  {
+    "task_id": "multihop_medium_009",
+    "task_type": "multihop",
+    "difficulty": "Medium",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The jade key gave access to the service entrance of the workshop on Lumi Street. This information is found in the sentence \"Vesna used the jade key to unlock the service entrance.\"",
+      "gold": "room 33",
+      "correct": false,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 1013
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 1539,
+      "prompt_tokens_after_trunc": 1539,
+      "generation_tokens": 43,
+      "latency_s": 0.18
+    },
+    "raw_response": " The jade key gave access to the service entrance of the workshop on Lumi Street. This information is found in the sentence \"Vesna used the jade key to unlock the service entrance.\""
+  },
+  {
+    "task_id": "multihop_hard_016",
+    "task_type": "multihop",
+    "difficulty": "Hard",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The silver stone is now in the west gallery.",
+      "gold": "the guard station",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 1700
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 2581,
+      "prompt_tokens_after_trunc": 2581,
+      "generation_tokens": 86,
+      "latency_s": 0.36
+    },
+    "raw_response": " The silver stone was sealed inside the copper lockbox by Vesna. According to the text, \"Vesna sealed the silver stone inside the copper lockbox.\" After this action, the copper lockbox was shipped to the west gallery. Therefore, the final location of the silver stone is the west gallery.\n\nANSWER: The silver stone is now in the west gallery."
+  },
+  {
+    "task_id": "multihop_hard_017",
+    "task_type": "multihop",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The research grant is now at the Meridian Tower. This is inferred from the last sentence, \"the registrar's office forwarded all pending documents to the Meridian Tower.\" Since Ravi submitted the resea",
+      "gold": "the Meridian Tower",
+      "correct": true,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 1676
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 2532,
+      "prompt_tokens_after_trunc": 2532,
+      "generation_tokens": 75,
+      "latency_s": 0.32
+    },
+    "raw_response": " The research grant is now at the Meridian Tower. This is inferred from the last sentence, \"the registrar's office forwarded all pending documents to the Meridian Tower.\" Since Ravi submitted the research grant to the registrar's office for processing, it is logical to conclude that the grant is now at the Meridian Tower."
+  },
+  {
+    "task_id": "multihop_expert_024",
+    "task_type": "multihop",
+    "difficulty": "Expert",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "Adaeze",
+      "gold": "the guard station",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 2805
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 4231,
+      "prompt_tokens_after_trunc": 4231,
+      "generation_tokens": 100,
+      "latency_s": 0.46
+    },
+    "raw_response": " To find the final answer, let's follow the sequence of events involving the coral shell:\n\n1. Maren entrusted the coral shell to Paloma before leaving the city.\n2. Paloma then passed the coral shell to Adaeze at the railway station.\n\nBased on these steps, the coral shell that Maren originally had ended up with Adaeze after being passed from Paloma.\n\nANSWER: Adaeze"
+  },
+  {
+    "task_id": "multihop_expert_025",
+    "task_type": "multihop",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The silver scroll is now located in the Okafor Complex.",
+      "gold": "the Okafor Complex",
+      "correct": true,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 2827
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 4233,
+      "prompt_tokens_after_trunc": 4233,
+      "generation_tokens": 106,
+      "latency_s": 0.48
+    },
+    "raw_response": " The silver scroll was initially wrapped and placed in the rosewood drawer. Later, during the renovation of the Okafor Complex, the contents of room 72 were moved. Since the silver scroll was in the rosewood drawer, and the contents of room 72 were moved to the Okafor Complex, it can be inferred that the silver scroll is now located in the Okafor Complex.\n\nANSWER: The silver scroll is now located in the Okafor Complex."
+  },
+  {
+    "task_id": "multihop_frontier_032",
+    "task_type": "multihop",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The calibration task was initially given to Willa. This information is found in the sentence: \"A thin rain began to fall just as Colette reached the old quarter. The cobblestones gleamed under the str",
+      "gold": "the archival unit",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": true,
+      "word_count": 5148
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 7642,
+      "prompt_tokens_after_trunc": 7642,
+      "generation_tokens": 89,
+      "latency_s": 0.51
+    },
+    "raw_response": " The calibration task was initially given to Willa. This information is found in the sentence: \"A thin rain began to fall just as Colette reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference. The calibration task was initially given to Willa.\"\n\nTherefore, the answer is Willa's department."
+  },
+  {
+    "task_id": "multihop_frontier_033",
+    "task_type": "multihop",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "The data migration job was initially given to Haruto. However, later in the text, it is mentioned that Haruto delegated the work to Ugo. Therefore, the departments involved in handling the data migrat",
+      "gold": "the procurement desk",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": true,
+      "word_count": 5106
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "multihop_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 7609,
+      "prompt_tokens_after_trunc": 7609,
+      "generation_tokens": 56,
+      "latency_s": 0.37
+    },
+    "raw_response": " The data migration job was initially given to Haruto. However, later in the text, it is mentioned that Haruto delegated the work to Ugo. Therefore, the departments involved in handling the data migration job were Haruto's and Ugo's."
   },
   {
     "task_id": "selective_easy_000",
@@ -791,6 +2553,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 0.6667,
+    "noise_ratio": 0.5,
     "details": {
       "found_items": [
         "$9,512.96",
@@ -806,7 +2569,8 @@
         "8,841.47",
         "8,948.23"
       ],
-      "n_found": 2
+      "n_found": 2,
+      "noise_ratio": 0.5
     },
     "model": "phi3",
     "generation_meta": {
@@ -827,6 +2591,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.5,
     "details": {
       "found_items": [
         "$5,163.45",
@@ -843,7 +2608,8 @@
         "213.58",
         "2,125.71"
       ],
-      "n_found": 3
+      "n_found": 3,
+      "noise_ratio": 0.5
     },
     "model": "phi3",
     "generation_meta": {
@@ -864,6 +2630,7 @@
     "attention_precision": 0.8,
     "distractor_intrusion": 0.3333,
     "sas_score": 0.6667,
+    "noise_ratio": 0.6,
     "details": {
       "found_items": [
         "$9,689.27",
@@ -891,7 +2658,8 @@
         "4,846.58",
         "8,614.07"
       ],
-      "n_found": 10
+      "n_found": 10,
+      "noise_ratio": 0.6
     },
     "model": "phi3",
     "generation_meta": {
@@ -912,6 +2680,7 @@
     "attention_precision": 0.375,
     "distractor_intrusion": 0.8333,
     "sas_score": 0.125,
+    "noise_ratio": 0.6,
     "details": {
       "found_items": [
         "66.7",
@@ -937,7 +2706,8 @@
         "31.4",
         "449.8"
       ],
-      "n_found": 8
+      "n_found": 8,
+      "noise_ratio": 0.6
     },
     "model": "phi3",
     "generation_meta": {
@@ -958,6 +2728,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 0.6,
+    "noise_ratio": 0.667,
     "details": {
       "found_items": [
         "$9,534.96",
@@ -983,7 +2754,8 @@
         "3,289.23",
         "9,627.12"
       ],
-      "n_found": 3
+      "n_found": 3,
+      "noise_ratio": 0.667
     },
     "model": "phi3",
     "generation_meta": {
@@ -1004,6 +2776,7 @@
     "attention_precision": 0.0,
     "distractor_intrusion": 0.0,
     "sas_score": 0.0,
+    "noise_ratio": 0.667,
     "details": {
       "found_items": [
         "referenced documentation\" and \"The audited record,\" while the third value comes from \"Per the verified data.\" The other numbers are from unverified or anecdotal sources and are therefore excluded"
@@ -1027,7 +2800,8 @@
         "28.8",
         "20.0"
       ],
-      "n_found": 1
+      "n_found": 1,
+      "noise_ratio": 0.667
     },
     "model": "phi3",
     "generation_meta": {
@@ -1048,6 +2822,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 0.6667,
+    "noise_ratio": 0.714,
     "details": {
       "found_items": [
         "4.7\u00b0C, 21.6\u00b0C, 16.1\u00b0C, -14.9\u00b0C, 13.9\u00b0C"
@@ -1077,7 +2852,8 @@
         "26.0",
         "-11.7"
       ],
-      "n_found": 1
+      "n_found": 1,
+      "noise_ratio": 0.714
     },
     "model": "phi3",
     "generation_meta": {
@@ -1098,6 +2874,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 0.6667,
+    "noise_ratio": 0.714,
     "details": {
       "found_items": [
         "$5,411.24",
@@ -1130,7 +2907,8 @@
         "6,899.39",
         "144.68"
       ],
-      "n_found": 4
+      "n_found": 4,
+      "noise_ratio": 0.714
     },
     "model": "phi3",
     "generation_meta": {
@@ -1144,6 +2922,379 @@
     "raw_response": " $5,411.24, $2,423.93, $8,031.12, $2,113.92\n\nThese values are reported in the context of \"Records show\" and \"The verified audit found,\" which align with the verified source (Source A) as per the given instructions. The other numbers are associated with \"Unconfirmed sources\" or \"speculation,\" which should be ignored according to the task."
   },
   {
+    "task_id": "selective_frontier_032",
+    "task_type": "selective",
+    "difficulty": "Frontier",
+    "signal_recall": 0.375,
+    "attention_precision": 1.0,
+    "distractor_intrusion": 0.0,
+    "sas_score": 0.375,
+    "noise_ratio": 0.758,
+    "details": {
+      "found_items": [
+        "$118.65: Mentioned in \"According to the data, Confirmed quarterly earnings reached $8,040.32.\"",
+        "$8,040.32: Directly stated as confirmed quarterly earnings",
+        "$2,851.75: Mentioned in \"Analysis shows The verified audit found revenue of $2,851.75.\""
+      ],
+      "gold_signals": [
+        "8,040.32",
+        "4,071.84",
+        "2,851.75",
+        "9,214.08",
+        "3,893.00",
+        "8,607.74",
+        "118.65",
+        "4,418.28"
+      ],
+      "distractor_values": [
+        "149.99",
+        "3,122.88",
+        "5,467.27",
+        "977.89",
+        "5,613.04",
+        "5,390.65",
+        "2,146.11",
+        "3,864.53",
+        "5,439.02",
+        "2,219.89",
+        "4,338.90",
+        "7,406.96",
+        "2,240.47",
+        "3,634.59",
+        "8,232.45",
+        "4,092.61",
+        "5,360.32",
+        "2,441.75",
+        "3,001.69",
+        "7,107.50",
+        "3,069.27",
+        "5,596.15",
+        "421.06",
+        "750.61",
+        "8,770.84"
+      ],
+      "n_found": 3,
+      "noise_ratio": 0.758
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "selective_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 868,
+      "prompt_tokens_after_trunc": 868,
+      "generation_tokens": 218,
+      "latency_s": 0.79
+    },
+    "raw_response": " $118.65, $8,040.32, $2,851.75\n\nExplanation: The values are selected based on the context that they are associated with \"certified report\" or \"verified audit,\" which are considered verified sources. The other figures are linked to \"speculation\" or \"unconfirmed sources,\" which are marked as unverified.\n\n- $118.65: Mentioned in \"According to the data, Confirmed quarterly earnings reached $8,040.32.\"\n- $8,040.32: Directly stated as confirmed quarterly earnings.\n- $2,851.75: Mentioned in \"Analysis shows The verified audit found revenue of $2,851.75.\"\n\nThe other numerical values are associated with speculation or unconfirmed sources and are therefore not included in the answer."
+  },
+  {
+    "task_id": "selective_frontier_033",
+    "task_type": "selective",
+    "difficulty": "Frontier",
+    "signal_recall": 0.375,
+    "attention_precision": 0.75,
+    "distractor_intrusion": 0.04,
+    "sas_score": 0.36,
+    "noise_ratio": 0.758,
+    "details": {
+      "found_items": [
+        "8.2\u00b0C",
+        "13.5\u00b0C",
+        "7.7\u00b0C",
+        "26.9\u00b0C"
+      ],
+      "gold_signals": [
+        "13.5",
+        "21.2",
+        "8.2",
+        "24.1",
+        "-9.9",
+        "26.9",
+        "-4.4",
+        "25.6"
+      ],
+      "distractor_values": [
+        "8.4",
+        "11.1",
+        "27.7",
+        "16.2",
+        "3.0",
+        "31.3",
+        "2.5",
+        "36.3",
+        "40.4",
+        "25.0",
+        "5.0",
+        "27.4",
+        "-8.5",
+        "-4.9",
+        "17.6",
+        "-6.6",
+        "-14.7",
+        "1.9",
+        "5.4",
+        "1.4",
+        "41.0",
+        "-4.5",
+        "7.7",
+        "32.1",
+        "28.3"
+      ],
+      "n_found": 4,
+      "noise_ratio": 0.758
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "selective_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 769,
+      "prompt_tokens_after_trunc": 769,
+      "generation_tokens": 66,
+      "latency_s": 0.24
+    },
+    "raw_response": " 8.2\u00b0C, 13.5\u00b0C, 7.7\u00b0C, 26.9\u00b0C\n\nThese values are reported by the verified source (Source A) in the context of the provided text. The other values are associated with unverified sources or data."
+  },
+  {
+    "task_id": "sniah_easy_000",
+    "task_type": "semantic_niah",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Idris.",
+      "gold": "Idris",
+      "correct": true,
+      "n_paragraphs": 15,
+      "needle_depth": 0.29,
+      "word_count": 400
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_easy_000",
+      "model": "phi3",
+      "prompt_tokens": 671,
+      "prompt_tokens_after_trunc": 671,
+      "generation_tokens": 4,
+      "latency_s": 0.02
+    },
+    "raw_response": " Idris."
+  },
+  {
+    "task_id": "sniah_easy_001",
+    "task_type": "semantic_niah",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Ugo.",
+      "gold": "Ugo",
+      "correct": true,
+      "n_paragraphs": 15,
+      "needle_depth": 0.72,
+      "word_count": 437
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_easy_001",
+      "model": "phi3",
+      "prompt_tokens": 709,
+      "prompt_tokens_after_trunc": 709,
+      "generation_tokens": 4,
+      "latency_s": 0.02
+    },
+    "raw_response": " Ugo."
+  },
+  {
+    "task_id": "sniah_medium_008",
+    "task_type": "semantic_niah",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Output from the operations team increased by 34 percent.",
+      "gold": "34 percent",
+      "correct": true,
+      "n_paragraphs": 40,
+      "needle_depth": 0.76,
+      "word_count": 1158
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_medium_008",
+      "model": "phi3",
+      "prompt_tokens": 1788,
+      "prompt_tokens_after_trunc": 1788,
+      "generation_tokens": 13,
+      "latency_s": 0.07
+    },
+    "raw_response": " Output from the operations team increased by 34 percent."
+  },
+  {
+    "task_id": "sniah_medium_009",
+    "task_type": "semantic_niah",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The twelfth of October.",
+      "gold": "the twelfth of October",
+      "correct": true,
+      "n_paragraphs": 40,
+      "needle_depth": 0.24,
+      "word_count": 1149
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_medium_009",
+      "model": "phi3",
+      "prompt_tokens": 1790,
+      "prompt_tokens_after_trunc": 1790,
+      "generation_tokens": 8,
+      "latency_s": 0.05
+    },
+    "raw_response": " The twelfth of October."
+  },
+  {
+    "task_id": "sniah_hard_016",
+    "task_type": "semantic_niah",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "62.0 degrees",
+      "gold": "62.0 degrees",
+      "correct": true,
+      "n_paragraphs": 80,
+      "needle_depth": 0.43,
+      "word_count": 2286
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_hard_016",
+      "model": "phi3",
+      "prompt_tokens": 3499,
+      "prompt_tokens_after_trunc": 3499,
+      "generation_tokens": 7,
+      "latency_s": 0.07
+    },
+    "raw_response": " 62.0 degrees"
+  },
+  {
+    "task_id": "sniah_hard_017",
+    "task_type": "semantic_niah",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "3457 thousand dollars",
+      "gold": "3457 thousand dollars",
+      "correct": true,
+      "n_paragraphs": 80,
+      "needle_depth": 0.53,
+      "word_count": 2232
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_hard_017",
+      "model": "phi3",
+      "prompt_tokens": 3369,
+      "prompt_tokens_after_trunc": 3369,
+      "generation_tokens": 8,
+      "latency_s": 0.08
+    },
+    "raw_response": " 3457 thousand dollars"
+  },
+  {
+    "task_id": "sniah_expert_024",
+    "task_type": "semantic_niah",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "46 hours",
+      "gold": "46 hours",
+      "correct": true,
+      "n_paragraphs": 120,
+      "needle_depth": 0.65,
+      "word_count": 3410
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_expert_024",
+      "model": "phi3",
+      "prompt_tokens": 5045,
+      "prompt_tokens_after_trunc": 5045,
+      "generation_tokens": 5,
+      "latency_s": 0.09
+    },
+    "raw_response": " 46 hours"
+  },
+  {
+    "task_id": "sniah_expert_025",
+    "task_type": "semantic_niah",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "7194 units",
+      "gold": "7194",
+      "correct": true,
+      "n_paragraphs": 120,
+      "needle_depth": 0.49,
+      "word_count": 3385
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_expert_025",
+      "model": "phi3",
+      "prompt_tokens": 5096,
+      "prompt_tokens_after_trunc": 5096,
+      "generation_tokens": 7,
+      "latency_s": 0.1
+    },
+    "raw_response": " 7194 units"
+  },
+  {
+    "task_id": "sniah_frontier_032",
+    "task_type": "semantic_niah",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Increased by 52 percent",
+      "gold": "52 percent",
+      "correct": true,
+      "n_paragraphs": 200,
+      "needle_depth": 0.58,
+      "word_count": 5565
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 8342,
+      "prompt_tokens_after_trunc": 8342,
+      "generation_tokens": 9,
+      "latency_s": 0.17
+    },
+    "raw_response": " Increased by 52 percent"
+  },
+  {
+    "task_id": "sniah_frontier_033",
+    "task_type": "semantic_niah",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The deadline for the strategy session is set to the twenty-second of August.",
+      "gold": "the twenty-second of August",
+      "correct": true,
+      "n_paragraphs": 200,
+      "needle_depth": 0.69,
+      "word_count": 5665
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sniah_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 8385,
+      "prompt_tokens_after_trunc": 8385,
+      "generation_tokens": 18,
+      "latency_s": 0.22
+    },
+    "raw_response": " The deadline for the strategy session is set to the twenty-second of August."
+  },
+  {
     "task_id": "shifting_easy_000",
     "task_type": "shifting",
     "difficulty": "Easy",
@@ -1153,6 +3304,10 @@
     "switch_cost": 0.3333,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 1,
+    "random_error_rate": 0.3333,
     "details": {
       "1": {
         "status": "correct",
@@ -1173,7 +3328,7 @@
         "phase": "pre"
       },
       "4": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "Rabbit starts with an 'r', which falls in the 'early' category (A-M)",
         "gold": "late",
         "phase": "post"
@@ -1198,7 +3353,7 @@
       "prompt_tokens": 191,
       "prompt_tokens_after_trunc": 191,
       "generation_tokens": 156,
-      "latency_s": 0.53
+      "latency_s": 0.54
     },
     "raw_response": " ANSWER:\n1. object\n2. object\n3. object\n4. early\n5. early\n6. late\n\nExplanation:\n1. Candle is an object, not an animal or food.\n2. Mirror is an object, not an animal or food.\n3. Shovel is an object, not an animal or food.\n4. Rabbit starts with an 'r', which falls in the 'early' category (A-M).\n5. Eagle starts with an 'e', which falls in the 'early' category (A-M).\n6. Wrench starts with a 'w', which falls in the 'late' category (N-Z)."
   },
@@ -1212,6 +3367,10 @@
     "switch_cost": 0.0,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1271,6 +3430,10 @@
     "switch_cost": -0.25,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1342,6 +3505,10 @@
     "switch_cost": 0.75,
     "perseveration_rate": 0.75,
     "perseveration_errors": 3,
+    "residue_error_count": 1,
+    "residue_rate": 0.25,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "incorrect",
@@ -1380,7 +3547,7 @@
         "phase": "post"
       },
       "7": {
-        "status": "incorrect",
+        "status": "residue",
         "predicted": "animal",
         "gold": "late",
         "phase": "post"
@@ -1399,7 +3566,7 @@
       "prompt_tokens": 209,
       "prompt_tokens_after_trunc": 209,
       "generation_tokens": 263,
-      "latency_s": 0.9
+      "latency_s": 0.91
     },
     "raw_response": " ANSWER:\n1. object\n2. animal\n3. food\n4. object\n5. animal\n6. object\n7. animal\n8. food\n\nFor the first part of the question, the classification is based on whether the word is an animal, food, or object:\n- walnut is an object (a type of nut),\n- rabbit is an animal,\n- pepper is food (spice),\n- needle is an object (a tool).\n\nFor the second part of the question, the classification is based on the first letter of each word:\n- pigeon starts with 'p', which falls in the 'early' category (A-M),\n- candle starts with 'c', which falls in the 'early' category (A-M),\n- salmon starts with 's', which falls in the 'early' category (A-M),\n- orange starts with 'o', which falls in the 'early' category (A-M).\n\nTherefore, the final answers are:\n1. object\n2. animal\n3. food\n4. object\n5. animal\n6. object\n7. animal\n8. food"
   },
@@ -1413,6 +3580,10 @@
     "switch_cost": 0.2,
     "perseveration_rate": 0.2,
     "perseveration_errors": 1,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1482,7 +3653,7 @@
       "prompt_tokens": 249,
       "prompt_tokens_after_trunc": 249,
       "generation_tokens": 270,
-      "latency_s": 0.93
+      "latency_s": 0.94
     },
     "raw_response": " ANSWER:\n1. animal - 1\n2. object - 1\n3. food - 2\n4. object - 1\n5. object - 1\n6. animal - 2\n7. food - 2\n8. object - 2\n9. animal - 3\n10. food - 2\n\nExplanation:\n- Rabbit is an animal.\n- Basket is an object.\n- Orange is a type of food.\n- Wrench is an object.\n- Shovel is an object.\n- Pigeon is an animal.\n- Mango is a type of food.\n- Needle is an object.\n- Lobster is an animal.\n- Salmon is a type of food.\n\nThe syllable count for each word is determined by counting the vowel sounds in the word:\n- Pigeon (pi-geon) has two syllables.\n- Mango (man-go) has two syllables.\n- Needle (nee-dle) has two syllables.\n- Lobster (lob-ster) has three syllables.\n- Salmon (sal-mon) has two syllables."
   },
@@ -1496,6 +3667,10 @@
     "switch_cost": -0.4,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 1,
+    "random_error_rate": 0.2,
     "details": {
       "1": {
         "status": "incorrect",
@@ -1528,7 +3703,7 @@
         "phase": "pre"
       },
       "6": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "1 (animal)",
         "gold": "food",
         "phase": "post"
@@ -1565,7 +3740,7 @@
       "prompt_tokens": 246,
       "prompt_tokens_after_trunc": 246,
       "generation_tokens": 291,
-      "latency_s": 1.0
+      "latency_s": 1.01
     },
     "raw_response": " ANSWER:\n1. 1 (pepper - one syllable)\n2. 1 (eagle - one syllable)\n3. 1 (wrench - one syllable)\n4. 3+ (banana - three or more syllables)\n5. 1 (rabbit - one syllable)\n6. 1 (cherry - one syllable)\n7. 1 (shovel - one syllable)\n8. 1 (hammer - one syllable)\n9. 1 (pigeon - one syllable)\n10. 1 (mirror - one syllable)\n\nCATEGORY:\n6. 1 (animal)\n7. 1 (object)\n8. 1 (object)\n9. 1 (animal)\n10. 1 (object)\n\nTo classify the words by category:\n6. Animal\n7. Object\n8. Object\n9. Animal\n10. Object\n\nCombining the syllable count with the category:\n6. 1 (animal)\n7. 1 (object)\n8. 1 (object)\n9. 1 (animal)\n10. 1 (object)"
   },
@@ -1579,6 +3754,10 @@
     "switch_cost": 0.0,
     "perseveration_rate": 0.2,
     "perseveration_errors": 1,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 2,
+    "random_error_rate": 0.4,
     "details": {
       "1": {
         "status": "correct",
@@ -1611,7 +3790,7 @@
         "phase": "pre"
       },
       "6": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "\"salmon\" has one syllable, so it is classified as '1' and starts with an 'early' letter, so it is 'early'",
         "gold": "late",
         "phase": "post"
@@ -1629,7 +3808,7 @@
         "phase": "post"
       },
       "9": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "\"walnut\" has one syllable, so it is classified as '1' and starts with an 'early' letter, so it is 'early'",
         "gold": "late",
         "phase": "post"
@@ -1662,6 +3841,10 @@
     "switch_cost": 0.2,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 3,
+    "random_error_rate": 0.6,
     "details": {
       "1": {
         "status": "correct",
@@ -1694,7 +3877,7 @@
         "phase": "pre"
       },
       "6": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "'eagle' has one syllable, so it is classified as '1'",
         "gold": "2",
         "phase": "post"
@@ -1712,13 +3895,13 @@
         "phase": "post"
       },
       "9": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "'basket' has one syllable, so it is classified as '1'",
         "gold": "2",
         "phase": "post"
       },
       "10": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "'mango' has one syllable, so it is classified as '1'",
         "gold": "2",
         "phase": "post"
@@ -1734,6 +3917,348 @@
       "latency_s": 1.12
     },
     "raw_response": " ANSWER:\n1. early\n2. early\n3. early\n4. late\n5. early\n6. 1\n7. 2\n8. 1\n9. 1\n10. 1\n\nExplanation:\n1. 'mirror' starts with 'm', which falls in the range A-M, so it is classified as 'early'.\n2. 'needle' starts with 'n', which falls in the range N-Z, so it is classified as 'late'.\n3. 'walnut' starts with 'w', which falls in the range A-M, so it is classified as 'early'.\n4. 'tiger' starts with 't', which falls in the range A-M, so it is classified as 'early'.\n5. 'donkey' starts with 'd', which falls in the range A-M, so it is classified as 'early'.\n6. 'eagle' has one syllable, so it is classified as '1'.\n7. 'turnip' has two syllables, so it is classified as '2'.\n8. 'wrench' has one syllable, so it is classified as '1'.\n9. 'basket' has one syllable, so it is classified as '1'.\n10. 'mango' has one syllable, so it is classified as '1'."
+  },
+  {
+    "task_id": "shifting_frontier_032",
+    "task_type": "shifting",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.25,
+    "pre_switch_accuracy": 0.0,
+    "post_switch_accuracy": 0.3158,
+    "switch_cost": -0.3158,
+    "perseveration_rate": 0.0,
+    "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 13,
+    "random_error_rate": 0.6842,
+    "details": {
+      "1": {
+        "status": "incorrect",
+        "predicted": "1",
+        "gold": "food",
+        "phase": "pre"
+      },
+      "2": {
+        "status": "incorrect",
+        "predicted": "2",
+        "gold": "object",
+        "phase": "pre"
+      },
+      "3": {
+        "status": "incorrect",
+        "predicted": "1",
+        "gold": "food",
+        "phase": "pre"
+      },
+      "4": {
+        "status": "incorrect",
+        "predicted": "1",
+        "gold": "animal",
+        "phase": "pre"
+      },
+      "5": {
+        "status": "incorrect",
+        "predicted": "1",
+        "gold": "animal",
+        "phase": "pre"
+      },
+      "6": {
+        "status": "random_error",
+        "predicted": "2",
+        "gold": "early",
+        "phase": "post"
+      },
+      "7": {
+        "status": "random_error",
+        "predicted": "2",
+        "gold": "early",
+        "phase": "post"
+      },
+      "8": {
+        "status": "random_error",
+        "predicted": "2",
+        "gold": "late",
+        "phase": "post"
+      },
+      "9": {
+        "status": "random_error",
+        "predicted": "2",
+        "gold": "early",
+        "phase": "post"
+      },
+      "10": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "late",
+        "phase": "post"
+      },
+      "11": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "early",
+        "phase": "post"
+      },
+      "12": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "late",
+        "phase": "post"
+      },
+      "13": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "late",
+        "phase": "post"
+      },
+      "14": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "early",
+        "phase": "post"
+      },
+      "15": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "early",
+        "phase": "post"
+      },
+      "16": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "2",
+        "phase": "post"
+      },
+      "17": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "18": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "19": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "20": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "21": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "22": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "3+",
+        "phase": "post"
+      },
+      "23": {
+        "status": "random_error",
+        "predicted": "2",
+        "gold": "1",
+        "phase": "post"
+      },
+      "24": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "shifting_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 504,
+      "prompt_tokens_after_trunc": 504,
+      "generation_tokens": 528,
+      "latency_s": 1.86
+    },
+    "raw_response": " ANSWER:\n1. food\n2. object\n3. food\n4. animal\n5. animal\n6. object\n7. object\n8. object\n9. animal\n10. food\n11. food\n12. food\n13. animal\n14. food\n15. object\n16. 1\n17. 2\n18. 2\n19. 2\n20. 2\n21. 2\n22. food\n23. object\n24. object\n25. 1\n\nANSWER:\n1. food\n2. object\n3. food\n4. animal\n5. animal\n6. object\n7. object\n8. object\n9. animal\n10. food\n11. food\n12. food\n13. animal\n14. food\n15. object\n16. 1\n17. 2\n18. 2\n19. 2\n20. 2\n21. 2\n22. food\n23. object\n24. object\n25. 1\n\nANSWER:\n1. early\n2. early\n3. early\n4. early\n5. early\n6. early\n7. early\n8. early\n9. early\n10. early\n11. early\n12. early\n13. early\n14. early\n15. early\n16. early\n17. early\n18. early\n19. early\n20. early\n21. early\n22. early\n23. early\n24. early\n25. early\n\nANSWER:\n1. 1\n2. 2\n3. 1\n4. 1\n5. 1\n6. 2\n7. 2\n8. 2\n9. 2\n10. 1\n11. 1\n12. 1\n13. 1\n14. 1\n15. 1\n16. 1\n17. 2\n18. 2\n19. 2\n20. 2\n21. 2\n22. 1\n23. 2\n24. 2\n25. 1\n"
+  },
+  {
+    "task_id": "shifting_frontier_033",
+    "task_type": "shifting",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.3333,
+    "pre_switch_accuracy": 0.0,
+    "post_switch_accuracy": 0.4211,
+    "switch_cost": -0.4211,
+    "perseveration_rate": 0.3684,
+    "perseveration_errors": 7,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 4,
+    "random_error_rate": 0.2105,
+    "details": {
+      "1": {
+        "status": "incorrect",
+        "predicted": "1 (one syllable)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "2": {
+        "status": "incorrect",
+        "predicted": "3+ (three or more syllables)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "3": {
+        "status": "incorrect",
+        "predicted": "1 (one syllable)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "4": {
+        "status": "incorrect",
+        "predicted": "3+ (three or more syllables)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "5": {
+        "status": "incorrect",
+        "predicted": "1 (one syllable)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "6": {
+        "status": "correct",
+        "predicted": "object",
+        "gold": "object",
+        "phase": "post"
+      },
+      "7": {
+        "status": "correct",
+        "predicted": "object",
+        "gold": "object",
+        "phase": "post"
+      },
+      "8": {
+        "status": "correct",
+        "predicted": "food",
+        "gold": "food",
+        "phase": "post"
+      },
+      "9": {
+        "status": "correct",
+        "predicted": "animal",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "10": {
+        "status": "correct",
+        "predicted": "food",
+        "gold": "food",
+        "phase": "post"
+      },
+      "11": {
+        "status": "correct",
+        "predicted": "food",
+        "gold": "food",
+        "phase": "post"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "animal",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "13": {
+        "status": "random_error",
+        "predicted": "animal",
+        "gold": "object",
+        "phase": "post"
+      },
+      "14": {
+        "status": "random_error",
+        "predicted": "object",
+        "gold": "food",
+        "phase": "post"
+      },
+      "15": {
+        "status": "correct",
+        "predicted": "animal",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "16": {
+        "status": "random_error",
+        "predicted": "object",
+        "gold": "early",
+        "phase": "post"
+      },
+      "17": {
+        "status": "perseveration",
+        "predicted": "object",
+        "gold": "late",
+        "phase": "post"
+      },
+      "18": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "early",
+        "phase": "post"
+      },
+      "19": {
+        "status": "random_error",
+        "predicted": "object",
+        "gold": "late",
+        "phase": "post"
+      },
+      "20": {
+        "status": "perseveration",
+        "predicted": "object",
+        "gold": "late",
+        "phase": "post"
+      },
+      "21": {
+        "status": "perseveration",
+        "predicted": "animal",
+        "gold": "early",
+        "phase": "post"
+      },
+      "22": {
+        "status": "perseveration",
+        "predicted": "animal",
+        "gold": "late",
+        "phase": "post"
+      },
+      "23": {
+        "status": "perseveration",
+        "predicted": "animal",
+        "gold": "late",
+        "phase": "post"
+      },
+      "24": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "late",
+        "phase": "post"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "shifting_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 504,
+      "prompt_tokens_after_trunc": 504,
+      "generation_tokens": 518,
+      "latency_s": 1.83
+    },
+    "raw_response": " ANSWER:\n1. 1 (one syllable)\n2. 3+ (three or more syllables)\n3. 1 (one syllable)\n4. 3+ (three or more syllables)\n5. 1 (one syllable)\n6. 1 (one syllable)\n7. 1 (one syllable)\n8. 1 (one syllable)\n9. 1 (one syllable)\n10. 1 (one syllable)\n11. 1 (one syllable)\n12. 1 (one syllable)\n13. 1 (one syllable)\n14. 1 (one syllable)\n15. 1 (one syllable)\n16. 1 (one syllable)\n17. 1 (one syllable)\n18. 1 (one syllable)\n19. 1 (one syllable)\n20. 1 (one syllable)\n21. 1 (one syllable)\n22. 1 (one syllable)\n23. 1 (one syllable)\n24. 1 (one syllable)\n25. 1 (one syllable)\n\nANSWER:\n6. object\n7. object\n8. food\n9. animal\n10. food\n11. food\n12. animal\n13. animal\n14. object\n15. animal\n16. object\n17. object\n18. food\n19. object\n20. object\n21. object\n22. animal\n23. animal\n24. food\n25. object\n\nANSWER:\n16. late\n17. late\n18. late\n19. late\n20. late\n21. late\n22. late\n23. late\n24. late\n25. late\n\nANSWER:\n16. object\n17. object\n18. food\n19. object\n20. object\n21. animal\n22. animal\n23. animal\n24. food\n25. object\n"
   },
   {
     "task_id": "stream_easy_000",
@@ -1803,7 +4328,7 @@
       "prompt_tokens": 300,
       "prompt_tokens_after_trunc": 300,
       "generation_tokens": 6,
-      "latency_s": 0.03
+      "latency_s": 0.02
     },
     "raw_response": " 21 inches apart"
   },
@@ -1932,6 +4457,56 @@
     "raw_response": " 1. 2 inches\n2. no\n"
   },
   {
+    "task_id": "stream_frontier_032",
+    "task_type": "stream_segregation",
+    "difficulty": "Frontier",
+    "stream_accuracy": 0.0,
+    "breakthrough_detection": 0.0,
+    "dual_score": 0.0,
+    "details": {
+      "q1_predicted": "240 degrees",
+      "q1_gold": "421",
+      "q1_correct": false,
+      "q2_predicted": "no",
+      "q2_correct": false
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "stream_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 859,
+      "prompt_tokens_after_trunc": 859,
+      "generation_tokens": 14,
+      "latency_s": 0.06
+    },
+    "raw_response": " 1. 240 degrees\n2. no\n"
+  },
+  {
+    "task_id": "stream_frontier_033",
+    "task_type": "stream_segregation",
+    "difficulty": "Frontier",
+    "stream_accuracy": 1.0,
+    "breakthrough_detection": 0.0,
+    "dual_score": 0.6,
+    "details": {
+      "q1_predicted": "122 tablespoons of olive oil",
+      "q1_gold": "122",
+      "q1_correct": true,
+      "q2_predicted": "no",
+      "q2_correct": false
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "stream_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 880,
+      "prompt_tokens_after_trunc": 880,
+      "generation_tokens": 20,
+      "latency_s": 0.08
+    },
+    "raw_response": " 1. 122 tablespoons of olive oil\n2. no\n"
+  },
+  {
     "task_id": "stroop_easy_000",
     "task_type": "stroop",
     "difficulty": "Easy",
@@ -1964,7 +4539,7 @@
       "prompt_tokens": 173,
       "prompt_tokens_after_trunc": 173,
       "generation_tokens": 21,
-      "latency_s": 0.08
+      "latency_s": 0.07
     },
     "raw_response": " 1. Italy\n2. 1955\n3. 1776"
   },
@@ -2141,7 +4716,7 @@
       "prompt_tokens": 244,
       "prompt_tokens_after_trunc": 244,
       "generation_tokens": 221,
-      "latency_s": 0.76
+      "latency_s": 0.77
     },
     "raw_response": " 1. The sentence \"Paris is the capital of Germany\" is incorrect as Paris is the capital of France, not Germany.\n   Answer: France\n\n2. The report states the sum as 132.\n   Answer: 132\n\n3. The river mentioned in the sentence \"The Danube is the longest river in Africa\" is the Danube.\n   Answer: Danube\n\n4. The sentence \"Paris is the capital of Brazil\" is incorrect as Paris is the capital of France, not Brazil.\n   Answer: France\n\n5. The sentence \"Paris is the capital of Spain\" is incorrect as Paris is the capital of France, not Spain.\n   Answer: France\n\n6. The sentence \"Paris is the capital of Australia\" is incorrect as Paris is the capital of France, not Australia.\n   Answer: France\n\nANSWER:\n1. France\n2. 132\n3. Danube\n4. France\n5. France\n6. France"
   },
@@ -2321,6 +4896,202 @@
       "latency_s": 0.74
     },
     "raw_response": " 1. The temperature mentioned in the sentence is 92 degrees Celsius.\n2. The temperature mentioned in the sentence is 120 degrees Celsius.\n3. The temperature mentioned in the sentence is 92 degrees Celsius.\n4. The temperature mentioned in the sentence is 75 degrees Celsius.\n5. The report states the sum as 135.\n6. The report states the sum as 162.\n7. The report states the sum as 57.\n8. The country mentioned in the sentence is not Brazil; it is actually France. Paris is the capital of France.\n\nANSWER:\n1. 92 degrees Celsius\n2. 120 degrees Celsius\n3. 92 degrees Celsius\n4. 75 degrees Celsius\n5. 135\n6. 162\n7. 57\n8. France"
+  },
+  {
+    "task_id": "stroop_frontier_032",
+    "task_type": "stroop",
+    "difficulty": "Frontier",
+    "accuracy": 0.6667,
+    "stroop_error_rate": 0.0,
+    "stroop_resistance": 1.0,
+    "correct_count": 10,
+    "stroop_errors": 0,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "150 degrees Celsius",
+        "gold": "150"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "85 degrees Celsius",
+        "gold": "85"
+      },
+      "3": {
+        "status": "correct",
+        "predicted": "77",
+        "gold": "77"
+      },
+      "4": {
+        "status": "other_error",
+        "predicted": "1848",
+        "gold": "1302"
+      },
+      "5": {
+        "status": "other_error",
+        "predicted": "The Moon landing",
+        "gold": "Volga"
+      },
+      "6": {
+        "status": "other_error",
+        "predicted": "The Volga",
+        "gold": "1848"
+      },
+      "7": {
+        "status": "correct",
+        "predicted": "The Danube",
+        "gold": "Danube"
+      },
+      "8": {
+        "status": "other_error",
+        "predicted": "The signing of the Magna Carta",
+        "gold": "1848"
+      },
+      "9": {
+        "status": "correct",
+        "predicted": "75 degrees Celsius",
+        "gold": "75"
+      },
+      "10": {
+        "status": "other_error",
+        "predicted": "Paris",
+        "gold": "Australia"
+      },
+      "11": {
+        "status": "correct",
+        "predicted": "The Seine",
+        "gold": "Seine"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "13": {
+        "status": "correct",
+        "predicted": "The Thames",
+        "gold": "Thames"
+      },
+      "14": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "15": {
+        "status": "correct",
+        "predicted": "75 degrees Celsius\n\nNote: The fourth and sixth sentences contain factual inaccuracies. The Moon landing occurred in 1969, and Paris is the capital of France, not Australia. The other answers are correct based on the information provided in the sentences",
+        "gold": "75"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "stroop_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 663,
+      "prompt_tokens_after_trunc": 663,
+      "generation_tokens": 171,
+      "latency_s": 0.61
+    },
+    "raw_response": " 1. 150 degrees Celsius\n2. 85 degrees Celsius\n3. 77\n4. 1848\n5. The Moon landing\n6. The Volga\n7. The Danube\n8. The signing of the Magna Carta\n9. 75 degrees Celsius\n10. Paris\n11. The Seine\n12. The Volga\n13. The Thames\n14. The Volga\n15. 75 degrees Celsius\n\nNote: The fourth and sixth sentences contain factual inaccuracies. The Moon landing occurred in 1969, and Paris is the capital of France, not Australia. The other answers are correct based on the information provided in the sentences."
+  },
+  {
+    "task_id": "stroop_frontier_033",
+    "task_type": "stroop",
+    "difficulty": "Frontier",
+    "accuracy": 0.5333,
+    "stroop_error_rate": 0.1333,
+    "stroop_resistance": 0.8667,
+    "correct_count": 8,
+    "stroop_errors": 2,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "Volga",
+        "gold": "Volga"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "Rhine",
+        "gold": "Rhine"
+      },
+      "3": {
+        "status": "stroop_error",
+        "predicted": "54",
+        "gold": "46",
+        "trap": "54"
+      },
+      "4": {
+        "status": "correct",
+        "predicted": "91",
+        "gold": "91"
+      },
+      "5": {
+        "status": "correct",
+        "predicted": "120 degrees Celsius",
+        "gold": "120"
+      },
+      "6": {
+        "status": "correct",
+        "predicted": "90",
+        "gold": "90"
+      },
+      "7": {
+        "status": "other_error",
+        "predicted": "None",
+        "gold": "Japan"
+      },
+      "8": {
+        "status": "other_error",
+        "predicted": "85 degrees Celsius",
+        "gold": "92"
+      },
+      "9": {
+        "status": "correct",
+        "predicted": "142",
+        "gold": "142"
+      },
+      "10": {
+        "status": "stroop_error",
+        "predicted": "82",
+        "gold": "81",
+        "trap": "82"
+      },
+      "11": {
+        "status": "other_error",
+        "predicted": "None",
+        "gold": "Brazil"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "85 degrees Celsius",
+        "gold": "85"
+      },
+      "13": {
+        "status": "correct",
+        "predicted": "156",
+        "gold": "156"
+      },
+      "14": {
+        "status": "other_error",
+        "predicted": "None",
+        "gold": "1997"
+      },
+      "15": {
+        "status": "other_error",
+        "predicted": "None",
+        "gold": "Italy"
+      }
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "stroop_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 716,
+      "prompt_tokens_after_trunc": 716,
+      "generation_tokens": 269,
+      "latency_s": 0.96
+    },
+    "raw_response": " 1. Volga\n2. Rhine\n3. 54\n4. 91\n5. 120 degrees Celsius\n6. 90\n7. None (Paris is the capital of France, not Japan)\n8. 85 degrees Celsius\n9. 142\n10. 82\n11. None (Paris is the capital of France, not Brazil)\n12. 85 degrees Celsius\n13. 156\n14. None (The signing of the Magna Carta occurred in 1215, not 1997)\n15. None (Paris is the capital of France, not Italy)\n\nANSWER:\n1. Volga\n2. Rhine\n3. 54\n4. 91\n5. 120 degrees Celsius\n6. 90\n7. None\n8. 85 degrees Celsius\n9. 142\n10. 82\n11. None\n12. 85 degrees Celsius\n13. 156\n14. None\n15. None"
   },
   {
     "task_id": "sustained_easy_000",
@@ -2675,7 +5446,7 @@
       "prompt_tokens": 3628,
       "prompt_tokens_after_trunc": 3628,
       "generation_tokens": 27,
-      "latency_s": 0.16
+      "latency_s": 0.15
     },
     "raw_response": " [kingfisher], [finch], [puffin], [robin], [eagle], [magpie]"
   },
@@ -2734,5 +5505,135 @@
       "latency_s": 0.23
     },
     "raw_response": " [sparrow], [pterodactyl], [dove], [magpie], [robin], [puffin], [osprey], [woodpecker], [kingfisher]"
+  },
+  {
+    "task_id": "sustained_frontier_032",
+    "task_type": "sustained",
+    "difficulty": "Frontier",
+    "recall": 0.5333,
+    "precision": 0.5,
+    "intrusion_rate": 0.8,
+    "vigilance_decrement": -0.75,
+    "f1": 0.5161,
+    "details": {
+      "found_items": [
+        "Nile",
+        "Danube",
+        "Yangtze",
+        "Suez Canal",
+        "Caspian Sea",
+        "Mississippi",
+        "Aral Sea",
+        "Tagus",
+        "Loire",
+        "Strait of Gibraltar",
+        "Amazon",
+        "Panama Canal",
+        "Lake Victoria",
+        "Lake Baikal",
+        "Tigris",
+        "Dead Sea"
+      ],
+      "gold_targets": [
+        "Don",
+        "Euphrates",
+        "Mekong",
+        "Loire",
+        "Amazon",
+        "Tagus",
+        "Mississippi",
+        "Murray",
+        "Rhine",
+        "Zambezi",
+        "Tigris",
+        "Danube",
+        "Yangtze",
+        "Nile",
+        "Congo"
+      ],
+      "quintile_recalls": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 0.5,
+        "3": 0.3333333333333333,
+        "4": 0.75
+      },
+      "n_found": 16,
+      "n_gold": 15
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sustained_frontier_032",
+      "model": "phi3",
+      "prompt_tokens": 6581,
+      "prompt_tokens_after_trunc": 6581,
+      "generation_tokens": 57,
+      "latency_s": 0.34
+    },
+    "raw_response": " Nile, Danube, Yangtze, Suez Canal, Caspian Sea, Mississippi, Aral Sea, Tagus, Loire, Strait of Gibraltar, Amazon, Panama Canal, Lake Victoria, Lake Baikal, Tigris, Dead Sea"
+  },
+  {
+    "task_id": "sustained_frontier_033",
+    "task_type": "sustained",
+    "difficulty": "Frontier",
+    "recall": 0.8,
+    "precision": 0.7857,
+    "intrusion_rate": 0.3,
+    "vigilance_decrement": -0.5,
+    "f1": 0.7928,
+    "details": {
+      "found_items": [
+        "Iron",
+        "Niobium",
+        "Ruthenium",
+        "Vanadium",
+        "Manganese",
+        "Chromium",
+        "Copper",
+        "Platinum",
+        "Nickel",
+        "Rhodium",
+        "Iridium",
+        "Sand",
+        "Marble",
+        "Granite"
+      ],
+      "gold_targets": [
+        "cobalt",
+        "niobium",
+        "ruthenium",
+        "manganese",
+        "vanadium",
+        "tin",
+        "lead",
+        "chromium",
+        "rhodium",
+        "iridium",
+        "iron",
+        "nickel",
+        "platinum",
+        "copper",
+        "molybdenum"
+      ],
+      "quintile_recalls": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 0.75,
+        "3": 1.0,
+        "4": 0.5
+      },
+      "n_found": 14,
+      "n_gold": 15
+    },
+    "model": "phi3",
+    "generation_meta": {
+      "task_id": "sustained_frontier_033",
+      "model": "phi3",
+      "prompt_tokens": 6659,
+      "prompt_tokens_after_trunc": 6659,
+      "generation_tokens": 49,
+      "latency_s": 0.31
+    },
+    "raw_response": " Iron, Niobium, Ruthenium, Vanadium, Manganese, Chromium, Copper, Platinum, Nickel, Rhodium, Iridium, Sand, Marble, Granite\n"
   }
 ]

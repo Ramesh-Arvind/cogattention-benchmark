@@ -1,144 +1,254 @@
 {
-  "cas_score": 0.8133,
+  "cas_score": 0.8326,
+  "cas_geometric": 0.8063,
   "per_task": {
     "anomaly": {
-      "mean": 0.425,
-      "std": 0.3284,
-      "n": 8,
+      "mean": 0.48,
+      "std": 0.3425,
+      "n": 10,
       "by_difficulty": {
         "Easy": 0.5,
         "Medium": 0.6,
         "Hard": 0.2,
-        "Expert": 0.4
+        "Expert": 0.7,
+        "Frontier": 0.4
       },
       "metric_used": "dual_task_score"
     },
+    "blink": {
+      "mean": 0.5,
+      "std": 0.3333,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 0.5,
+        "Medium": 0.5,
+        "Hard": 1.0,
+        "Expert": 0.5,
+        "Frontier": 0.0
+      },
+      "metric_used": "accuracy"
+    },
     "capacity": {
-      "mean": 0.6562,
-      "std": 0.4807,
-      "n": 8,
+      "mean": 0.6275,
+      "std": 0.3931,
+      "n": 10,
       "by_difficulty": {
         "Easy": 1.0,
         "Medium": 0.5,
-        "Hard": 0.125,
-        "Expert": 1.0
+        "Hard": 0.75,
+        "Expert": 0.7,
+        "Frontier": 0.1875
       },
       "metric_used": "accuracy"
+    },
+    "context_dilution": {
+      "mean": 0.8,
+      "std": 0.4216,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 1.0,
+        "Medium": 1.0,
+        "Hard": 1.0,
+        "Expert": 1.0,
+        "Frontier": 0.0
+      },
+      "metric_used": "accuracy"
+    },
+    "flanker": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 1.0,
+        "Medium": 1.0,
+        "Hard": 1.0,
+        "Expert": 1.0,
+        "Frontier": 1.0
+      },
+      "metric_used": "accuracy"
+    },
+    "inhibition_return": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 1.0,
+        "Medium": 1.0,
+        "Hard": 1.0,
+        "Expert": 1.0,
+        "Frontier": 1.0
+      },
+      "metric_used": "overall_accuracy"
     },
     "interference": {
       "mean": 1.0,
       "std": 0.0,
-      "n": 8,
+      "n": 10,
       "by_difficulty": {
         "Easy": 1.0,
         "Medium": 1.0,
         "Hard": 1.0,
-        "Expert": 1.0
+        "Expert": 1.0,
+        "Frontier": 1.0
+      },
+      "metric_used": "accuracy"
+    },
+    "multihop": {
+      "mean": 0.9,
+      "std": 0.3162,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 1.0,
+        "Medium": 1.0,
+        "Hard": 1.0,
+        "Expert": 0.5,
+        "Frontier": 1.0
       },
       "metric_used": "accuracy"
     },
     "selective": {
-      "mean": 0.6833,
-      "std": 0.439,
-      "n": 8,
+      "mean": 0.6687,
+      "std": 0.4254,
+      "n": 10,
       "by_difficulty": {
         "Easy": 0.5,
         "Medium": 1.0,
-        "Hard": 0.4,
-        "Expert": 0.8334
+        "Hard": 0.5,
+        "Expert": 0.8334,
+        "Frontier": 0.51
       },
       "metric_used": "sas_score"
     },
+    "semantic_niah": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 10,
+      "by_difficulty": {
+        "Easy": 1.0,
+        "Medium": 1.0,
+        "Hard": 1.0,
+        "Expert": 1.0,
+        "Frontier": 1.0
+      },
+      "metric_used": "accuracy"
+    },
     "shifting": {
-      "mean": 0.9104,
-      "std": 0.08,
-      "n": 8,
+      "mean": 0.9033,
+      "std": 0.0721,
+      "n": 10,
       "by_difficulty": {
         "Easy": 0.9166,
         "Medium": 0.875,
         "Hard": 1.0,
-        "Expert": 0.85
+        "Expert": 0.85,
+        "Frontier": 0.875
       },
       "metric_used": "overall_accuracy"
     },
     "stream_segregation": {
       "mean": 1.0,
       "std": 0.0,
-      "n": 8,
+      "n": 10,
       "by_difficulty": {
         "Easy": 1.0,
         "Medium": 1.0,
         "Hard": 1.0,
-        "Expert": 1.0
+        "Expert": 1.0,
+        "Frontier": 1.0
       },
       "metric_used": "stream_accuracy"
     },
     "stroop": {
       "mean": 1.0,
       "std": 0.0,
-      "n": 8,
+      "n": 10,
       "by_difficulty": {
         "Easy": 1.0,
         "Medium": 1.0,
         "Hard": 1.0,
-        "Expert": 1.0
+        "Expert": 1.0,
+        "Frontier": 1.0
       },
       "metric_used": "accuracy"
     },
     "sustained": {
-      "mean": 0.9146,
-      "std": 0.1726,
-      "n": 8,
+      "mean": 0.9317,
+      "std": 0.1564,
+      "n": 10,
       "by_difficulty": {
         "Easy": 1.0,
         "Medium": 1.0,
         "Hard": 0.7,
-        "Expert": 0.9584
+        "Expert": 0.9584,
+        "Frontier": 1.0
       },
       "metric_used": "recall"
     }
   },
   "aggregate_metrics": {
-    "anomaly_primary_accuracy": 0.5,
-    "anomaly_anomaly_detection": 0.375,
-    "anomaly_dual_task_score": 0.425,
-    "capacity_accuracy": 0.6562,
-    "capacity_correct_count": 2.25,
-    "capacity_total_people": 3.5,
+    "anomaly_primary_accuracy": 0.6,
+    "anomaly_anomaly_detection": 0.4,
+    "anomaly_dual_task_score": 0.48,
+    "blink_t1_accuracy": 0.8,
+    "blink_t2_accuracy": 0.2,
+    "blink_t2_given_t1": 0.2,
+    "blink_accuracy": 0.5,
+    "capacity_accuracy": 0.6275,
+    "capacity_correct_count": 2.3,
+    "capacity_total_people": 4.4,
+    "context_dilution_accuracy": 0.8,
+    "flanker_accuracy": 1.0,
+    "inhibition_return_overall_accuracy": 1.0,
+    "inhibition_return_initial_accuracy": 1.0,
+    "inhibition_return_return_accuracy": 1.0,
+    "inhibition_return_return_penalty": 0.0,
     "interference_accuracy": 1.0,
     "interference_perseveration_rate": 0.0,
-    "interference_correct_count": 2.5,
-    "interference_total_keys": 2.5,
-    "selective_signal_recall": 0.6833,
-    "selective_attention_precision": 0.75,
-    "selective_distractor_intrusion": 0.0,
-    "selective_sas_score": 0.6833,
-    "shifting_overall_accuracy": 0.9104,
-    "shifting_pre_switch_accuracy": 0.9021,
-    "shifting_post_switch_accuracy": 0.9187,
-    "shifting_switch_cost": -0.0167,
+    "interference_correct_count": 3.6,
+    "interference_total_keys": 3.6,
+    "multihop_accuracy": 0.9,
+    "selective_signal_recall": 0.6792,
+    "selective_attention_precision": 0.77,
+    "selective_distractor_intrusion": 0.012,
+    "selective_sas_score": 0.6687,
+    "selective_noise_ratio": 0.6478,
+    "semantic_niah_accuracy": 1.0,
+    "shifting_overall_accuracy": 0.9033,
+    "shifting_pre_switch_accuracy": 0.9217,
+    "shifting_post_switch_accuracy": 0.9034,
+    "shifting_switch_cost": 0.0183,
     "shifting_perseveration_rate": 0.0,
     "shifting_perseveration_errors": 0,
+    "shifting_residue_error_count": 0,
+    "shifting_residue_rate": 0.0,
+    "shifting_random_error_count": 0.9,
+    "shifting_random_error_rate": 0.0966,
     "stream_segregation_stream_accuracy": 1.0,
-    "stream_segregation_dual_score": 0.8,
+    "stream_segregation_dual_score": 0.76,
     "stream_segregation_breakthrough_detection": 0.0,
     "stroop_accuracy": 1.0,
     "stroop_stroop_error_rate": 0.0,
     "stroop_stroop_resistance": 1.0,
-    "stroop_correct_count": 5.25,
+    "stroop_correct_count": 7.2,
     "stroop_stroop_errors": 0,
-    "sustained_recall": 0.9146,
+    "sustained_recall": 0.9317,
     "sustained_precision": 1.0,
     "sustained_intrusion_rate": 0.0,
-    "sustained_vigilance_decrement": -0.0938,
-    "sustained_f1": 0.9463
+    "sustained_vigilance_decrement": -0.075,
+    "sustained_f1": 0.9571
   },
-  "total_instances": 64,
+  "total_instances": 140,
   "task_types_evaluated": [
     "anomaly",
+    "blink",
     "capacity",
+    "context_dilution",
+    "flanker",
+    "inhibition_return",
     "interference",
+    "multihop",
     "selective",
+    "semantic_niah",
     "shifting",
     "stream_segregation",
     "stroop",

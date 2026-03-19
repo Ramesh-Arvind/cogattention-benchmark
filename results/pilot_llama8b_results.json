@@ -103,7 +103,7 @@
       "prompt_tokens": 670,
       "prompt_tokens_after_trunc": 670,
       "generation_tokens": 82,
-      "latency_s": 0.47
+      "latency_s": 0.46
     },
     "raw_response": "ANSWER:\n1. 9\n2. The code snippet \"for (int i = 0; i < n; i++) { if (arr[i] > max) { max = arr[i]; } }\" appears to be out of place in the passage, as it seems to be a piece of programming code and does not fit with the narrative style of the rest of the passage."
   },
@@ -184,7 +184,7 @@
       "prompt_tokens": 1013,
       "prompt_tokens_after_trunc": 1013,
       "generation_tokens": 15,
-      "latency_s": 0.11
+      "latency_s": 0.1
     },
     "raw_response": "ANSWER:\n1. $317.26\n2. nothing unusual"
   },
@@ -211,9 +211,343 @@
       "prompt_tokens": 1027,
       "prompt_tokens_after_trunc": 1027,
       "generation_tokens": 15,
-      "latency_s": 0.11
+      "latency_s": 0.1
     },
     "raw_response": "ANSWER:\n1. $258.37\n2. nothing unusual"
+  },
+  {
+    "task_id": "anomaly_frontier_032",
+    "task_type": "anomaly",
+    "difficulty": "Frontier",
+    "primary_accuracy": 0.0,
+    "anomaly_detection": 0.0,
+    "dual_task_score": 0.0,
+    "details": {
+      "pred_primary": "$420.23",
+      "gold_primary": 339.23,
+      "primary_correct": false,
+      "pred_anomaly": "nothing unusual",
+      "anomaly_detected": false,
+      "anomaly_type": "off_by_one",
+      "anomaly_saliency": "ultra_low"
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "anomaly_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 1359,
+      "prompt_tokens_after_trunc": 1359,
+      "generation_tokens": 15,
+      "latency_s": 0.11
+    },
+    "raw_response": "ANSWER:\n1. $420.23\n2. nothing unusual"
+  },
+  {
+    "task_id": "anomaly_frontier_033",
+    "task_type": "anomaly",
+    "difficulty": "Frontier",
+    "primary_accuracy": 0.0,
+    "anomaly_detection": 0.0,
+    "dual_task_score": 0.0,
+    "details": {
+      "pred_primary": "$192.72 + $63.45 + $34.12 + $103.87 = $393.16",
+      "gold_primary": 394.16,
+      "primary_correct": false,
+      "pred_anomaly": "nothing unusual",
+      "anomaly_detected": false,
+      "anomaly_type": "single_char_swap",
+      "anomaly_saliency": "ultra_low"
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "anomaly_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 1338,
+      "prompt_tokens_after_trunc": 1338,
+      "generation_tokens": 35,
+      "latency_s": 0.22
+    },
+    "raw_response": "ANSWER:\n1. $192.72 + $63.45 + $34.12 + $103.87 = $393.16\n2. nothing unusual"
+  },
+  {
+    "task_id": "blink_easy_000",
+    "task_type": "blink",
+    "difficulty": "Easy",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "BALCONY",
+      "gold_t1": "EMERALD",
+      "gold_t2": "forty-five",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 8
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 213,
+      "prompt_tokens_after_trunc": 213,
+      "generation_tokens": 14,
+      "latency_s": 0.08
+    },
+    "raw_response": "T1: EMERALD\nT2: BALCONY"
+  },
+  {
+    "task_id": "blink_easy_001",
+    "task_type": "blink",
+    "difficulty": "Easy",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "CORRIDOR",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "nine-million",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 8
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 211,
+      "prompt_tokens_after_trunc": 211,
+      "generation_tokens": 14,
+      "latency_s": 0.08
+    },
+    "raw_response": "T1: DIAMOND\nT2: CORRIDOR"
+  },
+  {
+    "task_id": "blink_medium_008",
+    "task_type": "blink",
+    "difficulty": "Medium",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "pavilion",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "seven-hundred",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 254,
+      "prompt_tokens_after_trunc": 254,
+      "generation_tokens": 13,
+      "latency_s": 0.08
+    },
+    "raw_response": "T1: DIAMOND\nT2: pavilion"
+  },
+  {
+    "task_id": "blink_medium_009",
+    "task_type": "blink",
+    "difficulty": "Medium",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "building",
+      "gold_t1": "EMERALD",
+      "gold_t2": "sixty-three",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 253,
+      "prompt_tokens_after_trunc": 253,
+      "generation_tokens": 12,
+      "latency_s": 0.07
+    },
+    "raw_response": "T1: EMERALD\nT2: building"
+  },
+  {
+    "task_id": "blink_hard_016",
+    "task_type": "blink",
+    "difficulty": "Hard",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 1.0,
+    "t2_given_t1": 1.0,
+    "accuracy": 1.0,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "PENGUIN",
+      "gold_t1": "DIAMOND",
+      "gold_t2": "PENGUIN",
+      "t1_correct": true,
+      "t2_correct": true,
+      "lag": 3
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 295,
+      "prompt_tokens_after_trunc": 295,
+      "generation_tokens": 15,
+      "latency_s": 0.09
+    },
+    "raw_response": "T1: DIAMOND\nT2: PENGUIN"
+  },
+  {
+    "task_id": "blink_hard_017",
+    "task_type": "blink",
+    "difficulty": "Hard",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 1.0,
+    "t2_given_t1": 1.0,
+    "accuracy": 1.0,
+    "details": {
+      "pred_t1": "EMERALD",
+      "pred_t2": "PENGUIN",
+      "gold_t1": "EMERALD",
+      "gold_t2": "PENGUIN",
+      "t1_correct": true,
+      "t2_correct": true,
+      "lag": 3
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 295,
+      "prompt_tokens_after_trunc": 295,
+      "generation_tokens": 15,
+      "latency_s": 0.09
+    },
+    "raw_response": "T1: EMERALD\nT2: PENGUIN"
+  },
+  {
+    "task_id": "blink_expert_024",
+    "task_type": "blink",
+    "difficulty": "Expert",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "GARNET",
+      "pred_t2": "surface",
+      "gold_t1": "GARNET",
+      "gold_t2": "twenty-eight",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 2
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 333,
+      "prompt_tokens_after_trunc": 333,
+      "generation_tokens": 12,
+      "latency_s": 0.07
+    },
+    "raw_response": "T1: GARNET\nT2: surface"
+  },
+  {
+    "task_id": "blink_expert_025",
+    "task_type": "blink",
+    "difficulty": "Expert",
+    "t1_accuracy": 1.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.5,
+    "details": {
+      "pred_t1": "OPAL",
+      "pred_t2": "pavilion",
+      "gold_t1": "OPAL",
+      "gold_t2": "nine-million",
+      "t1_correct": true,
+      "t2_correct": false,
+      "lag": 2
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 332,
+      "prompt_tokens_after_trunc": 332,
+      "generation_tokens": 12,
+      "latency_s": 0.07
+    },
+    "raw_response": "T1: OPAL\nT2: pavilion"
+  },
+  {
+    "task_id": "blink_frontier_032",
+    "task_type": "blink",
+    "difficulty": "Frontier",
+    "t1_accuracy": 0.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.0,
+    "details": {
+      "pred_t1": "DIAMOND",
+      "pred_t2": "passage",
+      "gold_t1": "sixty-three",
+      "gold_t2": "DIAMOND",
+      "t1_correct": false,
+      "t2_correct": false,
+      "lag": 1
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 456,
+      "prompt_tokens_after_trunc": 456,
+      "generation_tokens": 12,
+      "latency_s": 0.08
+    },
+    "raw_response": "T1: DIAMOND\nT2: passage"
+  },
+  {
+    "task_id": "blink_frontier_033",
+    "task_type": "blink",
+    "difficulty": "Frontier",
+    "t1_accuracy": 0.0,
+    "t2_accuracy": 0.0,
+    "t2_given_t1": 0.0,
+    "accuracy": 0.0,
+    "details": {
+      "pred_t1": "OPAL",
+      "pred_t2": "cabinet",
+      "gold_t1": "sixty-three",
+      "gold_t2": "OPAL",
+      "t1_correct": false,
+      "t2_correct": false,
+      "lag": 1
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "blink_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 453,
+      "prompt_tokens_after_trunc": 453,
+      "generation_tokens": 11,
+      "latency_s": 0.07
+    },
+    "raw_response": "T1: OPAL\nT2: cabinet"
   },
   {
     "task_id": "capacity_easy_000",
@@ -223,27 +557,27 @@
     "correct_count": 0,
     "total_people": 2,
     "details": {
-      "Haruto": {
+      "Ines": {
         "status": "incorrect",
-        "predicted": "jade dice",
-        "gold": "amber coin"
+        "predicted": "copper mirror",
+        "gold": "golden mask"
       },
-      "Femi": {
+      "Adaeze": {
         "status": "incorrect",
-        "predicted": "amber coin",
-        "gold": "jade dice"
+        "predicted": "golden mask",
+        "gold": "copper mirror"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_easy_000",
       "model": "llama8b",
-      "prompt_tokens": 140,
-      "prompt_tokens_after_trunc": 140,
-      "generation_tokens": 17,
+      "prompt_tokens": 143,
+      "prompt_tokens_after_trunc": 143,
+      "generation_tokens": 18,
       "latency_s": 0.1
     },
-    "raw_response": "ANSWER:\n- Haruto: jade dice\n- Femi: amber coin"
+    "raw_response": "ANSWER:\n- Ines: copper mirror\n- Adaeze: golden mask"
   },
   {
     "task_id": "capacity_easy_001",
@@ -253,27 +587,27 @@
     "correct_count": 0,
     "total_people": 2,
     "details": {
-      "Priya": {
+      "Ines": {
         "status": "incorrect",
-        "predicted": "copper shell",
-        "gold": "onyx book"
+        "predicted": "red dagger",
+        "gold": "ochre pendant"
       },
-      "Leif": {
+      "Dariush": {
         "status": "incorrect",
-        "predicted": "onyx book",
-        "gold": "copper shell"
+        "predicted": "ochre pendant",
+        "gold": "red dagger"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_easy_001",
       "model": "llama8b",
-      "prompt_tokens": 141,
-      "prompt_tokens_after_trunc": 141,
-      "generation_tokens": 18,
+      "prompt_tokens": 144,
+      "prompt_tokens_after_trunc": 144,
+      "generation_tokens": 19,
       "latency_s": 0.11
     },
-    "raw_response": "ANSWER:\n- Priya: copper shell\n- Leif: onyx book"
+    "raw_response": "ANSWER:\n- Ines: red dagger\n- Dariush: ochre pendant"
   },
   {
     "task_id": "capacity_medium_008",
@@ -283,32 +617,32 @@
     "correct_count": 3,
     "total_people": 3,
     "details": {
-      "Qadir": {
+      "Soren": {
         "status": "correct",
-        "predicted": "coral book",
-        "gold": "coral book"
+        "predicted": "amber ring",
+        "gold": "amber ring"
       },
-      "Leif": {
+      "Idris": {
         "status": "correct",
-        "predicted": "onyx flask",
-        "gold": "onyx flask"
+        "predicted": "slate scroll",
+        "gold": "slate scroll"
       },
-      "Wren": {
+      "Greta": {
         "status": "correct",
-        "predicted": "silver ring",
-        "gold": "silver ring"
+        "predicted": "ochre dagger",
+        "gold": "ochre dagger"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_medium_008",
       "model": "llama8b",
-      "prompt_tokens": 176,
-      "prompt_tokens_after_trunc": 176,
-      "generation_tokens": 181,
-      "latency_s": 0.98
+      "prompt_tokens": 180,
+      "prompt_tokens_after_trunc": 180,
+      "generation_tokens": 213,
+      "latency_s": 1.13
     },
-    "raw_response": "To determine the final item distribution, let's follow the swaps step by step:\n\n1. Leif and Wren swap items:\n   - Qadir: silver ring\n   - Leif: onyx flask\n   - Wren: coral book\n\n2. Qadir and Leif swap items:\n   - Qadir: onyx flask\n   - Leif: silver ring\n   - Wren: coral book\n\n3. Leif and Wren swap items:\n   - Qadir: onyx flask\n   - Leif: coral book\n   - Wren: silver ring\n\n4. Qadir and Leif swap items:\n   - Qadir: coral book\n   - Leif: onyx flask\n   - Wren: silver ring\n\nANSWER:\n- Qadir: coral book\n- Leif: onyx flask\n- Wren: silver ring"
+    "raw_response": "To determine the final item distribution, let's follow the swaps step by step:\n\n1. Soren and Greta swap items:\n   - Soren now holds the ochre dagger.\n   - Greta now holds the amber ring.\n   - Idris still holds the slate scroll.\n\n2. Soren and Idris swap items:\n   - Soren now holds the slate scroll.\n   - Idris now holds the ochre dagger.\n   - Greta still holds the amber ring.\n\n3. Idris and Greta swap items:\n   - Idris now holds the amber ring.\n   - Greta now holds the ochre dagger.\n   - Soren still holds the slate scroll.\n\n4. Soren and Idris swap items:\n   - Soren now holds the amber ring.\n   - Idris now holds the slate scroll.\n   - Greta still holds the ochre dagger.\n\nANSWER:\n- Soren: amber ring\n- Idris: slate scroll\n- Greta: ochre dagger"
   },
   {
     "task_id": "capacity_medium_009",
@@ -318,32 +652,32 @@
     "correct_count": 3,
     "total_people": 3,
     "details": {
-      "Orla": {
+      "Maren": {
         "status": "correct",
-        "predicted": "ochre locket",
-        "gold": "ochre locket"
+        "predicted": "amber shell",
+        "gold": "amber shell"
       },
-      "Ugo": {
+      "Nalini": {
         "status": "correct",
-        "predicted": "ivory book",
-        "gold": "ivory book"
+        "predicted": "blue candle",
+        "gold": "blue candle"
       },
-      "Sigrid": {
+      "Xander": {
         "status": "correct",
-        "predicted": "silver lantern",
-        "gold": "silver lantern"
+        "predicted": "pearl ring",
+        "gold": "pearl ring"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_medium_009",
       "model": "llama8b",
-      "prompt_tokens": 181,
-      "prompt_tokens_after_trunc": 181,
-      "generation_tokens": 218,
-      "latency_s": 1.17
+      "prompt_tokens": 180,
+      "prompt_tokens_after_trunc": 180,
+      "generation_tokens": 197,
+      "latency_s": 1.05
     },
-    "raw_response": "To determine the final item distribution, let's follow the swaps step by step:\n\n1. Orla and Sigrid swap items:\n   - Orla now holds the ivory book\n   - Sigrid now holds the silver lantern\n   - Ugo still holds the ochre locket\n\n2. Ugo and Sigrid swap items:\n   - Ugo now holds the silver lantern\n   - Sigrid now holds the ochre locket\n   - Orla still holds the ivory book\n\n3. Orla and Ugo swap items:\n   - Orla now holds the silver lantern\n   - Ugo now holds the ivory book\n   - Sigrid still holds the ochre locket\n\n4. Orla and Sigrid swap items:\n   - Orla now holds the ochre locket\n   - Sigrid now holds the silver lantern\n   - Ugo still holds the ivory book\n\nANSWER:\n- Orla: ochre locket\n- Sigrid: silver lantern\n- Ugo: ivory book"
+    "raw_response": "To determine the final item distribution, let's follow the swaps step by step:\n\n1. Nalini and Xander swap items:\n   - Maren holds a pearl ring\n   - Nalini holds a blue candle\n   - Xander holds an amber shell\n\n2. Maren and Nalini swap items:\n   - Maren holds a blue candle\n   - Nalini holds a pearl ring\n   - Xander holds an amber shell\n\n3. Nalini and Xander swap items:\n   - Maren holds a blue candle\n   - Nalini holds an amber shell\n   - Xander holds a pearl ring\n\n4. Maren and Nalini swap items:\n   - Maren holds an amber shell\n   - Nalini holds a blue candle\n   - Xander holds a pearl ring\n\nANSWER:\n- Maren: amber shell\n- Nalini: blue candle\n- Xander: pearl ring"
   },
   {
     "task_id": "capacity_hard_016",
@@ -353,37 +687,37 @@
     "correct_count": 4,
     "total_people": 4,
     "details": {
-      "Tala": {
+      "Celine": {
         "status": "correct",
-        "predicted": "onyx lantern",
-        "gold": "onyx lantern"
+        "predicted": "teal dice",
+        "gold": "teal dice"
       },
-      "Nico": {
+      "Freya": {
         "status": "correct",
-        "predicted": "coral dice",
-        "gold": "coral dice"
+        "predicted": "ochre feather",
+        "gold": "ochre feather"
       },
-      "Vesna": {
+      "Runa": {
         "status": "correct",
-        "predicted": "blue dagger",
-        "gold": "blue dagger"
+        "predicted": "pearl pendant",
+        "gold": "pearl pendant"
       },
-      "Elio": {
+      "Amara": {
         "status": "correct",
-        "predicted": "pearl book",
-        "gold": "pearl book"
+        "predicted": "golden compass",
+        "gold": "golden compass"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_hard_016",
       "model": "llama8b",
-      "prompt_tokens": 217,
-      "prompt_tokens_after_trunc": 217,
-      "generation_tokens": 338,
-      "latency_s": 1.82
+      "prompt_tokens": 221,
+      "prompt_tokens_after_trunc": 221,
+      "generation_tokens": 322,
+      "latency_s": 1.71
     },
-    "raw_response": "To determine the final item distribution, let's follow the swaps step by step:\n\n1. Tala and Vesna swap items:\n   - Tala: onyx lantern\n   - Nico: coral dice\n   - Vesna: blue dagger\n   - Elio: pearl book\n\n2. Vesna and Elio swap items:\n   - Tala: onyx lantern\n   - Nico: coral dice\n   - Vesna: pearl book\n   - Elio: blue dagger\n\n3. Tala and Nico swap items:\n   - Tala: coral dice\n   - Nico: onyx lantern\n   - Vesna: pearl book\n   - Elio: blue dagger\n\n4. Nico and Elio swap items:\n   - Tala: coral dice\n   - Nico: blue dagger\n   - Vesna: pearl book\n   - Elio: onyx lantern\n\n5. Vesna and Elio swap items:\n   - Tala: coral dice\n   - Nico: blue dagger\n   - Vesna: onyx lantern\n   - Elio: pearl book\n\n6. Tala and Vesna swap items:\n   - Tala: onyx lantern\n   - Nico: blue dagger\n   - Vesna: coral dice\n   - Elio: pearl book\n\n7. Nico and Vesna swap items:\n   - Tala: onyx lantern\n   - Nico: coral dice\n   - Vesna: blue dagger\n   - Elio: pearl book\n\nANSWER:\n- Tala: onyx lantern\n- Nico: coral dice\n- Vesna: blue dagger\n- Elio: pearl book"
+    "raw_response": "To determine the final item distribution, we will go through the swaps step by step.\n\n1. Freya and Amara swap items:\n- Celine: teal dice\n- Freya: ochre feather\n- Runa: pearl pendant\n- Amara: golden compass\n\n2. Freya and Runa swap items:\n- Celine: teal dice\n- Freya: pearl pendant\n- Runa: ochre feather\n- Amara: golden compass\n\n3. Celine and Freya swap items:\n- Celine: pearl pendant\n- Freya: teal dice\n- Runa: ochre feather\n- Amara: golden compass\n\n4. Freya and Runa swap items:\n- Celine: pearl pendant\n- Freya: ochre feather\n- Runa: teal dice\n- Amara: golden compass\n\n5. Runa and Amara swap items:\n- Celine: pearl pendant\n- Freya: ochre feather\n- Runa: golden compass\n- Amara: teal dice\n\n6. Celine and Amara swap items:\n- Celine: teal dice\n- Freya: ochre feather\n- Runa: golden compass\n- Amara: pearl pendant\n\n7. Runa and Amara swap items:\n- Celine: teal dice\n- Freya: ochre feather\n- Runa: pearl pendant\n- Amara: golden compass\n\nANSWER:\n- Celine: teal dice\n- Freya: ochre feather\n- Runa: pearl pendant\n- Amara: golden compass"
   },
   {
     "task_id": "capacity_hard_017",
@@ -393,82 +727,82 @@
     "correct_count": 4,
     "total_people": 4,
     "details": {
-      "Tariq": {
+      "Viktor": {
         "status": "correct",
-        "predicted": "ochre feather",
-        "gold": "ochre feather"
+        "predicted": "bronze pendant",
+        "gold": "bronze pendant"
       },
-      "Runa": {
+      "Colette": {
         "status": "correct",
-        "predicted": "crimson flask",
-        "gold": "crimson flask"
+        "predicted": "teal candle",
+        "gold": "teal candle"
       },
-      "Paloma": {
+      "Zain": {
         "status": "correct",
-        "predicted": "silver stone",
-        "gold": "silver stone"
+        "predicted": "green bell",
+        "gold": "green bell"
       },
-      "Kaia": {
+      "Freya": {
         "status": "correct",
-        "predicted": "onyx key",
-        "gold": "onyx key"
+        "predicted": "ivory feather",
+        "gold": "ivory feather"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_hard_017",
       "model": "llama8b",
-      "prompt_tokens": 227,
-      "prompt_tokens_after_trunc": 227,
-      "generation_tokens": 388,
-      "latency_s": 2.09
+      "prompt_tokens": 216,
+      "prompt_tokens_after_trunc": 216,
+      "generation_tokens": 302,
+      "latency_s": 1.6
     },
-    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\nInitially:\n- Tariq: crimson flask\n- Runa: silver stone\n- Paloma: onyx key\n- Kaia: ochre feather\n\nSwap 1: Tariq and Kaia swap items.\n- Tariq: ochre feather\n- Runa: silver stone\n- Paloma: onyx key\n- Kaia: crimson flask\n\nSwap 2: Runa and Kaia swap items.\n- Tariq: ochre feather\n- Runa: crimson flask\n- Paloma: onyx key\n- Kaia: silver stone\n\nSwap 3: Paloma and Kaia swap items.\n- Tariq: ochre feather\n- Runa: crimson flask\n- Paloma: silver stone\n- Kaia: onyx key\n\nSwap 4: Tariq and Runa swap items.\n- Tariq: crimson flask\n- Runa: ochre feather\n- Paloma: silver stone\n- Kaia: onyx key\n\nSwap 5: Runa and Paloma swap items.\n- Tariq: crimson flask\n- Runa: silver stone\n- Paloma: ochre feather\n- Kaia: onyx key\n\nSwap 6: Tariq and Runa swap items.\n- Tariq: silver stone\n- Runa: crimson flask\n- Paloma: ochre feather\n- Kaia: onyx key\n\nSwap 7: Tariq and Paloma swap items.\n- Tariq: ochre feather\n- Runa: crimson flask\n- Paloma: silver stone\n- Kaia: onyx key\n\nANSWER:\n- Tariq: ochre feather\n- Runa: crimson flask\n- Paloma: silver stone\n- Kaia: onyx key"
+    "raw_response": "To determine the final item distribution, we will follow the swaps step by step.\n\n1. Viktor and Zain swap items:\n- Viktor: ivory feather\n- Colette: bronze pendant\n- Zain: green bell\n- Freya: teal candle\n\n2. Zain and Freya swap items:\n- Viktor: ivory feather\n- Colette: bronze pendant\n- Zain: teal candle\n- Freya: green bell\n\n3. Colette and Zain swap items:\n- Viktor: ivory feather\n- Colette: teal candle\n- Zain: bronze pendant\n- Freya: green bell\n\n4. Zain and Freya swap items:\n- Viktor: ivory feather\n- Colette: teal candle\n- Zain: green bell\n- Freya: bronze pendant\n\n5. Viktor and Zain swap items:\n- Viktor: green bell\n- Colette: teal candle\n- Zain: ivory feather\n- Freya: bronze pendant\n\n6. Viktor and Freya swap items:\n- Viktor: bronze pendant\n- Colette: teal candle\n- Zain: ivory feather\n- Freya: green bell\n\n7. Zain and Freya swap items:\n- Viktor: bronze pendant\n- Colette: teal candle\n- Zain: green bell\n- Freya: ivory feather\n\nANSWER:\n- Viktor: bronze pendant\n- Colette: teal candle\n- Zain: green bell\n- Freya: ivory feather"
   },
   {
     "task_id": "capacity_expert_024",
     "task_type": "capacity",
     "difficulty": "Expert",
-    "accuracy": 1.0,
-    "correct_count": 5,
+    "accuracy": 0.6,
+    "correct_count": 3,
     "total_people": 5,
     "details": {
-      "Lumi": {
-        "status": "correct",
-        "predicted": "green bell",
-        "gold": "green bell"
+      "Vesna": {
+        "status": "incorrect",
+        "predicted": "russet pendant",
+        "gold": "red shell"
       },
-      "Yuki": {
+      "Runa": {
         "status": "correct",
-        "predicted": "indigo dagger",
-        "gold": "indigo dagger"
+        "predicted": "cobalt lantern",
+        "gold": "cobalt lantern"
       },
-      "Bashir": {
-        "status": "correct",
-        "predicted": "copper mask",
-        "gold": "copper mask"
+      "Orla": {
+        "status": "incorrect",
+        "predicted": "red shell",
+        "gold": "russet pendant"
       },
-      "Gael": {
+      "Wren": {
         "status": "correct",
-        "predicted": "blue pendant",
-        "gold": "blue pendant"
+        "predicted": "ochre key",
+        "gold": "ochre key"
       },
-      "Leif": {
+      "Bram": {
         "status": "correct",
-        "predicted": "slate locket",
-        "gold": "slate locket"
+        "predicted": "blue ring",
+        "gold": "blue ring"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_expert_024",
       "model": "llama8b",
-      "prompt_tokens": 280,
-      "prompt_tokens_after_trunc": 280,
-      "generation_tokens": 613,
-      "latency_s": 3.3
+      "prompt_tokens": 286,
+      "prompt_tokens_after_trunc": 286,
+      "generation_tokens": 629,
+      "latency_s": 3.33
     },
-    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\n1. Lumi and Gael swap items: \n- Lumi: copper mask\n- Gael: slate locket\n- Yuki: indigo dagger\n- Bashir: blue pendant\n- Leif: green bell\n\n2. Lumi and Leif swap items: \n- Lumi: green bell\n- Gael: slate locket\n- Yuki: indigo dagger\n- Bashir: blue pendant\n- Leif: copper mask\n\n3. Bashir and Gael swap items: \n- Lumi: green bell\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: slate locket\n- Leif: copper mask\n\n4. Gael and Leif swap items: \n- Lumi: green bell\n- Gael: copper mask\n- Yuki: indigo dagger\n- Bashir: slate locket\n- Leif: blue pendant\n\n5. Lumi and Bashir swap items: \n- Lumi: slate locket\n- Gael: copper mask\n- Yuki: indigo dagger\n- Bashir: green bell\n- Leif: blue pendant\n\n6. Gael and Leif swap items: \n- Lumi: slate locket\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: green bell\n- Leif: copper mask\n\n7. Lumi and Leif swap items: \n- Lumi: copper mask\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: green bell\n- Leif: slate locket\n\n8. Lumi and Yuki swap items: \n- Lumi: indigo dagger\n- Gael: blue pendant\n- Yuki: copper mask\n- Bashir: green bell\n- Leif: slate locket\n\n9. Gael and Leif swap items: \n- Lumi: indigo dagger\n- Gael: slate locket\n- Yuki: copper mask\n- Bashir: green bell\n- Leif: blue pendant\n\n10. Lumi and Yuki swap items: \n- Lumi: copper mask\n- Gael: slate locket\n- Yuki: indigo dagger\n- Bashir: green bell\n- Leif: blue pendant\n\n11. Gael and Leif swap items: \n- Lumi: copper mask\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: green bell\n- Leif: slate locket\n\n12. Lumi and Bashir swap items: \n- Lumi: green bell\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: copper mask\n- Leif: slate locket\n\nANSWER:\n- Lumi: green bell\n- Gael: blue pendant\n- Yuki: indigo dagger\n- Bashir: copper mask\n- Leif: slate locket"
+    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\n1. Wren and Bram swap items:\n- Wren: ochre key\n- Bram: cobalt lantern\n- Vesna: blue ring\n- Runa: russet pendant\n- Orla: red shell\n\n2. Orla and Bram swap items:\n- Wren: ochre key\n- Bram: red shell\n- Vesna: blue ring\n- Runa: russet pendant\n- Orla: cobalt lantern\n\n3. Runa and Wren swap items:\n- Wren: russet pendant\n- Bram: red shell\n- Vesna: blue ring\n- Runa: ochre key\n- Orla: cobalt lantern\n\n4. Runa and Orla swap items:\n- Wren: russet pendant\n- Bram: red shell\n- Vesna: blue ring\n- Runa: cobalt lantern\n- Orla: ochre key\n\n5. Runa and Wren swap items:\n- Wren: cobalt lantern\n- Bram: red shell\n- Vesna: blue ring\n- Runa: russet pendant\n- Orla: ochre key\n\n6. Runa and Bram swap items:\n- Wren: cobalt lantern\n- Bram: russet pendant\n- Vesna: blue ring\n- Runa: red shell\n- Orla: ochre key\n\n7. Runa and Orla swap items:\n- Wren: cobalt lantern\n- Bram: russet pendant\n- Vesna: blue ring\n- Runa: ochre key\n- Orla: red shell\n\n8. Runa and Bram swap items:\n- Wren: cobalt lantern\n- Bram: ochre key\n- Vesna: blue ring\n- Runa: russet pendant\n- Orla: red shell\n\n9. Vesna and Runa swap items:\n- Wren: cobalt lantern\n- Bram: ochre key\n- Vesna: russet pendant\n- Runa: blue ring\n- Orla: red shell\n\n10. Vesna and Wren swap items:\n- Wren: blue ring\n- Bram: ochre key\n- Vesna: cobalt lantern\n- Runa: blue ring\n- Orla: red shell\n\n11. Wren and Bram swap items:\n- Wren: ochre key\n- Bram: blue ring\n- Vesna: cobalt lantern\n- Runa: blue ring\n- Orla: red shell\n\n12. Vesna and Runa swap items:\n- Wren: ochre key\n- Bram: blue ring\n- Vesna: russet pendant\n- Runa: cobalt lantern\n- Orla: red shell\n\nANSWER:\n- Vesna: russet pendant\n- Wren: ochre key\n- Bram: blue ring\n- Runa: cobalt lantern\n- Orla: red shell"
   },
   {
     "task_id": "capacity_expert_025",
@@ -478,42 +812,1108 @@
     "correct_count": 5,
     "total_people": 5,
     "details": {
-      "Idris": {
+      "Ravi": {
         "status": "correct",
-        "predicted": "golden dice",
-        "gold": "golden dice"
+        "predicted": "green mask",
+        "gold": "green mask"
       },
-      "Zora": {
+      "Tala": {
         "status": "correct",
-        "predicted": "indigo book",
-        "gold": "indigo book"
+        "predicted": "pearl locket",
+        "gold": "pearl locket"
       },
-      "Qadir": {
+      "Paloma": {
         "status": "correct",
-        "predicted": "bronze compass",
-        "gold": "bronze compass"
+        "predicted": "teal lantern",
+        "gold": "teal lantern"
       },
-      "Yuki": {
+      "Bram": {
         "status": "correct",
-        "predicted": "amber shell",
-        "gold": "amber shell"
+        "predicted": "cobalt ring",
+        "gold": "cobalt ring"
       },
-      "Greta": {
+      "Amara": {
         "status": "correct",
-        "predicted": "pearl chalice",
-        "gold": "pearl chalice"
+        "predicted": "copper shell",
+        "gold": "copper shell"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "capacity_expert_025",
       "model": "llama8b",
-      "prompt_tokens": 292,
-      "prompt_tokens_after_trunc": 292,
-      "generation_tokens": 638,
-      "latency_s": 3.43
+      "prompt_tokens": 281,
+      "prompt_tokens_after_trunc": 281,
+      "generation_tokens": 640,
+      "latency_s": 3.39
     },
-    "raw_response": "To determine the final item distribution, we will go through the swaps step by step.\n\n1. Zora and Qadir swap items:\n- Idris: amber shell\n- Zora: pearl chalice\n- Qadir: golden dice\n- Yuki: bronze compass\n- Greta: indigo book\n\n2. Zora and Greta swap items:\n- Idris: amber shell\n- Zora: indigo book\n- Qadir: golden dice\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n3. Idris and Zora swap items:\n- Idris: indigo book\n- Zora: amber shell\n- Qadir: golden dice\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n4. Idris and Qadir swap items:\n- Idris: golden dice\n- Zora: amber shell\n- Qadir: indigo book\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n5. Zora and Yuki swap items:\n- Idris: golden dice\n- Zora: bronze compass\n- Qadir: indigo book\n- Yuki: amber shell\n- Greta: pearl chalice\n\n6. Idris and Qadir swap items:\n- Idris: indigo book\n- Zora: bronze compass\n- Qadir: golden dice\n- Yuki: amber shell\n- Greta: pearl chalice\n\n7. Zora and Qadir swap items:\n- Idris: indigo book\n- Zora: golden dice\n- Qadir: bronze compass\n- Yuki: amber shell\n- Greta: pearl chalice\n\n8. Zora and Yuki swap items:\n- Idris: indigo book\n- Zora: amber shell\n- Qadir: bronze compass\n- Yuki: golden dice\n- Greta: pearl chalice\n\n9. Qadir and Yuki swap items:\n- Idris: indigo book\n- Zora: amber shell\n- Qadir: golden dice\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n10. Idris and Qadir swap items:\n- Idris: golden dice\n- Zora: amber shell\n- Qadir: indigo book\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n11. Zora and Qadir swap items:\n- Idris: golden dice\n- Zora: indigo book\n- Qadir: amber shell\n- Yuki: bronze compass\n- Greta: pearl chalice\n\n12. Qadir and Yuki swap items:\n- Idris: golden dice\n- Zora: indigo book\n- Qadir: bronze compass\n- Yuki: amber shell\n- Greta: pearl chalice\n\nANSWER:\n- Idris: golden dice\n- Zora: indigo book\n- Qadir: bronze compass\n- Yuki: amber shell\n- Greta: pearl chalice"
+    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\nInitially:\n- Ravi: teal lantern\n- Tala: copper shell\n- Paloma: green mask\n- Bram: cobalt ring\n- Amara: pearl locket\n\n1. Paloma and Bram swap items.\n- Ravi: teal lantern\n- Tala: copper shell\n- Paloma: cobalt ring\n- Bram: green mask\n- Amara: pearl locket\n\n2. Ravi and Paloma swap items.\n- Ravi: cobalt ring\n- Tala: copper shell\n- Paloma: teal lantern\n- Bram: green mask\n- Amara: pearl locket\n\n3. Paloma and Bram swap items.\n- Ravi: cobalt ring\n- Tala: copper shell\n- Paloma: green mask\n- Bram: teal lantern\n- Amara: pearl locket\n\n4. Tala and Amara swap items.\n- Ravi: cobalt ring\n- Tala: pearl locket\n- Paloma: green mask\n- Bram: teal lantern\n- Amara: copper shell\n\n5. Ravi and Paloma swap items.\n- Ravi: green mask\n- Tala: pearl locket\n- Paloma: cobalt ring\n- Bram: teal lantern\n- Amara: copper shell\n\n6. Tala and Bram swap items.\n- Ravi: green mask\n- Tala: teal lantern\n- Paloma: cobalt ring\n- Bram: pearl locket\n- Amara: copper shell\n\n7. Ravi and Amara swap items.\n- Ravi: copper shell\n- Tala: teal lantern\n- Paloma: cobalt ring\n- Bram: pearl locket\n- Amara: green mask\n\n8. Ravi and Paloma swap items.\n- Ravi: cobalt ring\n- Tala: teal lantern\n- Paloma: copper shell\n- Bram: pearl locket\n- Amara: green mask\n\n9. Paloma and Amara swap items.\n- Ravi: cobalt ring\n- Tala: teal lantern\n- Paloma: green mask\n- Bram: pearl locket\n- Amara: copper shell\n\n10. Tala and Bram swap items.\n- Ravi: cobalt ring\n- Tala: pearl locket\n- Paloma: green mask\n- Bram: teal lantern\n- Amara: copper shell\n\n11. Ravi and Paloma swap items.\n- Ravi: green mask\n- Tala: pearl locket\n- Paloma: cobalt ring\n- Bram: teal lantern\n- Amara: copper shell\n\n12. Paloma and Bram swap items.\n- Ravi: green mask\n- Tala: pearl locket\n- Paloma: teal lantern\n- Bram: cobalt ring\n- Amara: copper shell\n\nANSWER:\n- Ravi: green mask\n- Tala: pearl locket\n- Paloma: teal lantern\n- Bram: cobalt ring\n- Amara: copper shell"
+  },
+  {
+    "task_id": "capacity_frontier_032",
+    "task_type": "capacity",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "correct_count": 8,
+    "total_people": 8,
+    "details": {
+      "Magnus": {
+        "status": "correct",
+        "predicted": "ochre flask",
+        "gold": "ochre flask"
+      },
+      "Vesna": {
+        "status": "correct",
+        "predicted": "green book",
+        "gold": "green book"
+      },
+      "Yuki": {
+        "status": "correct",
+        "predicted": "golden shell",
+        "gold": "golden shell"
+      },
+      "Elio": {
+        "status": "correct",
+        "predicted": "indigo ring",
+        "gold": "indigo ring"
+      },
+      "Elara": {
+        "status": "correct",
+        "predicted": "ivory dagger",
+        "gold": "ivory dagger"
+      },
+      "Freya": {
+        "status": "correct",
+        "predicted": "silver scroll",
+        "gold": "silver scroll"
+      },
+      "Yara": {
+        "status": "correct",
+        "predicted": "slate mirror",
+        "gold": "slate mirror"
+      },
+      "Tariq": {
+        "status": "correct",
+        "predicted": "crimson lantern",
+        "gold": "crimson lantern"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "capacity_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 463,
+      "prompt_tokens_after_trunc": 463,
+      "generation_tokens": 1888,
+      "latency_s": 10.04
+    },
+    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\nInitially:\n- Magnus: ochre flask\n- Vesna: green book\n- Yuki: ivory dagger\n- Elio: silver scroll\n- Elara: slate mirror\n- Freya: golden shell\n- Yara: crimson lantern\n- Tariq: indigo ring\n\nSwap 1: Magnus and Elio swap items.\n- Magnus: silver scroll\n- Vesna: green book\n- Yuki: ivory dagger\n- Elio: ochre flask\n- Elara: slate mirror\n- Freya: golden shell\n- Yara: crimson lantern\n- Tariq: indigo ring\n\nSwap 2: Vesna and Yara swap items.\n- Magnus: silver scroll\n- Vesna: crimson lantern\n- Yuki: ivory dagger\n- Elio: ochre flask\n- Elara: slate mirror\n- Freya: golden shell\n- Yara: green book\n- Tariq: indigo ring\n\nSwap 3: Elara and Tariq swap items.\n- Magnus: silver scroll\n- Vesna: crimson lantern\n- Yuki: ivory dagger\n- Elio: ochre flask\n- Elara: indigo ring\n- Freya: golden shell\n- Yara: green book\n- Tariq: slate mirror\n\nSwap 4: Freya and Tariq swap items.\n- Magnus: silver scroll\n- Vesna: crimson lantern\n- Yuki: ivory dagger\n- Elio: ochre flask\n- Elara: indigo ring\n- Freya: slate mirror\n- Yara: green book\n- Tariq: golden shell\n\nSwap 5: Vesna and Freya swap items.\n- Magnus: silver scroll\n- Vesna: slate mirror\n- Yuki: ivory dagger\n- Elio: ochre flask\n- Elara: indigo ring\n- Freya: crimson lantern\n- Yara: green book\n- Tariq: golden shell\n\nSwap 6: Elio and Yara swap items.\n- Magnus: silver scroll\n- Vesna: slate mirror\n- Yuki: ivory dagger\n- Elio: green book\n- Elara: indigo ring\n- Freya: crimson lantern\n- Yara: ochre flask\n- Tariq: golden shell\n\nSwap 7: Freya and Yara swap items.\n- Magnus: silver scroll\n- Vesna: slate mirror\n- Yuki: ivory dagger\n- Elio: green book\n- Elara: indigo ring\n- Freya: ochre flask\n- Yara: crimson lantern\n- Tariq: golden shell\n\nSwap 8: Magnus and Yuki swap items.\n- Magnus: ivory dagger\n- Vesna: slate mirror\n- Yuki: silver scroll\n- Elio: green book\n- Elara: indigo ring\n- Freya: ochre flask\n- Yara: crimson lantern\n- Tariq: golden shell\n\nSwap 9: Vesna and Yuki swap items.\n- Magnus: ivor"
+  },
+  {
+    "task_id": "capacity_frontier_033",
+    "task_type": "capacity",
+    "difficulty": "Frontier",
+    "accuracy": 0.875,
+    "correct_count": 7,
+    "total_people": 8,
+    "details": {
+      "Orla": {
+        "status": "correct",
+        "predicted": "cobalt bell",
+        "gold": "cobalt bell"
+      },
+      "Tala": {
+        "status": "correct",
+        "predicted": "onyx locket",
+        "gold": "onyx locket"
+      },
+      "Idris": {
+        "status": "correct",
+        "predicted": "pearl chalice",
+        "gold": "pearl chalice"
+      },
+      "Viktor": {
+        "status": "correct",
+        "predicted": "blue feather",
+        "gold": "blue feather"
+      },
+      "Runa": {
+        "status": "incorrect",
+        "predicted": "green mirror",
+        "gold": "crimson coin"
+      },
+      "Sigrid": {
+        "status": "correct",
+        "predicted": "slate mask",
+        "gold": "slate mask"
+      },
+      "Zain": {
+        "status": "correct",
+        "predicted": "copper book",
+        "gold": "copper book"
+      },
+      "Elara": {
+        "status": "correct",
+        "predicted": "green mirror",
+        "gold": "green mirror"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "capacity_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 471,
+      "prompt_tokens_after_trunc": 471,
+      "generation_tokens": 1924,
+      "latency_s": 10.24
+    },
+    "raw_response": "To determine the final item distribution, we will track the swaps step by step.\n\nInitially:\n- Orla: green mirror\n- Tala: blue feather\n- Idris: onyx locket\n- Viktor: cobalt bell\n- Runa: pearl chalice\n- Sigrid: crimson coin\n- Zain: slate mask\n- Elara: copper book\n\n1. Zain and Elara swap items.\n- Orla: green mirror\n- Tala: blue feather\n- Idris: onyx locket\n- Viktor: cobalt bell\n- Runa: pearl chalice\n- Sigrid: copper book\n- Zain: copper book\n- Elara: slate mask\n\n2. Viktor and Runa swap items.\n- Orla: green mirror\n- Tala: blue feather\n- Idris: onyx locket\n- Viktor: pearl chalice\n- Runa: cobalt bell\n- Sigrid: copper book\n- Zain: copper book\n- Elara: slate mask\n\n3. Idris and Zain swap items.\n- Orla: green mirror\n- Tala: blue feather\n- Idris: copper book\n- Viktor: pearl chalice\n- Runa: cobalt bell\n- Sigrid: copper book\n- Zain: onyx locket\n- Elara: slate mask\n\n4. Idris and Runa swap items.\n- Orla: green mirror\n- Tala: blue feather\n- Idris: cobalt bell\n- Viktor: pearl chalice\n- Runa: copper book\n- Sigrid: copper book\n- Zain: onyx locket\n- Elara: slate mask\n\n5. Viktor and Elara swap items.\n- Orla: green mirror\n- Tala: blue feather\n- Idris: cobalt bell\n- Viktor: slate mask\n- Runa: copper book\n- Sigrid: copper book\n- Zain: onyx locket\n- Elara: pearl chalice\n\n6. Orla and Tala swap items.\n- Orla: blue feather\n- Tala: green mirror\n- Idris: cobalt bell\n- Viktor: slate mask\n- Runa: copper book\n- Sigrid: copper book\n- Zain: onyx locket\n- Elara: pearl chalice\n\n7. Sigrid and Elara swap items.\n- Orla: blue feather\n- Tala: green mirror\n- Idris: cobalt bell\n- Viktor: slate mask\n- Runa: copper book\n- Sigrid: pearl chalice\n- Zain: onyx locket\n- Elara: copper book\n\n8. Tala and Sigrid swap items.\n- Orla: blue feather\n- Tala: pearl chalice\n- Idris: cobalt bell\n- Viktor: slate mask\n- Runa: copper book\n- Sigrid: green mirror\n- Zain: onyx locket\n- Elara: copper book\n\n9. Idris and Viktor swap items.\n- Orla: blue feather\n- Tala: pearl chalice\n- Idris: slate mask\n- Viktor: cobalt bell\n- Runa: copper "
+  },
+  {
+    "task_id": "dilution_easy_000",
+    "task_type": "context_dilution",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Olive.",
+      "gold": "olive",
+      "correct": true,
+      "word_count": 1017,
+      "is_shuffled": false,
+      "needle_depth": 0.5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 1297,
+      "prompt_tokens_after_trunc": 1297,
+      "generation_tokens": 4,
+      "latency_s": 0.05
+    },
+    "raw_response": "Olive."
+  },
+  {
+    "task_id": "dilution_easy_001",
+    "task_type": "context_dilution",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Olive",
+      "gold": "olive",
+      "correct": true,
+      "word_count": 1032,
+      "is_shuffled": true,
+      "needle_depth": 0.25
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 1326,
+      "prompt_tokens_after_trunc": 1326,
+      "generation_tokens": 3,
+      "latency_s": 0.05
+    },
+    "raw_response": "Olive"
+  },
+  {
+    "task_id": "dilution_medium_008",
+    "task_type": "context_dilution",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Charcoal",
+      "gold": "charcoal",
+      "correct": true,
+      "word_count": 4043,
+      "is_shuffled": false,
+      "needle_depth": 0.25
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 4921,
+      "prompt_tokens_after_trunc": 4921,
+      "generation_tokens": 3,
+      "latency_s": 0.14
+    },
+    "raw_response": "Charcoal"
+  },
+  {
+    "task_id": "dilution_medium_009",
+    "task_type": "context_dilution",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Sapphire",
+      "gold": "sapphire",
+      "correct": true,
+      "word_count": 4025,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 4890,
+      "prompt_tokens_after_trunc": 4890,
+      "generation_tokens": 3,
+      "latency_s": 0.14
+    },
+    "raw_response": "Sapphire"
+  },
+  {
+    "task_id": "dilution_hard_016",
+    "task_type": "context_dilution",
+    "difficulty": "Hard",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "Vermilion",
+      "gold": "vermillion",
+      "correct": false,
+      "word_count": 8045,
+      "is_shuffled": false,
+      "needle_depth": 0.75
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 9671,
+      "prompt_tokens_after_trunc": 9671,
+      "generation_tokens": 4,
+      "latency_s": 0.29
+    },
+    "raw_response": "Vermilion"
+  },
+  {
+    "task_id": "dilution_hard_017",
+    "task_type": "context_dilution",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "tangerine",
+      "gold": "tangerine",
+      "correct": true,
+      "word_count": 8023,
+      "is_shuffled": true,
+      "needle_depth": 0.25
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 9626,
+      "prompt_tokens_after_trunc": 9626,
+      "generation_tokens": 4,
+      "latency_s": 0.29
+    },
+    "raw_response": "tangerine"
+  },
+  {
+    "task_id": "dilution_expert_024",
+    "task_type": "context_dilution",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Sapphire",
+      "gold": "sapphire",
+      "correct": true,
+      "word_count": 16036,
+      "is_shuffled": false,
+      "needle_depth": 0.25
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 19194,
+      "prompt_tokens_after_trunc": 19194,
+      "generation_tokens": 3,
+      "latency_s": 0.66
+    },
+    "raw_response": "Sapphire"
+  },
+  {
+    "task_id": "dilution_expert_025",
+    "task_type": "context_dilution",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Platinum",
+      "gold": "platinum",
+      "correct": true,
+      "word_count": 16019,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 19156,
+      "prompt_tokens_after_trunc": 19156,
+      "generation_tokens": 3,
+      "latency_s": 0.66
+    },
+    "raw_response": "Platinum"
+  },
+  {
+    "task_id": "dilution_frontier_032",
+    "task_type": "context_dilution",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "There is no mention of an automobile belonging to Vesna in the provided text.",
+      "gold": "cerulean",
+      "correct": false,
+      "word_count": 32030,
+      "is_shuffled": false,
+      "needle_depth": 0.75
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 38495,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 17,
+      "latency_s": 0.11
+    },
+    "raw_response": "There is no mention of an automobile belonging to Vesna in the provided text."
+  },
+  {
+    "task_id": "dilution_frontier_033",
+    "task_type": "context_dilution",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "There is no mention of Amara in the text.",
+      "gold": "vermillion",
+      "correct": false,
+      "word_count": 32022,
+      "is_shuffled": true,
+      "needle_depth": 0.5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "dilution_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 38300,
+      "prompt_tokens_after_trunc": 1024,
+      "generation_tokens": 12,
+      "latency_s": 0.08
+    },
+    "raw_response": "There is no mention of Amara in the text."
+  },
+  {
+    "task_id": "flanker_easy_000",
+    "task_type": "flanker",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Friday.",
+      "gold": "Friday",
+      "correct": true,
+      "n_flankers": 2,
+      "target_position": 2
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 149,
+      "prompt_tokens_after_trunc": 149,
+      "generation_tokens": 3,
+      "latency_s": 0.02
+    },
+    "raw_response": "Friday."
+  },
+  {
+    "task_id": "flanker_easy_001",
+    "task_type": "flanker",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Wednesday.",
+      "gold": "Wednesday",
+      "correct": true,
+      "n_flankers": 2,
+      "target_position": 1
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 152,
+      "prompt_tokens_after_trunc": 152,
+      "generation_tokens": 3,
+      "latency_s": 0.02
+    },
+    "raw_response": "Wednesday."
+  },
+  {
+    "task_id": "flanker_medium_008",
+    "task_type": "flanker",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Friday.",
+      "gold": "Friday",
+      "correct": true,
+      "n_flankers": 4,
+      "target_position": 2
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 193,
+      "prompt_tokens_after_trunc": 193,
+      "generation_tokens": 3,
+      "latency_s": 0.02
+    },
+    "raw_response": "Friday."
+  },
+  {
+    "task_id": "flanker_medium_009",
+    "task_type": "flanker",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "According to sentence 3, the exact measurement reading was 67.4 ppm.",
+      "gold": "67.4 ppm",
+      "correct": true,
+      "n_flankers": 4,
+      "target_position": 3
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 178,
+      "prompt_tokens_after_trunc": 178,
+      "generation_tokens": 18,
+      "latency_s": 0.1
+    },
+    "raw_response": "According to sentence 3, the exact measurement reading was 67.4 ppm."
+  },
+  {
+    "task_id": "flanker_hard_016",
+    "task_type": "flanker",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Wednesday.",
+      "gold": "Wednesday",
+      "correct": true,
+      "n_flankers": 6,
+      "target_position": 3
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 239,
+      "prompt_tokens_after_trunc": 239,
+      "generation_tokens": 3,
+      "latency_s": 0.02
+    },
+    "raw_response": "Wednesday."
+  },
+  {
+    "task_id": "flanker_hard_017",
+    "task_type": "flanker",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Saturday.",
+      "gold": "Saturday",
+      "correct": true,
+      "n_flankers": 6,
+      "target_position": 5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 239,
+      "prompt_tokens_after_trunc": 239,
+      "generation_tokens": 3,
+      "latency_s": 0.02
+    },
+    "raw_response": "Saturday."
+  },
+  {
+    "task_id": "flanker_expert_024",
+    "task_type": "flanker",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "According to sentence 4, the exact measurement reading was 67.4 kPa.",
+      "gold": "67.4 kPa",
+      "correct": true,
+      "n_flankers": 8,
+      "target_position": 4
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 259,
+      "prompt_tokens_after_trunc": 259,
+      "generation_tokens": 19,
+      "latency_s": 0.11
+    },
+    "raw_response": "According to sentence 4, the exact measurement reading was 67.4 kPa."
+  },
+  {
+    "task_id": "flanker_expert_025",
+    "task_type": "flanker",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "According to sentence 3, 120 units of components were included.",
+      "gold": "120",
+      "correct": true,
+      "n_flankers": 8,
+      "target_position": 3
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 296,
+      "prompt_tokens_after_trunc": 296,
+      "generation_tokens": 15,
+      "latency_s": 0.09
+    },
+    "raw_response": "According to sentence 3, 120 units of components were included."
+  },
+  {
+    "task_id": "flanker_frontier_032",
+    "task_type": "flanker",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "According to sentence 8, Manifest #A-4017 lists 510 units of modules bound for Zanzibar. \n\nThe answer is 510.",
+      "gold": "510",
+      "correct": true,
+      "n_flankers": 12,
+      "target_position": 8
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 366,
+      "prompt_tokens_after_trunc": 366,
+      "generation_tokens": 32,
+      "latency_s": 0.18
+    },
+    "raw_response": "According to sentence 8, Manifest #A-4017 lists 510 units of modules bound for Zanzibar. \n\nThe answer is 510."
+  },
+  {
+    "task_id": "flanker_frontier_033",
+    "task_type": "flanker",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "According to sentence 5, the exact measurement reading was 14.6 mV.",
+      "gold": "14.6 mV",
+      "correct": true,
+      "n_flankers": 12,
+      "target_position": 5
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "flanker_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 297,
+      "prompt_tokens_after_trunc": 297,
+      "generation_tokens": 19,
+      "latency_s": 0.11
+    },
+    "raw_response": "According to sentence 5, the exact measurement reading was 14.6 mV."
+  },
+  {
+    "task_id": "ior_easy_000",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "overall_accuracy": 0.3333,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "(About Passage C) \nThe resulting concentration was 45.1 mg/L.\n\nQ2. (About Passage A) \nThe reference number was WH-7120.\n\nQ3. (About Passage C) \nThe heating duration was 45 minutes",
+        "gold": "45.1",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "",
+        "gold": "WH-7120",
+        "correct": false
+      },
+      "3": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "",
+        "gold": "45",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 382,
+      "prompt_tokens_after_trunc": 382,
+      "generation_tokens": 56,
+      "latency_s": 0.31
+    },
+    "raw_response": "Q1. (About Passage C) \nThe resulting concentration was 45.1 mg/L.\n\nQ2. (About Passage A) \nThe reference number was WH-7120.\n\nQ3. (About Passage C) \nThe heating duration was 45 minutes."
+  },
+  {
+    "task_id": "ior_easy_001",
+    "task_type": "inhibition_return",
+    "difficulty": "Easy",
+    "overall_accuracy": 0.3333,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "(About Passage B) \nThe person who logged the shipment was Amara.\n\nQ2. (About Passage A) \nThe resulting concentration was 45.1 mg/L.\n\nQ3. (About Passage B) \nThere were 15 crates in the shipment",
+        "gold": "Amara",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "",
+        "gold": "45.1",
+        "correct": false
+      },
+      "3": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "",
+        "gold": "15",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 391,
+      "prompt_tokens_after_trunc": 391,
+      "generation_tokens": 58,
+      "latency_s": 0.32
+    },
+    "raw_response": "Q1. (About Passage B) \nThe person who logged the shipment was Amara.\n\nQ2. (About Passage A) \nThe resulting concentration was 45.1 mg/L.\n\nQ3. (About Passage B) \nThere were 15 crates in the shipment."
+  },
+  {
+    "task_id": "ior_medium_008",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "overall_accuracy": 0.3333,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "(About Passage B) \nThe total value of the shipment was $4,200.\n\nQ2. (About Passage C) \nThe temperature was 31.7\u00b0C.\n\nQ3. (About Passage B) \nThere were 24 crates in the shipment",
+        "gold": "4,200",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "",
+        "gold": "31.7",
+        "correct": false
+      },
+      "3": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "",
+        "gold": "24",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 473,
+      "prompt_tokens_after_trunc": 473,
+      "generation_tokens": 58,
+      "latency_s": 0.32
+    },
+    "raw_response": "Q1. (About Passage B) \nThe total value of the shipment was $4,200.\n\nQ2. (About Passage C) \nThe temperature was 31.7\u00b0C.\n\nQ3. (About Passage B) \nThere were 24 crates in the shipment."
+  },
+  {
+    "task_id": "ior_medium_009",
+    "task_type": "inhibition_return",
+    "difficulty": "Medium",
+    "overall_accuracy": 0.3333,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "45\u00b0C\nQ2. Monday\nQ3. Qadir",
+        "gold": "45",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "Monday",
+        "correct": false
+      },
+      "3": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "",
+        "gold": "Qadir",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 469,
+      "prompt_tokens_after_trunc": 469,
+      "generation_tokens": 18,
+      "latency_s": 0.11
+    },
+    "raw_response": "Q1. 45\u00b0C\nQ2. Monday\nQ3. Qadir"
+  },
+  {
+    "task_id": "ior_hard_016",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "overall_accuracy": 0.25,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "(About Passage B) \nThe weather station at the airport recorded conditions on Wednesday.\n\nQ2. (About Passage A) \nThe shipment was logged by Lumi under reference number WH-3506.\n\nQ3. (About Passage D) \nThe total value of the shipment was $9,100.\n\nQ4. (About Passage B) \nTemperature reached 27.8\u00b0C",
+        "gold": "Wednesday",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "A",
+        "predicted": "",
+        "gold": "WH-3506",
+        "correct": false
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "",
+        "gold": "9,100",
+        "correct": false
+      },
+      "4": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "",
+        "gold": "27.8",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 711,
+      "prompt_tokens_after_trunc": 711,
+      "generation_tokens": 83,
+      "latency_s": 0.46
+    },
+    "raw_response": "Q1. (About Passage B) \nThe weather station at the airport recorded conditions on Wednesday.\n\nQ2. (About Passage A) \nThe shipment was logged by Lumi under reference number WH-3506.\n\nQ3. (About Passage D) \nThe total value of the shipment was $9,100.\n\nQ4. (About Passage B) \nTemperature reached 27.8\u00b0C."
+  },
+  {
+    "task_id": "ior_hard_017",
+    "task_type": "inhibition_return",
+    "difficulty": "Hard",
+    "overall_accuracy": 0.25,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "C",
+        "predicted": "(About Passage C) \nThe total value of the shipment was $3,600.\n\nQ2. (About Passage B) \nThe final pH was 4.5.\n\nQ3. (About Passage D) \nThe resulting concentration was 12.4 mg/L.\n\nQ4. (About Passage C) \nThe reference number was WH-2293",
+        "gold": "3,600",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "4.5",
+        "correct": false
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "",
+        "gold": "12.4",
+        "correct": false
+      },
+      "4": {
+        "phase": "return",
+        "passage": "C",
+        "predicted": "",
+        "gold": "WH-2293",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 688,
+      "prompt_tokens_after_trunc": 688,
+      "generation_tokens": 78,
+      "latency_s": 0.43
+    },
+    "raw_response": "Q1. (About Passage C) \nThe total value of the shipment was $3,600.\n\nQ2. (About Passage B) \nThe final pH was 4.5.\n\nQ3. (About Passage D) \nThe resulting concentration was 12.4 mg/L.\n\nQ4. (About Passage C) \nThe reference number was WH-2293."
+  },
+  {
+    "task_id": "ior_expert_024",
+    "task_type": "inhibition_return",
+    "difficulty": "Expert",
+    "overall_accuracy": 0.25,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "A",
+        "predicted": "(About Passage A) \nThe humidity percentage was 62%.\n\nQ2. (About Passage C) \nThere were 60 crates in the shipment.\n\nQ3. (About Passage B) \nThe heating duration was 30 minutes.\n\nQ4. (About Passage A) \nConditions were recorded on Tuesday",
+        "gold": "62",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "",
+        "gold": "60",
+        "correct": false
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "30",
+        "correct": false
+      },
+      "4": {
+        "phase": "return",
+        "passage": "A",
+        "predicted": "",
+        "gold": "Tuesday",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 785,
+      "prompt_tokens_after_trunc": 785,
+      "generation_tokens": 67,
+      "latency_s": 0.38
+    },
+    "raw_response": "Q1. (About Passage A) \nThe humidity percentage was 62%.\n\nQ2. (About Passage C) \nThere were 60 crates in the shipment.\n\nQ3. (About Passage B) \nThe heating duration was 30 minutes.\n\nQ4. (About Passage A) \nConditions were recorded on Tuesday."
+  },
+  {
+    "task_id": "ior_expert_025",
+    "task_type": "inhibition_return",
+    "difficulty": "Expert",
+    "overall_accuracy": 0.25,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "A",
+        "predicted": "(About Passage A) \nThe barometric pressure was 1021 hPa.\n\nQ2. (About Passage C) \nThere were 48 crates in the shipment.\n\nQ3. (About Passage B) \nThe heating duration was 15 minutes.\n\nQ4. (About Passage A) \nThe temperature was 27.8\u00b0C",
+        "gold": "1021",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "",
+        "gold": "48",
+        "correct": false
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "15",
+        "correct": false
+      },
+      "4": {
+        "phase": "return",
+        "passage": "A",
+        "predicted": "",
+        "gold": "27.8",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 826,
+      "prompt_tokens_after_trunc": 826,
+      "generation_tokens": 73,
+      "latency_s": 0.41
+    },
+    "raw_response": "Q1. (About Passage A) \nThe barometric pressure was 1021 hPa.\n\nQ2. (About Passage C) \nThere were 48 crates in the shipment.\n\nQ3. (About Passage B) \nThe heating duration was 15 minutes.\n\nQ4. (About Passage A) \nThe temperature was 27.8\u00b0C."
+  },
+  {
+    "task_id": "ior_frontier_032",
+    "task_type": "inhibition_return",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.2,
+    "initial_accuracy": 1.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 1.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "B",
+        "predicted": "(About Passage B) \nThe heating duration was 45 minutes.\n\nQ2. (About Passage C) \nThe barometric pressure was 1015 hPa.\n\nQ3. (About Passage C) \nThe wind speed was not mentioned in Passage C. However, it was mentioned in Passage A as 28 km/h from the east, and in Passage E as 15 km/h from the south. \n\nQ4. (About Passage D) \nThe sample was heated to 150\u00b0C.\n\nQ5. (About Passage B) \nThe experiment ID was EX-712",
+        "gold": "45",
+        "correct": true
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "",
+        "gold": "1015",
+        "correct": false
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "C",
+        "predicted": "",
+        "gold": "28",
+        "correct": false
+      },
+      "4": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "",
+        "gold": "150",
+        "correct": false
+      },
+      "5": {
+        "phase": "return",
+        "passage": "B",
+        "predicted": "",
+        "gold": "EX-712",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 1261,
+      "prompt_tokens_after_trunc": 1261,
+      "generation_tokens": 122,
+      "latency_s": 0.68
+    },
+    "raw_response": "Q1. (About Passage B) \nThe heating duration was 45 minutes.\n\nQ2. (About Passage C) \nThe barometric pressure was 1015 hPa.\n\nQ3. (About Passage C) \nThe wind speed was not mentioned in Passage C. However, it was mentioned in Passage A as 28 km/h from the east, and in Passage E as 15 km/h from the south. \n\nQ4. (About Passage D) \nThe sample was heated to 150\u00b0C.\n\nQ5. (About Passage B) \nThe experiment ID was EX-712."
+  },
+  {
+    "task_id": "ior_frontier_033",
+    "task_type": "inhibition_return",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.2,
+    "initial_accuracy": 0.0,
+    "return_accuracy": 0.0,
+    "return_penalty": 0.0,
+    "details": {
+      "1": {
+        "phase": "initial",
+        "passage": "E",
+        "predicted": "",
+        "gold": "62",
+        "correct": false
+      },
+      "2": {
+        "phase": "shift",
+        "passage": "D",
+        "predicted": "(About Passage D) What was the wind speed?\nAnswer: 35 km/h\n\nQ3. (About Passage B) How many crates were in the shipment?\nAnswer: 24\n\nQ4. (About Passage B) What was the total value?\nAnswer: $4,200\n\nQ5. (About Passage E) What was the barometric pressure?\nAnswer: 1015 hPa",
+        "gold": "35",
+        "correct": true
+      },
+      "3": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "24",
+        "correct": false
+      },
+      "4": {
+        "phase": "shift",
+        "passage": "B",
+        "predicted": "",
+        "gold": "4,200",
+        "correct": false
+      },
+      "5": {
+        "phase": "return",
+        "passage": "E",
+        "predicted": "",
+        "gold": "1015",
+        "correct": false
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "ior_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 1245,
+      "prompt_tokens_after_trunc": 1245,
+      "generation_tokens": 104,
+      "latency_s": 0.58
+    },
+    "raw_response": "Q1. (About Passage E) What was the humidity percentage?\nAnswer: 62%\n\nQ2. (About Passage D) What was the wind speed?\nAnswer: 35 km/h\n\nQ3. (About Passage B) How many crates were in the shipment?\nAnswer: 24\n\nQ4. (About Passage B) What was the total value?\nAnswer: $4,200\n\nQ5. (About Passage E) What was the barometric pressure?\nAnswer: 1015 hPa"
   },
   {
     "task_id": "interference_easy_000",
@@ -524,7 +1924,7 @@
     "correct_count": 1,
     "total_keys": 1,
     "details": {
-      "reference": {
+      "delegate": {
         "status": "correct",
         "predicted": "Plovdiv",
         "gold": "Plovdiv"
@@ -536,10 +1936,10 @@
       "model": "llama8b",
       "prompt_tokens": 133,
       "prompt_tokens_after_trunc": 133,
-      "generation_tokens": 7,
+      "generation_tokens": 6,
       "latency_s": 0.04
     },
-    "raw_response": "- reference: Plovdiv"
+    "raw_response": "delegate: Plovdiv"
   },
   {
     "task_id": "interference_easy_001",
@@ -550,7 +1950,7 @@
     "correct_count": 1,
     "total_keys": 1,
     "details": {
-      "destination": {
+      "registry": {
         "status": "correct",
         "predicted": "850",
         "gold": "850"
@@ -562,29 +1962,29 @@
       "model": "llama8b",
       "prompt_tokens": 128,
       "prompt_tokens_after_trunc": 128,
-      "generation_tokens": 6,
-      "latency_s": 0.04
+      "generation_tokens": 8,
+      "latency_s": 0.05
     },
-    "raw_response": "- destination: 850"
+    "raw_response": "FINAL value of registry: 850"
   },
   {
     "task_id": "interference_medium_008",
     "task_type": "interference",
     "difficulty": "Medium",
-    "accuracy": 0.5,
+    "accuracy": 0.0,
     "perseveration_rate": 0.5,
-    "correct_count": 1,
+    "correct_count": 0,
     "total_keys": 2,
     "details": {
       "coordinator": {
         "status": "perseveration",
-        "predicted": "Fez",
-        "gold": "Tallinn"
+        "predicted": "Ulaanbaatar",
+        "gold": "Cartagena"
       },
       "delegate": {
-        "status": "correct",
-        "predicted": "Cusco",
-        "gold": "Cusco"
+        "status": "incorrect",
+        "predicted": "(no value given, so it remains empty)",
+        "gold": "Tallinn"
       }
     },
     "model": "llama8b",
@@ -593,10 +1993,10 @@
       "model": "llama8b",
       "prompt_tokens": 257,
       "prompt_tokens_after_trunc": 257,
-      "generation_tokens": 13,
-      "latency_s": 0.08
+      "generation_tokens": 399,
+      "latency_s": 2.12
     },
-    "raw_response": "- coordinator: Fez\n- delegate: Cusco"
+    "raw_response": "To find the final values of each record, we will apply the updates in the order they are given:\n\n1. Update: coordinator is now set to 'Ulaanbaatar'\n   - coordinator: Ulaanbaatar\n   - delegate: (no value given, so it remains empty)\n\n2. Update: delegate is now set to 'Jaipur'\n   - coordinator: Ulaanbaatar\n   - delegate: Jaipur\n\n3. Update: coordinator is now set to 'Jaipur'\n   - coordinator: Jaipur\n   - delegate: Jaipur\n\n4. Update: delegate is now set to 'Kotor'\n   - coordinator: Jaipur\n   - delegate: Kotor\n\n5. Update: coordinator is now set to 'Fez'\n   - coordinator: Fez\n   - delegate: Kotor\n\n6. Update: delegate is now set to 'Cusco'\n   - coordinator: Fez\n   - delegate: Cusco\n\n7. Update: coordinator is now set to 'Tallinn'\n   - coordinator: Tallinn\n   - delegate: Cusco\n\n8. Update: delegate is now set to 'Jaipur'\n   - coordinator: Tallinn\n   - delegate: Jaipur\n\n9. Update: coordinator is now set to 'Ulaanbaatar'\n   - coordinator: Ulaanbaatar\n   - delegate: Jaipur\n\n10. Update: delegate is now set to 'Tbilisi'\n    - coordinator: Ulaanbaatar\n    - delegate: Tbilisi\n\n11. Update: coordinator is now set to 'Cartagena'\n    - coordinator: Cartagena\n    - delegate: Tbilisi\n\n12. Update: delegate is now set to 'Tallinn'\n    - coordinator: Cartagena\n    - delegate: Tallinn\n\nThe final values are:\n- coordinator: Cartagena\n- delegate: Tallinn"
   },
   {
     "task_id": "interference_medium_009",
@@ -607,14 +2007,14 @@
     "correct_count": 0,
     "total_keys": 2,
     "details": {
-      "contact": {
+      "reference": {
         "status": "perseveration",
         "predicted": "Valetta",
         "gold": "Mandalay"
       },
-      "coordinator": {
+      "assignment": {
         "status": "incorrect",
-        "predicted": "(no value given, so it remains empty)",
+        "predicted": "(no update given for assignment)",
         "gold": "Gdansk"
       }
     },
@@ -624,10 +2024,10 @@
       "model": "llama8b",
       "prompt_tokens": 257,
       "prompt_tokens_after_trunc": 257,
-      "generation_tokens": 398,
-      "latency_s": 2.14
+      "generation_tokens": 426,
+      "latency_s": 2.26
     },
-    "raw_response": "To find the final values of each record, we need to apply the updates in the order they are given. \n\n1. Update: contact is now set to 'Valetta'\n   - contact: Valetta\n   - coordinator: (no value given, so it remains empty)\n\n2. Update: coordinator is now set to 'Cusco'\n   - contact: Valetta\n   - coordinator: Cusco\n\n3. Update: contact is now set to 'Kumasi'\n   - contact: Kumasi\n   - coordinator: Cusco\n\n4. Update: coordinator is now set to 'Kumasi'\n   - contact: Kumasi\n   - coordinator: Kumasi\n\n5. Update: contact is now set to 'Fez'\n   - contact: Fez\n   - coordinator: Kumasi\n\n6. Update: coordinator is now set to 'Oulu'\n   - contact: Fez\n   - coordinator: Oulu\n\n7. Update: contact is now set to 'Cartagena'\n   - contact: Cartagena\n   - coordinator: Oulu\n\n8. Update: coordinator is now set to 'Gdansk'\n   - contact: Cartagena\n   - coordinator: Gdansk\n\n9. Update: contact is now set to 'Ulaanbaatar'\n   - contact: Ulaanbaatar\n   - coordinator: Gdansk\n\n10. Update: coordinator is now set to 'Fez'\n    - contact: Ulaanbaatar\n    - coordinator: Fez\n\n11. Update: contact is now set to 'Mandalay'\n    - contact: Mandalay\n    - coordinator: Fez\n\n12. Update: coordinator is now set to 'Gdansk'\n    - contact: Mandalay\n    - coordinator: Gdansk\n\nThe final values are:\n- contact: Mandalay\n- coordinator: Gdansk"
+    "raw_response": "To find the final values of each record, we will apply the updates in the order they are given.\n\n1. Update: reference is now set to 'Valetta'\n   - reference: 'Valetta'\n   - assignment: (no update given for assignment)\n\n2. Update: assignment is now set to 'Cusco'\n   - reference: 'Valetta'\n   - assignment: 'Cusco'\n\n3. Update: reference is now set to 'Kumasi'\n   - reference: 'Kumasi'\n   - assignment: 'Cusco'\n\n4. Update: assignment is now set to 'Kumasi'\n   - reference: 'Kumasi'\n   - assignment: 'Kumasi'\n\n5. Update: reference is now set to 'Fez'\n   - reference: 'Fez'\n   - assignment: 'Kumasi'\n\n6. Update: assignment is now set to 'Oulu'\n   - reference: 'Fez'\n   - assignment: 'Oulu'\n\n7. Update: reference is now set to 'Cartagena'\n   - reference: 'Cartagena'\n   - assignment: 'Oulu'\n\n8. Update: assignment is now set to 'Gdansk'\n   - reference: 'Cartagena'\n   - assignment: 'Gdansk'\n\n9. Update: reference is now set to 'Ulaanbaatar'\n   - reference: 'Ulaanbaatar'\n   - assignment: 'Gdansk'\n\n10. Update: assignment is now set to 'Fez'\n    - reference: 'Ulaanbaatar'\n    - assignment: 'Fez'\n\n11. Update: reference is now set to 'Mandalay'\n    - reference: 'Mandalay'\n    - assignment: 'Fez'\n\n12. Update: assignment is now set to 'Gdansk'\n    - reference: 'Mandalay'\n    - assignment: 'Gdansk'\n\nThe final values are:\n- reference: 'Mandalay'\n- assignment: 'Gdansk'"
   },
   {
     "task_id": "interference_hard_016",
@@ -638,17 +2038,17 @@
     "correct_count": 3,
     "total_keys": 3,
     "details": {
-      "destination": {
+      "dispatch": {
         "status": "correct",
         "predicted": "Joelle",
         "gold": "Joelle"
       },
-      "reference": {
+      "delegate": {
         "status": "correct",
         "predicted": "Freya",
         "gold": "Freya"
       },
-      "contact": {
+      "assignment": {
         "status": "correct",
         "predicted": "Nico",
         "gold": "Nico"
@@ -660,10 +2060,10 @@
       "model": "llama8b",
       "prompt_tokens": 580,
       "prompt_tokens_after_trunc": 580,
-      "generation_tokens": 530,
-      "latency_s": 2.86
+      "generation_tokens": 534,
+      "latency_s": 2.85
     },
-    "raw_response": "To find the final values of each record, we will go through the updates in order and replace the previous value with the new one.\n\n- Initially, all records are empty.\n- Update: destination is now set to 'Nalini'\n- Update: reference is now set to 'Qadir'\n- Update: contact is now set to 'Gael'\n- Update: destination is now set to 'Uma'\n- Update: reference is now set to 'Tariq'\n- Update: contact is now set to 'Ravi'\n- Update: destination is now set to 'Dariush'\n- Update: reference is now set to 'Hana'\n- Update: contact is now set to 'Elara'\n- Update: destination is now set to 'Yuki'\n- Update: reference is now set to 'Olena'\n- Update: contact is now set to 'Uma'\n- Update: destination is now set to 'Vesna'\n- Update: reference is now set to 'Amara'\n- Update: contact is now set to 'Sigrid'\n- Update: destination is now set to 'Lumi'\n- Update: reference is now set to 'Ugo'\n- Update: contact is now set to 'Viktor'\n- Update: destination is now set to 'Bashir'\n- Update: reference is now set to 'Colette'\n- Update: contact is now set to 'Orla'\n- Update: destination is now set to 'Uma'\n- Update: reference is now set to 'Maren'\n- Update: contact is now set to 'Freya'\n- Update: destination is now set to 'Tariq'\n- Update: reference is now set to 'Adaeze'\n- Update: contact is now set to 'Elara'\n- Update: destination is now set to 'Femi'\n- Update: reference is now set to 'Freya'\n- Update: contact is now set to 'Vesna'\n- Update: destination is now set to 'Sigrid'\n- Update: reference is now set to 'Dmitri'\n- Update: contact is now set to 'Ugo'\n- Update: destination is now set to 'Joelle'\n- Update: reference is now set to 'Freya'\n- Update: contact is now set to 'Nico'\n\nAfter going through all the updates, the final values are:\n- destination: Joelle\n- reference: Freya\n- contact: Nico\n\nVerification questions:\nV1. Was 'Bashir' ever assigned to destination? [Yes/No]: Yes"
+    "raw_response": "To find the final values of each record, we will go through the updates in order and replace the previous value with the new one.\n\n- Initially, all records are empty.\n- Update: dispatch is now set to 'Nalini'\n- Update: delegate is now set to 'Qadir'\n- Update: assignment is now set to 'Gael'\n- Update: dispatch is now set to 'Uma'\n- Update: delegate is now set to 'Tariq'\n- Update: assignment is now set to 'Ravi'\n- Update: dispatch is now set to 'Dariush'\n- Update: delegate is now set to 'Hana'\n- Update: assignment is now set to 'Elara'\n- Update: dispatch is now set to 'Yuki'\n- Update: delegate is now set to 'Olena'\n- Update: assignment is now set to 'Uma'\n- Update: dispatch is now set to 'Vesna'\n- Update: delegate is now set to 'Amara'\n- Update: assignment is now set to 'Sigrid'\n- Update: dispatch is now set to 'Lumi'\n- Update: delegate is now set to 'Ugo'\n- Update: assignment is now set to 'Viktor'\n- Update: dispatch is now set to 'Bashir'\n- Update: delegate is now set to 'Colette'\n- Update: assignment is now set to 'Orla'\n- Update: dispatch is now set to 'Uma'\n- Update: delegate is now set to 'Maren'\n- Update: assignment is now set to 'Freya'\n- Update: dispatch is now set to 'Tariq'\n- Update: delegate is now set to 'Adaeze'\n- Update: assignment is now set to 'Elara'\n- Update: dispatch is now set to 'Femi'\n- Update: delegate is now set to 'Freya'\n- Update: assignment is now set to 'Vesna'\n- Update: dispatch is now set to 'Sigrid'\n- Update: delegate is now set to 'Dmitri'\n- Update: assignment is now set to 'Ugo'\n- Update: dispatch is now set to 'Joelle'\n- Update: delegate is now set to 'Freya'\n- Update: assignment is now set to 'Nico'\n\nAfter going through all the updates, the final values are:\n- dispatch: 'Joelle'\n- delegate: 'Freya'\n- assignment: 'Nico'\n\nVerification questions:\nV1. Was 'Bashir' ever assigned to dispatch? [Yes/No]: Yes"
   },
   {
     "task_id": "interference_hard_017",
@@ -674,20 +2074,20 @@
     "correct_count": 0,
     "total_keys": 3,
     "details": {
-      "delegate": {
+      "assignment": {
         "status": "incorrect",
-        "predicted": "unknown",
-        "gold": "Dmitri"
+        "predicted": "- Initially, there is no value",
+        "gold": "Lumi"
+      },
+      "dispatch": {
+        "status": "incorrect",
+        "predicted": "- Initially, there is no value",
+        "gold": "Viktor"
       },
       "contact": {
         "status": "incorrect",
-        "predicted": "unknown",
-        "gold": "Leif"
-      },
-      "coordinator": {
-        "status": "incorrect",
-        "predicted": "unknown",
-        "gold": "Dariush"
+        "predicted": "- Initially, there is no value",
+        "gold": "Uma"
       }
     },
     "model": "llama8b",
@@ -696,10 +2096,10 @@
       "model": "llama8b",
       "prompt_tokens": 579,
       "prompt_tokens_after_trunc": 579,
-      "generation_tokens": 1332,
-      "latency_s": 7.21
+      "generation_tokens": 594,
+      "latency_s": 3.17
     },
-    "raw_response": "To find the final values of each record, we will go through the updates in order and replace the previous value with the new one.\n\n- Initial values: \n  - delegate: unknown\n  - contact: unknown\n  - coordinator: unknown\n\n1. Update: delegate is now set to 'Elara'\n   - delegate: Elara\n   - contact: unknown\n   - coordinator: unknown\n\n2. Update: contact is now set to 'Lumi'\n   - delegate: Elara\n   - contact: Lumi\n   - coordinator: unknown\n\n3. Update: coordinator is now set to 'Viktor'\n   - delegate: Elara\n   - contact: Lumi\n   - coordinator: Viktor\n\n4. Update: delegate is now set to 'Orla'\n   - delegate: Orla\n   - contact: Lumi\n   - coordinator: Viktor\n\n5. Update: contact is now set to 'Dariush'\n   - delegate: Orla\n   - contact: Dariush\n   - coordinator: Viktor\n\n6. Update: coordinator is now set to 'Vesna'\n   - delegate: Orla\n   - contact: Dariush\n   - coordinator: Vesna\n\n7. Update: delegate is now set to 'Wren'\n   - delegate: Wren\n   - contact: Dariush\n   - coordinator: Vesna\n\n8. Update: contact is now set to 'Colette'\n   - delegate: Wren\n   - contact: Colette\n   - coordinator: Vesna\n\n9. Update: coordinator is now set to 'Kenji'\n   - delegate: Wren\n   - contact: Colette\n   - coordinator: Kenji\n\n10. Update: delegate is now set to 'Vesna'\n    - delegate: Vesna\n    - contact: Colette\n    - coordinator: Kenji\n\n11. Update: contact is now set to 'Nico'\n    - delegate: Vesna\n    - contact: Nico\n    - coordinator: Kenji\n\n12. Update: coordinator is now set to 'Haruto'\n    - delegate: Vesna\n    - contact: Nico\n    - coordinator: Haruto\n\n13. Update: delegate is now set to 'Viktor'\n    - delegate: Viktor\n    - contact: Nico\n    - coordinator: Haruto\n\n14. Update: contact is now set to 'Wren'\n    - delegate: Viktor\n    - contact: Wren\n    - coordinator: Haruto\n\n15. Update: coordinator is now set to 'Nalini'\n    - delegate: Viktor\n    - contact: Wren\n    - coordinator: Nalini\n\n16. Update: delegate is now set to 'Leif'\n    - delegate: Leif\n    - contact: Wren\n    - coordinator: Nalini\n\n"
+    "raw_response": "To find the final values of each record, we will go through the updates in order and replace the previous value with the new one.\n\n- assignment: \n  - Initially, there is no value.\n  - Update: assignment is now set to 'Orla'\n  - Update: assignment is now set to 'Wren'\n  - Update: assignment is now set to 'Vesna'\n  - Update: assignment is now set to 'Wren'\n  - Update: assignment is now set to 'Vesna'\n  - Update: assignment is now set to 'Viktor'\n  - Update: assignment is now set to 'Leif'\n  - Update: assignment is now set to 'Sigrid'\n  - Update: assignment is now set to 'Zora'\n  - Update: assignment is now set to 'Femi'\n  - Update: assignment is now set to 'Yuki'\n  - Update: assignment is now set to 'Joelle'\n  - Update: assignment is now set to 'Dmitri'\n  - Update: assignment is now set to 'Lumi'\n  - Final value of assignment: Lumi\n\n- dispatch:\n  - Initially, there is no value.\n  - Update: dispatch is now set to 'Dariush'\n  - Update: dispatch is now set to 'Colette'\n  - Update: dispatch is now set to 'Nico'\n  - Update: dispatch is now set to 'Wren'\n  - Update: dispatch is now set to 'Yuki'\n  - Update: dispatch is now set to 'Joaquin'\n  - Update: dispatch is now set to 'Kenji'\n  - Update: dispatch is now set to 'Runa'\n  - Update: dispatch is now set to 'Priya'\n  - Update: dispatch is now set to 'Elara'\n  - Update: dispatch is now set to 'Leif'\n  - Update: dispatch is now set to 'Viktor'\n  - Final value of dispatch: Viktor\n\n- contact:\n  - Initially, there is no value.\n  - Update: contact is now set to 'Vesna'\n  - Update: contact is now set to 'Kenji'\n  - Update: contact is now set to 'Haruto'\n  - Update: contact is now set to 'Nalini'\n  - Update: contact is now set to 'Tala'\n  - Update: contact is now set to 'Celine'\n  - Update: contact is now set to 'Haruto'\n  - Update: contact is now set to 'Xander'\n  - Update: contact is now set to 'Priya'\n  - Update: contact is now set to 'Vesna'\n  - Final value of contact: Vesna\n\nVerification questions:\nV1. Was 'Wren' ever assigned"
   },
   {
     "task_id": "interference_expert_024",
@@ -710,25 +2110,25 @@
     "correct_count": 0,
     "total_keys": 4,
     "details": {
-      "contact": {
-        "status": "incorrect",
-        "predicted": "- Initially, there is no value",
-        "gold": "894"
-      },
-      "delegate": {
-        "status": "incorrect",
-        "predicted": "- Initially, there is no value",
-        "gold": "132"
-      },
       "assignment": {
         "status": "incorrect",
         "predicted": "- Initially, there is no value",
-        "gold": "491"
+        "gold": "209"
+      },
+      "liaison": {
+        "status": "incorrect",
+        "predicted": "- Initially, there is no value",
+        "gold": "765"
       },
       "location": {
         "status": "incorrect",
         "predicted": "- Initially, there is no value",
-        "gold": "188"
+        "gold": "267"
+      },
+      "registry": {
+        "status": "incorrect",
+        "predicted": "- Initially, there is no value",
+        "gold": "951"
       }
     },
     "model": "llama8b",
@@ -737,10 +2137,10 @@
       "model": "llama8b",
       "prompt_tokens": 1260,
       "prompt_tokens_after_trunc": 1260,
-      "generation_tokens": 1308,
-      "latency_s": 7.13
+      "generation_tokens": 1323,
+      "latency_s": 7.1
     },
-    "raw_response": "To find the final values of each record, we need to go through the updates in order and replace the previous value with the new one.\n\n- contact: \n  - Initially, there is no value.\n  - Update: contact is now set to '135'\n  - Update: contact is now set to '901'\n  - Update: contact is now set to '961'\n  - Update: contact is now set to '885'\n  - Update: contact is now set to '931'\n  - Update: contact is now set to '775'\n  - Update: contact is now set to '621'\n  - Update: contact is now set to '423'\n  - Update: contact is now set to '138'\n  - Update: contact is now set to '352'\n  - Update: contact is now set to '741'\n  - Update: contact is now set to '631'\n  - Update: contact is now set to '518'\n  - Update: contact is now set to '491'\n  - Update: contact is now set to '450'\n  - Update: contact is now set to '877'\n  - Update: contact is now set to '833'\n  - Update: contact is now set to '335'\n  - Update: contact is now set to '268'\n  - Update: contact is now set to '559'\n  - Update: contact is now set to '608'\n  - Update: contact is now set to '884'\n  - Update: contact is now set to '448'\n  - Update: contact is now set to '791'\n  - Update: contact is now set to '894'\n\n- delegate:\n  - Initially, there is no value.\n  - Update: delegate is now set to '209'\n  - Update: delegate is now set to '728'\n  - Update: delegate is now set to '927'\n  - Update: delegate is now set to '787'\n  - Update: delegate is now set to '832'\n  - Update: delegate is now set to '178'\n  - Update: delegate is now set to '872'\n  - Update: delegate is now set to '924'\n  - Update: delegate is now set to '560'\n  - Update: delegate is now set to '774'\n  - Update: delegate is now set to '470'\n  - Update: delegate is now set to '523'\n  - Update: delegate is now set to '875'\n  - Update: delegate is now set to '598'\n  - Update: delegate is now set to '121'\n  - Update: delegate is now set to '823'\n  - Update: delegate is now set to '533'\n  - Update: delegate is now set to '279'\n  - Update: delegate is now set to "
+    "raw_response": "To find the final value of each record, we need to go through the updates in order and replace the previous value with the new one.\n\n- assignment: \n  - Initially, there is no value.\n  - Update: assignment is now set to '901'\n  - Update: assignment is now set to '961'\n  - Update: assignment is now set to '885'\n  - Update: assignment is now set to '931'\n  - Update: assignment is now set to '775'\n  - Update: assignment is now set to '621'\n  - Update: assignment is now set to '423'\n  - Update: assignment is now set to '138'\n  - Update: assignment is now set to '352'\n  - Update: assignment is now set to '741'\n  - Update: assignment is now set to '631'\n  - Update: assignment is now set to '518'\n  - Update: assignment is now set to '491'\n  - Update: assignment is now set to '450'\n  - Update: assignment is now set to '877'\n  - Update: assignment is now set to '833'\n  - Update: assignment is now set to '335'\n  - Update: assignment is now set to '268'\n  - Update: assignment is now set to '559'\n  - Update: assignment is now set to '608'\n  - Update: assignment is now set to '884'\n  - Update: assignment is now set to '448'\n  - Update: assignment is now set to '791'\n  - Update: assignment is now set to '894'\n\n- liaison: \n  - Initially, there is no value.\n  - Update: liaison is now set to '728'\n  - Update: liaison is now set to '927'\n  - Update: liaison is now set to '787'\n  - Update: liaison is now set to '832'\n  - Update: liaison is now set to '178'\n  - Update: liaison is now set to '872'\n  - Update: liaison is now set to '924'\n  - Update: liaison is now set to '560'\n  - Update: liaison is now set to '774'\n  - Update: liaison is now set to '470'\n  - Update: liaison is now set to '523'\n  - Update: liaison is now set to '875'\n  - Update: liaison is now set to '598'\n  - Update: liaison is now set to '121'\n  - Update: liaison is now set to '823'\n  - Update: liaison is now set to '533'\n  - Update: liaison is now set to '279'\n  - Update: liaison is now set to '209'\n  - Update: liaison"
   },
   {
     "task_id": "interference_expert_025",
@@ -751,37 +2151,399 @@
     "correct_count": 0,
     "total_keys": 4,
     "details": {
-      "coordinator": {
+      "registry": {
         "status": "incorrect",
         "predicted": "- Initially, there is no value",
-        "gold": "Haruto"
+        "gold": "Ines"
       },
-      "destination": {
+      "liaison": {
         "status": "incorrect",
         "predicted": "- Initially, there is no value",
-        "gold": "Freya"
+        "gold": "Viktor"
+      },
+      "dispatch": {
+        "status": "incorrect",
+        "predicted": "- Initially, there is no value",
+        "gold": "Dmitri"
       },
       "assignment": {
         "status": "incorrect",
         "predicted": "- Initially, there is no value",
-        "gold": "Dariush"
-      },
-      "delegate": {
-        "status": "incorrect",
-        "predicted": "- Initially, there is no value",
-        "gold": "Celine"
+        "gold": "Dmitri"
       }
     },
     "model": "llama8b",
     "generation_meta": {
       "task_id": "interference_expert_025",
       "model": "llama8b",
-      "prompt_tokens": 1381,
-      "prompt_tokens_after_trunc": 1381,
-      "generation_tokens": 1064,
-      "latency_s": 5.81
+      "prompt_tokens": 1382,
+      "prompt_tokens_after_trunc": 1382,
+      "generation_tokens": 1104,
+      "latency_s": 5.93
     },
-    "raw_response": "To find the final values of each record, we need to go through the updates in order and replace the previous value with the new one.\n\n- coordinator: \n  - Initially, there is no value.\n  - Update: coordinator is now set to 'Elio'\n  - Update: coordinator is now set to 'Olena'\n  - Update: coordinator is now set to 'Freya'\n  - Update: coordinator is now set to 'Zora'\n  - Update: coordinator is now set to 'Haruto'\n  - Update: coordinator is now set to 'Zain'\n  - Update: coordinator is now set to 'Maren'\n  - Update: coordinator is now set to 'Gael'\n  - Update: coordinator is now set to 'Yuki'\n  - Update: coordinator is now set to 'Joaquin'\n  - Update: coordinator is now set to 'Joelle'\n  - Update: coordinator is now set to 'Zain'\n  - Update: coordinator is now set to 'Joaquin'\n  - Update: coordinator is now set to 'Magnus'\n  - Update: coordinator is now set to 'Idris'\n  - Update: coordinator is now set to 'Qadir'\n  - Update: coordinator is now set to 'Leif'\n  - Update: coordinator is now set to 'Adaeze'\n  - Update: coordinator is now set to 'Hana'\n  - Update: coordinator is now set to 'Xander'\n  - Update: coordinator is now set to 'Ravi'\n  - Update: coordinator is now set to 'Tala'\n  - Update: coordinator is now set to 'Freya'\n\n- destination: \n  - Initially, there is no value.\n  - Update: destination is now set to 'Ines'\n  - Update: destination is now set to 'Runa'\n  - Update: destination is now set to 'Olena'\n  - Update: destination is now set to 'Elara'\n  - Update: destination is now set to 'Ravi'\n  - Update: destination is now set to 'Adaeze'\n  - Update: destination is now set to 'Joaquin'\n  - Update: destination is now set to 'Colette'\n  - Update: destination is now set to 'Leif'\n  - Update: destination is now set to 'Elio'\n  - Update: destination is now set to 'Zain'\n  - Update: destination is now set to 'Dariush'\n  - Update: destination is now set to 'Viktor'\n  - Update: destination is now set to 'Bashir'\n  - Update: destination is now set to 'Xander'\n\n- assignment:"
+    "raw_response": "To find the final values of each record, we need to go through the updates in order and replace the previous value with the new one.\n\n- registry: \n  - Initially, there is no value.\n  - Update: registry is now set to 'Olena'\n  - Update: registry is now set to 'Freya'\n  - Update: registry is now set to 'Zora'\n  - Update: registry is now set to 'Haruto'\n  - Update: registry is now set to 'Zain'\n  - Update: registry is now set to 'Maren'\n  - Update: registry is now set to 'Yuki'\n  - Update: registry is now set to 'Joaquin'\n  - Update: registry is now set to 'Gael'\n  - Update: registry is now set to 'Joaquin'\n  - Update: registry is now set to 'Magnus'\n  - Update: registry is now set to 'Celine'\n  - Update: registry is now set to 'Idris'\n  - Update: registry is now set to 'Qadir'\n  - Update: registry is now set to 'Leif'\n  - Update: registry is now set to 'Adaeze'\n  - Update: registry is now set to 'Hana'\n  - Update: registry is now set to 'Xander'\n  - Update: registry is now set to 'Ravi'\n  - Update: registry is now set to 'Tala'\n  - Update: registry is now set to 'Freya'\n  - Update: registry is now set to 'Haruto'\n  - Update: registry is now set to 'Ines'\n\n- liaison: \n  - Initially, there is no value.\n  - Update: liaison is now set to 'Runa'\n  - Update: liaison is now set to 'Olena'\n  - Update: liaison is now set to 'Elara'\n  - Update: liaison is now set to 'Adaeze'\n  - Update: liaison is now set to 'Ravi'\n  - Update: liaison is now set to 'Adaeze'\n  - Update: liaison is now set to 'Joaquin'\n  - Update: liaison is now set to 'Colette'\n  - Update: liaison is now set to 'Leif'\n  - Update: liaison is now set to 'Zain'\n  - Update: liaison is now set to 'Elio'\n  - Update: liaison is now set to 'Zain'\n  - Update: liaison is now set to 'Dariush'\n  - Update: liaison is now set to 'Viktor'\n  - Update: liaison is now set to 'Bashir'\n  - Update: liaison is now set to 'Xander'\n  - Update: liaison is now set to 'Freya'\n  - Update: liaison is now set to 'Paloma'\n  - Update: liaison "
+  },
+  {
+    "task_id": "interference_frontier_032",
+    "task_type": "interference",
+    "difficulty": "Frontier",
+    "accuracy": 0.125,
+    "perseveration_rate": 0.875,
+    "correct_count": 1,
+    "total_keys": 8,
+    "details": {
+      "registry": {
+        "status": "perseveration",
+        "predicted": "Ulaanbaatar",
+        "gold": "Trieste"
+      },
+      "coordinator": {
+        "status": "correct",
+        "predicted": "Gdansk",
+        "gold": "Gdansk"
+      },
+      "location": {
+        "status": "perseveration",
+        "predicted": "Gdansk",
+        "gold": "Tallinn"
+      },
+      "reference": {
+        "status": "perseveration",
+        "predicted": "Plovdiv",
+        "gold": "Valetta"
+      },
+      "delegate": {
+        "status": "perseveration",
+        "predicted": "Gdansk",
+        "gold": "Oulu"
+      },
+      "dispatch": {
+        "status": "perseveration",
+        "predicted": "Recife",
+        "gold": "Cusco"
+      },
+      "contact": {
+        "status": "perseveration",
+        "predicted": "Trieste",
+        "gold": "Luang Prabang"
+      },
+      "destination": {
+        "status": "perseveration",
+        "predicted": "Trieste",
+        "gold": "Reykjavik"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "interference_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 5385,
+      "prompt_tokens_after_trunc": 5385,
+      "generation_tokens": 81,
+      "latency_s": 0.58
+    },
+    "raw_response": "FINAL VALUES:\n- registry: Ulaanbaatar\n- coordinator: Gdansk\n- location: Gdansk\n- reference: Plovdiv\n- delegate: Gdansk\n- dispatch: Recife\n- contact: Trieste\n- destination: Trieste\n\nVerification answers:\nV1. Yes\nV2. No\nV3. Yes\nV4. No"
+  },
+  {
+    "task_id": "interference_frontier_033",
+    "task_type": "interference",
+    "difficulty": "Frontier",
+    "accuracy": 0.75,
+    "perseveration_rate": 0.25,
+    "correct_count": 6,
+    "total_keys": 8,
+    "details": {
+      "registry": {
+        "status": "perseveration",
+        "predicted": "Oulu",
+        "gold": "Kumasi"
+      },
+      "dispatch": {
+        "status": "correct",
+        "predicted": "Gdansk",
+        "gold": "Gdansk"
+      },
+      "reference": {
+        "status": "perseveration",
+        "predicted": "Valetta",
+        "gold": "Jaipur"
+      },
+      "coordinator": {
+        "status": "correct",
+        "predicted": "Cusco",
+        "gold": "Cusco"
+      },
+      "destination": {
+        "status": "correct",
+        "predicted": "Mandalay",
+        "gold": "Mandalay"
+      },
+      "location": {
+        "status": "correct",
+        "predicted": "Tbilisi",
+        "gold": "Tbilisi"
+      },
+      "delegate": {
+        "status": "correct",
+        "predicted": "Fez",
+        "gold": "Fez"
+      },
+      "contact": {
+        "status": "correct",
+        "predicted": "Kotor",
+        "gold": "Kotor"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "interference_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 5393,
+      "prompt_tokens_after_trunc": 5393,
+      "generation_tokens": 135,
+      "latency_s": 0.88
+    },
+    "raw_response": "FINAL VALUES:\n- registry: 'Oulu'\n- dispatch: 'Gdansk'\n- reference: 'Valetta'\n- coordinator: 'Cusco'\n- destination: 'Mandalay'\n- location: 'Tbilisi'\n- delegate: 'Fez'\n- contact: 'Kotor'\n\nVerification answers:\nV1. Was 'Cusco' ever assigned to registry? [No]\nV2. Was 'Tbilisi' ever assigned to dispatch? [Yes]\nV3. Was 'Oulu' ever assigned to reference? [Yes]\nV4. Was 'Valetta' ever assigned to coordinator? [Yes]"
+  },
+  {
+    "task_id": "multihop_easy_000",
+    "task_type": "multihop",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To determine where the silver scroll is, we need to follow the sequence of events involving the silver scroll. \n\n1. The first mention of the silver scroll is in the following sentence: \"Evening fell q",
+      "gold": "the guard station",
+      "correct": true,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 410
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 589,
+      "prompt_tokens_after_trunc": 589,
+      "generation_tokens": 188,
+      "latency_s": 1.01
+    },
+    "raw_response": "To determine where the silver scroll is, we need to follow the sequence of events involving the silver scroll. \n\n1. The first mention of the silver scroll is in the following sentence: \"Evening fell quickly in the valley. The mountains blocked the last hour of sunlight, and by five o'clock the streetlights were already on. Ugo handed the silver scroll to Gael.\"\n\n   This indicates that Ugo handed the silver scroll to Gael.\n\n2. The next mention of Gael is in the following sentence: \"A thin rain began to fall just as Idris reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference. Gael later placed everything received that day in the guard station.\"\n\n   This indicates that Gael placed everything received that day in the guard station, which includes the silver scroll.\n\nTherefore, the silver scroll is now in the guard station."
+  },
+  {
+    "task_id": "multihop_easy_001",
+    "task_type": "multihop",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To find the answer, we need to identify the passage where the crimson key is mentioned and the room it unlocks. \n\nThe passage where the crimson key is mentioned is: \"Bram used the crimson key to unloc",
+      "gold": "room 27",
+      "correct": true,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 409
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 576,
+      "prompt_tokens_after_trunc": 576,
+      "generation_tokens": 106,
+      "latency_s": 0.58
+    },
+    "raw_response": "To find the answer, we need to identify the passage where the crimson key is mentioned and the room it unlocks. \n\nThe passage where the crimson key is mentioned is: \"Bram used the crimson key to unlock the side passage.\"\n\nThe next step is to find the passage where the side passage is mentioned. The side passage is mentioned in the following passage: \"Behind the side passage was room 27, which had been sealed for years.\"\n\nTherefore, the room that the crimson key gives access to is room 27."
+  },
+  {
+    "task_id": "multihop_medium_008",
+    "task_type": "multihop",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To find the location of the jade locket, we need to follow the clues given in the text.\n\n1. The first mention of the jade locket is in the following sentence: \"Nalini handed the jade locket to Nico.\"\n",
+      "gold": "the observatory loft",
+      "correct": true,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 994
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 1282,
+      "prompt_tokens_after_trunc": 1282,
+      "generation_tokens": 170,
+      "latency_s": 0.93
+    },
+    "raw_response": "To find the location of the jade locket, we need to follow the clues given in the text.\n\n1. The first mention of the jade locket is in the following sentence: \"Nalini handed the jade locket to Nico.\"\n\n   This tells us that Nalini handed the locket to Nico.\n\n2. The next mention of Nico is in the following sentence: \"Fog rolled in from the harbour, thick enough to muffle the sound of the bells. Ships sat motionless at their moorings, waiting for the visibility to improve before attempting the channel. Nico later placed everything received that day in the observatory loft.\"\n\n   This tells us that Nico placed everything received that day in the observatory loft, which includes the jade locket.\n\nTherefore, the jade locket is now in the observatory loft."
+  },
+  {
+    "task_id": "multihop_medium_009",
+    "task_type": "multihop",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To find the answer, we need to identify the passage where the jade key is mentioned and the room it unlocks.\n\nThe passage where the jade key is mentioned is: \"Vesna used the jade key to unlock the ser",
+      "gold": "room 33",
+      "correct": true,
+      "n_hops": 2,
+      "has_distractors": false,
+      "word_count": 1013
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 1291,
+      "prompt_tokens_after_trunc": 1291,
+      "generation_tokens": 108,
+      "latency_s": 0.6
+    },
+    "raw_response": "To find the answer, we need to identify the passage where the jade key is mentioned and the room it unlocks.\n\nThe passage where the jade key is mentioned is: \"Vesna used the jade key to unlock the service entrance.\"\n\nThe phrase \"service entrance\" suggests that the jade key is used to access a room or area that is not the main entrance. \n\nThe passage also mentions \"Behind the service entrance was room 33, which had been sealed for years.\"\n\nTherefore, the jade key gives access to room 33."
+  },
+  {
+    "task_id": "multihop_hard_016",
+    "task_type": "multihop",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To determine where the silver stone is, we need to follow the clues provided in the text. \n\nFirst, we know that Vesna sealed the silver stone inside the copper lockbox. \n\nNext, we find a mention of th",
+      "gold": "the guard station",
+      "correct": true,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 1700
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 2102,
+      "prompt_tokens_after_trunc": 2102,
+      "generation_tokens": 138,
+      "latency_s": 0.79
+    },
+    "raw_response": "To determine where the silver stone is, we need to follow the clues provided in the text. \n\nFirst, we know that Vesna sealed the silver stone inside the copper lockbox. \n\nNext, we find a mention of the copper lockbox being shipped to the west gallery. This implies that the lockbox, and therefore the silver stone, was moved to the west gallery.\n\nHowever, later in the text, it is mentioned that everything stored at the west gallery was subsequently transferred to the guard station. This means that the copper lockbox and the silver stone were moved from the west gallery to the guard station.\n\nTherefore, the final location of the silver stone is the guard station."
+  },
+  {
+    "task_id": "multihop_hard_017",
+    "task_type": "multihop",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To determine where the research grant is, we need to find the sentence that mentions the research grant and the location it is associated with. \n\nThe sentence that mentions the research grant is: \"The",
+      "gold": "the Meridian Tower",
+      "correct": true,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 1676
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 2063,
+      "prompt_tokens_after_trunc": 2063,
+      "generation_tokens": 446,
+      "latency_s": 2.43
+    },
+    "raw_response": "To determine where the research grant is, we need to find the sentence that mentions the research grant and the location it is associated with. \n\nThe sentence that mentions the research grant is: \"The research grant was prepared by Ravi.\"\n\nThe next step is to find the location associated with Ravi. However, Ravi is mentioned in multiple places, but we need to find the one that is most likely to be associated with the research grant. \n\nRavi is mentioned in the following sentences:\n- A thin rain began to fall just as Zain reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference.\n- A shipment of textiles arrived from the south, packed in crates stamped with unfamiliar markings. The customs officer consulted her reference manual before clearing them. Ravi submitted it to the registrar's office for processing.\n\nThe second sentence is the one that mentions Ravi in the context of the research grant. \n\nThe sentence mentions that Ravi submitted the research grant to the registrar's office for processing. \n\nThe next step is to find the location associated with the registrar's office. The registrar's office is mentioned in the following sentences:\n- A shipment of textiles arrived from the south, packed in crates stamped with unfamiliar markings. The customs officer consulted her reference manual before clearing them. Ravi submitted it to the registrar's office for processing.\n- A thin rain began to fall just as Hana reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference. the registrar's office forwarded all pending documents to the Meridian Tower.\n\nThe second sentence is the one that mentions the registrar's office in the context of the Meridian Tower.\n\nThe Meridian Tower is mentioned in the following sentence:\n- A thin rain began to fall just as Hana reached the old quarter. The cobblestones gleamed under the stree"
+  },
+  {
+    "task_id": "multihop_expert_024",
+    "task_type": "multihop",
+    "difficulty": "Expert",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "To find the location of the coral shell that Maren originally had, we need to follow the sequence of events involving the coral shell.\n\n1. Maren entrusted the coral shell to Paloma before leaving the ",
+      "gold": "the guard station",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 2805
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 3445,
+      "prompt_tokens_after_trunc": 3445,
+      "generation_tokens": 121,
+      "latency_s": 0.73
+    },
+    "raw_response": "To find the location of the coral shell that Maren originally had, we need to follow the sequence of events involving the coral shell.\n\n1. Maren entrusted the coral shell to Paloma before leaving the city. This indicates that Maren had the coral shell initially.\n2. Later, it is mentioned that Paloma passed the coral shell to Adaeze at the railway station. This means that Paloma had the coral shell after Maren, and then passed it to Adaeze.\n\nTherefore, the coral shell that Maren originally had was passed to Adaeze at the railway station."
+  },
+  {
+    "task_id": "multihop_expert_025",
+    "task_type": "multihop",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "To find the location of the silver scroll, we need to follow the clues given in the text. \n\nFirst, we need to identify the location where the silver scroll was initially mentioned. It was mentioned in",
+      "gold": "the Okafor Complex",
+      "correct": true,
+      "n_hops": 3,
+      "has_distractors": false,
+      "word_count": 2827
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 3466,
+      "prompt_tokens_after_trunc": 3466,
+      "generation_tokens": 695,
+      "latency_s": 3.85
+    },
+    "raw_response": "To find the location of the silver scroll, we need to follow the clues given in the text. \n\nFirst, we need to identify the location where the silver scroll was initially mentioned. It was mentioned in the following sentence: \"The old postal route between Kotor and the coastal villages had not been used in years. Weeds pushed through the gravel, and the mile markers were barely legible. The silver scroll was wrapped and placed in the rosewood drawer.\"\n\nThis sentence tells us that the silver scroll was initially placed in a rosewood drawer. \n\nNext, we need to find the location of the rosewood drawer. The rosewood drawer is mentioned in the following sentences: \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Sigrid fully understood. The wooden shelves bowed slightly under the weight.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Haruto fully understood. The wooden shelves bowed slightly under the weight.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Adaeze fully understood. The wooden shelves bowed slightly under the weight.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Zora fully understood. The wooden shelves bowed slightly under the weight.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Lumi fully understood. The wooden shelves bowed slightly under the weight. The rosewood drawer was stored in room 72.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Wren fully understood. The wooden shelves bowed slightly under the weight.\" and \"The library held over thirty thousand volumes, most of them catalogued by hand in a system that only Amara fully understood. The wooden shelves bowed slightly under the weight.\" and \"The libr"
+  },
+  {
+    "task_id": "multihop_frontier_032",
+    "task_type": "multihop",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "To determine which department handled the calibration task, we need to find the mention of the calibration task in the text and identify the person or department responsible for it.\n\nThe calibration t",
+      "gold": "the archival unit",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": true,
+      "word_count": 5148
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 6236,
+      "prompt_tokens_after_trunc": 6236,
+      "generation_tokens": 2048,
+      "latency_s": 11.5
+    },
+    "raw_response": "To determine which department handled the calibration task, we need to find the mention of the calibration task in the text and identify the person or department responsible for it.\n\nThe calibration task is mentioned in the following sentences:\n\nA thin rain began to fall just as Colette reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference. The calibration task was initially given to Willa.\n\nFrom this sentence, we can see that the calibration task was initially given to Willa. However, it does not explicitly state that Willa's department handled the task. \n\nLater in the text, we find the following sentence:\n\nEvening fell quickly in the valley. The mountains blocked the last hour of sunlight, and by five o'clock the streetlights were already on. Willa delegated the work to Ravi.\n\nThis sentence implies that Willa delegated the work to Ravi, but it does not specify that the work was the calibration task. However, it does not contradict the previous sentence either.\n\nThe next relevant sentence is:\n\nThe clearance booth forwarded all pending documents to the Novak Pavilion.\n\nThis sentence does not mention Willa or Ravi, but it does mention the clearance booth. However, it does not directly relate to the calibration task.\n\nThe next relevant sentence is:\n\nElio submitted it to the clearance booth for processing.\n\nThis sentence mentions Elio submitting something to the clearance booth for processing, but it does not specify what the \"it\" refers to. However, it does not contradict the previous sentences.\n\nThe next relevant sentence is:\n\nThe library held over thirty thousand volumes, most of them catalogued by hand in a system that only Lumi fully understood. The wooden shelves bowed slightly under the weight. Elio submitted it to the clearance booth for processing.\n\nThis sentence implies that Elio submitted something to the clearance booth for processing, but it does not specify what the \"it\" r"
+  },
+  {
+    "task_id": "multihop_frontier_033",
+    "task_type": "multihop",
+    "difficulty": "Frontier",
+    "accuracy": 0.0,
+    "details": {
+      "predicted": "To determine which department handled the data migration job, we need to find the passage where the data migration job is mentioned. \n\nThe passage is: \"A thin rain began to fall just as Sigrid reached",
+      "gold": "the procurement desk",
+      "correct": false,
+      "n_hops": 3,
+      "has_distractors": true,
+      "word_count": 5106
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "multihop_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 6193,
+      "prompt_tokens_after_trunc": 6193,
+      "generation_tokens": 99,
+      "latency_s": 0.71
+    },
+    "raw_response": "To determine which department handled the data migration job, we need to find the passage where the data migration job is mentioned. \n\nThe passage is: \"A thin rain began to fall just as Sigrid reached the old quarter. The cobblestones gleamed under the streetlights, and a cat watched from a window ledge with studied indifference. The data migration job was initially given to Haruto.\"\n\nFrom this passage, we can see that the data migration job was initially given to Haruto."
   },
   {
     "task_id": "selective_easy_000",
@@ -791,6 +2553,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.5,
     "details": {
       "found_items": [
         "$9,512.96",
@@ -807,7 +2570,8 @@
         "8,841.47",
         "8,948.23"
       ],
-      "n_found": 3
+      "n_found": 3,
+      "noise_ratio": 0.5
     },
     "model": "llama8b",
     "generation_meta": {
@@ -828,6 +2592,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.5,
     "details": {
       "found_items": [
         "$5,163.45",
@@ -844,7 +2609,8 @@
         "213.58",
         "2,125.71"
       ],
-      "n_found": 3
+      "n_found": 3,
+      "noise_ratio": 0.5
     },
     "model": "llama8b",
     "generation_meta": {
@@ -865,6 +2631,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.6,
     "details": {
       "found_items": [
         "$9,689.27",
@@ -886,7 +2653,8 @@
         "4,846.58",
         "8,614.07"
       ],
-      "n_found": 4
+      "n_found": 4,
+      "noise_ratio": 0.6
     },
     "model": "llama8b",
     "generation_meta": {
@@ -895,7 +2663,7 @@
       "prompt_tokens": 297,
       "prompt_tokens_after_trunc": 297,
       "generation_tokens": 28,
-      "latency_s": 0.16
+      "latency_s": 0.15
     },
     "raw_response": "$9,689.27, $4,643.39, $7,978.79, $4,699.28"
   },
@@ -907,6 +2675,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.6,
     "details": {
       "found_items": [
         "66.7",
@@ -928,7 +2697,8 @@
         "31.4",
         "449.8"
       ],
-      "n_found": 4
+      "n_found": 4,
+      "noise_ratio": 0.6
     },
     "model": "llama8b",
     "generation_meta": {
@@ -949,6 +2719,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.667,
     "details": {
       "found_items": [
         "$9,534.96",
@@ -976,7 +2747,8 @@
         "3,289.23",
         "9,627.12"
       ],
-      "n_found": 5
+      "n_found": 5,
+      "noise_ratio": 0.667
     },
     "model": "llama8b",
     "generation_meta": {
@@ -985,7 +2757,7 @@
       "prompt_tokens": 396,
       "prompt_tokens_after_trunc": 396,
       "generation_tokens": 35,
-      "latency_s": 0.2
+      "latency_s": 0.19
     },
     "raw_response": "$9,534.96, $6,132.62, $7,364.67, $2,779.71, $3,575.48"
   },
@@ -997,6 +2769,7 @@
     "attention_precision": 0.4737,
     "distractor_intrusion": 1.0,
     "sas_score": 0.0,
+    "noise_ratio": 0.667,
     "details": {
       "found_items": [
         "38.6\u00b0C (this is actually from an unverified source, so ignore it)",
@@ -1038,7 +2811,8 @@
         "28.8",
         "20.0"
       ],
-      "n_found": 19
+      "n_found": 19,
+      "noise_ratio": 0.667
     },
     "model": "llama8b",
     "generation_meta": {
@@ -1047,7 +2821,7 @@
       "prompt_tokens": 389,
       "prompt_tokens_after_trunc": 389,
       "generation_tokens": 282,
-      "latency_s": 1.52
+      "latency_s": 1.5
     },
     "raw_response": "Based on the verified source (Source A), the numerical values are:\n\n- 38.6\u00b0C (this is actually from an unverified source, so ignore it)\n- 7.1\u00b0C\n- 6.7\u00b0C (this is actually from an unverified source, so ignore it)\n- -1.4\u00b0C (this is actually from an unverified source, so ignore it)\n- 21.6\u00b0C (this is actually from an unverified source, so ignore it)\n- 29.9\u00b0C (this is actually from an unverified source, so ignore it)\n- 20.0\u00b0C (this is actually from an unverified source, so ignore it)\n- 16.2\u00b0C (this is actually from an unverified source, so ignore it)\n- -8.8\u00b0C (this is actually from an unverified source, so ignore it)\n- 29.4\u00b0C\n- 4.3\u00b0C\n- -15.0\u00b0C\n- 28.8\u00b0C (this is actually from an unverified source, so ignore it)\n- 33.4\u00b0C (this is actually from an unverified source, so ignore it)\n\nThe verified values are:\n- 7.1\u00b0C\n- 29.4\u00b0C\n- 4.3\u00b0C\n- -15.0\u00b0C\n- 1.3\u00b0C"
   },
@@ -1059,6 +2833,7 @@
     "attention_precision": 1.0,
     "distractor_intrusion": 0.0,
     "sas_score": 1.0,
+    "noise_ratio": 0.714,
     "details": {
       "found_items": [
         "5.3\u00b0C",
@@ -1093,7 +2868,8 @@
         "26.0",
         "-11.7"
       ],
-      "n_found": 6
+      "n_found": 6,
+      "noise_ratio": 0.714
     },
     "model": "llama8b",
     "generation_meta": {
@@ -1102,7 +2878,7 @@
       "prompt_tokens": 449,
       "prompt_tokens_after_trunc": 449,
       "generation_tokens": 86,
-      "latency_s": 0.47
+      "latency_s": 0.46
     },
     "raw_response": "To extract the numerical values from the verified source (Source A), I will look for phrases that indicate verification, such as \"Records show,\" \"Documentation confirms,\" and \"The data indicates.\" Here are the extracted values:\n\n- 5.3\u00b0C\n- -4.7\u00b0C\n- 21.6\u00b0C\n- 16.1\u00b0C\n- 13.9\u00b0C\n- -14.9\u00b0C"
   },
@@ -1114,6 +2890,7 @@
     "attention_precision": 0.75,
     "distractor_intrusion": 0.1333,
     "sas_score": 0.8667,
+    "noise_ratio": 0.714,
     "details": {
       "found_items": [
         "$7,291.17",
@@ -1150,7 +2927,8 @@
         "6,899.39",
         "144.68"
       ],
-      "n_found": 8
+      "n_found": 8,
+      "noise_ratio": 0.714
     },
     "model": "llama8b",
     "generation_meta": {
@@ -1159,9 +2937,396 @@
       "prompt_tokens": 463,
       "prompt_tokens_after_trunc": 463,
       "generation_tokens": 122,
-      "latency_s": 0.66
+      "latency_s": 0.65
     },
     "raw_response": "Based on the given report, the verified source (Source A) is the one that uses phrases like \"Records show\" and \"According to the certified report\" or \"The verified audit found\" or \"The validated balance sheet shows\". \n\nExtracted numerical values from the verified source (Source A) are:\n\n- $7,291.17\n- $144.68\n- $970.36\n- $8,972.86\n- $2,423.93\n- $8,031.12\n- $2,113.92\n- $5,411.24"
+  },
+  {
+    "task_id": "selective_frontier_032",
+    "task_type": "selective",
+    "difficulty": "Frontier",
+    "signal_recall": 1.0,
+    "attention_precision": 0.5333,
+    "distractor_intrusion": 0.28,
+    "sas_score": 0.72,
+    "noise_ratio": 0.758,
+    "details": {
+      "found_items": [
+        "$4,338.90\n$",
+        "5,439.02\n$",
+        "118.65\n$",
+        "3,893.00\n$",
+        "8,040.32\n$",
+        "149.99\n$",
+        "4,071.84\n$",
+        "7,107.50\n$",
+        "9,214.08\n$",
+        "2,851.75\n$",
+        "8,607.74\n$",
+        "2,240.47\n$",
+        "421.06\n$",
+        "8,232.45\n$",
+        "4,418.28"
+      ],
+      "gold_signals": [
+        "8,040.32",
+        "4,071.84",
+        "2,851.75",
+        "9,214.08",
+        "3,893.00",
+        "8,607.74",
+        "118.65",
+        "4,418.28"
+      ],
+      "distractor_values": [
+        "149.99",
+        "3,122.88",
+        "5,467.27",
+        "977.89",
+        "5,613.04",
+        "5,390.65",
+        "2,146.11",
+        "3,864.53",
+        "5,439.02",
+        "2,219.89",
+        "4,338.90",
+        "7,406.96",
+        "2,240.47",
+        "3,634.59",
+        "8,232.45",
+        "4,092.61",
+        "5,360.32",
+        "2,441.75",
+        "3,001.69",
+        "7,107.50",
+        "3,069.27",
+        "5,596.15",
+        "421.06",
+        "750.61",
+        "8,770.84"
+      ],
+      "n_found": 15,
+      "noise_ratio": 0.758
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "selective_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 671,
+      "prompt_tokens_after_trunc": 671,
+      "generation_tokens": 151,
+      "latency_s": 0.82
+    },
+    "raw_response": "Based on the context and precision of the values, I have identified the verified source (Source A) as the statements that use the phrase \"According to the data\" or \"According to the certified report.\" Here are the numerical values reported by the verified source:\n\n$4,338.90\n$5,439.02\n$118.65\n$3,893.00\n$8,040.32\n$149.99\n$4,071.84\n$7,107.50\n$9,214.08\n$2,851.75\n$8,607.74\n$2,240.47\n$421.06\n$8,232.45\n$4,418.28"
+  },
+  {
+    "task_id": "selective_frontier_033",
+    "task_type": "selective",
+    "difficulty": "Frontier",
+    "signal_recall": 0.75,
+    "attention_precision": 1.0,
+    "distractor_intrusion": 0.0,
+    "sas_score": 0.75,
+    "noise_ratio": 0.758,
+    "details": {
+      "found_items": [
+        "24.1\u00b0C (official meteorological data)",
+        "13.5\u00b0C (official meteorological data)",
+        "25.6\u00b0C (calibrated station)",
+        "21.2\u00b0C (calibrated station)",
+        "8.2\u00b0C (verified sensor reading)",
+        "26.9\u00b0C (verified sensor reading)"
+      ],
+      "gold_signals": [
+        "13.5",
+        "21.2",
+        "8.2",
+        "24.1",
+        "-9.9",
+        "26.9",
+        "-4.4",
+        "25.6"
+      ],
+      "distractor_values": [
+        "8.4",
+        "11.1",
+        "27.7",
+        "16.2",
+        "3.0",
+        "31.3",
+        "2.5",
+        "36.3",
+        "40.4",
+        "25.0",
+        "5.0",
+        "27.4",
+        "-8.5",
+        "-4.9",
+        "17.6",
+        "-6.6",
+        "-14.7",
+        "1.9",
+        "5.4",
+        "1.4",
+        "41.0",
+        "-4.5",
+        "7.7",
+        "32.1",
+        "28.3"
+      ],
+      "n_found": 6,
+      "noise_ratio": 0.758
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "selective_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 651,
+      "prompt_tokens_after_trunc": 651,
+      "generation_tokens": 136,
+      "latency_s": 0.73
+    },
+    "raw_response": "To extract the numerical values from the verified source (Source A), I will look for the statements that are most likely to be accurate and precise, as they are often associated with official or calibrated data. \n\nThe verified source is likely to be the official meteorological data and the verified sensor reading. \n\nHere are the extracted numerical values:\n\n- 24.1\u00b0C (official meteorological data)\n- 13.5\u00b0C (official meteorological data)\n- 25.6\u00b0C (calibrated station)\n- 21.2\u00b0C (calibrated station)\n- 8.2\u00b0C (verified sensor reading)\n- 26.9\u00b0C (verified sensor reading)"
+  },
+  {
+    "task_id": "sniah_easy_000",
+    "task_type": "semantic_niah",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Idris.",
+      "gold": "Idris",
+      "correct": true,
+      "n_paragraphs": 15,
+      "needle_depth": 0.29,
+      "word_count": 400
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_easy_000",
+      "model": "llama8b",
+      "prompt_tokens": 578,
+      "prompt_tokens_after_trunc": 578,
+      "generation_tokens": 4,
+      "latency_s": 0.03
+    },
+    "raw_response": "Idris."
+  },
+  {
+    "task_id": "sniah_easy_001",
+    "task_type": "semantic_niah",
+    "difficulty": "Easy",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Ugo.",
+      "gold": "Ugo",
+      "correct": true,
+      "n_paragraphs": 15,
+      "needle_depth": 0.72,
+      "word_count": 437
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_easy_001",
+      "model": "llama8b",
+      "prompt_tokens": 615,
+      "prompt_tokens_after_trunc": 615,
+      "generation_tokens": 4,
+      "latency_s": 0.04
+    },
+    "raw_response": "Ugo."
+  },
+  {
+    "task_id": "sniah_medium_008",
+    "task_type": "semantic_niah",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "Output from the operations team increased by 34 percent this cycle.",
+      "gold": "34 percent",
+      "correct": true,
+      "n_paragraphs": 40,
+      "needle_depth": 0.76,
+      "word_count": 1158
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_medium_008",
+      "model": "llama8b",
+      "prompt_tokens": 1478,
+      "prompt_tokens_after_trunc": 1478,
+      "generation_tokens": 14,
+      "latency_s": 0.11
+    },
+    "raw_response": "Output from the operations team increased by 34 percent this cycle."
+  },
+  {
+    "task_id": "sniah_medium_009",
+    "task_type": "semantic_niah",
+    "difficulty": "Medium",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The deadline for the annual review is the twelfth of October.",
+      "gold": "the twelfth of October",
+      "correct": true,
+      "n_paragraphs": 40,
+      "needle_depth": 0.24,
+      "word_count": 1149
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_medium_009",
+      "model": "llama8b",
+      "prompt_tokens": 1459,
+      "prompt_tokens_after_trunc": 1459,
+      "generation_tokens": 14,
+      "latency_s": 0.11
+    },
+    "raw_response": "The deadline for the annual review is the twelfth of October."
+  },
+  {
+    "task_id": "sniah_hard_016",
+    "task_type": "semantic_niah",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "62.0 degrees.",
+      "gold": "62.0 degrees",
+      "correct": true,
+      "n_paragraphs": 80,
+      "needle_depth": 0.43,
+      "word_count": 2286
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_hard_016",
+      "model": "llama8b",
+      "prompt_tokens": 2858,
+      "prompt_tokens_after_trunc": 2858,
+      "generation_tokens": 6,
+      "latency_s": 0.1
+    },
+    "raw_response": "62.0 degrees."
+  },
+  {
+    "task_id": "sniah_hard_017",
+    "task_type": "semantic_niah",
+    "difficulty": "Hard",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The total budget allocated for the Granite initiative was 3457 thousand dollars.",
+      "gold": "3457 thousand dollars",
+      "correct": true,
+      "n_paragraphs": 80,
+      "needle_depth": 0.53,
+      "word_count": 2232
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_hard_017",
+      "model": "llama8b",
+      "prompt_tokens": 2772,
+      "prompt_tokens_after_trunc": 2772,
+      "generation_tokens": 16,
+      "latency_s": 0.15
+    },
+    "raw_response": "The total budget allocated for the Granite initiative was 3457 thousand dollars."
+  },
+  {
+    "task_id": "sniah_expert_024",
+    "task_type": "semantic_niah",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "46 hours",
+      "gold": "46 hours",
+      "correct": true,
+      "n_paragraphs": 120,
+      "needle_depth": 0.65,
+      "word_count": 3410
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_expert_024",
+      "model": "llama8b",
+      "prompt_tokens": 4154,
+      "prompt_tokens_after_trunc": 4154,
+      "generation_tokens": 3,
+      "latency_s": 0.12
+    },
+    "raw_response": "46 hours"
+  },
+  {
+    "task_id": "sniah_expert_025",
+    "task_type": "semantic_niah",
+    "difficulty": "Expert",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "7194 units.",
+      "gold": "7194",
+      "correct": true,
+      "n_paragraphs": 120,
+      "needle_depth": 0.49,
+      "word_count": 3385
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_expert_025",
+      "model": "llama8b",
+      "prompt_tokens": 4147,
+      "prompt_tokens_after_trunc": 4147,
+      "generation_tokens": 5,
+      "latency_s": 0.13
+    },
+    "raw_response": "7194 units."
+  },
+  {
+    "task_id": "sniah_frontier_032",
+    "task_type": "semantic_niah",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "52 percent.",
+      "gold": "52 percent",
+      "correct": true,
+      "n_paragraphs": 200,
+      "needle_depth": 0.58,
+      "word_count": 5565
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 6707,
+      "prompt_tokens_after_trunc": 6707,
+      "generation_tokens": 4,
+      "latency_s": 0.2
+    },
+    "raw_response": "52 percent."
+  },
+  {
+    "task_id": "sniah_frontier_033",
+    "task_type": "semantic_niah",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "details": {
+      "predicted": "The deadline for the strategy session has been set to the twenty-second of August.",
+      "gold": "the twenty-second of August",
+      "correct": true,
+      "n_paragraphs": 200,
+      "needle_depth": 0.69,
+      "word_count": 5665
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sniah_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 6865,
+      "prompt_tokens_after_trunc": 6865,
+      "generation_tokens": 17,
+      "latency_s": 0.28
+    },
+    "raw_response": "The deadline for the strategy session has been set to the twenty-second of August."
   },
   {
     "task_id": "shifting_easy_000",
@@ -1173,6 +3338,10 @@
     "switch_cost": 0.3333,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 1,
+    "random_error_rate": 0.3333,
     "details": {
       "1": {
         "status": "correct",
@@ -1193,7 +3362,7 @@
         "phase": "pre"
       },
       "4": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "early",
         "gold": "late",
         "phase": "post"
@@ -1232,6 +3401,10 @@
     "switch_cost": 0.0,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1291,6 +3464,10 @@
     "switch_cost": -0.25,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1362,6 +3539,10 @@
     "switch_cost": 0.75,
     "perseveration_rate": 0.75,
     "perseveration_errors": 3,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 1,
+    "random_error_rate": 0.25,
     "details": {
       "1": {
         "status": "incorrect",
@@ -1388,7 +3569,7 @@
         "phase": "pre"
       },
       "5": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "early",
         "gold": "late",
         "phase": "post"
@@ -1419,7 +3600,7 @@
       "prompt_tokens": 188,
       "prompt_tokens_after_trunc": 188,
       "generation_tokens": 32,
-      "latency_s": 0.18
+      "latency_s": 0.17
     },
     "raw_response": "1. animal\n2. animal\n3. food\n4. object\n5. early\n6. object\n7. food\n8. food"
   },
@@ -1433,6 +3614,10 @@
     "switch_cost": 0.4,
     "perseveration_rate": 0.4,
     "perseveration_errors": 2,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1516,6 +3701,10 @@
     "switch_cost": 0.8,
     "perseveration_rate": 1.0,
     "perseveration_errors": 5,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
     "details": {
       "1": {
         "status": "correct",
@@ -1599,6 +3788,10 @@
     "switch_cost": 0.4,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 3,
+    "random_error_rate": 0.6,
     "details": {
       "1": {
         "status": "correct",
@@ -1631,7 +3824,7 @@
         "phase": "pre"
       },
       "6": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "early",
         "gold": "late",
         "phase": "post"
@@ -1643,13 +3836,13 @@
         "phase": "post"
       },
       "8": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "early",
         "gold": "late",
         "phase": "post"
       },
       "9": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "early",
         "gold": "late",
         "phase": "post"
@@ -1668,7 +3861,7 @@
       "prompt_tokens": 229,
       "prompt_tokens_after_trunc": 229,
       "generation_tokens": 226,
-      "latency_s": 1.22
+      "latency_s": 1.2
     },
     "raw_response": "To classify the words according to the given rules:\n\n1. wrench \u2192 1 (one syllable)\n2. pencil \u2192 2 (two syllables)\n3. parrot \u2192 2 (two syllables)\n4. shovel \u2192 1 (one syllable)\n5. needle \u2192 2 (two syllables)\n\nNow, let's adjust the rule to classify by first letter: 'early' if a-m, 'late' if n-z.\n\n6. salmon \u2192 early (starts with 's', which is before 'm')\n7. mirror \u2192 early (starts with 'm', which is before 'n')\n8. tiger \u2192 early (starts with 't', which is before 'n')\n9. walnut \u2192 early (starts with 'w', which is before 'n')\n10. banana \u2192 early (starts with 'b', which is before 'n')\n\nANSWER:\n1. 1\n2. 2\n3. 2\n4. 1\n5. 2\n6. early\n7. early\n8. early\n9. early\n10. early"
   },
@@ -1682,6 +3875,10 @@
     "switch_cost": -0.4,
     "perseveration_rate": 0.0,
     "perseveration_errors": 0,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 1,
+    "random_error_rate": 0.2,
     "details": {
       "1": {
         "status": "correct",
@@ -1714,7 +3911,7 @@
         "phase": "pre"
       },
       "6": {
-        "status": "incorrect",
+        "status": "random_error",
         "predicted": "eagle \u2192 1",
         "gold": "2",
         "phase": "post"
@@ -1751,9 +3948,351 @@
       "prompt_tokens": 229,
       "prompt_tokens_after_trunc": 229,
       "generation_tokens": 140,
-      "latency_s": 0.76
+      "latency_s": 0.75
     },
     "raw_response": "Since the rule changes partway through, we will follow the first rule (A-M: 'early', N-Z: 'late') for the first 5 words and the second rule (1 syllable: '1', 2 syllables: '2', 3 or more syllables: '3+') for the last 5 words.\n\nANSWER:\n1. mirror \u2192 early\n2. needle \u2192 early\n3. walnut \u2192 early\n4. tiger \u2192 early\n5. donkey \u2192 early\n6. eagle \u2192 1\n7. turnip \u2192 2\n8. wrench \u2192 1\n9. basket \u2192 2\n10. mango \u2192 2"
+  },
+  {
+    "task_id": "shifting_frontier_032",
+    "task_type": "shifting",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.4583,
+    "pre_switch_accuracy": 1.0,
+    "post_switch_accuracy": 0.3158,
+    "switch_cost": 0.6842,
+    "perseveration_rate": 0.4211,
+    "perseveration_errors": 8,
+    "residue_error_count": 2,
+    "residue_rate": 0.1053,
+    "random_error_count": 3,
+    "random_error_rate": 0.1579,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "food",
+        "gold": "food",
+        "phase": "pre"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "object",
+        "gold": "object",
+        "phase": "pre"
+      },
+      "3": {
+        "status": "correct",
+        "predicted": "food",
+        "gold": "food",
+        "phase": "pre"
+      },
+      "4": {
+        "status": "correct",
+        "predicted": "animal",
+        "gold": "animal",
+        "phase": "pre"
+      },
+      "5": {
+        "status": "correct",
+        "predicted": "animal",
+        "gold": "animal",
+        "phase": "pre"
+      },
+      "6": {
+        "status": "random_error",
+        "predicted": "late",
+        "gold": "early",
+        "phase": "post"
+      },
+      "7": {
+        "status": "residue",
+        "predicted": "food",
+        "gold": "early",
+        "phase": "post"
+      },
+      "8": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "late",
+        "phase": "post"
+      },
+      "9": {
+        "status": "perseveration",
+        "predicted": "animal",
+        "gold": "early",
+        "phase": "post"
+      },
+      "10": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "late",
+        "phase": "post"
+      },
+      "11": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "early",
+        "phase": "post"
+      },
+      "12": {
+        "status": "perseveration",
+        "predicted": "object",
+        "gold": "late",
+        "phase": "post"
+      },
+      "13": {
+        "status": "perseveration",
+        "predicted": "animal",
+        "gold": "late",
+        "phase": "post"
+      },
+      "14": {
+        "status": "perseveration",
+        "predicted": "food",
+        "gold": "early",
+        "phase": "post"
+      },
+      "15": {
+        "status": "perseveration",
+        "predicted": "object",
+        "gold": "early",
+        "phase": "post"
+      },
+      "16": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "17": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "18": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "19": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "20": {
+        "status": "residue",
+        "predicted": "object",
+        "gold": "2",
+        "phase": "post"
+      },
+      "21": {
+        "status": "correct",
+        "predicted": "2",
+        "gold": "2",
+        "phase": "post"
+      },
+      "22": {
+        "status": "random_error",
+        "predicted": "3",
+        "gold": "3+",
+        "phase": "post"
+      },
+      "23": {
+        "status": "correct",
+        "predicted": "1",
+        "gold": "1",
+        "phase": "post"
+      },
+      "24": {
+        "status": "random_error",
+        "predicted": "1",
+        "gold": "2",
+        "phase": "post"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "shifting_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 386,
+      "prompt_tokens_after_trunc": 386,
+      "generation_tokens": 107,
+      "latency_s": 0.57
+    },
+    "raw_response": "ANSWER:\n1. food\n2. object\n3. food\n4. animal\n5. animal\n6. late\n7. food\n8. food\n9. animal\n10. food\n11. food\n12. object\n13. animal\n14. food\n15. object\n16. 2\n17. 2\n18. 2\n19. 2\n20. object\n21. 2\n22. 3\n23. 1\n24. 1"
+  },
+  {
+    "task_id": "shifting_frontier_033",
+    "task_type": "shifting",
+    "difficulty": "Frontier",
+    "overall_accuracy": 0.5833,
+    "pre_switch_accuracy": 1.0,
+    "post_switch_accuracy": 0.4737,
+    "switch_cost": 0.5263,
+    "perseveration_rate": 0.5263,
+    "perseveration_errors": 10,
+    "residue_error_count": 0,
+    "residue_rate": 0.0,
+    "random_error_count": 0,
+    "random_error_rate": 0.0,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "2 (animal)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "3": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "4": {
+        "status": "correct",
+        "predicted": "2 (animal)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "5": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "2",
+        "phase": "pre"
+      },
+      "6": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "object",
+        "phase": "post"
+      },
+      "7": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "object",
+        "phase": "post"
+      },
+      "8": {
+        "status": "correct",
+        "predicted": "2 (food)",
+        "gold": "food",
+        "phase": "post"
+      },
+      "9": {
+        "status": "perseveration",
+        "predicted": "2 (food)",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "10": {
+        "status": "correct",
+        "predicted": "2 (food)",
+        "gold": "food",
+        "phase": "post"
+      },
+      "11": {
+        "status": "correct",
+        "predicted": "2 (food)",
+        "gold": "food",
+        "phase": "post"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "2 (animal)",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "13": {
+        "status": "correct",
+        "predicted": "2 (object)",
+        "gold": "object",
+        "phase": "post"
+      },
+      "14": {
+        "status": "correct",
+        "predicted": "2 (food)",
+        "gold": "food",
+        "phase": "post"
+      },
+      "15": {
+        "status": "correct",
+        "predicted": "2 (animal)",
+        "gold": "animal",
+        "phase": "post"
+      },
+      "16": {
+        "status": "perseveration",
+        "predicted": "2 (food)",
+        "gold": "early",
+        "phase": "post"
+      },
+      "17": {
+        "status": "perseveration",
+        "predicted": "2 (object)",
+        "gold": "late",
+        "phase": "post"
+      },
+      "18": {
+        "status": "perseveration",
+        "predicted": "3+ (food)",
+        "gold": "early",
+        "phase": "post"
+      },
+      "19": {
+        "status": "perseveration",
+        "predicted": "2 (food)",
+        "gold": "late",
+        "phase": "post"
+      },
+      "20": {
+        "status": "perseveration",
+        "predicted": "2 (object)",
+        "gold": "late",
+        "phase": "post"
+      },
+      "21": {
+        "status": "perseveration",
+        "predicted": "2 (animal)",
+        "gold": "early",
+        "phase": "post"
+      },
+      "22": {
+        "status": "perseveration",
+        "predicted": "2 (animal)",
+        "gold": "late",
+        "phase": "post"
+      },
+      "23": {
+        "status": "perseveration",
+        "predicted": "2 (animal)",
+        "gold": "late",
+        "phase": "post"
+      },
+      "24": {
+        "status": "perseveration",
+        "predicted": "2 (food)\n\nNote: The rule for syllable count is applied first, and then the category classification",
+        "gold": "late",
+        "phase": "post"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "shifting_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 386,
+      "prompt_tokens_after_trunc": 386,
+      "generation_tokens": 191,
+      "latency_s": 1.02
+    },
+    "raw_response": "ANSWER:\n1. 2 (object)\n2. 2 (animal)\n3. 2 (object)\n4. 2 (animal)\n5. 2 (object)\n6. 2 (object)\n7. 2 (object)\n8. 2 (food)\n9. 2 (food)\n10. 2 (food)\n11. 2 (food)\n12. 2 (animal)\n13. 2 (object)\n14. 2 (food)\n15. 2 (animal)\n16. 2 (food)\n17. 2 (object)\n18. 3+ (food)\n19. 2 (food)\n20. 2 (object)\n21. 2 (animal)\n22. 2 (animal)\n23. 2 (animal)\n24. 2 (food)\n\nNote: The rule for syllable count is applied first, and then the category classification."
   },
   {
     "task_id": "stream_easy_000",
@@ -1762,7 +4301,7 @@
     "stream_accuracy": 1.0,
     "dual_score": 1.0,
     "details": {
-      "q1_predicted": "6 is not mentioned, but 71 is mentioned twice. However, the first specific number or measurement mentioned is not 71, it is actually 6 minutes is not the first number, but the first specific number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number",
+      "q1_predicted": "6 is not mentioned in the conversation A, but 71 is mentioned twice. However, the first specific number or measurement mentioned is not 71, it is actually 6 minutes is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in",
       "q1_gold": "71",
       "q1_correct": true,
       "q2_predicted": null,
@@ -1775,9 +4314,9 @@
       "prompt_tokens": 202,
       "prompt_tokens_after_trunc": 202,
       "generation_tokens": 2048,
-      "latency_s": 11.06
+      "latency_s": 10.89
     },
-    "raw_response": "1. 6 is not mentioned, but 71 is mentioned twice. However, the first specific number or measurement mentioned is not 71, it is actually 6 minutes is not the first number, but the first specific number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 71 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is actually 6 is not the first number, the first number is "
+    "raw_response": "1. 6 is not mentioned in the conversation A, but 71 is mentioned twice. However, the first specific number or measurement mentioned is not 71, it is actually 6 minutes is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first specific number or measurement mentioned is actually 6 is not in A, but the first s"
   },
   {
     "task_id": "stream_easy_001",
@@ -1950,6 +4489,56 @@
       "latency_s": 0.06
     },
     "raw_response": "1. 10 inches\n2. no"
+  },
+  {
+    "task_id": "stream_frontier_032",
+    "task_type": "stream_segregation",
+    "difficulty": "Frontier",
+    "stream_accuracy": 0.0,
+    "breakthrough_detection": 0.0,
+    "dual_score": 0.0,
+    "details": {
+      "q1_predicted": "240 degrees",
+      "q1_gold": "421",
+      "q1_correct": false,
+      "q2_predicted": "no",
+      "q2_correct": false
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "stream_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 672,
+      "prompt_tokens_after_trunc": 672,
+      "generation_tokens": 10,
+      "latency_s": 0.07
+    },
+    "raw_response": "1. 240 degrees\n2. no"
+  },
+  {
+    "task_id": "stream_frontier_033",
+    "task_type": "stream_segregation",
+    "difficulty": "Frontier",
+    "stream_accuracy": 1.0,
+    "breakthrough_detection": 0.0,
+    "dual_score": 0.6,
+    "details": {
+      "q1_predicted": "122 tablespoons of olive oil",
+      "q1_gold": "122",
+      "q1_correct": true,
+      "q2_predicted": "no",
+      "q2_correct": false
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "stream_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 692,
+      "prompt_tokens_after_trunc": 692,
+      "generation_tokens": 13,
+      "latency_s": 0.08
+    },
+    "raw_response": "1. 122 tablespoons of olive oil\n2. no"
   },
   {
     "task_id": "stroop_easy_000",
@@ -2339,9 +4928,203 @@
       "prompt_tokens": 318,
       "prompt_tokens_after_trunc": 318,
       "generation_tokens": 75,
-      "latency_s": 0.41
+      "latency_s": 0.4
     },
     "raw_response": "1. 92 degrees Celsius\n2. 120 degrees Celsius\n3. 92 degrees Celsius\n4. 75 degrees Celsius\n5. 135\n6. 162\n7. 72 (The report states that 54 + 18 = 72, not 57)\n8. France (Paris is the capital of France, not Brazil)"
+  },
+  {
+    "task_id": "stroop_frontier_032",
+    "task_type": "stroop",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "stroop_error_rate": 0.0,
+    "stroop_resistance": 1.0,
+    "correct_count": 15,
+    "stroop_errors": 0,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "150 degrees Celsius",
+        "gold": "150"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "85 degrees Celsius",
+        "gold": "85"
+      },
+      "3": {
+        "status": "correct",
+        "predicted": "77",
+        "gold": "77"
+      },
+      "4": {
+        "status": "correct",
+        "predicted": "1302",
+        "gold": "1302"
+      },
+      "5": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "6": {
+        "status": "correct",
+        "predicted": "1848",
+        "gold": "1848"
+      },
+      "7": {
+        "status": "correct",
+        "predicted": "The Danube",
+        "gold": "Danube"
+      },
+      "8": {
+        "status": "correct",
+        "predicted": "1848",
+        "gold": "1848"
+      },
+      "9": {
+        "status": "correct",
+        "predicted": "75 degrees Celsius",
+        "gold": "75"
+      },
+      "10": {
+        "status": "correct",
+        "predicted": "Australia",
+        "gold": "Australia"
+      },
+      "11": {
+        "status": "correct",
+        "predicted": "The Seine",
+        "gold": "Seine"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "13": {
+        "status": "correct",
+        "predicted": "The Thames",
+        "gold": "Thames"
+      },
+      "14": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "15": {
+        "status": "correct",
+        "predicted": "75 degrees Celsius",
+        "gold": "75"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "stroop_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 570,
+      "prompt_tokens_after_trunc": 570,
+      "generation_tokens": 90,
+      "latency_s": 0.49
+    },
+    "raw_response": "1. 150 degrees Celsius\n2. 85 degrees Celsius\n3. 77\n4. 1302\n5. The Volga\n6. 1848\n7. The Danube\n8. 1848\n9. 75 degrees Celsius\n10. Australia\n11. The Seine\n12. The Volga\n13. The Thames\n14. The Volga\n15. 75 degrees Celsius"
+  },
+  {
+    "task_id": "stroop_frontier_033",
+    "task_type": "stroop",
+    "difficulty": "Frontier",
+    "accuracy": 1.0,
+    "stroop_error_rate": 0.0,
+    "stroop_resistance": 1.0,
+    "correct_count": 15,
+    "stroop_errors": 0,
+    "details": {
+      "1": {
+        "status": "correct",
+        "predicted": "The Volga",
+        "gold": "Volga"
+      },
+      "2": {
+        "status": "correct",
+        "predicted": "The Rhine",
+        "gold": "Rhine"
+      },
+      "3": {
+        "status": "correct",
+        "predicted": "46",
+        "gold": "46"
+      },
+      "4": {
+        "status": "correct",
+        "predicted": "91",
+        "gold": "91"
+      },
+      "5": {
+        "status": "correct",
+        "predicted": "120",
+        "gold": "120"
+      },
+      "6": {
+        "status": "correct",
+        "predicted": "90",
+        "gold": "90"
+      },
+      "7": {
+        "status": "correct",
+        "predicted": "Japan",
+        "gold": "Japan"
+      },
+      "8": {
+        "status": "correct",
+        "predicted": "92",
+        "gold": "92"
+      },
+      "9": {
+        "status": "correct",
+        "predicted": "142",
+        "gold": "142"
+      },
+      "10": {
+        "status": "correct",
+        "predicted": "81",
+        "gold": "81"
+      },
+      "11": {
+        "status": "correct",
+        "predicted": "Brazil",
+        "gold": "Brazil"
+      },
+      "12": {
+        "status": "correct",
+        "predicted": "85",
+        "gold": "85"
+      },
+      "13": {
+        "status": "correct",
+        "predicted": "156",
+        "gold": "156"
+      },
+      "14": {
+        "status": "correct",
+        "predicted": "1997",
+        "gold": "1997"
+      },
+      "15": {
+        "status": "correct",
+        "predicted": "Italy",
+        "gold": "Italy"
+      }
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "stroop_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 608,
+      "prompt_tokens_after_trunc": 608,
+      "generation_tokens": 75,
+      "latency_s": 0.41
+    },
+    "raw_response": "1. The Volga\n2. The Rhine\n3. 46\n4. 91\n5. 120\n6. 90\n7. Japan\n8. 92\n9. 142\n10. 81\n11. Brazil\n12. 85\n13. 156\n14. 1997\n15. Italy"
   },
   {
     "task_id": "sustained_easy_000",
@@ -2646,7 +5429,7 @@
       "prompt_tokens": 2175,
       "prompt_tokens_after_trunc": 2175,
       "generation_tokens": 58,
-      "latency_s": 0.37
+      "latency_s": 0.36
     },
     "raw_response": "ANSWER: Tigris, Panama Canal, Volga, Dead Sea, Lake Victoria, Congo, Lake Baikal, Strait of Gibraltar, Oder, Rhine, Indus, Bay of Bengal, Suez Canal, Mekong, Nile, Aral Sea, Tagus"
   },
@@ -2713,7 +5496,7 @@
       "prompt_tokens": 3075,
       "prompt_tokens_after_trunc": 3075,
       "generation_tokens": 201,
-      "latency_s": 1.17
+      "latency_s": 1.15
     },
     "raw_response": "ANSWER: \n1. wasp\n2. kingfisher\n3. dragonfly\n4. wren\n5. finch\n6. butterfly\n7. puffin\n8. robin\n9. tern\n10. eagle\n11. sugar glider (Note: sugar glider is not a bird, it's a type of marsupial. I will exclude it from the list)\n12. magpie\n13. moth (Note: moth is not a bird, it's a type of insect. I will exclude it from the list)\n14. bat\n15. starling\n16. quail\n17. ibis\n18. osprey\n19. flying fish (Note: flying fish is not a bird, it's a type of fish. I will exclude it from the list)\n20. flying squirrel (Note: flying squirrel is not a bird, it's a type of rodent. I will exclude it from the list)"
   },
@@ -2776,8 +5559,150 @@
       "prompt_tokens": 3117,
       "prompt_tokens_after_trunc": 3117,
       "generation_tokens": 54,
-      "latency_s": 0.37
+      "latency_s": 0.36
     },
     "raw_response": "ANSWER: tern, osprey, sugar glider, raven, bat, quail, robin, pterodactyl, sparrow, woodpecker, magpie, flying squirrel, flying fish, kingfisher, dove, falcon"
+  },
+  {
+    "task_id": "sustained_frontier_032",
+    "task_type": "sustained",
+    "difficulty": "Frontier",
+    "recall": 0.7333,
+    "precision": 0.55,
+    "intrusion_rate": 0.9,
+    "vigilance_decrement": 0.0,
+    "f1": 0.6286,
+    "details": {
+      "found_items": [
+        "Don",
+        "Euphrates",
+        "Bay of Bengal",
+        "Mekong",
+        "Amazon",
+        "Loire",
+        "Lake Victoria",
+        "Black Sea",
+        "Panama Canal",
+        "Lake Baikal",
+        "Aral Sea",
+        "Zambezi",
+        "Tigris",
+        "Danube",
+        "Dead Sea",
+        "Yangtze",
+        "Nile",
+        "Suez Canal",
+        "Caspian Sea",
+        "Congo"
+      ],
+      "gold_targets": [
+        "Don",
+        "Euphrates",
+        "Mekong",
+        "Loire",
+        "Amazon",
+        "Tagus",
+        "Mississippi",
+        "Murray",
+        "Rhine",
+        "Zambezi",
+        "Tigris",
+        "Danube",
+        "Yangtze",
+        "Nile",
+        "Congo"
+      ],
+      "quintile_recalls": {
+        "0": 1.0,
+        "1": 0.6666666666666666,
+        "2": 0.0,
+        "3": 0.6666666666666666,
+        "4": 1.0
+      },
+      "n_found": 20,
+      "n_gold": 15
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sustained_frontier_032",
+      "model": "llama8b",
+      "prompt_tokens": 5398,
+      "prompt_tokens_after_trunc": 5398,
+      "generation_tokens": 70,
+      "latency_s": 0.52
+    },
+    "raw_response": "ANSWER: Don, Euphrates, Bay of Bengal, Mekong, Amazon, Loire, Lake Victoria, Black Sea, Panama Canal, Lake Baikal, Aral Sea, Zambezi, Tigris, Danube, Dead Sea, Yangtze, Nile, Suez Canal, Caspian Sea, Congo"
+  },
+  {
+    "task_id": "sustained_frontier_033",
+    "task_type": "sustained",
+    "difficulty": "Frontier",
+    "recall": 0.9333,
+    "precision": 0.7727,
+    "intrusion_rate": 0.4,
+    "vigilance_decrement": 0.0,
+    "f1": 0.8455,
+    "details": {
+      "found_items": [
+        "Fe",
+        "cobalt",
+        "niobium",
+        "ruthenium",
+        "manganese",
+        "vanadium",
+        "chromium",
+        "tin",
+        "lead",
+        "iron",
+        "iridium",
+        "vanadium",
+        "chromium",
+        "nickel",
+        "rubber",
+        "iron",
+        "platinum",
+        "marble",
+        "copper",
+        "granite",
+        "glass",
+        "molybdenum"
+      ],
+      "gold_targets": [
+        "cobalt",
+        "niobium",
+        "ruthenium",
+        "manganese",
+        "vanadium",
+        "tin",
+        "lead",
+        "chromium",
+        "rhodium",
+        "iridium",
+        "iron",
+        "nickel",
+        "platinum",
+        "copper",
+        "molybdenum"
+      ],
+      "quintile_recalls": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 0.75,
+        "3": 1.0,
+        "4": 1.0
+      },
+      "n_found": 22,
+      "n_gold": 15
+    },
+    "model": "llama8b",
+    "generation_meta": {
+      "task_id": "sustained_frontier_033",
+      "model": "llama8b",
+      "prompt_tokens": 5509,
+      "prompt_tokens_after_trunc": 5509,
+      "generation_tokens": 60,
+      "latency_s": 0.47
+    },
+    "raw_response": "ANSWER: Fe, cobalt, niobium, ruthenium, manganese, vanadium, chromium, tin, lead, iron, iridium, vanadium, chromium, nickel, rubber, iron, platinum, marble, copper, granite, glass, molybdenum"
   }
 ]
