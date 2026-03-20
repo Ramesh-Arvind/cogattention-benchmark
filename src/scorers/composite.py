@@ -2,12 +2,13 @@
 Composite Cognitive Attention Score (CAS) aggregator.
 
 Combines per-task scores into a single cognitive profile.
-Weights:
-  - Capacity (thread tracking + interference): 0.20
-  - Sustained (vigilance + stream): 0.20
-  - Selective (filtering + stroop): 0.25
-  - Shifting (rule shift): 0.20
-  - Stimulus-driven (anomaly): 0.15
+14 task types with per-task weights (see WEIGHTS dict below).
+Grouped by ability:
+  - Capacity (capacity + interference + blink): 0.17
+  - Sustained (sustained + stream + dilution + niah + multihop): 0.38
+  - Selective (selective + stroop + flanker): 0.18
+  - Shifting (shifting + inhibition_return): 0.14
+  - Stimulus-driven (anomaly): 0.13
 """
 
 import math

@@ -8,12 +8,12 @@ A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive ps
 
 | Metric | Value |
 |--------|-------|
-| Task types | 16 (15 text + 1 visual, across 5 cognitive abilities) |
-| Total items | 600 (560 text + 40 visual Stroop) |
+| Task types | 16 (14 text + 2 visual, across 5 cognitive abilities) |
+| Total items | 860 (560 text + 150 Visual Stroop + 150 Visual Inattentional) |
 | Difficulty tiers | 5 (Easy, Medium, Hard, Expert, Frontier) |
-| Fine-grained assertions | 1,168 |
-| Kaggle notebooks | 5 task notebooks + 1 interactive public demo |
-| Unit tests | 124 passing |
+| Kaggle benchmark tasks | 7 core tasks evaluated on Kaggle Benchmarks platform |
+| Kaggle notebooks | 13 task notebooks |
+| Unit tests | 148 passing |
 | Scoring variants | Arithmetic CAS + Geometric CAS (non-compensatory) |
 
 ## Cognitive Abilities Tested
@@ -24,11 +24,11 @@ A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive ps
 | **Sustained Attention** | Vigilance Probe, Stream Segregation, Context Dilution, Semantic NIAH, Multi-hop | CPT (Mackworth), Dichotic Listening (Cherry) |
 | **Selective Attention** | Distractor Filtering, Semantic Stroop, Flanker, **Visual Stroop (VLM)** | SiN, Stroop (1935), Eriksen Flanker |
 | **Attention Shifting** | Rule Shift, Inhibition of Return | WCST (Monsell), IOR |
-| **Stimulus-Driven** | Anomaly Detection | Inattentional Blindness (Simons & Chabris) |
+| **Stimulus-Driven** | Anomaly Detection, **Visual Inattentional Blindness (VLM)** | Inattentional Blindness (Simons & Chabris) |
 
 ## Local Validation Results (with Frontier Tier)
 
-Evaluated on 140 items per model (2 per difficulty × 15 tasks × 5 tiers) using vLLM with deterministic generation (temperature=0, top_p=1):
+Evaluated on 140 items per model (2 per difficulty × 14 text tasks × 5 tiers) using vLLM with deterministic generation (temperature=0, top_p=1):
 
 | Model | Parameters | CAS (Arithmetic) | CAS (Geometric) | 95% CI |
 |-------|-----------|-------------------|-----------------|--------|
@@ -57,13 +57,13 @@ src/
     degradation.py     # Power-law degradation coefficient
     position_bias.py   # U-shape / Lost-in-the-Middle detection
     discrimination.py  # Cross-model spread + ceiling/floor detection
-  human_baseline/    # Scaffolding for human evaluation (Prolific/MTurk export)
+  human_baseline/    # Human baseline data (25 participants, Excel-based collection)
   visualize.py       # 9 publication-quality figures (dark theme, 300 DPI)
   inference_engine.py # vLLM wrapper with OOM resilience
   run_local_eval.py  # Main evaluation harness with checkpoint/resume
 
-notebooks/           # 5 Kaggle SDK task notebooks + 1 interactive public demo
-tests/               # 124 unit tests (generators, scorers, analysis)
+notebooks/           # 13 Kaggle SDK task notebooks
+tests/               # 148 unit tests (generators, scorers, analysis)
 docs/                # Competition writeup + metrics spec + task specs
 figures/             # 9 generated visualizations + Visual Stroop samples
 results/             # Evaluation results (3 models × 140 items)
@@ -124,10 +124,10 @@ pip install -e ".[dev]"
 ## Quick Start
 
 ```bash
-# Run all 124 tests
+# Run all 148 tests
 python3 -m pytest tests/ -v
 
-# Generate all 600 benchmark instances (560 text + 40 visual)
+# Generate all 860 benchmark instances (560 text + 300 visual)
 python3 -c "
 from src.generators.capacity import generate_capacity_dataset
 from src.generators.sustained import generate_sustained_dataset

@@ -68,7 +68,7 @@
 CAS = Σ(weight_i × score_i) / Σ(weight_i)
 ```
 
-Weights (13 task types): capacity(0.07), interference(0.07), blink(0.03), sustained(0.07), stream_segregation(0.07), context_dilution(0.08), semantic_niah(0.08), multihop(0.08), selective(0.07), stroop(0.07), flanker(0.04), shifting(0.07), inhibition_return(0.07), anomaly(0.13).
+Weights (14 task types): capacity(0.07), interference(0.07), blink(0.03), sustained(0.07), stream_segregation(0.07), context_dilution(0.08), semantic_niah(0.08), multihop(0.08), selective(0.07), stroop(0.07), flanker(0.04), shifting(0.07), inhibition_return(0.07), anomaly(0.13).
 
 **Geometric CAS** (non-compensatory — zero on any task tanks the composite):
 ```

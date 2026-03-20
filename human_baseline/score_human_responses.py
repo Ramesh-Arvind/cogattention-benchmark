@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Score human participant responses from the CogAttention Prolific study.
+Score human participant responses from the CogAttention human baseline study.
 
 Loads participant responses from a CSV export (one row per participant, one
 column per item), scores each response using the existing scorers, and computes:
