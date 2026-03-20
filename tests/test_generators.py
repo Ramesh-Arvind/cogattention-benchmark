@@ -16,6 +16,8 @@ from src.generators.anomaly import generate_anomaly_dataset
 from src.generators.novel_capacity import generate_interference_dataset
 from src.generators.novel_selective import generate_stroop_dataset
 from src.generators.novel_sustained import generate_stream_dataset
+from src.generators.visual_selective import generate_visual_stroop_dataset
+from src.generators.visual_inattentional import generate_visual_inattentional_dataset
 from src.generators.base import DIFFICULTY_LEVELS
 
 
@@ -148,7 +150,7 @@ class TestSustainedGenerator(unittest.TestCase):
             elif diff == "Expert":
                 self.assertGreaterEqual(n_targets, 12)
             elif diff == "Frontier":
-                self.assertGreaterEqual(n_targets, 12)
+                self.assertGreaterEqual(n_targets, 10)
 
     def test_quintile_coverage(self):
         """Targets should be distributed across quintiles."""
@@ -415,6 +417,142 @@ class TestStreamGenerator(unittest.TestCase):
     def test_no_duplicate_prompts(self):
         hashes = [hashlib.md5(d.prompt.encode()).hexdigest() for d in self.dataset]
         self.assertEqual(len(hashes), len(set(hashes)))
+
+
+VISUAL_ITEMS_PER_DIFFICULTY = 30
+VISUAL_EXPECTED_ITEMS = VISUAL_ITEMS_PER_DIFFICULTY * len(DIFFICULTY_LEVELS)  # 30 * 5 = 150
+
+
+class TestVisualStroopGenerator(unittest.TestCase):
+    """Tests for Task F: Visual Stroop."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.dataset = generate_visual_stroop_dataset(seed=2026)
+
+    def test_instance_count(self):
+        self.assertEqual(len(self.dataset), VISUAL_EXPECTED_ITEMS)
+
+    def test_difficulty_distribution(self):
+        counts = Counter(d.difficulty for d in self.dataset)
+        for diff in DIFFICULTY_LEVELS:
+            self.assertEqual(counts[diff], VISUAL_ITEMS_PER_DIFFICULTY,
+                             f"{diff} should have {VISUAL_ITEMS_PER_DIFFICULTY} instances")
+
+    def test_ground_truth_correctness(self):
+        """Verify ink_color != word for every item (Stroop conflict)."""
+        for inst in self.dataset:
+            for item in inst.metadata["items"]:
+                self.assertNotEqual(
+                    item["ink_color"].lower(), item["word"].lower(),
+                    f"Ink color matches word in {inst.task_id} — no Stroop conflict"
+                )
+
+    def test_difficulty_scaling(self):
+        """n_items should increase Easy(1) → Frontier(5)."""
+        prev_n = 0
+        for diff in DIFFICULTY_LEVELS:
+            subset = [d for d in self.dataset if d.difficulty == diff]
+            n = subset[0].metadata["n_items"]
+            self.assertGreater(n, prev_n, f"{diff} n_items should exceed previous")
+            prev_n = n
+
+    def test_no_duplicate_instances(self):
+        """All task_ids should be unique."""
+        ids = [d.task_id for d in self.dataset]
+        self.assertEqual(len(ids), len(set(ids)))
+
+    def test_images_generated(self):
+        """All items should have non-empty base64 images."""
+        for inst in self.dataset:
+            for img_b64 in inst.metadata["images_base64"]:
+                self.assertTrue(len(img_b64) > 100,
+                                f"Empty/placeholder image in {inst.task_id}")
+
+    def test_reproducibility(self):
+        """Same seed should produce identical dataset."""
+        d2 = generate_visual_stroop_dataset(seed=2026)
+        for a, b in zip(self.dataset, d2):
+            self.assertEqual(a.task_id, b.task_id)
+            self.assertEqual(a.gold_answer, b.gold_answer)
+
+    def test_color_conflict(self):
+        """Gold answer (ink color) should never match the word."""
+        for inst in self.dataset:
+            for item in inst.metadata["items"]:
+                gold = item["ink_color"].lower()
+                word = item["word"].lower()
+                self.assertNotEqual(gold, word,
+                                    f"Gold answer matches word in {inst.task_id}")
+
+
+class TestVisualInattentionalGenerator(unittest.TestCase):
+    """Tests for Task G: Visual Inattentional Blindness."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.dataset = generate_visual_inattentional_dataset(seed=2026)
+
+    def test_instance_count(self):
+        self.assertEqual(len(self.dataset), VISUAL_EXPECTED_ITEMS)
+
+    def test_difficulty_distribution(self):
+        counts = Counter(d.difficulty for d in self.dataset)
+        for diff in DIFFICULTY_LEVELS:
+            self.assertEqual(counts[diff], VISUAL_ITEMS_PER_DIFFICULTY)
+
+    def test_ground_truth_count(self):
+        """Target count must be positive (at least 1 target drawn)."""
+        for inst in self.dataset:
+            self.assertGreaterEqual(inst.gold_answer["count"], 1,
+                                    f"Zero target count in {inst.task_id}")
+
+    def test_unexpected_stimulus_balance(self):
+        """Exactly 50% of items per difficulty should have unexpected stimulus."""
+        for diff in DIFFICULTY_LEVELS:
+            subset = [d for d in self.dataset if d.difficulty == diff]
+            present = sum(1 for d in subset if d.metadata["unexpected_present"])
+            absent = len(subset) - present
+            self.assertEqual(present, absent,
+                             f"{diff}: present={present}, absent={absent}, should be equal")
+
+    def test_difficulty_scaling(self):
+        """Shape count should increase with difficulty."""
+        avg_shapes = {}
+        for diff in DIFFICULTY_LEVELS:
+            subset = [d for d in self.dataset if d.difficulty == diff]
+            avg_shapes[diff] = sum(d.metadata["n_shapes"] for d in subset) / len(subset)
+        self.assertLess(avg_shapes["Easy"], avg_shapes["Medium"])
+        self.assertLess(avg_shapes["Medium"], avg_shapes["Hard"])
+        self.assertLess(avg_shapes["Hard"], avg_shapes["Expert"])
+        self.assertLess(avg_shapes["Expert"], avg_shapes["Frontier"])
+
+    def test_images_generated(self):
+        """All items should have non-empty base64 images."""
+        for inst in self.dataset:
+            img = inst.metadata["image_base64"]
+            self.assertTrue(len(img) > 100,
+                            f"Empty/placeholder image in {inst.task_id}")
+
+    def test_reproducibility(self):
+        """Same seed should produce identical dataset."""
+        d2 = generate_visual_inattentional_dataset(seed=2026)
+        for a, b in zip(self.dataset, d2):
+            self.assertEqual(a.task_id, b.task_id)
+            self.assertEqual(a.gold_answer, b.gold_answer)
+
+    def test_no_duplicate_instances(self):
+        ids = [d.task_id for d in self.dataset]
+        self.assertEqual(len(ids), len(set(ids)))
+
+    def test_unexpected_description_when_present(self):
+        """When unexpected is present, description should be non-empty."""
+        for inst in self.dataset:
+            if inst.metadata["unexpected_present"]:
+                self.assertTrue(len(inst.metadata["unexpected_description"]) > 0,
+                                f"Missing description in {inst.task_id}")
+            else:
+                self.assertEqual(inst.metadata["unexpected_description"], "")
 
 
 class TestCrossGeneratorProperties(unittest.TestCase):

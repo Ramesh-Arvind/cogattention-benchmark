@@ -23,7 +23,7 @@ try:
 except ImportError:
     PIL_AVAILABLE = False
 
-ITEMS_PER_DIFFICULTY = 8
+ITEMS_PER_DIFFICULTY = 30
 
 # Color-word Stroop set
 COLOR_WORDS = ["RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE", "PINK", "BROWN"]

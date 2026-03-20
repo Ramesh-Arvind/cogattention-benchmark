@@ -18,7 +18,7 @@ DIFFICULTY_CONFIG = {
     "Medium": {"n_signal": 4,  "n_distractor": 6,  "labeling": "inline"},
     "Hard":   {"n_signal": 5,  "n_distractor": 10, "labeling": "subtle"},
     "Expert":   {"n_signal": 6,  "n_distractor": 15, "labeling": "minimal"},
-    "Frontier": {"n_signal": 8,  "n_distractor": 25, "labeling": "none"},
+    "Frontier": {"n_signal": 6,  "n_distractor": 20, "labeling": "none"},
 }
 
 ITEMS_PER_DIFFICULTY = 8

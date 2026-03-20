@@ -21,7 +21,7 @@ DIFFICULTY_CONFIG = {
     "Medium": {"n_targets": 8,  "n_nearmiss": 5,  "filler_paragraphs": 30},
     "Hard":   {"n_targets": 10, "n_nearmiss": 8,  "filler_paragraphs": 55},
     "Expert":   {"n_targets": 12, "n_nearmiss": 12, "filler_paragraphs": 80},
-    "Frontier": {"n_targets": 15, "n_nearmiss": 20, "filler_paragraphs": 150},
+    "Frontier": {"n_targets": 10, "n_nearmiss": 15, "filler_paragraphs": 150},
 }
 
 ITEMS_PER_DIFFICULTY = 8

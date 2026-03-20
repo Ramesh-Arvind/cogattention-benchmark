@@ -49,6 +49,8 @@ PRIMARY_METRIC = {
     "shifting": "overall_accuracy",
     "inhibition_return": "overall_accuracy",
     "anomaly": "dual_task_score",
+    "visual_stroop": "accuracy",
+    "visual_inattentional": "ib_composite",
 }
 
 

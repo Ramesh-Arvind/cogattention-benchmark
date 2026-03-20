@@ -34,7 +34,7 @@ TARGET_CATEGORIES = {
                                           "TOPAZ", "GARNET", "OPAL", "AMETHYST"]),
     "number_word": lambda rng: rng.choice(["seven-hundred", "four-thousand", "nine-million",
                                             "sixty-three", "twenty-eight", "forty-five",
-                                            "eighty-one", "thirteen"]),
+                                            "eighty-one", "thirty-six"]),
     "animal_caps": lambda rng: rng.choice(["ELEPHANT", "GIRAFFE", "PENGUIN", "DOLPHIN",
                                             "LEOPARD", "PEACOCK", "OCTOPUS", "BUFFALO"]),
 }
@@ -89,12 +89,23 @@ def generate_blink_instance(
     # Format stream as numbered list (RSVP style)
     stream_text = "\n".join(f"{i+1}. {word}" for i, word in enumerate(stream))
 
-    # Build prompt
+    # Build prompt — describe BOTH targets so the model knows what to look for
+    t2_category = config["t2_category"]
+    t1_category = config["t1_category"]
+
+    category_descriptions = {
+        "uppercase": "an ALL-CAPS word (e.g., DIAMOND)",
+        "number_word": "a hyphenated number-word (e.g., forty-five)",
+        "animal_caps": "an ALL-CAPS animal name (e.g., ELEPHANT)",
+    }
+    t1_desc = category_descriptions[t1_category]
+    t2_desc = category_descriptions[t2_category]
+
     prompt = (
         f"Below is a rapid word stream of {stream_length} items. "
         f"Most words are common nouns. Two special target items are hidden in the stream:\n"
-        f"  - Target 1 (T1): an ALL-CAPS word\n"
-        f"  - Target 2 (T2): appears shortly after T1\n\n"
+        f"  - Target 1 (T1): {t1_desc}\n"
+        f"  - Target 2 (T2): {t2_desc}, appearing after T1\n\n"
         f"Read the entire stream carefully, then report both targets.\n\n"
         f"Word stream:\n{stream_text}\n\n"
         f"ANSWER:\n"

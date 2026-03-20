@@ -322,5 +322,77 @@ class TestIRT(unittest.TestCase):
         self.assertLess(out["difficulty"]["Item_0"], out["difficulty"]["Item_4"])
 
 
+# ── Few-Shot Rescue ───────────────────────────────────────────────────────────
+
+class TestFewShotRescue(unittest.TestCase):
+
+    def test_strong_adaptation(self):
+        """Score jump 0.2→0.75 should be 'strong'."""
+        from src.analysis.few_shot_rescue import compute_adaptation_rate
+        out = compute_adaptation_rate(0.2, {1: 0.4, 3: 0.6, 5: 0.75})
+        self.assertEqual(out["adaptation_category"], "strong")
+        self.assertGreater(out["adaptation_rate"], 0.05)
+
+    def test_no_adaptation(self):
+        """Flat scores should be 'none'."""
+        from src.analysis.few_shot_rescue import compute_adaptation_rate
+        out = compute_adaptation_rate(0.5, {1: 0.5, 3: 0.5, 5: 0.5})
+        self.assertEqual(out["adaptation_category"], "none")
+        self.assertAlmostEqual(out["adaptation_rate"], 0.0, places=4)
+
+    def test_negative_adaptation(self):
+        """Score drops should yield negative slope."""
+        from src.analysis.few_shot_rescue import compute_adaptation_rate
+        out = compute_adaptation_rate(0.8, {1: 0.7, 3: 0.5, 5: 0.3})
+        self.assertLess(out["adaptation_rate"], 0.0)
+
+    def test_build_few_shot_prompt(self):
+        """Examples should be correctly prepended to prompt."""
+        from src.analysis.few_shot_rescue import build_few_shot_prompt
+        prompt = "What color is the sky?"
+        examples = [
+            {"input": "What color is grass?", "output": "green"},
+            {"input": "What color is snow?", "output": "white"},
+        ]
+        result = build_few_shot_prompt(prompt, examples)
+        self.assertIn("Example 1:", result)
+        self.assertIn("Example 2:", result)
+        self.assertIn("green", result)
+        self.assertIn("white", result)
+        self.assertIn("What color is the sky?", result)
+        # Examples come before the task prompt
+        ex_pos = result.index("Example 1:")
+        task_pos = result.index("What color is the sky?")
+        self.assertLess(ex_pos, task_pos)
+
+    def test_empty_examples(self):
+        """Empty examples should return original prompt unchanged."""
+        from src.analysis.few_shot_rescue import build_few_shot_prompt
+        prompt = "What color is the sky?"
+        result = build_few_shot_prompt(prompt, [])
+        self.assertEqual(result, prompt)
+
+    def test_rescue_ratio(self):
+        """Rescue ratio = max_few_shot / zero_shot."""
+        from src.analysis.few_shot_rescue import compute_adaptation_rate
+        out = compute_adaptation_rate(0.2, {1: 0.4, 3: 0.6, 5: 0.8})
+        # max few-shot is 0.8, zero-shot is 0.2 → rescue_ratio = 4.0
+        self.assertAlmostEqual(out["rescue_ratio"], 4.0, places=2)
+
+    def test_format_report(self):
+        """Report output should contain task names and rates."""
+        from src.analysis.few_shot_rescue import (
+            compute_adaptation_rate, format_adaptation_report
+        )
+        profile = {
+            "capacity": compute_adaptation_rate(0.3, {1: 0.5, 3: 0.7, 5: 0.8}),
+            "selective": compute_adaptation_rate(0.5, {1: 0.5, 3: 0.5, 5: 0.5}),
+        }
+        report = format_adaptation_report(profile)
+        self.assertIn("capacity", report)
+        self.assertIn("selective", report)
+        self.assertIn("Adaptation rate", report)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

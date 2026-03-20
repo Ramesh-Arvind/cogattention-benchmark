@@ -60,9 +60,9 @@ METALS = [
 ]
 
 CATEGORY_POOLS = {
-    "birds": ["eagle", "heron", "falcon", "ibis", "osprey", "crane",
-              "puffin", "quail", "kingfisher", "robin", "wren", "finch",
-              "sparrow", "magpie", "starling", "swift", "tern", "dove",
+    "birds": ["eagle", "heron", "falcon", "ibis", "osprey", "pelican",
+              "puffin", "quail", "kingfisher", "oriole", "toucan", "finch",
+              "sparrow", "magpie", "starling", "parrot", "flamingo", "dove",
               "raven", "woodpecker"],
     "near_birds": ["bat", "butterfly", "dragonfly", "flying squirrel",
                    "flying fish", "moth", "beetle", "wasp", "pterodactyl",
