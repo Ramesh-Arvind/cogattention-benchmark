@@ -231,18 +231,61 @@ def _fill_template(template: str, rng: random.Random) -> str:
     return result
 
 
-def _generate_stream(topic: str, n_sentences: int, rng: random.Random) -> List[str]:
-    """Generate n sentences for a topic stream."""
+def _has_number_placeholder(template: str) -> bool:
+    """Check if a template will produce a sentence with a numeric value."""
+    # Templates with these placeholders produce Arabic numerals
+    number_placeholders = [
+        "{temp}", "{amount}", "{minutes}", "{total_minutes}", "{time}",
+        "{terminal}", "{budget}", "{closing_time}", "{rate}", "{tour_time}",
+        "{checkout_time}", "{n_screws}", "{tool_size}", "{hours}", "{torque}",
+        "{capacity}", "{low}", "{high}", "{start_time}", "{end_time}",
+        "{n_tables}", "{chairs}", "{delivery_time}", "{photo_rate}",
+        "{weeks}", "{days}", "{n_cars}", "{setup_time}", "{open_time}",
+        "{depth}", "{ph_low}", "{ph_high}", "{inches}", "{spacing}",
+        "{germ_days}", "{germ_days_high}", "{height}",
+        "{percent}", "{ratio}", "{dividend}", "{market_cap}", "{buyback}",
+        "{growth}", "{margin}", "{capex}", "{pe}",
+        "{home}", "{away}", "{distance}", "{home_poss}", "{away_poss}",
+        "{attendance}", "{added_time}",
+        "{dosage}", "{systolic}", "{diastolic}", "{sodium}", "{liters}",
+        "{times}",
+    ]
+    return any(p in template for p in number_placeholders)
+
+
+def _generate_stream(topic: str, n_sentences: int, rng: random.Random,
+                     first_must_have_number: bool = False) -> List[str]:
+    """Generate n sentences for a topic stream.
+
+    Args:
+        first_must_have_number: If True, ensure the first sentence contains
+            an Arabic numeral so "first number" questions are unambiguous.
+    """
     templates = TOPIC_SENTENCES.get(topic, TOPIC_SENTENCES["cooking_recipe"])
-    selected = [rng.choice(templates) for _ in range(n_sentences)]
+
+    selected = []
+    if first_must_have_number:
+        # Pick a template that will produce a number for position 0
+        number_templates = [t for t in templates if _has_number_placeholder(t)]
+        if number_templates:
+            selected.append(rng.choice(number_templates))
+        else:
+            selected.append(rng.choice(templates))
+        remaining = n_sentences - 1
+    else:
+        remaining = n_sentences
+
+    for _ in range(remaining):
+        selected.append(rng.choice(templates))
+
     return [_fill_template(t, rng) for t in selected]
 
 
 DIFFICULTY_CONFIG_STREAM = {
     "Easy":   {"n_sentences": 4, "has_breakthrough": False},
     "Medium": {"n_sentences": 6, "has_breakthrough": False},
-    "Hard":   {"n_sentences": 8, "has_breakthrough": True},
-    "Expert":   {"n_sentences": 10, "has_breakthrough": True},
+    "Hard":   {"n_sentences": 6, "has_breakthrough": True},
+    "Expert":   {"n_sentences": 8, "has_breakthrough": True},
     "Frontier": {"n_sentences": 14, "has_breakthrough": True, "n_streams": 3},
 }
 
@@ -261,7 +304,7 @@ def generate_stream_instance(
     if n_streams == 3:
         # 3-stream Frontier mode
         topic_a, topic_b, topic_c = rng.choice(TOPIC_TRIPLES)
-        stream_a = _generate_stream(topic_a, n, rng)
+        stream_a = _generate_stream(topic_a, n, rng, first_must_have_number=True)
         stream_b = _generate_stream(topic_b, n, rng)
         stream_c = _generate_stream(topic_c, n, rng)
 
@@ -272,8 +315,8 @@ def generate_stream_instance(
             breakthrough_keyword = "ALERT"
             breakthrough_position = rng.randint(2, n - 1)
             stream_c[breakthrough_position] = (
-                stream_c[breakthrough_position].rstrip('.') +
-                f". ALERT: this is a priority notice."
+                f"***** ALERT ALERT ALERT: URGENT PRIORITY NOTICE — THIS IS AN ALERT — immediate attention required. ALERT ***** "
+                + stream_c[breakthrough_position]
             )
 
         # Interleave 3 streams
@@ -288,13 +331,13 @@ def generate_stream_instance(
         import re
         first_number = None
         for sent in stream_a:
-            nums = re.findall(r'\b\d+(?:\.\d+)?\b', sent)
+            nums = re.findall(r'\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?', sent)
             if nums:
                 first_number = nums[0]
                 break
 
         question_about_a = f"Based ONLY on conversation A (about {topic_a.replace('_', ' ')}), " \
-                           f"what is the first specific number or measurement mentioned?"
+                           f"what is the first Arabic numeral (e.g. 3, 450, 12.5) that appears?"
 
         lines = [
             "Below are THREE interleaved conversations marked [A], [B], and [C].",
@@ -341,7 +384,7 @@ def generate_stream_instance(
     # Original 2-stream path
     topic_a, topic_b = rng.choice(TOPIC_PAIRS)
 
-    stream_a = _generate_stream(topic_a, n, rng)
+    stream_a = _generate_stream(topic_a, n, rng, first_must_have_number=True)
     stream_b = _generate_stream(topic_b, n, rng)
 
     # Insert breakthrough keyword in stream B if applicable
@@ -351,8 +394,8 @@ def generate_stream_instance(
         breakthrough_keyword = "ALERT"
         breakthrough_position = rng.randint(2, n - 1)
         stream_b[breakthrough_position] = (
-            stream_b[breakthrough_position].rstrip('.') +
-            f". ALERT: this is a priority notice."
+            f"***** ALERT ALERT ALERT: URGENT PRIORITY NOTICE — THIS IS AN ALERT — immediate attention required. ALERT ***** "
+            + stream_b[breakthrough_position]
         )
 
     # Interleave streams
@@ -365,12 +408,12 @@ def generate_stream_instance(
 
     # Generate question about stream A
     question_about_a = f"Based ONLY on conversation A (about {topic_a.replace('_', ' ')}), " \
-                       f"what is the first specific number or measurement mentioned?"
+                       f"what is the first Arabic numeral (e.g. 3, 450, 12.5) that appears?"
     # Find the first number in stream A
     import re
     first_number = None
     for sent in stream_a:
-        nums = re.findall(r'\b\d+(?:\.\d+)?\b', sent)
+        nums = re.findall(r'\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?', sent)
         if nums:
             first_number = nums[0]
             break

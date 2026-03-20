@@ -10,6 +10,7 @@ It must complete the primary task AND report the anomaly.
 """
 
 import random
+import re
 from typing import List, Dict
 from .base import (
     TaskInstance, DIFFICULTY_LEVELS, FIRST_NAMES, CITIES,
@@ -76,13 +77,19 @@ ANOMALY_TYPES = {
             f"which {rng.choice(FIRST_NAMES)} paid without hesitation."
         ),
         "detection_keywords": ["large", "unusual", "amount", "million", "expensive", "anomalous",
-                                "extraordinary", "999", "8,500", "12,000"],
+                                "extraordinary", "999", "8,500", "12,000", "unrealistic",
+                                "absurd", "strange", "odd", "suspicious", "outrageous",
+                                "invoice", "exorbitant", "ridiculous", "implausible",
+                                "enormous", "huge", "unreasonable", "clearly wrong",
+                                "fabricated", "not realistic", "absurdly"],
     },
     "name_inconsistency": {
         "saliency": "low",
         "generator": lambda rng: None,  # handled specially — needs character tracking
         "detection_keywords": ["name", "changed", "inconsistent", "different name", "was called",
-                                "previously", "earlier"],
+                                "previously", "earlier", "same person", "same individual",
+                                "two different", "refers to", "contradiction", "conflicting",
+                                "switched", "mixed up", "confused", "swapped"],
     },
     "single_char_swap": {
         "saliency": "ultra_low",
@@ -105,7 +112,11 @@ ANOMALY_TYPES = {
         ]),
         "detection_keywords": ["math", "calculation", "wrong", "incorrect", "off by one", "doesn't add up",
                                 "inconsistent", "150", "anniversary", "groups of 5", "12", "48-hour",
-                                "Wednesday", "8 eggs", "7"],
+                                "Wednesday", "8 eggs", "7", "error", "mistake", "mismatch",
+                                "doesn't match", "not correct", "arithmetic", "discrepancy",
+                                "inaccurate", "impossible", "illogical", "contradicts",
+                                "should be", "actually", "149", "1889", "2038", "Monday",
+                                "expired", "deadline", "split", "recipe", "eggs"],
     },
     "date_inconsistency": {
         "saliency": "ultra_low",
@@ -116,7 +127,9 @@ ANOMALY_TYPES = {
             "The shipment departed on February 29th, 2023 and arrived three days later.",
         ]),
         "detection_keywords": ["date", "calendar", "day", "wrong", "inconsistent", "February 29",
-                                "doesn't match", "Tuesday", "March 15", "Saturday", "June 7"],
+                                "doesn't match", "Tuesday", "March 15", "Saturday", "June 7",
+                                "error", "mistake", "mismatch", "incorrect", "not correct",
+                                "discrepancy", "impossible"],
     },
 }
 
@@ -148,8 +161,23 @@ def _generate_passage_with_anomaly(
 
     anomaly_type = rng.choice(matching_types) if matching_types else "factual_absurdity"
 
-    # Generate filler paragraphs
-    paragraphs = [generate_filler_paragraph(rng) for _ in range(n_paras)]
+    # Generate filler paragraphs — ensure no duplicates so models don't
+    # flag repetition as the anomaly instead of the actual embedded one
+    paragraphs = []
+    used_texts = set()
+    for _ in range(n_paras):
+        for _attempt in range(50):
+            p = generate_filler_paragraph(rng)
+            if p not in used_texts:
+                used_texts.add(p)
+                paragraphs.append(p)
+                break
+        else:
+            # Exhausted unique fillers — vary with city/name suffix
+            p = generate_filler_paragraph(rng)
+            suffix = f" The situation in {rng.choice(CITIES)} was no different."
+            p += suffix
+            paragraphs.append(p)
 
     # Handle primary task specifics
     task_type = config["primary_task"]
@@ -159,14 +187,14 @@ def _generate_passage_with_anomaly(
     if task_type == "count_word":
         target_word = rng.choice(["the", "and", "was", "that"])
         # Count occurrences across all paragraphs
-        base_count = sum(p.lower().split().count(target_word) for p in paragraphs)
+        base_count = sum(len(re.findall(rf'\b{target_word}\b', p, re.IGNORECASE)) for p in paragraphs)
         primary_answer = base_count
     elif task_type == "count_names":
         # Count unique FIRST_NAMES that appear in paragraphs
         all_text = " ".join(paragraphs)
         found = set()
         for name in FIRST_NAMES:
-            if name in all_text:
+            if re.search(rf'\b{re.escape(name)}\b', all_text):
                 found.add(name)
         primary_answer = len(found)
     elif task_type == "sum_numbers":
@@ -199,12 +227,12 @@ def _generate_passage_with_anomaly(
 
     # Recount primary task after anomaly insertion
     if task_type == "count_word":
-        primary_answer = sum(p.lower().split().count(target_word) for p in paragraphs)
+        primary_answer = sum(len(re.findall(rf'\b{target_word}\b', p, re.IGNORECASE)) for p in paragraphs)
     elif task_type == "count_names":
         all_text = " ".join(paragraphs)
         found = set()
         for name in FIRST_NAMES:
-            if name in all_text:
+            if re.search(rf'\b{re.escape(name)}\b', all_text):
                 found.add(name)
         primary_answer = len(found)
 
@@ -237,6 +265,9 @@ def generate_anomaly_instance(
         f"Answer BOTH questions:\n"
         f"1. {question}\n"
         f"2. Did you notice anything unusual or out of place in the passage? "
+        f"Look for things like: text in a foreign language, code/programming syntax, "
+        f"factual errors, impossible numbers, spelling mistakes, or date/math errors. "
+        f"Ignore any repetitive sentence structures — focus on content anomalies only. "
         f"If yes, describe it briefly. If no, write 'nothing unusual'.\n\n"
         f"Format:\n"
         f"ANSWER:\n"
