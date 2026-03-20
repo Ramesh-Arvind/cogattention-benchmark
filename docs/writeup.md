@@ -4,7 +4,7 @@
 
 CogAttention tests whether language models can do the things that "paying attention" actually requires. Not just answering questions about a passage, but tracking multiple things at once, staying focused over long text, ignoring distractions, switching between tasks, and noticing something unexpected.
 
-We built 10 task types across 5 cognitive abilities, all procedurally generated. Every instance is unique. There are no static datasets. Ground truth is always computed programmatically, so there is no ambiguity in scoring.
+We built 16 task types across 5 cognitive abilities, all procedurally generated. Every instance is unique. There are no static datasets. Ground truth is always computed programmatically, so there is no ambiguity in scoring.
 
 The benchmark has 860 items (560 text-only + 150 procedurally generated Visual Stroop images + 150 Visual Inattentional Blindness scenes) across 5 difficulty tiers (Easy through Frontier). Seven core tasks are evaluated on the Kaggle Benchmarks platform against frontier models; the full suite of 13 task notebooks is available on GitHub. We report both arithmetic CAS (compensatory) and geometric CAS (non-compensatory, where a zero on any ability tanks the composite).
 
