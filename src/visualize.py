@@ -176,7 +176,7 @@ def fig_difficulty_curves():
     print("[OK] difficulty_curves.png")
 
 
-# ── Figure 4: Radar / Cognitive Profile ────────────────────────────────────────
+# ── Figure 4: Radar / Cognitive Profile (with Human Baseline + Gemini) ────────
 def fig_cognitive_profile():
     cas = {name: load_cas(key) for name, key in MODEL_KEYS.items()}
 
@@ -192,7 +192,31 @@ def fig_cognitive_profile():
             pt["anomaly"]["mean"],                                             # Stimulus-Driven
         ]
 
-    fig, ax = plt.subplots(figsize=(7, 7), subplot_kw=dict(polar=True))
+    # Human baseline data (n=25, from human_baseline/results/human_baselines.json)
+    human_baseline_path = os.path.join(ROOT, "human_baseline", "results", "human_baselines.json")
+    human_vals = None
+    if os.path.exists(human_baseline_path):
+        with open(human_baseline_path) as f:
+            hb = json.load(f)
+        hp = hb["per_task"]
+        human_vals = [
+            np.mean([hp["capacity"]["mean"], hp["interference"]["mean"]]),     # Capacity
+            np.mean([hp["sustained"]["mean"], hp["stream_segregation"]["mean"]]),  # Sustained
+            np.mean([hp["selective"]["mean"], hp["stroop"]["mean"]]),           # Selective
+            hp["shifting"]["mean"],                                             # Shifting
+            hp["anomaly"]["mean"],                                              # Stimulus-Driven
+        ]
+
+    # Gemini 2.5 Flash (from Kaggle benchmark runs: 440 items)
+    gemini_vals = [
+        0.992,   # Capacity: 119/120
+        0.938,   # Sustained: 75/80
+        0.992,   # Selective: 119/120
+        1.000,   # Shifting: 80/80
+        0.575,   # Stimulus-Driven: 23/40
+    ]
+
+    fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
     fig.set_facecolor(BG)
     ax.set_facecolor(BG)
 
@@ -203,30 +227,44 @@ def fig_cognitive_profile():
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
     ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(abilities, fontsize=11, color=TEXT_CLR)
+    ax.set_xticklabels(abilities, fontsize=12, fontweight="bold", color=TEXT_CLR)
 
-    ax.set_ylim(0, 1.05)
+    ax.set_ylim(0, 1.08)
     ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
     ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"], fontsize=8, color=TEXT_CLR)
     ax.yaxis.grid(color=GRID_CLR, linewidth=0.5)
     ax.xaxis.grid(color=GRID_CLR, linewidth=0.5)
     ax.spines["polar"].set_color(GRID_CLR)
 
+    # Plot human baseline first (dashed white line, prominent)
+    if human_vals is not None:
+        hv = human_vals + human_vals[:1]
+        ax.plot(angles, hv, linewidth=2.5, color="#ffffff", label="Human (n=25)",
+                linestyle="--", zorder=5, marker="s", markersize=5)
+        ax.fill(angles, hv, alpha=0.06, color="#ffffff")
+
+    # Plot Gemini 2.5 Flash
+    gv = gemini_vals + gemini_vals[:1]
+    ax.plot(angles, gv, linewidth=2.2, color="#e84855", label="Gemini 2.5 Flash",
+            zorder=4, marker="^", markersize=5)
+    ax.fill(angles, gv, alpha=0.10, color="#e84855")
+
+    # Plot local models
     for model in MODEL_ORDER:
         vals = compute_axes(cas[model])
         vals += vals[:1]
-        ax.plot(angles, vals, linewidth=2.2, color=COLORS[model], label=model, zorder=3)
-        ax.fill(angles, vals, alpha=0.12, color=COLORS[model])
+        ax.plot(angles, vals, linewidth=2.0, color=COLORS[model], label=model, zorder=3)
+        ax.fill(angles, vals, alpha=0.08, color=COLORS[model])
 
-    ax.set_title("Cognitive Attention Profile by Model", fontsize=14, fontweight="bold",
-                 color=TEXT_CLR, pad=20)
-    leg = ax.legend(loc="lower right", bbox_to_anchor=(1.15, -0.05),
-                    fontsize=10, facecolor=BG, edgecolor=GRID_CLR, labelcolor=TEXT_CLR)
+    ax.set_title("Cognitive Attention Profile: Models vs Human Baseline",
+                 fontsize=14, fontweight="bold", color=TEXT_CLR, pad=24)
+    leg = ax.legend(loc="lower right", bbox_to_anchor=(1.25, -0.08),
+                    fontsize=9, facecolor=BG, edgecolor=GRID_CLR, labelcolor=TEXT_CLR)
 
     fig.savefig(os.path.join(FIGURES, "cognitive_profile.png"), dpi=300, bbox_inches="tight",
                 facecolor=BG)
     plt.close(fig)
-    print("[OK] cognitive_profile.png")
+    print("[OK] cognitive_profile.png (with human baseline + Gemini 2.5 Flash)")
 
 
 # ── Figure 5: Degradation Power-Law (log-log scatter + fit) ──────────────────
