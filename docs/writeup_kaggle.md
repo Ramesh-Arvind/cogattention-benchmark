@@ -10,7 +10,7 @@ CogAttention is a benchmark that decomposes "attention" into 5 distinct sub-abil
 
 ### Task & Benchmark Construction
 
-We built 16 task types across 5 cognitive abilities, organized into 7 Kaggle benchmark tasks with 13 supporting notebooks. All tasks are procedurally generated from a seed with programmatic ground truth — no static datasets, no ambiguity.
+We built 16 task types across 5 cognitive abilities, organized into 19 Kaggle benchmark tasks across 17 notebooks (one task per notebook). All tasks are procedurally generated from a seed with programmatic ground truth — no static datasets, no ambiguity.
 
 **Capacity.** Thread Tracking: N people swap items; report who holds what (Pylyshyn & Storm, 1988). Proactive Interference: repeated value updates; report only the final value (Wang & Sun, 2025). Attentional Blink: identify two targets in rapid serial presentation (Raymond et al., 1992).
 
