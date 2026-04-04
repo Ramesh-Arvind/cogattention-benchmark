@@ -11,8 +11,8 @@ A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive ps
 | Task types | 16 (14 text + 2 visual, across 5 cognitive abilities) |
 | Total items | 860 (560 text + 150 Visual Stroop + 150 Visual Inattentional) |
 | Difficulty tiers | 5 (Easy, Medium, Hard, Expert, Frontier) |
-| Kaggle benchmark tasks | 7 core tasks evaluated on Kaggle Benchmarks platform |
-| Kaggle notebooks | 13 task notebooks |
+| Kaggle benchmark tasks | 19 tasks across 17 notebooks on Kaggle Benchmarks |
+| Frontier models evaluated | 7 (DeepSeek-R1, Gemini 2.5 Flash, Claude Opus 4.6, Claude Sonnet 4.5, GPT-OSS-20B, Qwen3-Next-80B, Gemma-3-27B) |
 | Unit tests | 148 passing |
 | Scoring variants | Arithmetic CAS + Geometric CAS (non-compensatory) |
 
@@ -26,7 +26,23 @@ A comprehensive cognitive attention benchmark for LLMs, adapting 13 cognitive ps
 | **Attention Shifting** | Rule Shift, Inhibition of Return | WCST (Monsell), IOR |
 | **Stimulus-Driven** | Anomaly Detection, **Visual Inattentional Blindness (VLM)** | Inattentional Blindness (Simons & Chabris) |
 
-## Local Validation Results (with Frontier Tier)
+## Kaggle Benchmarks Leaderboard (Frontier Models)
+
+Evaluated on the Kaggle Community Benchmarks platform across 19 tasks (April 2026):
+
+| Model | Score | Key Failures |
+|-------|-------|-------------|
+| DeepSeek-R1-0528 | **0.895** | visual stroop, visual inattentional |
+| Gemini 2.5 Flash | 0.842 | blink, visual stroop, visual inattentional |
+| Claude Opus 4.6 | 0.842 | blink, visual stroop, visual inattentional |
+| Claude Sonnet 4.5 | 0.789 | blink, shifting, visual stroop, visual inattentional |
+| GPT-OSS-20B | 0.778 | flanker, inhibition of return, visual stroop, visual inattentional |
+| Qwen3-Next-80B | 0.737 | blink, shifting, anomaly, visual stroop, visual inattentional |
+| Gemma-3-27B | **0.684** | blink, capacity, shifting, anomaly, visual stroop, visual inattentional |
+
+**21-point spread** across 7 frontier models. Key discriminating tasks: **shifting** (3/7 fail), **anomaly** (2/7 fail), **blink** (5/7 fail). Visual tasks remain unsolved by all models.
+
+## Local Validation Results (Open Models)
 
 Evaluated on 140 items per model (2 per difficulty × 14 text tasks × 5 tiers) using vLLM with deterministic generation (temperature=0, top_p=1):
 
@@ -62,13 +78,39 @@ src/
   inference_engine.py # vLLM wrapper with OOM resilience
   run_local_eval.py  # Main evaluation harness with checkpoint/resume
 
-notebooks/           # 13 Kaggle SDK task notebooks
+notebooks/           # 19 Kaggle SDK task notebooks (1 task per notebook)
 tests/               # 148 unit tests (generators, scorers, analysis)
 docs/                # Competition writeup + metrics spec + task specs
 figures/             # 9 generated visualizations + Visual Stroop samples
 results/             # Evaluation results (3 models × 140 items)
 tasks/               # Planning docs and progress tracker
 ```
+
+## Kaggle Benchmark Notebooks
+
+Each notebook contains exactly one `@kbench.task` (required by Kaggle Benchmarks platform):
+
+| Notebook | Kaggle Task | Cognitive Ability | Items |
+|----------|-------------|-------------------|-------|
+| `task_a1_capacity.ipynb` | cogattention_capacity | Attention Capacity | 40 |
+| `task_a2_interference.ipynb` | cogattention_interference | Attention Capacity | 40 |
+| `task_a3_blink.ipynb` | cogattention_blink | Attention Capacity | 40 |
+| `task_b1a_vigilance.ipynb` | cogattention_sustained | Sustained Attention | 40 |
+| `task_b1b_stream.ipynb` | cogattention_stream_segregation | Sustained Attention | 40 |
+| `task_b2_dilution_emh.ipynb` | cogattention_context_dilution | Sustained Attention | 24 |
+| `task_b2_dilution_expert.ipynb` | cogattention_context_dilution | Sustained Attention | 8 |
+| `task_b2_dilution_frontier_a.ipynb` | cogattention_context_dilution | Sustained Attention | 4 |
+| `task_b2_dilution_frontier_b.ipynb` | cogattention_context_dilution | Sustained Attention | 4 |
+| `task_b3_niah.ipynb` | cogattention_semantic_niah | Sustained Attention | 40 |
+| `task_b4_multihop.ipynb` | cogattention_multihop | Sustained Attention | 40 |
+| `task_c1_selective.ipynb` | cogattention_selective | Selective Attention | 40 |
+| `task_c2_stroop.ipynb` | cogattention_stroop | Selective Attention | 40 |
+| `task_c3_flanker.ipynb` | cogattention_flanker | Selective Attention | 40 |
+| `task_d1_shifting.ipynb` | cogattention_shifting | Attention Shifting | 40 |
+| `task_d2_inhibition_return.ipynb` | cogattention_inhibition_return | Attention Shifting | 40 |
+| `task_e_anomaly.ipynb` | cogattention_anomaly | Stimulus-Driven | 40 |
+| `task_f_visual_stroop.ipynb` | cogattention_visual_stroop | Selective (VLM) | 150 |
+| `task_g_visual_inattentional.ipynb` | cogattention_visual_inattentional | Stimulus-Driven (VLM) | 150 |
 
 ## Scoring Architecture
 
