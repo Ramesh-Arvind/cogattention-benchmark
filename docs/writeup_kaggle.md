@@ -4,7 +4,9 @@
 
 ### Problem Statement
 
-Most LLM benchmarks test knowledge or reasoning — a model that memorized enough facts scores well. But attention is different. It is about what the model does with information right in front of it. Cognitive psychology has studied attention for decades and identified distinct sub-abilities. We adapted five for language models: Attention Capacity (tracking multiple things), Sustained Attention (staying focused over long text), Selective Attention (filtering signal from noise), Attention Shifting (switching rules), and Stimulus-Driven Attention (noticing the unexpected). These are not the same ability — a model good at filtering noise can be bad at switching rules. CogAttention measures each one separately.
+We gave 7 frontier AI models the cognitive equivalent of the gorilla experiment. Five failed to detect two targets in a rapid word stream. Three could not switch classification rules mid-task. Two missed embedded anomalies entirely. Meanwhile, humans outperform every frontier model on anomaly detection and Stroop resistance — but LLMs dominate on interference resistance and sequential recall. The cognitive profiles are inverted.
+
+CogAttention is a benchmark that decomposes "attention" into 5 distinct sub-abilities from cognitive psychology: Attention Capacity (tracking multiple things), Sustained Attention (staying focused over long text), Selective Attention (filtering signal from noise), Attention Shifting (switching rules), and Stimulus-Driven Attention (noticing the unexpected). On the Kaggle platform, it produces a 21-point spread across 7 frontier models (DeepSeek-R1 at 0.895, Gemma-3-27B at 0.684). These are not the same ability — a model good at filtering noise can be bad at switching rules. CogAttention measures each one separately.
 
 ### Task & Benchmark Construction
 

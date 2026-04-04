@@ -522,6 +522,180 @@ def fig_selectivity_frontier(selectivity_data=None):
     print("[OK] selectivity_frontier.png (+.pdf, .eps, .jpg)")
 
 
+# ── Figure 10: Kaggle Leaderboard Bar Chart ─────────────────────────────────
+KAGGLE_CSV = os.path.join(ROOT, "rameshln_cog-attention_leaderboard (1).csv")
+
+# Mapping from Kaggle task names to 5 cognitive abilities
+TASK_TO_ABILITY = {
+    "cogattention_capacity": "Capacity", "cogattention_interference": "Capacity",
+    "cogattention_blink": "Capacity", "cogattention_blinks": "Capacity",
+    "cogattention_sustained": "Sustained", "cogattention_stream_segregation": "Sustained",
+    "cogattention_context_dilution": "Sustained", "cogattention_semantic_niah": "Sustained",
+    "cogattention_multihop": "Sustained",
+    "cogattention_selective": "Selective", "cogattention_stroop": "Selective",
+    "cogattention_flanker": "Selective", "cogattention_flankers": "Selective",
+    "cogattention_shifting": "Shifting", "cogattention_inhibition_return": "Shifting",
+    "cogattention_inhibition_return1": "Shifting",
+    "cogattention_anomaly1": "Stimulus-Driven",
+    "cogattention_visual_stroop": "Selective", "cogattention_visual_inattentional": "Stimulus-Driven",
+}
+
+KAGGLE_MODEL_LABELS = {
+    "deepseek-r1-0528": "DeepSeek-R1",
+    "gemini-2.5-flash": "Gemini 2.5 Flash",
+    "claude-opus-4-6-default": "Claude Opus 4.6",
+    "claude-sonnet-4-5-20250929": "Claude Sonnet 4.5",
+    "gpt-oss-20b": "GPT-OSS-20B",
+    "qwen3-next-80b-a3b-instruct": "Qwen3-Next-80B",
+    "gemma-3-27b-it": "Gemma-3-27B",
+}
+
+KAGGLE_COLORS_LIST = [
+    "#4ec9b0", "#e84855", "#f0c060", "#5b9bd5",
+    "#c678dd", "#98c379", "#e5c07b",
+]
+
+
+def _load_kaggle_leaderboard():
+    """Parse Kaggle leaderboard CSV into structured data."""
+    import csv
+    from collections import defaultdict
+    models = defaultdict(lambda: {"score": None, "tasks": {}})
+    with open(KAGGLE_CSV) as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            m = row["Model"]
+            if row["Task_Name"] == "":
+                models[m]["score"] = float(row["Numerical_Result"])
+            else:
+                models[m]["tasks"][row["Task_Name"]] = row["Boolean_Result"] == "True"
+    # Sort by score descending
+    sorted_models = sorted(models.items(), key=lambda x: x[1]["score"] or 0, reverse=True)
+    return sorted_models
+
+
+def fig_kaggle_leaderboard():
+    """Horizontal bar chart of 7 frontier models with task pass/fail breakdown."""
+    sorted_models = _load_kaggle_leaderboard()
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    _apply_dark_style(ax, "Kaggle Benchmarks Leaderboard — 7 Frontier Models")
+
+    y_positions = list(range(len(sorted_models)))
+    y_positions.reverse()
+
+    for i, (model_key, data) in enumerate(sorted_models):
+        y = y_positions[i]
+        score = data["score"]
+        label = KAGGLE_MODEL_LABELS.get(model_key, model_key)
+        color = KAGGLE_COLORS_LIST[i % len(KAGGLE_COLORS_LIST)]
+
+        # Main bar
+        ax.barh(y, score, height=0.6, color=color, alpha=0.85, zorder=3,
+                edgecolor="white", linewidth=0.5)
+        ax.text(score + 0.008, y, f"{score:.3f}", va="center", fontsize=11,
+                fontweight="bold", color=TEXT_CLR, zorder=5)
+
+        # Count failures
+        fails = [t for t, passed in data["tasks"].items() if not passed]
+        n_fail = len(fails)
+        fail_text = f"({n_fail} fail)" if n_fail > 0 else "(all pass)"
+        ax.text(-0.01, y, f"{label}  {fail_text}", va="center", ha="right",
+                fontsize=10, color=TEXT_CLR, zorder=5)
+
+    ax.set_xlim(0, 1.0)
+    ax.set_ylim(-0.5, len(sorted_models) - 0.5)
+    ax.set_yticks([])
+    ax.set_xlabel("Composite Score (pass rate across tasks)", fontsize=11)
+    ax.grid(axis="x", color=GRID_CLR, linewidth=0.5, zorder=0)
+    ax.axvline(x=0.80, color="#e84855", linewidth=1, linestyle="--", alpha=0.4, zorder=1)
+    ax.text(0.80, len(sorted_models) - 0.3, "0.80", fontsize=8, color="#e84855", ha="center")
+
+    fig.tight_layout()
+    _save_multi_format(fig, "kaggle_leaderboard")
+    plt.close(fig)
+    print("[OK] kaggle_leaderboard.png (+.pdf, .eps, .jpg)")
+
+
+def fig_kaggle_radar():
+    """Radar chart showing 7 frontier models + human baseline by cognitive ability."""
+    sorted_models = _load_kaggle_leaderboard()
+
+    abilities = ["Capacity", "Sustained", "Selective", "Shifting", "Stimulus-Driven"]
+
+    # Compute per-ability pass rates for each model
+    model_profiles = {}
+    for model_key, data in sorted_models:
+        ability_scores = {a: [] for a in abilities}
+        for task_name, passed in data["tasks"].items():
+            ability = TASK_TO_ABILITY.get(task_name)
+            if ability:
+                ability_scores[ability].append(1.0 if passed else 0.0)
+        label = KAGGLE_MODEL_LABELS.get(model_key, model_key)
+        model_profiles[label] = [
+            np.mean(ability_scores[a]) if ability_scores[a] else 0.0
+            for a in abilities
+        ]
+
+    # Human baseline
+    human_baseline_path = os.path.join(ROOT, "human_baseline", "results", "human_baselines.json")
+    human_vals = None
+    if os.path.exists(human_baseline_path):
+        with open(human_baseline_path) as f:
+            hb = json.load(f)
+        hp = hb["per_task"]
+        human_vals = [
+            np.mean([hp["capacity"]["mean"], hp["interference"]["mean"]]),
+            np.mean([hp["sustained"]["mean"], hp["stream_segregation"]["mean"]]),
+            np.mean([hp["selective"]["mean"], hp["stroop"]["mean"]]),
+            hp["shifting"]["mean"],
+            hp["anomaly"]["mean"],
+        ]
+
+    fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
+    fig.set_facecolor(BG)
+    ax.set_facecolor(BG)
+
+    N = len(abilities)
+    angles = np.linspace(0, 2 * np.pi, N, endpoint=False).tolist()
+    angles += angles[:1]
+
+    ax.set_theta_offset(np.pi / 2)
+    ax.set_theta_direction(-1)
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(abilities, fontsize=12, fontweight="bold", color=TEXT_CLR)
+    ax.set_ylim(0, 1.08)
+    ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
+    ax.set_yticklabels(["0.2", "0.4", "0.6", "0.8", "1.0"], fontsize=8, color=TEXT_CLR)
+    ax.yaxis.grid(color=GRID_CLR, linewidth=0.5)
+    ax.xaxis.grid(color=GRID_CLR, linewidth=0.5)
+    ax.spines["polar"].set_color(GRID_CLR)
+
+    # Human baseline
+    if human_vals is not None:
+        hv = human_vals + human_vals[:1]
+        ax.plot(angles, hv, linewidth=2.5, color="#ffffff", label="Human (n=25)",
+                linestyle="--", zorder=5, marker="s", markersize=5)
+        ax.fill(angles, hv, alpha=0.06, color="#ffffff")
+
+    # Frontier models
+    for i, (label, vals) in enumerate(model_profiles.items()):
+        color = KAGGLE_COLORS_LIST[i % len(KAGGLE_COLORS_LIST)]
+        v = vals + vals[:1]
+        ax.plot(angles, v, linewidth=1.8, color=color, label=label, zorder=3,
+                alpha=0.85)
+        ax.fill(angles, v, alpha=0.04, color=color)
+
+    ax.set_title("Cognitive Attention Profile: 7 Frontier Models vs Human",
+                 fontsize=14, fontweight="bold", color=TEXT_CLR, pad=24)
+    leg = ax.legend(loc="lower right", bbox_to_anchor=(1.35, -0.08),
+                    fontsize=9, facecolor=BG, edgecolor=GRID_CLR, labelcolor=TEXT_CLR)
+
+    _save_multi_format(fig, "kaggle_radar")
+    plt.close(fig)
+    print("[OK] kaggle_radar.png (+.pdf, .eps, .jpg)")
+
+
 # ── Multi-format export helper ────────────────────────────────────────────────
 EXPORT_FORMATS = [".png", ".pdf", ".eps", ".jpg"]
 
@@ -572,4 +746,10 @@ if __name__ == "__main__":
     fig_shifting_error_breakdown()
     fig_position_bias()
     fig_selectivity_frontier()
-    print(f"\nDone — 9 figures saved to {FIGURES}/")
+    # Kaggle frontier model figures
+    if os.path.exists(KAGGLE_CSV):
+        fig_kaggle_leaderboard()
+        fig_kaggle_radar()
+        print(f"\nDone — 11 figures saved to {FIGURES}/")
+    else:
+        print(f"\nDone — 9 figures saved to {FIGURES}/ (no Kaggle CSV found, skipping Kaggle figures)")

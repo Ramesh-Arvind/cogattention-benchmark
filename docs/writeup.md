@@ -1,5 +1,11 @@
 # CogAttention: Testing Whether Language Models Can Pay Attention
 
+## The Headline Finding
+
+We gave 7 frontier AI models the cognitive equivalent of Simons and Chabris' gorilla experiment — a primary task with an unexpected anomaly embedded in it. Five of the seven could not even identify two targets in a rapid word stream. Three failed to switch classification rules mid-task. Two missed anomalies entirely. Humans outperform every frontier model on anomaly detection and Stroop resistance, while LLMs dominate on interference resistance and sequential recall. The cognitive profiles are inverted.
+
+On the Kaggle Benchmarks platform, CogAttention produces a 21-point spread across 7 frontier models (DeepSeek-R1 at 0.895, Gemma-3-27B at 0.684), with shifting, anomaly detection, and attentional blink as the key discriminators. No other attention benchmark decomposes performance into 5 cognitive sub-abilities, connects failures to Transformer architecture, or provides human baselines for comparison.
+
 ## What This Benchmark Does
 
 CogAttention tests whether language models can do the things that "paying attention" actually requires. Not just answering questions about a passage, but tracking multiple things at once, staying focused over long text, ignoring distractions, switching between tasks, and noticing something unexpected.
