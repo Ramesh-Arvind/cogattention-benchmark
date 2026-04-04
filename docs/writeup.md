@@ -131,7 +131,7 @@ Critically, humans scored 0.676 on anomaly detection — far above Phi-3.5 (0.16
 
 ## Kaggle Benchmarks Platform Results (Frontier Models)
 
-All 16 task types were evaluated on the Kaggle Community Benchmarks platform against 7 frontier models (April 2026). Each task is scored as pass/fail based on fine-grained assertion pass rates:
+All 16 task types were evaluated on the Kaggle Community Benchmarks platform against 7 frontier models (April 2026). Each task is scored as pass/fail based on fine-grained assertion pass rates (Figure: kaggle_leaderboard.png):
 
 | Model | Score | Tasks Passed | Key Failures |
 |-------|-------|-------------|-------------|
@@ -165,7 +165,7 @@ Five observations stand out:
 
 **Shifting errors are systematic, not random.** Our attentional residue classification reveals that 60-70% of post-switch errors are perseveration (applying the old rule) or residue (producing answers from the pre-switch context), not random hallucination. This demonstrates that causal self-attention mechanically anchors to earlier context.
 
-**Humans and LLMs have inverted cognitive profiles.** Humans excel at anomaly detection (0.676) and Stroop resistance (0.852) but struggle with proactive interference (0.640). LLMs show the opposite: Qwen-72B scores 1.0 on interference but only 0.48 on anomaly detection. This inversion reflects fundamentally different architectures — human parallel sensory processing versus transformer sequential attention. The pattern holds across all 7 frontier models on the Kaggle platform: every model passes interference and stroop, but shifting (3/7 fail), anomaly (2/7 fail), and blink (5/7 fail) remain challenging — confirming the inverted profile is a universal Transformer trait, not a model-specific artifact. Figure 4 (Cognitive Attention Profile radar chart) visualizes this inversion across all evaluated models and the human baseline.
+**Humans and LLMs have inverted cognitive profiles.** Humans excel at anomaly detection (0.676) and Stroop resistance (0.852) but struggle with proactive interference (0.640). LLMs show the opposite: Qwen-72B scores 1.0 on interference but only 0.48 on anomaly detection. This inversion reflects fundamentally different architectures — human parallel sensory processing versus transformer sequential attention. The pattern holds across all 7 frontier models on the Kaggle platform: every model passes interference and stroop, but shifting (3/7 fail), anomaly (2/7 fail), and blink (5/7 fail) remain challenging — confirming the inverted profile is a universal Transformer trait, not a model-specific artifact. Figure: kaggle_radar.png visualizes this inversion across all 7 frontier models and the human baseline; Figure: cognitive_profile.png shows the same pattern for locally validated open models.
 
 ## Gradient of Performance & Discriminatory Power
 

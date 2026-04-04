@@ -126,7 +126,7 @@ Each notebook contains exactly one `@kbench.task` (required by Kaggle Benchmarks
 
 ## Figures
 
-9 publication-quality visualizations (dark theme, 300 DPI):
+11 publication-quality visualizations (dark theme, 300 DPI):
 1. CAS scores by model (bar chart)
 2. Task performance heatmap (model x task)
 3. Difficulty degradation curves (line chart)
@@ -136,6 +136,9 @@ Each notebook contains exactly one `@kbench.task` (required by Kaggle Benchmarks
 7. Shifting error breakdown (stacked bar: perseveration/residue/random)
 8. Position bias U-curve (Lost in the Middle)
 9. Selectivity frontier (recall vs intrusion scatter)
+
+10. Kaggle leaderboard bar chart (7 frontier models)
+11. Kaggle radar chart (7 frontier models + human baseline)
 
 Plus: Visual Stroop sample images (`figures/visual_stroop_sample_*.png`)
 
