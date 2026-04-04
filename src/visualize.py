@@ -523,7 +523,7 @@ def fig_selectivity_frontier(selectivity_data=None):
 
 
 # ── Figure 10: Kaggle Leaderboard Bar Chart ─────────────────────────────────
-KAGGLE_CSV = os.path.join(ROOT, "rameshln_cog-attention_leaderboard (1).csv")
+KAGGLE_CSV = os.path.join(ROOT, "rameshln_cog-attention_leaderboard (3).csv")
 
 # Mapping from Kaggle task names to 5 cognitive abilities
 TASK_TO_ABILITY = {

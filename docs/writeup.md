@@ -133,15 +133,15 @@ Critically, humans scored 0.676 on anomaly detection — far above Phi-3.5 (0.16
 
 All 16 task types were evaluated on the Kaggle Community Benchmarks platform against 7 frontier models (April 2026). Each task is scored as pass/fail based on fine-grained assertion pass rates:
 
-| Model | Score | Tasks Passed |
-|-------|-------|-------------|
-| DeepSeek-R1-0528 | **0.895** | 17/19 |
-| Gemini 2.5 Flash | 0.842 | 16/19 |
-| Claude Opus 4.6 | 0.842 | 16/19 |
-| Claude Sonnet 4.5 | 0.789 | 15/19 |
-| GPT-OSS-20B | 0.778 | 14/18 |
-| Qwen3-Next-80B | 0.737 | 14/19 |
-| Gemma-3-27B | **0.684** | 13/19 |
+| Model | Score | Tasks Passed | Key Failures |
+|-------|-------|-------------|-------------|
+| DeepSeek-R1-0528 | **0.895** | 17/19 | visual stroop, visual inattentional |
+| Gemini 2.5 Flash | 0.842 | 16/19 | blink, visual tasks |
+| Claude Opus 4.6 | 0.842 | 16/19 | blink, visual tasks |
+| GPT-OSS-20B | 0.833 | 15/18 | blink, visual tasks |
+| Claude Sonnet 4.5 | 0.789 | 15/19 | blink, shifting, visual tasks |
+| Qwen3-Next-80B | 0.737 | 14/19 | blink, shifting, anomaly, visual tasks |
+| Gemma-3-27B | **0.684** | 13/19 | blink, capacity, shifting, anomaly, visual tasks |
 
 The 21-point spread across 7 frontier models confirms meaningful discrimination at the frontier. Key task-level findings:
 
