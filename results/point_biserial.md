@@ -8,12 +8,12 @@
 
 | Task | N | p (difficulty) | r_pb | Discriminating |
 |------|---|----------------|------|----------------|
-| cogattention_anomaly1 | 7 | 0.714 | 0.88 | Yes |
-| cogattention_blink | 7 | 0.143 | 0.561 | Yes |
+| cogattention_anomaly1 | 7 | 0.714 | 0.936 | Yes |
+| cogattention_blink | 7 | 0.429 | 0.678 | Yes |
 | cogattention_blinks | 7 | 1.0 | n/a (no variance) | No |
-| cogattention_capacity | 7 | 0.857 | 0.73 | Yes |
+| cogattention_capacity | 7 | 0.857 | 0.75 | Yes |
 | cogattention_context_dilution | 7 | 1.0 | n/a (no variance) | No |
-| cogattention_flanker | 6 | 1.0 | n/a (no variance) | No |
+| cogattention_flanker | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_flankers | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_inhibition_return | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_inhibition_return1 | 7 | 1.0 | n/a (no variance) | No |
@@ -21,7 +21,7 @@
 | cogattention_multihop | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_selective | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_semantic_niah | 7 | 1.0 | n/a (no variance) | No |
-| cogattention_shifting | 7 | 0.571 | 0.863 | Yes |
+| cogattention_shifting | 7 | 0.571 | 0.766 | Yes |
 | cogattention_stream_segregation | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_stroop | 7 | 1.0 | n/a (no variance) | No |
 | cogattention_sustained | 7 | 1.0 | n/a (no variance) | No |

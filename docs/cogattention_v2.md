@@ -56,11 +56,11 @@ Task-level r_pb shows 4 discriminating tasks (shifting, anomaly, capacity, blink
 
 ### Five findings that aggregate scores obscure
 
-**1. Shifting is the strongest discriminator within Selective Attention.** Three of seven models fail rule-shift (point-biserial r_pb = 0.86 against total CAS). Of these errors, 60–70% are classified as perseveration: traces show continued application of the prior classification rule rather than random noise, consistent with goal-set reconfiguration failure (Monsell, 2003).
+**1. Shifting is a primary discriminator within Selective Attention.** Three of seven models fail rule-shift (point-biserial r_pb = 0.77 against total CAS). Of these errors, 60–70% are classified as perseveration: traces show continued application of the prior classification rule rather than random noise, consistent with goal-set reconfiguration failure (Monsell, 2003).
 
-**2. Attention Capacity separates only the bottom tier.** Gemma-3-27B fails capacity tasks that all other models pass (r_pb = 0.73), while top models are at ceiling. Capacity acts as a floor constraint, not a scaling axis, at the frontier.
+**2. Attention Capacity separates only the bottom tier.** Gemma-3-27B fails capacity tasks that all other models pass (r_pb = 0.75), while top models are at ceiling. Capacity acts as a floor constraint, not a scaling axis, at the frontier.
 
-**3. Anomaly Detection (Stimulus-Driven) separates tiers not captured by Selective metrics.** Qwen3-Next and Gemma fail (r_pb = 0.88, the highest in the benchmark). Humans score 0.676; the weakest models approach floor. A model that misses an embedded anomaly has no signal that something unexpected occurred, which is relevant to downstream metacognitive monitoring (Fernandez-Duque et al., 2000).
+**3. Anomaly Detection (Stimulus-Driven) separates tiers not captured by Selective metrics.** Qwen3-Next and Gemma fail (r_pb = 0.94, the highest in the benchmark). Humans score 0.676; the weakest models approach floor. A model that misses an embedded anomaly has no signal that something unexpected occurred, which is relevant to downstream metacognitive monitoring (Fernandez-Duque et al., 2000).
 
 **4. Vigilance degrades predictably with length.** All seven models show the classical vigilance decrement (Mackworth, 1948): detection rates drop monotonically in later document quartiles. Long-context degradation follows a pattern also documented in humans.
 
@@ -89,7 +89,7 @@ Sub-scores are diagnostic tools. For labs, two concrete uses: (a) regression-tes
 
 ### References
 
-Agrawal, N. (2026). *Executive Functions: Cognitive Control Suite.* Kaggle Benchmarks.
+Agrawal, N. (2026). *Executive Functions: Cognitive Control Suite.* Kaggle Benchmarks. https://www.kaggle.com/benchmarks/naivedhyaagrawal/executive-functions-the-cognitive-control-suite
 Barzykowski, K. et al. (2022). Cognitive inhibition behavioral tasks: online and laboratory data. *Data in Brief*, 43, 108398.
 Burnell, R., Kelly, O. et al. (2026). *Measuring Progress Toward AGI: A Cognitive Framework.* Google DeepMind.
 Cherry, E.C. (1953). Some experiments on the recognition of speech. *JASA*, 25(5), 975–979.

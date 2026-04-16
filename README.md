@@ -33,14 +33,14 @@ Evaluated on the Kaggle Community Benchmarks platform across 19 tasks (April 202
 | Model | Score | Key Failures |
 |-------|-------|-------------|
 | DeepSeek-R1-0528 | **0.895** | visual stroop, visual inattentional |
+| Claude Opus 4.6 | **0.895** | visual stroop, visual inattentional |
 | Gemini 2.5 Flash | 0.842 | blink, visual stroop, visual inattentional |
-| Claude Opus 4.6 | 0.842 | blink, visual stroop, visual inattentional |
-| Claude Sonnet 4.5 | 0.789 | blink, shifting, visual stroop, visual inattentional |
-| GPT-OSS-20B | 0.778 | flanker, inhibition of return, visual stroop, visual inattentional |
+| Claude Sonnet 4.5 | 0.842 | shifting, visual stroop, visual inattentional |
+| GPT-OSS-20B | 0.842 | blink, visual stroop, visual inattentional |
 | Qwen3-Next-80B | 0.737 | blink, shifting, anomaly, visual stroop, visual inattentional |
 | Gemma-3-27B | **0.684** | blink, capacity, shifting, anomaly, visual stroop, visual inattentional |
 
-**21-point spread** across 7 frontier models. Key discriminating tasks: **shifting** (3/7 fail), **anomaly** (2/7 fail), **blink** (5/7 fail). Visual tasks remain unsolved by all models.
+**21-point spread** across 7 frontier models. Point-biserial discrimination (CTT, Pearson `r_pb` between task pass/fail and total CAS): **anomaly r_pb=0.94**, **shifting r_pb=0.77**, **capacity r_pb=0.75**, **blink r_pb=0.68** — the four discriminating tasks (3/7 fail shifting, 2/7 fail anomaly, 1/7 fails capacity, 4/7 fail blink). Ten remaining text-only tasks are at ceiling; two visual tasks at floor (all 7 fail).
 
 ## Local Validation Results (Open Models)
 
@@ -69,7 +69,7 @@ src/
   analysis/          # Statistical analysis suite
     bootstrap.py       # Bootstrapped CIs (10,000 resamples)
     effect_size.py     # Cohen's d + rank-biserial correlation
-    irt.py             # 2PL Item Response Theory (scipy.optimize)
+    point_biserial.py  # CTT task-level discrimination against total CAS
     degradation.py     # Power-law degradation coefficient
     position_bias.py   # U-shape / Lost-in-the-Middle detection
     discrimination.py  # Cross-model spread + ceiling/floor detection
@@ -80,7 +80,7 @@ src/
 
 notebooks/           # 19 Kaggle SDK task notebooks (1 task per notebook)
 tests/               # 148 unit tests (generators, scorers, analysis)
-docs/                # Competition writeup + metrics spec + task specs
+docs/                # Kaggle writeup (cogattention_v2.md) + detailed writeup (writeup.md) + metrics/task specs
 figures/             # 9 generated visualizations + Visual Stroop samples
 results/             # Evaluation results (3 models × 140 items)
 tasks/               # Planning docs and progress tracker
@@ -120,7 +120,7 @@ Each notebook contains exactly one `@kbench.task` (required by Kaggle Benchmarks
 - **Attentional residue classification** — shifting errors split into perseveration, residue, and random
 - **Bootstrapped 95% CIs** — 10,000 resamples for all metrics
 - **Cohen's d + rank-biserial** — pairwise effect sizes between models
-- **2PL IRT** — item difficulty and discrimination parameters
+- **Point-biserial discrimination (CTT)** — Pearson `r_pb` between task pass/fail and total CAS; 4 of 16 deduplicated tasks pass the `r_pb >= 0.3` threshold (anomaly 0.94, shifting 0.77, capacity 0.75, blink 0.68)
 - **Power-law degradation** — `E(m) ~ a * m^delta` fit for selective attention
 - **Position bias** — U-shape detection (Lost in the Middle)
 
@@ -219,7 +219,6 @@ print(f"Accuracy: {result.metrics['accuracy']}")
 # Statistical analysis
 from src.analysis.bootstrap import bootstrap_ci
 from src.analysis.effect_size import cohens_d
-from src.analysis.irt import fit_irt_model
 
 ci = bootstrap_ci([0.8, 0.7, 0.9, 0.85], n_bootstrap=10000)
 print(f"Mean: {ci['point_estimate']:.3f} [{ci['ci_lower']:.3f}, {ci['ci_upper']:.3f}]")

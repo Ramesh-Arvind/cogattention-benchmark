@@ -88,7 +88,7 @@ This scoring approach measures genuine cognitive capability rather than formatti
 
 ## Taxonomy Alignment
 
-Our five cognitive abilities map precisely to the hierarchy defined in the DeepMind companion paper (§7.3): Attention Capacity, Sustained Attention, Perceptual Inhibition (explicitly separated from Selective Attention as the paper requires), Attention Shifting, and Stimulus-Driven Attention. We test Perceptual Inhibition through three dedicated tasks — Distractor Filtering, Semantic Stroop, and Flanker Interference — each isolating a different inhibition mechanism. This separation demonstrates alignment with the paper's requirement to "precisely diagnose model weaknesses" by isolating each cognitive faculty.
+Our cognitive abilities map to the three-tier hierarchy defined by Burnell et al. (2026, §7.3): Attention Capacity (§7.3.1), Selective Attention with sub-abilities for Sustained focus, Perceptual Inhibition, and Shifting (§7.3.2), and Stimulus-Driven Attention (§7.3.3). We test Perceptual Inhibition through three dedicated tasks — Distractor Filtering, Semantic Stroop, and Flanker Interference — each isolating a different inhibition mechanism. The decomposition supports the paper's goal of isolating each cognitive faculty rather than collapsing attention to a single score.
 
 ## Procedural Generation and Contamination Resistance
 
@@ -108,7 +108,7 @@ Before uploading to Kaggle, we ran the benchmark locally against three open mode
 | Llama-3.1-8B-Instruct | 8B | 0.685 | 0.640 | [0.621, 0.747] |
 | Phi-3.5-mini-instruct | 3.8B | 0.567 | 0.479 | [0.513, 0.619] |
 
-CAS (Cognitive Attention Score) is a weighted average across all task types. Confidence intervals are bootstrapped (10,000 resamples). The CIs do not overlap between Qwen-72B and Phi-3.5, confirming significant separation.
+CAS (Composite Attention Score) is a weighted average across all task types, reported in two modes following BetterBench (Reuel et al., 2024): Arithmetic CAS (compensatory) and Geometric CAS (non-compensatory). Confidence intervals are bootstrapped (10,000 resamples). The CIs do not overlap between Qwen-72B and Phi-3.5, confirming significant separation.
 
 **Effect sizes.** Cohen's d between Phi-3.5 and Qwen-72B is 0.68 (medium), and the rank-biserial correlation is 0.35. Between Llama-8B and Qwen-72B, d = 0.41 (small).
 
@@ -127,7 +127,7 @@ We collected human performance data from 25 participants (13 psychology students
 
 Human performance degrades predictably with difficulty: Easy 0.943, Medium 0.722, Hard 0.600. The strongest human abilities were Stroop resistance (0.852) and inhibition of return (0.862) — tasks requiring perceptual inhibition where humans outperform all three LLMs. The weakest was attention shifting (0.632), confirming that rule-switching is cognitively demanding even for humans.
 
-Critically, humans scored 0.676 on anomaly detection — far above Phi-3.5 (0.16) and above Qwen-72B (0.48). This confirms that inattentional blindness is qualitatively different in LLMs versus humans: humans notice anomalies most of the time even under cognitive load, while models systematically miss them.
+Critically, humans scored 0.676 on anomaly detection — far above Phi-3.5 (0.16) and above Qwen-72B (0.48). This confirms that inattentional blindness is qualitatively different in LLMs versus humans: humans notice anomalies most of the time even under cognitive load, while models systematically miss them. We anchor against Barzykowski et al. (2022) normative data (N=485) on Stroop, SART, and Flanker for additional comparison points.
 
 ## Kaggle Benchmarks Platform Results (Frontier Models)
 
@@ -137,19 +137,19 @@ All 16 task types were evaluated on the Kaggle Community Benchmarks platform aga
 |-------|-------|-------------|-------------|
 | DeepSeek-R1-0528 | **0.89** | 17/19 | visual stroop, visual inattentional |
 | Claude Opus 4.6 | **0.89** | 17/19 | visual stroop, visual inattentional |
-| Gemini 2.5 Flash | 0.84 | 17/19 | visual stroop, visual inattentional |
+| Gemini 2.5 Flash | 0.84 | 16/19 | blink, visual stroop, visual inattentional |
 | Claude Sonnet 4.5 | 0.84 | 16/19 | shifting, visual tasks |
-| GPT-OSS-20B | 0.84 | 17/19 | visual stroop, visual inattentional |
-| Qwen3-Next-80B | 0.74 | 15/19 | shifting, anomaly, visual tasks |
-| Gemma-3-27B | **0.68** | 13/19 | capacity, shifting, anomaly, visual tasks |
+| GPT-OSS-20B | 0.84 | 16/19 | blink, visual stroop, visual inattentional |
+| Qwen3-Next-80B | 0.74 | 14/19 | blink, shifting, anomaly, visual tasks |
+| Gemma-3-27B | **0.68** | 13/19 | blink, capacity, shifting, anomaly, visual tasks |
 
 The 21-point spread across 7 frontier models confirms meaningful discrimination at the frontier. DeepSeek-R1 and Claude Opus are tied at the top (0.89), with Gemini Flash, Claude Sonnet, and GPT-OSS clustered at 0.84, followed by Qwen3-Next (0.74) and Gemma-3-27B (0.68). Key task-level findings:
 
-**Shifting is the strongest discriminator.** Three of seven frontier models fail the rule-shift task (Claude Sonnet 4.5, Qwen3-Next-80B, Gemma-3-27B), confirming that perseveration errors under causal self-attention are a universal Transformer limitation, not a model-specific artifact.
+**Shifting is a primary discriminator.** Three of seven frontier models fail the rule-shift task (Claude Sonnet 4.5, Qwen3-Next-80B, Gemma-3-27B). Point-biserial r_pb = 0.77 against total CAS. Of these errors, 60–70% are classified as perseveration rather than random noise, consistent with goal-set reconfiguration failure (Monsell, 2003).
 
-**Anomaly detection separates mid-tier from top-tier.** Qwen3-Next-80B and Gemma-3-27B fail anomaly detection while all larger models pass, confirming that inattentional blindness scales inversely with model capacity.
+**Anomaly detection separates mid-tier from top-tier.** Qwen3-Next-80B and Gemma-3-27B fail anomaly detection while all larger models pass. Point-biserial r_pb = 0.94, the highest in the benchmark.
 
-**Capacity separates the bottom tier.** Gemma-3-27B is the only frontier model to fail capacity tasks (thread tracking, proactive interference). All other models — including Qwen3-Next at similar parameter count — pass, suggesting that Gemma's capacity bottleneck is architectural rather than purely scale-dependent. Tracking multiple objects under load is a fundamental requirement that smaller or less efficient architectures struggle with.
+**Capacity separates the bottom tier.** Gemma-3-27B is the only frontier model to fail the capacity (thread tracking) task; all other models pass, including Qwen3-Next at similar parameter count. Point-biserial r_pb = 0.75 against total CAS. Tracking multiple objects under load remains a frontier-floor constraint, not a scaling axis at the top.
 
 **Visual tasks remain completely unsolved.** All 7 frontier models fail both Visual Stroop and Visual Inattentional Blindness, establishing a clear floor for multimodal attention capabilities. This is the only task category where every model, regardless of size or architecture, scores zero — making visual attention the single hardest frontier for current VLMs.
 
@@ -225,29 +225,27 @@ A critical objective of this benchmark is to transition from merely observing fa
 
 **Inattentional Blindness and Masked Self-Attention (Task E).** Under dual-task load, models reliably miss embedded anomalies. This parallels Simons and Chabris's gorilla experiment. In Transformers, the fixed number of attention heads per layer creates a hard capacity constraint: when heads are allocated to the primary counting task, no surplus capacity remains for anomaly detection, producing systematic blindness to unexpected patterns.
 
-## Attention as the Missing Primitive
+## Attention as an Upstream Hypothesis
 
-The failures exposed by CogAttention are not confined to the Attention track. We argue that attention is the critical upstream primitive whose failures cascade into the metacognitive and executive function deficits documented by other benchmarks.
+Cognitive science has long treated attention as an upstream gate on downstream processing (Posner & Petersen, 1990). CogAttention is positioned to test that hypothesis through cross-track comparison rather than to assert it. The mechanisms below are plausible bridges between our task-level findings and broader cognitive deficits documented in other benchmarks; we present them as hypotheses, not conclusions.
 
-Consider two failure modes observed across the broader Kaggle hackathon ecosystem: metacognitive miscalibration (models generating incorrect answers with high confidence) and agentic precondition failures (models acting on under-specified states without verification). Both can be traced to attentional root causes.
+**Metacognition may depend on attentional grounding.** A model can only calibrate its confidence accurately if it has attended to the relevant evidence in context. When attention is diluted by long context (our Task B finding) or anchored to initial tokens by attention sinks (our Task A finding), the model has reduced access to the state it needs for self-assessment. Confabulation under such conditions is one plausible downstream consequence.
 
-**Metacognition depends on attentional grounding.** A model can only calibrate its confidence accurately if it has attended to the relevant evidence in context. When attention is diluted by long context (our Task B finding) or anchored to initial tokens by attention sinks (our Task A finding), the model loses access to the precise causal state it needs for self-assessment. The result is confabulation with high confidence — a metacognitive failure driven by an attentional one.
+**Executive control may require attentional flexibility.** Our attentional residue finding (Task D) shows that causal self-attention can leave traces of prior context in the generation phase. The same mechanism is a candidate explanation for agentic precondition failures, where attention remains on the plan rather than shifting to verify environmental state.
 
-**Executive control requires attentional flexibility.** Our attentional residue finding (Task D) demonstrates that causal self-attention mechanically prevents models from fully disengaging from prior context. This same mechanism explains why agentic systems fail to verify preconditions: the model's attention remains anchored to its plan rather than shifting to check whether the environment matches its assumptions. The perseveration errors we measure in rule-shifting are the same class of error that causes agentic failures in multi-step tasks.
-
-**Stimulus-driven attention enables environmental monitoring.** Our inattentional blindness results (Task E) show that models systematically miss anomalies under cognitive load. In agentic settings, this translates to missing error signals, changed environmental conditions, or contradictory evidence — all of which require the bottom-up attentional capture that Transformers fundamentally lack.
+**Stimulus-driven attention may enable environmental monitoring.** Our inattentional blindness results (Task E) show that models systematically miss anomalies under cognitive load. In agentic settings, the same failure mode would translate into missed error signals or contradictory evidence — the bottom-up capture that Transformers approximate weakly.
 
 ### Empirical Cross-Track Validation
 
 These theoretical predictions find empirical support in the Executive Functions: Cognitive Control Suite benchmark (Agrawal, 2026; 16 tasks, 27 models, available at kaggle.com/benchmarks/naivedhyaagrawal/executive-functions-the-cognitive-control-suite). Cross-referencing our results with Agrawal's reveals three concrete correspondences:
 
-**Shifting predicts cognitive flexibility failures.** Gemma-3-27B fails our rule-shift task. In Agrawal's benchmark, Gemma-3-1B scores 0.00 on cognitive flexibility — the same architectural family, the same deficit, two independent benchmarks. This is exactly the cascade Norman and Shallice (1986) predict: if the Supervisory Attentional System cannot disengage from a prior schema, downstream cognitive flexibility collapses.
+**Shifting and cognitive flexibility co-fail in the Gemma family.** Gemma-3-27B fails our rule-shift task. In Agrawal's benchmark, Gemma-3-1B scores near floor on cognitive flexibility — the same family, the same deficit, two independent benchmarks. This is consistent with Norman and Shallice (1986): if the Supervisory Attentional System cannot disengage from a prior schema, downstream cognitive flexibility is unlikely to recover.
 
-**Anomaly detection predicts metacognitive monitoring failures.** A model that misses an embedded anomaly (Qwen3-Next, Gemma-3-27B in our benchmark) has no signal that something unexpected occurred. Without that signal, it cannot flag uncertainty — it will answer confidently on incomplete evidence. This is the core metacognitive monitoring failure described by Fernandez-Duque et al. (2000). CogAttention's anomaly detection sub-score can thus serve as a leading indicator: if a model scores at floor here, expect metacognitive calibration to be unreliable.
+**Anomaly detection is relevant to downstream metacognitive monitoring.** A model that misses an embedded anomaly (Qwen3-Next, Gemma-3-27B in our benchmark) has no signal that something unexpected occurred. Without that signal, it cannot flag uncertainty on incomplete evidence — the core metacognitive monitoring failure described by Fernandez-Duque et al. (2000).
 
-**Attention and executive control are separable faculties.** DeepSeek-R1 tops our benchmark (0.89) yet scores 0.00 on executive inhibitory control in Agrawal's benchmark. This double dissociation confirms that attention and executive function are not a single "intelligence" factor — a model can have excellent attentional resources but still fail to deploy them under executive control. Conversely, a model with strong executive function but weak attention would have nothing to control. This supports the hierarchical model where attention is the upstream primitive that gates executive processing.
+**Attention and executive control behave independently here.** DeepSeek-R1 tops our benchmark (0.89) yet scores near floor on executive inhibitory control in Agrawal's suite. §7.3 (attention) and §7.4 (executive function) come apart in this case rather than collapsing into a single factor.
 
-This cascade — from attentional failure to metacognitive blindness to executive rigidity — suggests that improving the attention mechanisms of frontier models (whether through architectural innovations beyond causal self-attention, or through attention-aware prompting strategies) may yield compound gains across multiple cognitive faculties simultaneously.
+Two benchmarks grounded in the same taxonomy produce a cognitive profile rather than a single score. Whether improvements to attention mechanisms also lift downstream metacognitive or executive metrics is an open empirical question, not one we settle here.
 
 ### Implications for AGI Measurement and Lab Workflows
 
@@ -272,13 +270,17 @@ To ensure CogAttention can reliably detect true performance differences between 
 - At N=180 (Capacity), the same test detects a difference of 0.10 with power=0.80.
 - At N=280 (Sustained), we detect a difference of 0.08 with power=0.81.
 
-**Frontier tier considerations.** At the Frontier tier, where model performance floors near zero, we allocate approximately 20% of items per ability. For Shifting at Frontier (N~16), individual tier-level comparisons have lower power — but the benchmark is designed for composite scoring across tiers, not isolated tier comparisons. The IRT-weighted scoring aggregates signal across all difficulty levels, maintaining statistical power for the composite CAS metric.
+**Frontier tier considerations.** At the Frontier tier, where model performance floors near zero, we allocate approximately 20% of items per ability. For Shifting at Frontier (N~16), individual tier-level comparisons have lower power — but the benchmark is designed for composite scoring across tiers, not isolated tier comparisons. CTT composite scoring aggregates signal across all difficulty levels, maintaining statistical power for the composite CAS metric.
+
+**Discrimination at the task level.** Classical Test Theory (CTT) point-biserial discrimination on the 7-model leaderboard identifies four discriminating tasks under the `r_pb >= 0.3` threshold: anomaly (r_pb = 0.94), shifting (0.77), capacity (0.75), and attentional blink (0.68). Ten remaining text-only tasks are at ceiling; two visual tasks are at floor. We use CTT rather than IRT because the 7-model pool is too small for stable IRT parameter estimation; expanding the pool to support IRT is future work.
 
 **Conclusion.** With 860 items, CogAttention achieves >80% power to detect clinically meaningful differences (d >= 0.40) between frontier models at the composite level, and >80% power to detect absolute accuracy differences of 0.10-0.15 at the per-ability level. This exceeds the statistical requirements for benchmark validity.
 
 ## References
 
 - Agrawal, N. (2026). Executive Functions: Cognitive Control Suite. *Kaggle Benchmarks*. kaggle.com/benchmarks/naivedhyaagrawal/executive-functions-the-cognitive-control-suite
+- Barzykowski, K. et al. (2022). Cognitive inhibition behavioral tasks: online and laboratory data. *Data in Brief*, 43, 108398.
+- Burnell, R., Kelly, O. et al. (2026). *Measuring Progress Toward AGI: A Cognitive Framework.* Google DeepMind.
 - Cherry, E. C. (1953). Some experiments on the recognition of speech, with one and with two ears. *Journal of the Acoustical Society of America*, 25(5), 975--979.
 - Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. *Perception & Psychophysics*, 16(1), 143--149.
 - Fernandez-Duque, D., Baird, J. A., & Posner, M. I. (2000). Executive attention and metacognitive regulation. *Consciousness and Cognition*, 9(2), 288--307.
@@ -290,6 +292,7 @@ To ensure CogAttention can reliably detect true performance differences between 
 - Posner, M. I., & Petersen, S. E. (1990). The attention system of the human brain. *Annual Review of Neuroscience*, 13, 25--42.
 - Pylyshyn, Z. W., & Storm, R. W. (1988). Tracking multiple independent targets: Evidence for a parallel tracking mechanism. *Spatial Vision*, 3(3), 179--197.
 - Raymond, J. E., Shapiro, K. L., & Arnell, K. M. (1992). Temporary suppression of visual processing in an RSVP task: An attentional blink? *Journal of Experimental Psychology: Human Perception and Performance*, 18(3), 849--860.
+- Reuel, A. et al. (2024). BetterBench: Assessing AI benchmarks. *NeurIPS 2024.*
 - Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained inattentional blindness for dynamic events. *Perception*, 28(9), 1059--1074.
 - Sohlberg, M. M., & Mateer, C. A. (1987). Effectiveness of an attention-training program. *Journal of Clinical and Experimental Neuropsychology*, 9(2), 117--130.
 - Stroop, J. R. (1935). Studies of interference in serial verbal reactions. *Journal of Experimental Psychology*, 18(6), 643--662.

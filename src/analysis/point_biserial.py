@@ -174,7 +174,7 @@ def render_markdown(task_rows, item_agg, out_path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--leaderboard", default=os.path.join(ROOT, "rameshln_cog-attention_leaderboard (3).csv"))
+    parser.add_argument("--leaderboard", default=os.path.join(ROOT, "rameshln_cog-attention_leaderboard.csv"))
     parser.add_argument("--pilot-dir", default=os.path.join(ROOT, "results"))
     parser.add_argument("--out", default=os.path.join(ROOT, "results", "point_biserial.md"))
     parser.add_argument("--json-out", default=os.path.join(ROOT, "results", "point_biserial.json"))
