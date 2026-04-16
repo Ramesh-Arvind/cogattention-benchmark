@@ -6,11 +6,11 @@
 
 We adapted the gorilla experiment (Simons & Chabris, 1999) and 15 other classical attention paradigms for frontier models. Three of seven could not switch classification rules mid-task. Two missed embedded anomalies entirely. None could reliably name ink colors in conflicting color words. Meanwhile, the same models saturated classical distractor-filtering and interference-resistance tasks. These dissociations are invisible to aggregate benchmark scores and to retrieval-centric long-context tests like NIAH or RULER.
 
-CogAttention measures attention as DeepMind's cognitive taxonomy (Burnell et al., 2026, §7.3) defines it: not a single ability, but three dissociable faculties — Attention Capacity, Selective Attention (with sub-abilities for Sustained focus, Perceptual Inhibition, and Shifting), and Stimulus-Driven Attention. Across 16 task types and 860 items, we find a 21-point spread between the strongest and weakest models, human-model profile inversions on specific sub-abilities, and cross-benchmark dissociations that empirically support the framework's claim that cognitive faculties are separable. The competition's guiding question asks what a benchmark reveals that was previously invisible. Ours reveals that frontier models with near-identical aggregate scores can have opposite cognitive profiles.
+CogAttention measures attention as DeepMind's cognitive taxonomy (Burnell et al., 2026, §7.3) defines it: three dissociable faculties — Attention Capacity, Selective Attention (with sub-abilities for Sustained focus, Perceptual Inhibition, and Shifting), and Stimulus-Driven Attention. Across 16 task types and 860 items, we find a 21-point spread across models, human-model profile inversions on specific sub-abilities, and cross-benchmark dissociations supporting the framework's claim that cognitive faculties are separable. Frontier models with near-identical aggregate scores can have opposite cognitive profiles.
 
 ### Alignment to the DeepMind Cognitive Framework
 
-We structure all 16 tasks under the framework's three-tier hierarchy for Attention (§7.3):
+Under the framework's three-tier hierarchy (§7.3):
 
 **Attention Capacity (§7.3.1).** Thread Tracking (Pylyshyn & Storm, 1988): N agents swap items; the model reports final holdings. Proactive Interference (Wang & Sun, 2025): repeated value updates with only the final value as target. Attentional Blink (Raymond et al., 1992): identify two targets in rapid serial presentation.
 
@@ -26,19 +26,19 @@ We structure all 16 tasks under the framework's three-tier hierarchy for Attenti
 
 ### Dataset and Contamination Resistance
 
-860 items: 560 text-only, 150 Visual Stroop scenes, 150 Visual Inattentional scenes. All items are procedurally generated from a seed with programmatic ground truth — no static corpora, no ambiguity. Seven contamination-resistance layers: combinatorial entity pools, canary strings, seed-based regeneration, zero lexical overlap with source materials, dynamic name sampling, parametric difficulty scaling, and private scoring logic held out of model contexts. Difficulty spans five tiers (Easy → Frontier) by varying tracked-item count, passage length, distractor density, and cue clarity.
+860 items: 560 text-only, 150 Visual Stroop, 150 Visual Inattentional. All items are procedurally generated from a seed with programmatic ground truth. Contamination resistance via combinatorial pools, canary strings, seed-based regeneration, zero lexical overlap, and private scoring logic held out of model contexts. Difficulty spans five tiers (Easy → Frontier) by varying tracked-item count, passage length, distractor density, and cue clarity.
 
 ### Methodology
 
-Assertions are built on `assert_contains_regex` with task-specific scoring logic. Multi-target tasks pass if ≥80% of targets are correctly identified (e.g., ≥4 of 5 tracked items). Visual Stroop uses color-variant-aware matching.
+Assertions use `assert_contains_regex` with task-specific scoring; multi-target tasks pass at ≥80% target identification (e.g., ≥4 of 5 tracked items).
 
-**Composite Attention Score (CAS).** We report two aggregation modes following BetterBench (Reuel et al., NeurIPS 2024) guidance for compensatory vs. non-compensatory scoring. Arithmetic CAS is a weighted mean; Geometric CAS requires non-zero performance on every sub-faculty and penalizes uneven profiles.
+**Composite Attention Score (CAS).** Following BetterBench (Reuel et al., 2024), we report Arithmetic CAS (compensatory weighted mean) and Geometric CAS (non-compensatory — penalizes uneven profiles).
 
 **Statistics.** With 7 models officially benchmarked on Kaggle (extended to 12 in local validation), we rely on Classical Test Theory rather than IRT, for which our model pool is an order of magnitude too small. We report per-task difficulty (proportion of models passing), task-level point-biserial discrimination against total CAS, bootstrapped 95% confidence intervals (10,000 resamples), Cohen's d effect sizes between adjacent models, and position-bias analysis detecting the U-shaped attention curves documented by Liu et al. (2024). Shifting errors are further classified as perseveration vs. random via an attentional-residue analysis.
 
 ### Human Baseline
 
-25 participants contributed 207 responses, with difficulty tiers validated against expected human performance. We anchor our participant pool against Barzykowski et al. (2022) normative data (N=485) on Stroop, SART, and Flanker tasks. Human CAS is 0.767 overall (0.943 Easy → 0.600 Hard), establishing a meaningful comparison profile rather than a single ceiling point.
+25 participants contributed 207 responses; we anchor against Barzykowski et al. (2022) normative data (N=485) on Stroop, SART, and Flanker. Human CAS = 0.767 overall (0.943 Easy → 0.600 Hard) — a comparison profile, not a single ceiling.
 
 ### Results: Seven Frontier Models, April 2026
 
@@ -62,28 +62,28 @@ Task-level r_pb shows 4 discriminating tasks (shifting, anomaly, capacity, blink
 
 **3. Anomaly Detection (Stimulus-Driven) separates tiers not captured by Selective metrics.** Qwen3-Next and Gemma fail (r_pb = 0.88, the highest in the benchmark). Humans score 0.676; the weakest models approach floor. A model that misses an embedded anomaly has no signal that something unexpected occurred — a prerequisite for downstream metacognitive monitoring (Fernandez-Duque et al., 2000).
 
-**4. Vigilance degrades predictably with length.** All seven models show the classical vigilance decrement (Mackworth, 1948) across document portions — detection rates drop monotonically in later quartiles, confirming that long-context degradation is not purely architectural but mirrors a well-documented human phenomenon.
+**4. Vigilance degrades predictably with length.** All seven models show the classical vigilance decrement (Mackworth, 1948): detection rates drop monotonically in later document quartiles — long-context degradation mirrors a documented human phenomenon, not just architecture.
 
-**5. Human-model profile inversion.** Humans outperform every tested model on Anomaly Detection and Perceptual Inhibition (Stroop) but underperform on Proactive Interference and sequential recall. This is not a gap in overall ability — it is an inversion. The sub-abilities where humans excel are exactly the sub-abilities where frontier models floor.
+**5. Human-model profile inversion.** Humans outperform every tested model on Anomaly Detection and Stroop but underperform on Proactive Interference and sequential recall. Not a gap in overall ability — an inversion. The sub-abilities where humans excel are exactly the ones where frontier models floor.
 
 ### Cross-Track Dissociation: Empirical Support for the Framework
 
-Cognitive science has long treated attention as an upstream gate on downstream processing (Posner & Petersen, 1990) — a position our cross-track dissociations empirically test. The framework's central claim is that cognitive abilities are dissociable. Cross-referencing with Agrawal's *Executive Functions: Cognitive Control Suite* (Kaggle Benchmarks, 2026) provides direct evidence:
+Cognitive science has long treated attention as an upstream gate on downstream processing (Posner & Petersen, 1990) — a hypothesis our cross-track dissociations test. Cross-referencing Agrawal's *Executive Functions: Cognitive Control Suite* (Kaggle Benchmarks, 2026):
 
-- **DeepSeek-R1 tops CogAttention (0.89) yet scores near-floor on executive inhibitory control in Agrawal's suite.** Attention and executive control are not the same faculty, confirming §7.3 and §7.4 dissociate in observed behavior.
-- **Gemma-3 fails Shifting in our Selective Attention tasks and fails cognitive flexibility in Agrawal's Executive Functions tasks.** Same family, same deficit, two independent benchmarks — the cascade Norman & Shallice (1986) predict.
+- **DeepSeek-R1 tops CogAttention (0.89) yet scores near-floor on executive inhibitory control in Agrawal's suite** — §7.3 and §7.4 dissociate in observed behavior.
+- **Gemma-3 fails Shifting here and cognitive flexibility in Agrawal's Executive Functions tasks** — same family, same deficit across two independent benchmarks, the cascade Norman & Shallice (1986) predict.
 
-These convergent results are framework-validating. A single benchmark produces a single score; two benchmarks grounded in the same taxonomy produce a cognitive profile.
+Two benchmarks grounded in the same taxonomy produce a cognitive profile, not a score — framework-validating convergence.
 
 ### Limitations
 
-Seven models on Kaggle and 12 in local validation is sufficient for CTT-based descriptive analysis and profile comparisons but not for full psychometric calibration; IRT analysis is deferred to a larger model pool. Visual Stroop in VLMs mixes perceptual encoding with cognitive interference; we report it under Stimulus-Driven/Selective with this caveat explicit. Our 25-participant pool validates task construct but does not replace population-level norms, for which we anchor to Barzykowski et al. (2022).
+Our 7-model (12 local) pool supports CTT descriptive analysis but defers IRT to a larger pool. Visual Stroop in VLMs mixes perceptual encoding with interference; flagged where reported. The 25-participant pool validates construct, not population norms — we anchor to Barzykowski et al. (2022).
 
 ### What CogAttention reveals that was previously invisible
 
-Standard long-context benchmarks measure retrieval across length. CogAttention measures attention as a structured cognitive faculty, and three results were not visible before this decomposition. First, models with identical aggregate scores have opposite cognitive profiles — Claude Sonnet 4.5 and GPT-OSS-20B both score 0.84 but fail on different sub-abilities. Second, failure modes are systematic, not random — perseveration dominates shifting errors and the vigilance decrement is monotonic. Third, cross-track dissociation provides the first empirical evidence that the framework's taxonomy is behaviorally realized, not just theoretically stipulated.
+Standard long-context benchmarks measure retrieval across length. CogAttention decomposes attention into sub-faculties and surfaces three previously-invisible results: (1) models with identical aggregate scores have opposite profiles — Sonnet 4.5 and GPT-OSS-20B both score 0.84 but fail different sub-abilities; (2) failure modes are systematic — perseveration dominates shifting errors, vigilance decrement is monotonic; (3) cross-track dissociation is the first empirical evidence the framework's taxonomy is behaviorally realized, not just theoretically stipulated.
 
-For researchers, the sub-scores are diagnostic primitives. For labs, CogAttention sub-scores support three concrete operational uses: (a) regression-test a model family across releases — did shifting degrade from v3 to v4? (b) evaluate architectural ablations — does a new KV-cache design improve sustained attention without breaking anomaly detection? (c) feed sub-scores into a composite cognitive dashboard alongside metacognition and executive-function benchmarks to build multi-faculty profiles. For the framework itself, they provide what it most needed from the hackathon: operational evidence that its categories cut nature at the joints.
+Sub-scores are diagnostic primitives. For labs, two concrete uses: (a) regression-test a model family across releases — did shifting degrade from v3 to v4? (b) evaluate architectural ablations — does a new KV-cache design improve sustained attention without breaking anomaly detection? For the framework itself, they provide operational evidence that its categories cut nature at the joints.
 
 **Full benchmark (19 notebooks, 860 items), stimuli, human baseline data, and analysis code:** github.com/Ramesh-Arvind/cogattention-benchmark
 
