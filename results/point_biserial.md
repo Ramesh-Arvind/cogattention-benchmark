@@ -1,5 +1,7 @@
 # Point-Biserial Discrimination (CTT)
 
+**Note on task count.** This analysis runs over 19 leaderboard task slots, which include 3 old/new version pairs: `blink`/`blinks`, `flanker`/`flankers`, `inhibition_return`/`inhibition_return1`. Deduplicated, this is **16 unique task types** — the number cited in the writeup. After dedup: 4 discriminating, 10 text-only at ceiling, 2 visual at floor (= 16).
+
 ## Task-level (7-model leaderboard)
 
 `r_pb` is Pearson correlation between task pass/fail across models and model total CAS. `p` is item difficulty (fraction passing). Classical threshold: `r_pb >= 0.3` → discriminating.
