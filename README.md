@@ -260,13 +260,21 @@ for task_type, (gen_fn, score_fn) in registry.items():
 
 ## References
 
+- Agrawal, N. (2026). Executive Functions: Cognitive Control Suite. *Kaggle Benchmarks*. kaggle.com/benchmarks/naivedhyaagrawal/executive-functions-the-cognitive-control-suite
+- Barzykowski, K. et al. (2022). Cognitive inhibition behavioral tasks: online and laboratory data. *Data in Brief*, 43, 108398.
+- Burnell, R., Kelly, O. et al. (2026). *Measuring Progress Toward AGI: A Cognitive Framework.* Google DeepMind.
 - Cherry, E. C. (1953). Some experiments on the recognition of speech, with one and with two ears. *Journal of the Acoustical Society of America*, 25(5), 975--979.
+- Eriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon the identification of a target letter in a nonsearch task. *Perception & Psychophysics*, 16(1), 143--149.
+- Fernandez-Duque, D., Baird, J. A., & Posner, M. I. (2000). Executive attention and metacognitive regulation. *Consciousness and Cognition*, 9(2), 288--307.
 - Liu, N. F. et al. (2024). Lost in the middle: How language models use long contexts. *TACL*.
 - Mackworth, N. H. (1948). The breakdown of vigilance during prolonged visual search. *Quarterly Journal of Experimental Psychology*, 1(1), 6--21.
 - Monsell, S. (2003). Task switching. *Trends in Cognitive Sciences*, 7(3), 134--140.
+- Norman, D. A., & Shallice, T. (1986). Attention to action: Willed and automatic control of behavior. *Consciousness and Self-Regulation*, 4, 1--18.
+- Posner, M. I., & Cohen, Y. (1984). Components of visual orienting. *Attention and Performance X*, 531--556.
 - Posner, M. I., & Petersen, S. E. (1990). The attention system of the human brain. *Annual Review of Neuroscience*, 13, 25--42.
 - Pylyshyn, Z. W., & Storm, R. W. (1988). Tracking multiple independent targets: Evidence for a parallel tracking mechanism. *Spatial Vision*, 3(3), 179--197.
+- Raymond, J. E., Shapiro, K. L., & Arnell, K. M. (1992). Temporary suppression of visual processing in an RSVP task: An attentional blink? *Journal of Experimental Psychology: HPP*, 18(3), 849--860.
+- Reuel, A. et al. (2024). BetterBench: Assessing AI benchmarks. *NeurIPS 2024.*
 - Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained inattentional blindness for dynamic events. *Perception*, 28(9), 1059--1074.
-- Sohlberg, M. M., & Mateer, C. A. (1987). Effectiveness of an attention-training program. *Journal of Clinical and Experimental Neuropsychology*, 9(2), 117--130.
 - Stroop, J. R. (1935). Studies of interference in serial verbal reactions. *Journal of Experimental Psychology*, 18(6), 643--662.
-- Wang, C., & Sun, J. V. (2025). Unable to forget: Proactive interference reveals working memory limits in LLMs beyond context length (PI-LLM). In *Proceedings of the ICML 2025 Workshop on Long Context Foundation Models (ICFM)*. arXiv:2506.08184.
+- Wang, C., & Sun, J. V. (2025). Unable to forget: Proactive interference reveals working memory limits in LLMs beyond context length (PI-LLM). *ICML 2025 Workshop on Long Context Foundation Models*. arXiv:2506.08184.
