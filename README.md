@@ -58,6 +58,19 @@ Evaluated on 140 items per model (2 per difficulty × 14 text tasks × 5 tiers) 
 
 **Geometric CAS** penalizes models that completely fail on any ability — Phi drops from 0.567 (arithmetic) to 0.479 (geometric), exposing hidden weaknesses.
 
+## What You Can Do With CogAttention
+
+| Use Case | How | Entry Point |
+|----------|-----|-------------|
+| **Benchmark a frontier model on Kaggle** | Submit any of 19 notebooks to the Kaggle Community Benchmarks platform and get a score on the public leaderboard | `notebooks/task_*.ipynb` |
+| **Evaluate a local/open model with vLLM** | Run the full 14-task text suite (or a subset via `--tasks`) with OOM-safe checkpointed inference | `python -m src.run_local_eval --model <alias> --full` |
+| **Plug into lm-evaluation-harness** | Each generator yields `TaskInstance` objects; each scorer returns a `ScoreResult` — drop into any external harness | `src/eval_config.py::get_task_registry()` |
+| **Diagnose a model's attention profile** | Geometric CAS + radar chart expose which of the 5 abilities (capacity / sustained / selective / shifting / stimulus-driven) collapse | `src/scorers/composite.py`, `src/visualize.py` |
+| **Compare two models with stats** | Bootstrapped 95% CIs, Cohen's d, rank-biserial, and point-biserial CTT discrimination | `src/analysis/` |
+| **Extend to new paradigms** | All generators are procedural + seeded — fork a `generator.py` + `scorer.py` pair and register it | `src/generators/base.py`, `src/scorers/base.py` |
+| **Test multimodal attention (VLMs)** | PIL-generated Visual Stroop and Inattentional Blindness items with programmatic ground truth | `src/generators/visual_*.py` |
+| **Reproduce our 7-model leaderboard** | All seeds fixed (`seed=2026`); regenerate identical items, rescore, and replot the figures | `python src/visualize.py` |
+
 ## Repository Structure
 
 ```
@@ -172,21 +185,34 @@ pip install -e ".[dev]"
 # Run all 148 tests
 python3 -m pytest tests/ -v
 
-# Generate all 860 benchmark instances (560 text + 300 visual)
+# Generate all 860 benchmark instances (560 text + 300 visual) across 16 task types
 python3 -c "
 from src.generators.capacity import generate_capacity_dataset
+from src.generators.novel_capacity import generate_interference_dataset
+from src.generators.attentional_blink import generate_blink_dataset
 from src.generators.sustained import generate_sustained_dataset
+from src.generators.novel_sustained import generate_stream_dataset
+from src.generators.context_dilution import generate_dilution_dataset
+from src.generators.semantic_niah import generate_sniah_dataset
+from src.generators.multihop_attention import generate_multihop_dataset
 from src.generators.selective import generate_selective_dataset
+from src.generators.novel_selective import generate_stroop_dataset
+from src.generators.flanker import generate_flanker_dataset
 from src.generators.shifting import generate_shifting_dataset
+from src.generators.inhibition_return import generate_ior_dataset
 from src.generators.anomaly import generate_anomaly_dataset
 from src.generators.visual_selective import generate_visual_stroop_dataset
+from src.generators.visual_inattentional import generate_visual_inattentional_dataset
 
 total = sum(len(g(seed=2026)) for g in [
-    generate_capacity_dataset, generate_sustained_dataset,
-    generate_selective_dataset, generate_shifting_dataset,
-    generate_anomaly_dataset, generate_visual_stroop_dataset,
+    generate_capacity_dataset, generate_interference_dataset, generate_blink_dataset,
+    generate_sustained_dataset, generate_stream_dataset, generate_dilution_dataset,
+    generate_sniah_dataset, generate_multihop_dataset,
+    generate_selective_dataset, generate_stroop_dataset, generate_flanker_dataset,
+    generate_shifting_dataset, generate_ior_dataset, generate_anomaly_dataset,
+    generate_visual_stroop_dataset, generate_visual_inattentional_dataset,
 ])
-print(f'Total instances: {total}')
+print(f'Total instances: {total}')  # expect 860
 "
 
 # Generate all 9 figures (from pilot data)

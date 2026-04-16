@@ -83,7 +83,7 @@ Our 7-model (12 local) pool supports CTT descriptive analysis but defers IRT to 
 
 Standard long-context benchmarks measure retrieval across length. CogAttention decomposes attention into sub-faculties and surfaces three results a single score hides: (1) models with identical aggregate scores have opposite profiles (Sonnet 4.5 and GPT-OSS-20B both score 0.84 but fail different sub-abilities); (2) failure modes are systematic (perseveration dominates shifting errors, vigilance decrement is monotonic); (3) cross-track comparison shows the framework's sub-faculties coming apart in behavior.
 
-Sub-scores are diagnostic tools. For labs, two concrete uses: (a) regression-test a model family across releases (did shifting degrade from v3 to v4?); (b) evaluate architectural ablations (does a new KV-cache design improve sustained attention without breaking anomaly detection?). For the framework, they give behavioral evidence that its sub-faculty categories come apart in practice.
+Sub-scores are diagnostic tools with three concrete uses. For labs: (a) regression-test a model family across releases (did shifting degrade from v3 to v4?); (b) evaluate architectural ablations (does a new KV-cache design improve sustained attention without breaking anomaly detection?). For practitioners: (c) route deployments by profile — a model strong on sustained attention but weak on shifting suits long-context RAG over multi-step agent workflows. For the framework, they give behavioral evidence that its sub-faculty categories come apart in practice.
 
 **Full benchmark (19 notebooks, 860 items), stimuli, human baseline data, and analysis code:** github.com/Ramesh-Arvind/cogattention-benchmark
 
